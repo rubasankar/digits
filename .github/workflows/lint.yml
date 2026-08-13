@@ -1,0 +1,43 @@
+name: Lint
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL_CI }}
+
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version-file: ".python-version"
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          python-version-file: ".python-version"
+          enable-cache: true
+
+      - run: uv sync --dev
+
+      - name: Ruff Format
+        run: uv run ruff format --check .
+
+      - name: Ruff Lint
+        run: uv run ruff check .
+
+      - name: djLint
+        run: uv run djlint . --check
+
+      - name: MyPy
+        run: uv run mypy . --show-traceback

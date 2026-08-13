@@ -1,0 +1,30 @@
+{
+  "name": "digits",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubasankar/digits.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rubasankar/digits/issues"
+  },
+  "homepage": "https://github.com/rubasankar/digits#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "4.2",
+    "daisyui": "5.5",
+    "tailwindcss": "4.2"
+  }
+}

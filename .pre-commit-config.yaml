@@ -1,0 +1,156 @@
+exclude: |
+  (?x)^(
+      .*docs/|
+      .*/migrations/|
+      .*\.min\.js|
+      .*\.min\.css|
+  )$
+default_install_hook_types: [pre-commit, commit-msg, pre-push]
+default_stages:
+  - pre-commit
+minimum_pre_commit_version: "3.2.0"
+
+default_language_version:
+  python: python3.14
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-json
+      - id: check-toml
+      - id: check-xml
+      - id: check-yaml
+      - id: debug-statements
+      - id: check-builtin-literals
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-docstring-first
+      - id: detect-private-key
+      - id: check-added-large-files
+        args:
+          - --maxkb=2048
+      - id: mixed-line-ending
+        args: ["--fix=lf"]
+      - id: no-commit-to-branch
+        args: ["--branch", "main", "--branch", "master"]
+      - id: pretty-format-json
+        exclude: ^package(-lock)?\.json$
+        args:
+          - --autofix
+      - id: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
+      - id: check-vcs-permalinks
+      - id: check-symlinks
+      - id: destroyed-symlinks
+
+  - repo: https://github.com/tox-dev/pyproject-fmt
+    rev: v2.26.0
+    hooks:
+      - id: pyproject-fmt
+
+  - repo: https://github.com/adamchainz/django-upgrade
+    rev: "1.31.1"
+    hooks:
+      - id: django-upgrade
+        args: ["--target-version", "6.0"]
+
+  # Run the Ruff linter.
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.16.0
+    hooks:
+      # Linter
+      - id: ruff-check
+        args: [--fix, --exit-non-zero-on-fix]
+      # Formatter
+      - id: ruff-format
+
+  - repo: https://github.com/djlint/djLint
+    rev: v1.43.1
+    hooks:
+      - id: djlint-reformat-django
+        types_or: [html]
+      - id: djlint-django
+        types_or: [html]
+
+  - repo: local
+    hooks:
+      - id: fix-non-ascii
+        name: fix non-ASCII characters
+        language: system
+        entry: uv run scripts/fix_non_ascii.py
+        pass_filenames: true
+        always_run: true
+
+      - id: mypy
+        name: mypy
+        entry: uv run mypy . --show-traceback
+        language: system
+        pass_filenames: false
+
+      - id: django-check
+        name: Django System Check
+        entry: uv run manage.py check
+        language: system
+        pass_filenames: false
+
+      - id: django-migrations
+        name: Checking Missing Migrations
+        entry: uv run manage.py makemigrations --check --dry-run
+        language: system
+        pass_filenames: false
+
+      - id: pytest
+        name: Run Tests
+        entry: uv run pytest
+        language: system
+        pass_filenames: false
+        stages: [pre-push]
+
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.5.0
+    hooks:
+      - id: detect-secrets
+        args: ["--baseline", ".secrets.baseline"]
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.0
+    hooks:
+      - id: gitleaks
+        name: gitleaks (secret scan)
+
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v4.4.0
+    hooks:
+      - id: conventional-pre-commit
+        name: conventional commits
+        stages: [commit-msg]
+        args:
+          [
+            "feat",
+            "fix",
+            "chore",
+            "docs",
+            "style",
+            "refactor",
+            "test",
+            "perf",
+            "ci",
+            "build",
+            "revert",
+          ]
+
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.37.4
+    hooks:
+      - id: check-github-workflows
+        name: validate GitHub Actions workflows
+      - id: check-dependabot
+        name: validate Dependabot config
+# sets up .pre-commit-ci.yaml to ensure pre-commit dependencies stay up to date
+ci:
+  autoupdate_schedule: weekly
+  skip: []
+  submodules: false

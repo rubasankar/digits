@@ -1,0 +1,18 @@
+{% load lb_tags %}
+
+<c-vars active="" />
+<c-lb.navbar class="border-b border-base-300 bg-base-100">
+  <c-lb.navbar.start>
+    <a href="{% url 'core:home' %}" class="text-xl font-bold">Name</a>
+  </c-lb.navbar.start>
+  <c-lb.navbar.end>
+    <a href="https://labb.io"
+       target="_blank"
+       class="btn btn-ghost btn-sm {% if active == 'docs' %}btn-active{% endif %}">Docs</a>
+    <a href="https://github.com/labbhq/labb"
+       target="_blank"
+       class="btn btn-ghost btn-sm {% if active == 'github' %}btn-active{% endif %}">GitHub</a>
+    {{ slot }}
+    <a href="{% url 'admin:index' %}" class="btn btn-ghost btn-sm">Admin</a>
+  </c-lb.navbar.end>
+</c-lb.navbar>

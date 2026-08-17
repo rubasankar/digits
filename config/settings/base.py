@@ -12,6 +12,9 @@ from typing import Any
 
 import django_stubs_ext
 
+from .apps.allauth import *  # noqa: F403
+from .apps.allauth import ALLAUTH_APPS
+from .apps.allauth import ALLAUTH_MIDDLEWARE
 from .apps.celery import *  # noqa: F403
 from .apps.compressor import *  # noqa: F403
 from .apps.compressor import COMPRESSOR_APPS
@@ -82,6 +85,7 @@ THIRD_PARTY_APPS: list[str] = [
 
 INSTALLED_APPS = (
     DJANGO_APPS
+    + ALLAUTH_APPS
     + COMPRESSOR_APPS
     + COTTON_APPS
     + IMAGEKIT_APPS
@@ -90,18 +94,15 @@ INSTALLED_APPS = (
     + THIRD_PARTY_APPS
 )
 
-# Middleware
-MIDDLEWARE = [
-    "django.middleware.security.SecurityMiddleware",
-    "django.contrib.sessions.middleware.SessionMiddleware",
-    "django.middleware.locale.LocaleMiddleware",
-    "django.middleware.common.CommonMiddleware",
-    "django.middleware.csrf.CsrfViewMiddleware",
-    "django.contrib.auth.middleware.AuthenticationMiddleware",
-    "django.contrib.messages.middleware.MessageMiddleware",
-    "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    *STRUCTLOG_MIDDLEWARE,
+
+# Authentication
+AUTHENTICATION_BACKENDS = [
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
 ]
+AUTH_USER_MODEL = "accounts.UserAccount"
+LOGIN_REDIRECT_URL = "core:home"
+LOGIN_URL = "account_login"
 
 # Password hashing & validation
 PASSWORD_HASHERS = [
@@ -118,6 +119,21 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
     {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
+]
+
+# Middleware
+MIDDLEWARE = [
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    *ALLAUTH_MIDDLEWARE,
+    *STRUCTLOG_MIDDLEWARE,
 ]
 
 # Static & media files
@@ -195,9 +211,7 @@ EMAIL_SUBJECT_PREFIX = env(
 ACCOUNT_EMAIL_SUBJECT_PREFIX = EMAIL_SUBJECT_PREFIX
 
 
-# ---------------------------------------------------------------------------
 # Admin
-# ---------------------------------------------------------------------------
 ADMIN_URL = "admin/"
 ADMINS = ['"Rubasankar" <rubasankar@outlook.in>']
 MANAGERS = ADMINS

@@ -8,9 +8,7 @@ import structlog
 
 from .environ import env
 
-# ---------------------------------------------------------------------------
 # Apps & middleware
-# ---------------------------------------------------------------------------
 
 # Merged into INSTALLED_APPS / MIDDLEWARE in base.py.
 
@@ -23,7 +21,6 @@ STRUCTLOG_MIDDLEWARE = [
 ]
 
 
-# ---------------------------------------------------------------------------
 # Shared pre-chain
 #
 # Runs for:
@@ -31,7 +28,6 @@ STRUCTLOG_MIDDLEWARE = [
 #   - native structlog events
 #
 # The final renderer is intentionally NOT included here.
-# ---------------------------------------------------------------------------
 
 _SHARED_PRE_CHAIN: list[Any] = [
     structlog.contextvars.merge_contextvars,
@@ -48,13 +44,11 @@ _SHARED_PRE_CHAIN: list[Any] = [
 ]
 
 
-# ---------------------------------------------------------------------------
 # Native structlog configuration
 #
 # structlog.get_logger() -> stdlib -> ProcessorFormatter
 #
 # This keeps native structlog logging consistent with Django/stdlib logging.
-# ---------------------------------------------------------------------------
 
 structlog.configure(
     processors=[
@@ -67,14 +61,12 @@ structlog.configure(
 )
 
 
-# ---------------------------------------------------------------------------
 # Django LOGGING configuration
 #
 # The final renderer is selected through DJANGO_LOG_FORMATTER:
 #
 #   json    -> production
 #   console -> local development
-# ---------------------------------------------------------------------------
 
 STRUCTLOG_LOGGING: dict[str, Any] = {
     "version": 1,

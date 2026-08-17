@@ -9,9 +9,7 @@ from .environ import env
 REDIS_URL = env("REDIS_URL", default="redis://redis:6379/0")
 REDIS_SSL = REDIS_URL.startswith("rediss://")
 
-# ---------------------------------------------------------------------------
 # Celery
-# ---------------------------------------------------------------------------
 # TIME_ZONE and USE_TZ are set in base.py; Celery picks them up from there.
 # We declare CELERY_TIMEZONE here using the same default so it is always set.
 CELERY_TIMEZONE = env("TIME_ZONE", default="UTC")

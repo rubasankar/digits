@@ -25,9 +25,10 @@ from django.views import defaults as default_views
 from labb.shortcuts import set_theme_view
 
 urlpatterns = [
-    path("", include("core.urls")),
+    path("auth/", include("allauth.urls")),
     path("set-theme/", set_theme_view, name="set_theme"),
     path("admin/", admin.site.urls),
+    path("", include("core.urls")),
     *static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT),
 ]
 

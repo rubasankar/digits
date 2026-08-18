@@ -1,5 +1,5 @@
 # General
-USE_DOCKER=yes
+USE_DOCKER=no
 IPYTHONDIR=/app/.ipython
 
 # Redis
@@ -10,3 +10,14 @@ REDIS_URL=redis://redis:6379/0
 # Flower
 CELERY_FLOWER_USER=user
 CELERY_FLOWER_PASSWORD=dev_password
+
+# Django
+DJANGO_READ_DOT_ENV_FILE=False
+DJANGO_DEBUG=true
+DATABASE_URL=sqlite:///db.sqlite3
+DJANGO_ADMIN_FORCE_ALLAUTH=true
+DJANGO_EMAIL_BACKEND=django.core.mail.backends.console.EmailBackend
+
+# Google OAuth
+GOOGLE_CLIENT_ID=test_id
+GOOGLE_SECRET=test_secret

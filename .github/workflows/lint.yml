@@ -10,9 +10,6 @@ jobs:
   lint:
     runs-on: ubuntu-latest
 
-    env:
-      DATABASE_URL: ${{ secrets.DATABASE_URL_CI }}
-
     steps:
       - name: Checkout Code Repository
         uses: actions/checkout@v7
@@ -28,6 +25,12 @@ jobs:
           python-version-file: ".python-version"
           enable-cache: true
 
+      - name: Load environment
+        run: |
+          while IFS='=' read -r key value; do
+            [[ -z "$key" || "$key" == \#* ]] && continue
+            echo "$key=$value" >> "$GITHUB_ENV"
+          done < .envs/.local/.django
       - run: uv sync --dev
 
       - name: Ruff Format

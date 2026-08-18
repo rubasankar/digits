@@ -1,7 +1,3 @@
-"""
-With these settings, tests run faster.
-"""
-
 from .apps.environ import env
 from .base import *  # noqa: F403
 from .base import TEMPLATES

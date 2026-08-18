@@ -1,10 +1,5 @@
 """
 Base Django configuration.
-
-Only core Django settings live here. Third-party app configurations
-are split into their own modules inside config/settings/apps/:
-
-
 """
 
 from pathlib import Path

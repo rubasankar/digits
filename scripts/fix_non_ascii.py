@@ -1,25 +1,5 @@
 #!/usr/bin/env python3
-"""
-Normalize "typographic artifact" characters that AI code-generation tools
-tend to sprinkle into source files (smart quotes, em/en dashes, non-breaking
-spaces, zero-width characters, etc.) back to their plain-ASCII equivalents.
 
-This is intentionally NOT a blanket unidecode pass. Blanket transliteration
-would also mangle *deliberate* non-ASCII content that legitimately belongs
-in a Django project -- currency symbols (₹, €, £), translated strings in
-.po files, accented names in fixtures/tests, emoji in comments, etc.
-
-Instead, we only touch a curated set of characters that are near-universally
-AI-formatting mistakes rather than intentional content, and that are also
-the ones most likely to actually break code (e.g. a curly quote where a
-real string quote was meant, or a non-breaking space that silently causes
-an IndentationError/SyntaxError).
-
-Usage (e.g. as a pre-commit hook):
-    fix_non_ascii.py file1.py file2.js ...
-Exit code is non-zero if any files were modified, so pre-commit will ask
-you to re-stage.
-"""
 
 import contextlib
 import sys
@@ -95,6 +75,13 @@ REPLACEMENTS: dict[str, str | int | None] = {
     "\u2212": "-",  # MINUS SIGN
     # Ellipsis
     "\u2026": "...",  # HORIZONTAL ELLIPSIS
+    # Arrows (common in AI-generated comments/docstrings)
+    "\u2192": "->",  # RIGHTWARDS ARROW  →
+    "\u2190": "<-",  # LEFTWARDS ARROW   ←
+    "\u2194": "<->",  # LEFT RIGHT ARROW  ↔
+    "\u21d2": "=>",  # RIGHTWARDS DOUBLE ARROW  ⇒
+    "\u21d0": "<=",  # LEFTWARDS DOUBLE ARROW   ⇐
+    "\u21d4": "<=>",  # LEFT RIGHT DOUBLE ARROW  ⇔
     # Bullets (common in AI-generated comments/docstrings/lists)
     "\u2022": "*",  # BULLET
     "\u25cf": "*",  # BLACK CIRCLE

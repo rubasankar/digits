@@ -1,1 +1,1 @@
-"""Root pytest configuration for the opshop project."""
+"""Root pytest configuration"""

@@ -6,12 +6,6 @@ from .models import CustomerProfile
 
 
 class CustomerProfileForm(forms.ModelForm[CustomerProfile]):
-    """
-    Used on the customer-facing profile edit page.
-    Excludes: user (set by view), avatar (separate upload form),
-              accepts_marketing (separate preference form).
-    """
-
     class Meta:
         model = CustomerProfile
         fields = ["first_name", "last_name", "phone_number", "gender", "date_of_birth"]

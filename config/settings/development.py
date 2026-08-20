@@ -23,6 +23,9 @@ CACHES = {
 # EMAIL
 MAILERS = {
     "default": {
+        "BACKEND": "django.core.mail.backends.console.EmailBackend",
+    },
+    "smtp": {
         "BACKEND": "django.core.mail.backends.smtp.EmailBackend",
         "OPTIONS": {
             "host": env("EMAIL_HOST", default="mailpit"),

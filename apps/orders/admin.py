@@ -2,6 +2,8 @@ from typing import TYPE_CHECKING
 
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
+from unfold.admin import ModelAdmin
+from unfold.admin import TabularInline
 
 from .models import Order
 from .models import OrderItem
@@ -11,7 +13,7 @@ if TYPE_CHECKING:
     from django.http import HttpRequest
 
 
-class OrderStatusHistoryInline(admin.TabularInline[OrderStatusHistory, Order]):
+class OrderStatusHistoryInline(TabularInline):  # type: ignore[misc]
     model = OrderStatusHistory
     extra = 0
     readonly_fields = ("old_status", "new_status", "changed_by", "note", "changed_at")
@@ -25,7 +27,7 @@ class OrderStatusHistoryInline(admin.TabularInline[OrderStatusHistory, Order]):
         return False
 
 
-class OrderItemInline(admin.TabularInline[OrderItem, Order]):
+class OrderItemInline(TabularInline):  # type: ignore[misc]
     model = OrderItem
     extra = 0
     readonly_fields = (
@@ -49,7 +51,7 @@ class OrderItemInline(admin.TabularInline[OrderItem, Order]):
 
 
 @admin.register(Order)
-class OrderAdmin(admin.ModelAdmin[Order]):
+class OrderAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = [
         "number",
         "customer",

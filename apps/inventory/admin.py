@@ -2,6 +2,8 @@ from typing import TYPE_CHECKING
 
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
+from unfold.admin import ModelAdmin
+from unfold.admin import TabularInline
 
 from .models import Stock
 from .models import StockMovement
@@ -11,7 +13,7 @@ if TYPE_CHECKING:
     from django.http import HttpRequest
 
 
-class StockMovementInline(admin.TabularInline[StockMovement, Stock]):
+class StockMovementInline(TabularInline):  # type: ignore[misc]
     model = StockMovement
     extra = 0
     readonly_fields = (
@@ -36,7 +38,7 @@ class StockMovementInline(admin.TabularInline[StockMovement, Stock]):
         return False
 
 
-class StockInline(admin.TabularInline[Stock, Warehouse]):
+class StockInline(TabularInline):  # type: ignore[misc]
     model = Stock
     extra = 0
     readonly_fields = ["variant", "quantity", "reserved_quantity", "available_quantity"]
@@ -61,7 +63,7 @@ class StockInline(admin.TabularInline[Stock, Warehouse]):
 
 
 @admin.register(Warehouse)
-class WarehouseAdmin(admin.ModelAdmin[Warehouse]):
+class WarehouseAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = ["name", "code", "city", "country", "is_active", "contact_person"]
     list_filter = ["is_active", "country"]
     search_fields = ["name", "code", "city"]
@@ -94,7 +96,7 @@ class WarehouseAdmin(admin.ModelAdmin[Warehouse]):
 
 
 @admin.register(Stock)
-class StockAdmin(admin.ModelAdmin[Stock]):
+class StockAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = [
         "variant",
         "warehouse",
@@ -145,7 +147,7 @@ class StockAdmin(admin.ModelAdmin[Stock]):
 
 
 @admin.register(StockMovement)
-class StockMovementAdmin(admin.ModelAdmin[StockMovement]):
+class StockMovementAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = [
         "created",
         "movement_type",

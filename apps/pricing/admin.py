@@ -5,6 +5,7 @@ from typing import override
 from django.contrib import admin
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
+from unfold.admin import ModelAdmin
 
 from apps.pricing.services import CurrencyService
 
@@ -19,7 +20,7 @@ if TYPE_CHECKING:
 
 
 @admin.register(Currency)
-class CurrencyAdmin(admin.ModelAdmin[Currency]):
+class CurrencyAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = ["code", "name", "symbol", "is_default"]
     list_filter = ["is_default"]
     search_fields = ["code", "name"]
@@ -63,7 +64,7 @@ class CurrencyAdmin(admin.ModelAdmin[Currency]):
 
 
 @admin.register(TaxClass)
-class TaxClassAdmin(admin.ModelAdmin[TaxClass]):
+class TaxClassAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = ["name", "description"]
     search_fields = ["name", "slug", "description"]
     readonly_fields = ["created", "modified"]
@@ -77,7 +78,7 @@ class TaxClassAdmin(admin.ModelAdmin[TaxClass]):
 
 
 @admin.register(TaxRate)
-class TaxRateAdmin(admin.ModelAdmin[TaxRate]):
+class TaxRateAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = [
         "tax_class",
         "country",
@@ -127,7 +128,7 @@ class TaxRateAdmin(admin.ModelAdmin[TaxRate]):
 
 
 @admin.register(Pricing)
-class PricingAdmin(admin.ModelAdmin[Pricing]):
+class PricingAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = [
         "variant",
         "currency",

@@ -1,28 +1,26 @@
 """
 Base Django configuration.
 """
+# ruff: noqa: E402, F403
 
 from pathlib import Path
 from typing import Any
 
 import django_stubs_ext
 
-from .apps.allauth import *  # noqa: F403
 from .apps.allauth import ALLAUTH_APPS
 from .apps.allauth import ALLAUTH_MIDDLEWARE
-from .apps.celery import *  # noqa: F403
-from .apps.compressor import *  # noqa: F403
 from .apps.compressor import COMPRESSOR_APPS
 from .apps.compressor import COMPRESSOR_STATICFILES_FINDERS
 from .apps.cotton import COTTON_APPS
 from .apps.cotton import COTTON_TEMPLATE_BUILTINS
 from .apps.cotton import COTTON_TEMPLATE_LOADERS
 from .apps.environ import env
-from .apps.imagekit import *  # noqa: F403
 from .apps.imagekit import IMAGEKIT_APPS
 from .apps.structlog import STRUCTLOG_APPS
 from .apps.structlog import STRUCTLOG_LOGGING
 from .apps.structlog import STRUCTLOG_MIDDLEWARE
+from .apps.unfold import UNFOLD_APPS
 
 # Paths
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -50,7 +48,7 @@ DJANGO_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "django.contrib.admin",
+    "config.admin.DigitsAdminConfig",
     "django.forms",
 ]
 
@@ -81,7 +79,8 @@ THIRD_PARTY_APPS: list[str] = [
 ]
 
 INSTALLED_APPS = (
-    DJANGO_APPS
+    UNFOLD_APPS
+    + DJANGO_APPS
     + ALLAUTH_APPS
     + COMPRESSOR_APPS
     + COTTON_APPS
@@ -222,3 +221,9 @@ LOGGING = STRUCTLOG_LOGGING
 SHIPPING_DELIVERED_EVENT_CODES: frozenset[str] = frozenset({"DELIVERED", "DEL", "POD"})
 # carrier_code used to identify the local-delivery CarrierAccount.
 LOCAL_DELIVERY_CARRIER_CODE: str = "local"
+
+from .apps.allauth import *
+from .apps.celery import *
+from .apps.compressor import *
+from .apps.imagekit import *
+from .apps.unfold import *

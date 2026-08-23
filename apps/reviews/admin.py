@@ -2,6 +2,7 @@ from typing import TYPE_CHECKING
 
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
+from unfold.admin import ModelAdmin
 
 from .models import ProductReview
 
@@ -11,7 +12,7 @@ if TYPE_CHECKING:
 
 
 @admin.register(ProductReview)
-class ProductReviewAdmin(admin.ModelAdmin[ProductReview]):
+class ProductReviewAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = [
         "product",
         "customer",

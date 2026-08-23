@@ -6,11 +6,15 @@ from typing import override
 from django.contrib import admin
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
+from unfold.admin import ModelAdmin
 
 from .models import StaffDepartment
 from .models import StaffProfile
 
 if TYPE_CHECKING:
+    from typing import Any
+    from typing import ClassVar
+
     from django import forms
     from django.db.models import QuerySet
     from django.http import HttpRequest
@@ -19,7 +23,7 @@ if TYPE_CHECKING:
 
 
 @admin.register(StaffDepartment)
-class StaffDepartmentAdmin(admin.ModelAdmin[StaffDepartment]):
+class StaffDepartmentAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = ["name", "is_active", "display_order"]
     list_filter = ["is_active"]
     search_fields = ["name"]
@@ -44,7 +48,7 @@ class StaffDepartmentAdmin(admin.ModelAdmin[StaffDepartment]):
 
 
 @admin.register(StaffProfile)
-class StaffProfileAdmin(admin.ModelAdmin[StaffProfile]):
+class StaffProfileAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = [
         "full_name",
         "user",
@@ -85,9 +89,33 @@ class StaffProfileAdmin(admin.ModelAdmin[StaffProfile]):
             {"fields": ("created", "modified"), "classes": ("collapse",)},
         ),
     )
+    SELF_SERVICE_FIELDSETS: ClassVar[tuple[tuple[str | None, dict[str, Any]], ...]] = (
+        (None, {"fields": ("first_name", "last_name", "avatar", "phone_number")}),
+    )
+
+    def get_fieldsets(
+        self, request: HttpRequest, obj: StaffProfile | None = None
+    ) -> Any:
+        if getattr(request.user, "is_superuser", False):
+            return super().get_fieldsets(request, obj)
+        return self.SELF_SERVICE_FIELDSETS
+
+    def has_view_permission(
+        self, request: HttpRequest, obj: StaffProfile | None = None
+    ) -> bool:
+        if super().has_view_permission(request, obj):
+            return True
+        return self._is_own_profile(request, obj)
+
+    @staticmethod
+    def _is_own_profile(request: HttpRequest, obj: StaffProfile | None) -> bool:
+        user = getattr(request, "user", None)
+        if obj is None:
+            return bool(getattr(user, "is_staff", False))
+        return bool(obj.user_id == cast("UserAccount", user).pk)
 
     def get_queryset(self, request: HttpRequest) -> QuerySet[StaffProfile]:
-        qs = super().get_queryset(request)
+        qs = cast("QuerySet[StaffProfile]", super().get_queryset(request))
         user = cast("UserAccount", request.user)
         if getattr(user, "is_superuser", False):
             return qs

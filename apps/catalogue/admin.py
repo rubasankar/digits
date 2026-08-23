@@ -10,6 +10,8 @@ from django.db.models import Count
 from django.utils.translation import gettext_lazy as _
 from treebeard.admin import TreeAdmin
 from treebeard.forms import movenodeform_factory
+from unfold.admin import ModelAdmin
+from unfold.admin import TabularInline
 
 from apps.catalogue.forms import ProductAdminForm
 from apps.catalogue.forms import ProductVariantAdminForm
@@ -30,7 +32,7 @@ from .models.product import ProductImage
 from .models.product import ProductVariant
 
 
-class AttributeOptionInline(admin.TabularInline[AttributeOption, AttributeDefinition]):
+class AttributeOptionInline(TabularInline):  # type: ignore[misc]
     model = AttributeOption
     extra = 1
     fields = ["label", "value", "is_active", "display_order", "metadata"]
@@ -41,7 +43,7 @@ class AttributeOptionInline(admin.TabularInline[AttributeOption, AttributeDefini
 
 
 @admin.register(AttributeDefinition)
-class AttributeDefinitionAdmin(admin.ModelAdmin[AttributeDefinition]):
+class AttributeDefinitionAdmin(ModelAdmin):  # type: ignore[misc]
     form = AttributeDefinitionAdminForm
 
     list_display = [
@@ -97,7 +99,7 @@ class AttributeDefinitionAdmin(admin.ModelAdmin[AttributeDefinition]):
 
 
 @admin.register(AttributeAssignment)
-class AttributeAssignmentAdmin(admin.ModelAdmin[AttributeAssignment]):
+class AttributeAssignmentAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = [
         "definition",
         "scope",
@@ -157,7 +159,7 @@ class AttributeAssignmentAdmin(admin.ModelAdmin[AttributeAssignment]):
 
 
 @admin.register(ProductBrand)
-class ProductBrandAdmin(admin.ModelAdmin[ProductBrand]):
+class ProductBrandAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = ["name", "website", "created"]
     search_fields = ["name", "slug"]
     prepopulated_fields = {"slug": ["name"]}
@@ -174,9 +176,7 @@ class ProductBrandAdmin(admin.ModelAdmin[ProductBrand]):
     )
 
 
-class AttributeAssignmentInline(
-    admin.TabularInline[AttributeAssignment, ProductCategory]
-):
+class AttributeAssignmentInline(TabularInline):  # type: ignore[misc]
     model = AttributeAssignment
     extra = 1
     fields = [
@@ -198,7 +198,7 @@ class AttributeAssignmentInline(
 
 
 @admin.register(ProductCategory)
-class ProductCategoryAdmin(TreeAdmin):  # type: ignore[misc]
+class ProductCategoryAdmin(TreeAdmin, ModelAdmin):  # type: ignore[misc]
     form = movenodeform_factory(ProductCategory)
     list_display = ["name", "slug", "depth", "is_active", "assignment_count"]
     list_filter = ["is_active"]
@@ -310,7 +310,7 @@ class ProductAttributeValueForm(forms.ModelForm[ProductAttributeValue]):
             apply_value_widget(self.fields, defn)
 
 
-class ProductAttributeValueInline(admin.TabularInline[ProductAttributeValue, Product]):
+class ProductAttributeValueInline(TabularInline):  # type: ignore[misc]
     model = ProductAttributeValue
     form = ProductAttributeValueForm
     extra = 0
@@ -344,7 +344,7 @@ class ProductAttributeValueInline(admin.TabularInline[ProductAttributeValue, Pro
         return formset
 
 
-class ProductVariantInline(admin.TabularInline[ProductVariant, Product]):
+class ProductVariantInline(TabularInline):  # type: ignore[misc]
     model = ProductVariant
     extra = 1
     fields = ["sku", "is_active"]
@@ -354,7 +354,7 @@ class ProductVariantInline(admin.TabularInline[ProductVariant, Product]):
 
 
 @admin.register(Product)
-class ProductAdmin(admin.ModelAdmin[Product]):
+class ProductAdmin(ModelAdmin):  # type: ignore[misc]
     form = ProductAdminForm
     list_display = [
         "name",
@@ -472,9 +472,7 @@ class VariantAttributeValueForm(forms.ModelForm[VariantAttributeValue]):
             apply_value_widget(self.fields, defn)
 
 
-class VariantAttributeValueInline(
-    admin.TabularInline[VariantAttributeValue, ProductVariant]
-):
+class VariantAttributeValueInline(TabularInline):  # type: ignore[misc]
     model = VariantAttributeValue
     form = VariantAttributeValueForm
     extra = 0
@@ -508,14 +506,14 @@ class VariantAttributeValueInline(
         return formset
 
 
-class ProductImageInline(admin.TabularInline[ProductImage, ProductVariant]):
+class ProductImageInline(TabularInline):  # type: ignore[misc]
     model = ProductImage
     extra = 1
     fields = ["image", "alt_text", "is_primary", "display_order"]
 
 
 @admin.register(ProductVariant)
-class ProductVariantAdmin(admin.ModelAdmin[ProductVariant]):
+class ProductVariantAdmin(ModelAdmin):  # type: ignore[misc]
     form = ProductVariantAdminForm
     list_display = ["sku", "product", "is_active", "created"]
     list_filter = ["is_active", "product__category"]

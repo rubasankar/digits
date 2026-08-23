@@ -1,0 +1,63 @@
+{% extends "admin/base.html" %}
+
+{% load admin_urls i18n unfold %}
+
+{% block title %}
+  {% if subtitle %}
+    {{ subtitle }} |
+  {% endif %}
+  {{ title }} | {{ site_title|default:_("Django site admin") }}
+{% endblock %}
+{% block branding %}
+  {% include "unfold/helpers/site_branding.html" %}
+{% endblock %}
+{% block content %}
+  {% component "unfold/components/container.html" %}
+    <div class="flex flex-col gap-6">
+      <div class="flex flex-col gap-2">
+        <h1 class="text-2xl font-semibold tracking-tight">{% trans "Dashboard" %}</h1>
+        <p class="text-sm text-gray-500 dark:text-gray-400">
+          {% trans "Overview of catalogue activity and moderation work." %}
+        </p>
+      </div>
+      <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        {% url "admin:catalogue_product_changelist" as products_url %}
+        {% url "admin:orders_order_changelist" as orders_url %}
+        {% url "admin:customers_customerprofile_changelist" as customers_url %}
+        {% url "admin:reviews_productreview_changelist" as reviews_url %}
+        {% component "unfold/components/card.html" with title=_("Products") icon="inventory_2" href=products_url %}
+          {% component "unfold/components/title.html" %}
+            {{ total_products|default:0 }}
+          {% endcomponent %}
+          {% component "unfold/components/text.html" %}
+            {% trans "Products available in the catalogue." %}
+          {% endcomponent %}
+        {% endcomponent %}
+        {% component "unfold/components/card.html" with title=_("Orders") icon="receipt_long" href=orders_url %}
+          {% component "unfold/components/title.html" %}
+            {{ total_orders|default:0 }}
+          {% endcomponent %}
+          {% component "unfold/components/text.html" %}
+            {% trans "Orders recorded in the system." %}
+          {% endcomponent %}
+        {% endcomponent %}
+        {% component "unfold/components/card.html" with title=_("Customers") icon="group" href=customers_url %}
+          {% component "unfold/components/title.html" %}
+            {{ total_customers|default:0 }}
+          {% endcomponent %}
+          {% component "unfold/components/text.html" %}
+            {% trans "Customer profiles ready for support and sales." %}
+          {% endcomponent %}
+        {% endcomponent %}
+        {% component "unfold/components/card.html" with title=_("Pending reviews") icon="rate_review" href=reviews_url %}
+          {% component "unfold/components/title.html" %}
+            {{ pending_reviews|default:0 }}
+          {% endcomponent %}
+          {% component "unfold/components/text.html" %}
+            {% trans "Reviews waiting for moderation." %}
+          {% endcomponent %}
+        {% endcomponent %}
+      </div>
+    </div>
+  {% endcomponent %}
+{% endblock %}

@@ -5,6 +5,8 @@ from typing import override
 from django.contrib import admin
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
+from unfold.admin import ModelAdmin
+from unfold.admin import TabularInline
 
 from .models import Payment
 from .models import PaymentMethod
@@ -17,7 +19,7 @@ if TYPE_CHECKING:
     from django.http import HttpRequest
 
 
-class PaymentStatusHistoryInline(admin.TabularInline[PaymentStatusHistory, Payment]):
+class PaymentStatusHistoryInline(TabularInline):  # type: ignore[misc]
     model = PaymentStatusHistory
     extra = 0
     readonly_fields = (
@@ -38,7 +40,7 @@ class PaymentStatusHistoryInline(admin.TabularInline[PaymentStatusHistory, Payme
         return False
 
 
-class RefundInline(admin.TabularInline[Refund, Payment]):
+class RefundInline(TabularInline):  # type: ignore[misc]
     model = Refund
     extra = 0
     readonly_fields = (
@@ -61,7 +63,7 @@ class RefundInline(admin.TabularInline[Refund, Payment]):
 
 
 @admin.register(PaymentMethod)
-class PaymentMethodAdmin(admin.ModelAdmin[PaymentMethod]):
+class PaymentMethodAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = ["name", "gateway_code", "is_active", "display_order"]
     list_filter = ["is_active"]
     search_fields = ["name", "gateway_code"]
@@ -87,7 +89,7 @@ class PaymentMethodAdmin(admin.ModelAdmin[PaymentMethod]):
 
 
 @admin.register(RefundReason)
-class RefundReasonAdmin(admin.ModelAdmin[RefundReason]):
+class RefundReasonAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = ["name", "requires_return", "is_active", "display_order"]
     list_filter = ["is_active", "requires_return"]
     search_fields = ["name"]
@@ -113,7 +115,7 @@ class RefundReasonAdmin(admin.ModelAdmin[RefundReason]):
 
 
 @admin.register(Payment)
-class PaymentAdmin(admin.ModelAdmin[Payment]):
+class PaymentAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = [
         "transaction_id",
         "order",
@@ -166,7 +168,7 @@ class PaymentAdmin(admin.ModelAdmin[Payment]):
 
 
 @admin.register(Refund)
-class RefundAdmin(admin.ModelAdmin[Refund]):
+class RefundAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = [
         "id",
         "payment",

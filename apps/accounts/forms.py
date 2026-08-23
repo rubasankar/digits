@@ -1,20 +1,21 @@
 from allauth.account.forms import SignupForm
 from allauth.socialaccount.forms import SignupForm as SocialSignupForm
-from django.contrib.auth import forms as admin_forms
 from django.forms import EmailField
 from django.utils.translation import gettext_lazy as _
+from unfold.forms import UserChangeForm
+from unfold.forms import UserCreationForm
 
 from .models import UserAccount
 
 
-class UserAdminChangeForm(admin_forms.UserChangeForm[UserAccount]):
-    class Meta(admin_forms.UserChangeForm.Meta):
+class UserAdminChangeForm(UserChangeForm):  # type: ignore[misc]
+    class Meta(UserChangeForm.Meta):  # type: ignore[misc]
         model = UserAccount
         field_classes = {"email": EmailField}
 
 
-class UserAdminCreationForm(admin_forms.AdminUserCreationForm[UserAccount]):
-    class Meta(admin_forms.UserCreationForm.Meta):
+class UserAdminCreationForm(UserCreationForm):  # type: ignore[misc]
+    class Meta(UserCreationForm.Meta):  # type: ignore[misc]
         model = UserAccount
         fields = ("email",)
         field_classes = {"email": EmailField}

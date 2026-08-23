@@ -1,3 +1,4 @@
+from typing import TYPE_CHECKING
 from typing import ClassVar
 
 from django.contrib.auth.models import AbstractUser
@@ -7,6 +8,9 @@ from model_utils.models import TimeStampedModel
 from model_utils.models import UUIDModel
 
 from .managers import UserManager
+
+if TYPE_CHECKING:
+    from apps.staff.models import StaffProfile
 
 
 class UserAccount(UUIDModel, AbstractUser, TimeStampedModel):
@@ -45,6 +49,22 @@ class UserAccount(UUIDModel, AbstractUser, TimeStampedModel):
     def is_store_staff(self) -> bool:
 
         return hasattr(self, "staff_profile")
+
+    def get_full_name(self) -> str:
+        profile: StaffProfile | None = getattr(self, "staff_profile", None)
+        if profile is not None and profile.full_name:
+            return profile.full_name
+        return self.email.split("@")[0]
+
+    @property
+    def avatar_url(self) -> str:
+        profile: StaffProfile | None = getattr(self, "staff_profile", None)
+        if profile is not None and profile.avatar:
+            return profile.avatar.url
+        return ""
+
+    def get_short_name(self) -> str:
+        return self.get_full_name()
 
     def __str__(self) -> str:
         return self.email

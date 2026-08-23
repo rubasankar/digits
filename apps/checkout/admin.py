@@ -1,11 +1,12 @@
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
+from unfold.admin import ModelAdmin
 
 from .models import CheckoutSession
 
 
 @admin.register(CheckoutSession)
-class CheckoutSessionAdmin(admin.ModelAdmin[CheckoutSession]):
+class CheckoutSessionAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = [
         "id",
         "cart",

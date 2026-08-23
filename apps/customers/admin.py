@@ -1,11 +1,13 @@
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
+from unfold.admin import ModelAdmin
+from unfold.admin import TabularInline
 
 from .models import CustomerAddress
 from .models import CustomerProfile
 
 
-class CustomerAddressInline(admin.TabularInline[CustomerAddress, CustomerProfile]):
+class CustomerAddressInline(TabularInline):  # type: ignore[misc]
     model = CustomerAddress
     extra = 0
     fields = [
@@ -20,11 +22,11 @@ class CustomerAddressInline(admin.TabularInline[CustomerAddress, CustomerProfile
         "pincode",
         "is_default",
     ]
-    readonly_fields = []
+    readonly_fields: list[str] = []
 
 
 @admin.register(CustomerAddress)
-class CustomerAddressAdmin(admin.ModelAdmin[CustomerAddress]):
+class CustomerAddressAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = [
         "id",
         "customer",
@@ -50,7 +52,7 @@ class CustomerAddressAdmin(admin.ModelAdmin[CustomerAddress]):
 
 
 @admin.register(CustomerProfile)
-class CustomerProfileAdmin(admin.ModelAdmin[CustomerProfile]):
+class CustomerProfileAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = [
         "full_name",
         "user",

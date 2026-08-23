@@ -2,6 +2,8 @@ from typing import TYPE_CHECKING
 
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
+from unfold.admin import ModelAdmin
+from unfold.admin import TabularInline
 
 from .models import Fulfilment
 from .models import FulfilmentStatusHistory
@@ -10,9 +12,7 @@ if TYPE_CHECKING:
     from django.http import HttpRequest
 
 
-class FulfilmentStatusHistoryInline(
-    admin.TabularInline[FulfilmentStatusHistory, Fulfilment]
-):
+class FulfilmentStatusHistoryInline(TabularInline):  # type: ignore[misc]
     model = FulfilmentStatusHistory
     extra = 0
     readonly_fields = ("old_status", "new_status", "changed_by", "note", "changed_at")
@@ -27,7 +27,7 @@ class FulfilmentStatusHistoryInline(
 
 
 @admin.register(Fulfilment)
-class FulfilmentAdmin(admin.ModelAdmin[Fulfilment]):
+class FulfilmentAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = [
         "id",
         "order_item",

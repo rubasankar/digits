@@ -6,6 +6,8 @@ from typing import override
 from django.contrib import admin
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
+from unfold.admin import ModelAdmin
+from unfold.admin import TabularInline
 
 from .models import Campaign
 from .models import Coupon
@@ -16,7 +18,7 @@ if TYPE_CHECKING:
     from django.http import HttpRequest
 
 
-class DiscountInline(admin.TabularInline[Discount, Campaign]):
+class DiscountInline(TabularInline):  # type: ignore[misc]
     model = Discount
     extra = 0
     fields = [
@@ -32,7 +34,7 @@ class DiscountInline(admin.TabularInline[Discount, Campaign]):
     show_change_link = True
 
 
-class CouponInline(admin.TabularInline[Coupon, Discount]):
+class CouponInline(TabularInline):  # type: ignore[misc]
     model = Coupon
     extra = 0
     fields = [
@@ -52,7 +54,7 @@ class CouponInline(admin.TabularInline[Coupon, Discount]):
 
 
 @admin.register(Campaign)
-class CampaignAdmin(admin.ModelAdmin[Campaign]):
+class CampaignAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = ["name", "start_date", "end_date", "is_active", "discount_count"]
     list_filter = ["is_active"]
     search_fields = ["name"]
@@ -90,7 +92,7 @@ class CampaignAdmin(admin.ModelAdmin[Campaign]):
 
 
 @admin.register(Discount)
-class DiscountAdmin(admin.ModelAdmin[Discount]):
+class DiscountAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = [
         "campaign",
         "discount_type",
@@ -158,7 +160,7 @@ class DiscountAdmin(admin.ModelAdmin[Discount]):
 
 
 @admin.register(Coupon)
-class CouponAdmin(admin.ModelAdmin[Coupon]):
+class CouponAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = [
         "code",
         "discount",

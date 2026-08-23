@@ -7,6 +7,6 @@
   "close_void_tags": true,
   "format_css": true,
   "format_js": true,
-  "custom_blocks": "element,slot",
+  "custom_blocks": "element,slot,component",
   "ignore": "H006,H030,H031,T002"
 }

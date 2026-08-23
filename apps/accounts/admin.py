@@ -3,6 +3,8 @@ from django.conf import settings
 from django.contrib import admin
 from django.contrib.auth import admin as auth_admin
 from django.utils.translation import gettext_lazy as _
+from unfold.admin import ModelAdmin
+from unfold.forms import AdminPasswordChangeForm
 
 from .forms import UserAdminChangeForm
 from .forms import UserAdminCreationForm
@@ -14,9 +16,10 @@ if settings.DJANGO_ADMIN_FORCE_ALLAUTH:
 
 
 @admin.register(UserAccount)
-class UserAdmin(auth_admin.UserAdmin[UserAccount]):
+class UserAdmin(auth_admin.UserAdmin[UserAccount], ModelAdmin):  # type: ignore[misc]
     form = UserAdminChangeForm
     add_form = UserAdminCreationForm
+    change_password_form = AdminPasswordChangeForm
     fieldsets = (
         (None, {"fields": ("email", "password")}),
         (

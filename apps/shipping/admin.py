@@ -2,6 +2,8 @@ from typing import TYPE_CHECKING
 
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
+from unfold.admin import ModelAdmin
+from unfold.admin import TabularInline
 
 from .models import CarrierAccount
 from .models import Shipment
@@ -12,7 +14,7 @@ if TYPE_CHECKING:
     from django.http import HttpRequest
 
 
-class TrackingEventInline(admin.TabularInline[TrackingEvent, Shipment]):
+class TrackingEventInline(TabularInline):  # type: ignore[misc]
     model = TrackingEvent
     extra = 0
     readonly_fields = ("event_code", "event_timestamp", "description", "raw_payload")
@@ -27,7 +29,7 @@ class TrackingEventInline(admin.TabularInline[TrackingEvent, Shipment]):
 
 
 @admin.register(Shipment)
-class ShipmentAdmin(admin.ModelAdmin[Shipment]):
+class ShipmentAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = [
         "id",
         "fulfilment",
@@ -80,7 +82,7 @@ class ShipmentAdmin(admin.ModelAdmin[Shipment]):
 
 
 @admin.register(ShippingMethod)
-class ShippingMethodAdmin(admin.ModelAdmin[ShippingMethod]):
+class ShippingMethodAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = [
         "name",
         "carrier",
@@ -96,7 +98,7 @@ class ShippingMethodAdmin(admin.ModelAdmin[ShippingMethod]):
 
 
 @admin.register(CarrierAccount)
-class CarrierAccountAdmin(admin.ModelAdmin[CarrierAccount]):
+class CarrierAccountAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = ["name", "carrier_code", "is_active"]
     list_filter = ["is_active"]
     search_fields = ["name", "carrier_code"]

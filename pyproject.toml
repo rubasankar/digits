@@ -28,6 +28,7 @@ dependencies = [
   "django-structlog>=10.1.0",
   "django-stubs-ext>=6.0.7",
   "django-treebeard>=6.0.0",
+  "django-unfold>=0.104.1",
   "flower>=2.0.1",
   "gunicorn>=26.0.0",
   "hiredis>=3.4.0",

@@ -23,6 +23,32 @@ class CustomerAddressInline(admin.TabularInline[CustomerAddress, CustomerProfile
     readonly_fields = []
 
 
+@admin.register(CustomerAddress)
+class CustomerAddressAdmin(admin.ModelAdmin[CustomerAddress]):
+    list_display = [
+        "id",
+        "customer",
+        "full_name",
+        "city",
+        "state",
+        "country",
+        "address_type",
+        "is_default",
+    ]
+    list_filter = ["address_type", "is_default", "country"]
+    search_fields = [
+        "full_name",
+        "city",
+        "state",
+        "country",
+        "pincode",
+        "customer__first_name",
+        "customer__last_name",
+        "customer__user__email",
+    ]
+    readonly_fields = ["created", "modified"]
+
+
 @admin.register(CustomerProfile)
 class CustomerProfileAdmin(admin.ModelAdmin[CustomerProfile]):
     list_display = [

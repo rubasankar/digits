@@ -36,6 +36,19 @@ class ProductCategory(MP_Node):  # type: ignore[misc]
         options={"quality": IMAGE_THUMBNAIL_QUALITY},
     )
     is_active = models.BooleanField(_("Active"), default=True)
+    default_tax_class = models.ForeignKey(
+        "pricing.TaxClass",
+        verbose_name=_("Default Tax Class"),
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="+",
+        help_text=_(
+            "Bulk-set default for products in this category. "
+            "Used at product creation time if the product has no tax_class set. "
+            "Not read directly at checkout."
+        ),
+    )
 
     class Meta:
         verbose_name = _("Product Category")

@@ -87,6 +87,33 @@ class Product(BaseModel):
             "Contact a developer to add new fulfilment methods."
         ),
     )
+    tax_class = models.ForeignKey(
+        "pricing.TaxClass",
+        verbose_name=_("Tax Class"),
+        on_delete=models.PROTECT,
+        null=True,
+        blank=True,
+        related_name="products",
+        help_text=_(
+            "Source of truth for tax calculation at checkout. "
+            "Resolves to TaxRate based on customer's country/state. "
+            "If empty, auto-populated from category.default_tax_class on first save."
+        ),
+    )
+    meta_title = models.CharField(
+        _("Meta Title"),
+        max_length=70,
+        blank=True,
+        help_text=_(
+            "SEO title for search engines. Falls back to product name if empty."
+        ),
+    )
+    meta_description = models.CharField(
+        _("Meta Description"),
+        max_length=160,
+        blank=True,
+        help_text=_("SEO description for search results. Max 160 characters."),
+    )
     other_attributes = models.JSONField(
         _("Extra Attributes"),
         default=dict,
@@ -105,10 +132,59 @@ class Product(BaseModel):
 
     def clean(self) -> None:
         super().clean()
+
+        # Auto-populate tax_class from category default when not explicitly set.
+        # This runs at save time so the product always has a resolved tax class
+        # without requiring staff to manually fill it in for every product.
+        if not self.tax_class_id and self.category_id:
+            category_default = getattr(self.category, "default_tax_class", None)
+            if category_default is not None:
+                self.tax_class = category_default
+
         if self.product_type and self.fulfilment_type:
             validate_type_fulfilment_combination(
                 self.product_type, self.fulfilment_type
             )
+        self._validate_shipping_dimensions()
+
+    def _validate_shipping_dimensions(self) -> None:
+        shippable_fulfilment_types = {
+            FulfilmentType.SHIPMENT,
+            FulfilmentType.LOCAL_DELIVERY,
+            FulfilmentType.STORE_PICKUP,
+        }
+
+        if self.fulfilment_type not in shippable_fulfilment_types:
+            return
+
+        other_attrs = self.other_attributes or {}
+
+        # json_key, expected_python_type
+        required_fields: list[tuple[str, type]] = [
+            ("weight", float),
+            ("weight_unit", str),
+            ("length", float),
+            ("length_unit", str),
+            ("width", float),
+            ("width_unit", str),
+            ("height", float),
+            ("height_unit", str),
+        ]
+
+        errors: dict[str, str] = {}
+        for key, expected_type in required_fields:
+            if key not in other_attrs:
+                errors[key] = _("'%(field)s' is required for shippable products.") % {
+                    "field": key
+                }
+            elif not isinstance(other_attrs[key], expected_type):
+                errors[key] = _("'%(field)s' must be %(type)s.") % {
+                    "field": key,
+                    "type": expected_type.__name__,
+                }
+
+        if errors:
+            raise ValidationError({"other_attributes": errors})
 
     def __repr__(self) -> str:
         return f"<Product id={self.id} name={self.name!r} type={self.product_type}>"

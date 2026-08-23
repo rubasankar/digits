@@ -8,6 +8,7 @@ from apps.catalogue.models.attribute import AttributeDefinition
 from .models.product import Product
 from .models.product import ProductVariant
 from .widgets import KeyValueField
+from .widgets import ShippingAttributesField
 from .widgets import UnitSymbolWidget
 
 
@@ -48,7 +49,7 @@ class AttributeDefinitionAdminForm(forms.ModelForm["AttributeDefinition"]):
 
 
 class ProductAdminForm(forms.ModelForm[Product]):
-    other_attributes = KeyValueField()
+    other_attributes = ShippingAttributesField()
 
     class Meta:
         model = Product
@@ -60,11 +61,12 @@ class ProductAdminForm(forms.ModelForm[Product]):
             "brand",
             "product_type",
             "fulfilment_type",
+            "tax_class",
             "other_attributes",
             "is_active",
         ]
 
-    def clean_other_attributes(self) -> dict[str, str]:
+    def clean_other_attributes(self) -> dict[str, Any]:
         return self.cleaned_data.get("other_attributes") or {}
 
 

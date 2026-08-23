@@ -1,6 +1,7 @@
 from typing import TYPE_CHECKING
 from typing import Any
 from typing import cast
+from typing import override
 
 from django.contrib import admin
 from django.core.exceptions import ValidationError
@@ -100,15 +101,14 @@ class StaffProfileAdmin(admin.ModelAdmin[StaffProfile]):
     ) -> bool:
         return bool(getattr(request.user, "is_superuser", False))
 
+    @override
     def save_model(
         self,
         request: HttpRequest,
         obj: StaffProfile,
         form: forms.ModelForm[Any],
-        change: bool,  # noqa: FBT001
+        change: bool,
     ) -> None:
-        """Run full_clean() so StaffProfile.clean()
-        (is_staff check) surfaces in admin."""
         try:
             obj.full_clean()
         except ValidationError as exc:

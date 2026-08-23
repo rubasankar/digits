@@ -66,7 +66,12 @@ class StaffProfile(UUIDModel, TimeStampedModel):
         _("Role / Job Title"),
         max_length=100,
         blank=True,
-        help_text=_("e.g. 'Warehouse Manager', 'Customer Support Agent'."),
+        help_text=_(
+            "Coarse role label. Use Django Groups/Permissions for fine-grained "
+            "access control. This field is for display and broad categorization "
+            "only (e.g. 'Warehouse Manager', 'Customer Support Agent'). "
+            "Staff permissions are controlled via auth.Group assignments."
+        ),
     )
     department = models.ForeignKey(
         StaffDepartment,

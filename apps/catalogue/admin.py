@@ -383,6 +383,7 @@ class ProductAdmin(admin.ModelAdmin[Product]):
                     "brand",
                     "product_type",
                     "fulfilment_type",
+                    "tax_class",
                 )
             },
         ),
@@ -391,14 +392,21 @@ class ProductAdmin(admin.ModelAdmin[Product]):
             {"fields": ("is_active",)},
         ),
         (
-            _("Extra Attributes"),
+            _("Dimensions & Extra Attributes"),
             {
                 "fields": ("other_attributes",),
-                "classes": ("collapse",),
                 "description": _(
-                    "Free-form key/value pairs for this product. "
-                    "These supplement the structured attribute system."
+                    "For shippable products (Shipment / Local Delivery / Store Pickup) "
+                    "the Shipping Dimensions group is shown and required. "
+                    "Use Extra Attributes below it for any additional key/value data."
                 ),
+            },
+        ),
+        (
+            _("SEO"),
+            {
+                "fields": ("meta_title", "meta_description"),
+                "classes": ("collapse",),
             },
         ),
         (

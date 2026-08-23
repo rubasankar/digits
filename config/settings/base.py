@@ -60,12 +60,14 @@ LOCAL_APPS = [
     "apps.catalogue",
     "apps.checkout",
     "apps.customers",
+    "apps.delivery",
     "apps.inventory",
     "apps.notifications",
     "apps.orders",
     "apps.payments",
     "apps.pricing",
     "apps.promotions",
+    "apps.reviews",
     "apps.shipping",
     "apps.shopping",
     "apps.staff",
@@ -214,3 +216,9 @@ MANAGERS = ADMINS
 # Logging -- delegate entirely to the structlog settings module so there is
 # a single source of truth for formatters, handlers, and log levels.
 LOGGING = STRUCTLOG_LOGGING
+
+# Shipping
+# Carrier event codes that indicate a successful delivery.
+SHIPPING_DELIVERED_EVENT_CODES: frozenset[str] = frozenset({"DELIVERED", "DEL", "POD"})
+# carrier_code used to identify the local-delivery CarrierAccount.
+LOCAL_DELIVERY_CARRIER_CODE: str = "local"

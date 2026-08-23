@@ -1,0 +1,45 @@
+name: Test
+
+on:
+  workflow_call:
+    inputs:
+      pytest_args:
+        description: "Additional arguments to pass to pytest."
+        required: false
+        type: string
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version-file: ".python-version"
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          python-version-file: ".python-version"
+          enable-cache: true
+
+      - name: Load environment
+        run: |
+          while IFS='=' read -r key value; do
+            [[ -z "$key" || "$key" == \#* ]] && continue
+            echo "$key=$value" >> "$GITHUB_ENV"
+          done < .envs/.local/.django
+
+      - name: Install dependencies
+        run: uv sync --dev
+
+      - name: Run tests
+        run: uv run pytest ${{ inputs.pytest_args }}

@@ -428,7 +428,6 @@ class AttributeValidation:
             is_required=True,
         ).select_related("definition")
 
-        # Fix: was incorrectly wrapped in an extra list - `[list(...)]`
         all_required = list(required_assignments)
 
         missing = []

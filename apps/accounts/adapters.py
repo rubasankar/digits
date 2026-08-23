@@ -34,8 +34,4 @@ class SocialAccountAdapter(DefaultSocialAccountAdapter):  # type: ignore[misc]
         sociallogin: SocialLogin,
         data: dict[str, Any],
     ) -> UserAccount:
-        """
-        Populate the user from social account data.
-        Username is intentionally omitted -- this app uses email-only auth.
-        """
         return cast("UserAccount", super().populate_user(request, sociallogin, data))

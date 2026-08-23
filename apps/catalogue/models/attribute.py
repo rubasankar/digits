@@ -107,8 +107,8 @@ class AttributeDefinition(UUIDModel, TimeStampedModel):
 
         # If a symbol is set, it must belong to the selected dimension.
         # When dimension is NONE, only the symbols listed under NONE
-        # (percent, ppm, dimensionless) are allowed - not symbols from
-        # other dimension groups.
+        # (percent, ppm, dimensionless) are allowed
+        # not symbols from other dimension groups.
         if self.unit_symbol:
             validate_unit_symbol_matches_dimension(
                 self.unit_dimension, self.unit_symbol

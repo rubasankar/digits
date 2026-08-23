@@ -14,8 +14,6 @@ class UserAdminChangeForm(admin_forms.UserChangeForm[UserAccount]):
 
 
 class UserAdminCreationForm(admin_forms.AdminUserCreationForm[UserAccount]):
-    """Form for User Creation in the Admin Area."""
-
     class Meta(admin_forms.UserCreationForm.Meta):
         model = UserAccount
         fields = ("email",)
@@ -28,7 +26,6 @@ class UserAdminCreationForm(admin_forms.AdminUserCreationForm[UserAccount]):
 class UserSignupForm(SignupForm):  # type: ignore[misc]
     """
     Form rendered on the sign-up screen.
-    Login is email-only; no username field needed.
     """
 
 

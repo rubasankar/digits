@@ -114,7 +114,6 @@ class Shipment(UUIDModel, TimeStampedModel):
         null=True,
         blank=True,
         related_name="shipments",
-        help_text=_("Null for STORE_PICKUP fulfilments."),
     )
     tracking_number = models.CharField(
         _("Tracking Number"),
@@ -145,6 +144,16 @@ class Shipment(UUIDModel, TimeStampedModel):
         verbose_name = _("Shipment")
         verbose_name_plural = _("Shipments")
         ordering = ["-requested_at"]
+        constraints = [
+            # Blank tracking_number is normal pre-label (multiple rows can be
+            # blank at once); once a real tracking number is set it must be
+            # unique so ingest_tracking_event() can look one up unambiguously.
+            models.UniqueConstraint(
+                fields=["tracking_number"],
+                condition=~models.Q(tracking_number=""),
+                name="unique_shipment_tracking_number",
+            ),
+        ]
 
     def __str__(self) -> str:
         return f"Shipment {self.id} [{self.tracking_number or 'no tracking'}]"

@@ -71,14 +71,19 @@ class LocalDeliveryHandler(PhysicalHandoffHandler):
 
 
 class StorePickupHandler(PhysicalHandoffHandler):
-    """Handles STORE_PICKUP fulfilments - creates a Shipment with no carrier label."""
+    """
+    Handles STORE_PICKUP fulfilments entirely within delivery.
+
+    Store pickup never touches a carrier, so unlike ShipmentHandler and
+    LocalDeliveryHandler it does not call into the shipping app at all --
+    Fulfilment.status/shipped_at (stamped by the transition that triggered
+    this dispatch) fully represent "ready for pickup"; FulfilmentService.
+    deliver() (triggered by staff confirming the handoff at the counter)
+    represents "picked up".
+    """
 
     def dispatch(self, fulfilment: Fulfilment) -> None:
-        """Create a Shipment record for counter pickup; no carrier API call."""
-        # Import inside method to avoid circular import with the shipping app.
-
         logger.info(
             "delivery.store_pickup_handler.dispatch",
             fulfilment_id=str(fulfilment.pk),
         )
-        ShippingService.create_shipment(fulfilment)

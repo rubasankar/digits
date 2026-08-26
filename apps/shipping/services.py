@@ -14,7 +14,6 @@ from apps.catalogue.enums import FulfilmentType
 from apps.delivery.models import Fulfilment
 from apps.delivery.services import FulfilmentService
 from apps.shipping.exceptions import ShippingServiceError
-from apps.shipping.models import CarrierAccount
 from apps.shipping.models import Shipment
 from apps.shipping.models import ShippingMethod
 from apps.shipping.models import TrackingEvent
@@ -26,73 +25,18 @@ if TYPE_CHECKING:
 
 logger = structlog.get_logger(__name__)
 
-PHYSICAL_FULFILMENT_TYPES: frozenset[str] = frozenset(
+# Fulfilment types that hand off to a carrier. STORE_PICKUP is physical but
+# is handled by delivery alone -- it never reaches this app.
+CARRIER_FULFILMENT_TYPES: frozenset[str] = frozenset(
     {
         FulfilmentType.SHIPMENT,
         FulfilmentType.LOCAL_DELIVERY,
-        FulfilmentType.STORE_PICKUP,
     }
 )
 
 
 class ShippingService:
     """Handles carrier label generation, shipment records, and tracking ingestion."""
-
-    @classmethod
-    def create_shipment(cls, fulfilment: Fulfilment) -> Shipment:
-        """Create a Shipment record for a physical-group Fulfilment."""
-        if fulfilment.fulfilment_type not in PHYSICAL_FULFILMENT_TYPES:
-            msg = (
-                f"Cannot create shipment for non-physical "
-                f"fulfilment type '{fulfilment.fulfilment_type}'."
-            )
-            raise ValueError(msg)
-
-        if fulfilment.fulfilment_type == FulfilmentType.STORE_PICKUP:
-            shipment = Shipment.objects.create(
-                fulfilment=fulfilment,
-                shipping_method=None,
-                tracking_number="",
-                label_url="",
-                label_data=b"",
-            )
-            logger.info(
-                "shipping.create_shipment.store_pickup",
-                fulfilment_id=str(fulfilment.pk),
-                shipment_id=str(shipment.pk),
-            )
-            return shipment
-
-        carrier: CarrierAccount | None = None
-        if fulfilment.fulfilment_type == FulfilmentType.LOCAL_DELIVERY:
-            local_code: str = getattr(settings, "LOCAL_DELIVERY_CARRIER_CODE", "local")
-            carrier = (
-                CarrierAccount.objects.filter(
-                    carrier_code=local_code,
-                    is_active=True,
-                )
-                .order_by("name")
-                .first()
-            )
-            if carrier is None:
-                logger.warning(
-                    "shipping.create_shipment.no_local_carrier",
-                    carrier_code=local_code,
-                    fulfilment_id=str(fulfilment.pk),
-                )
-
-        shipment = Shipment.objects.create(
-            fulfilment=fulfilment,
-            shipping_method=None,
-        )
-        logger.info(
-            "shipping.create_shipment.created",
-            fulfilment_id=str(fulfilment.pk),
-            fulfilment_type=fulfilment.fulfilment_type,
-            shipment_id=str(shipment.pk),
-            carrier_id=str(carrier.pk) if carrier else None,
-        )
-        return shipment
 
     @classmethod
     def request_label(
@@ -107,9 +51,9 @@ class ShippingService:
             "warehouse",
         ).get(pk=fulfilment_id)
 
-        if fulfilment.fulfilment_type not in PHYSICAL_FULFILMENT_TYPES:
+        if fulfilment.fulfilment_type not in CARRIER_FULFILMENT_TYPES:
             msg = (
-                f"Cannot request label for non-physical "
+                f"Cannot request label for non-carrier "
                 f"fulfilment type '{fulfilment.fulfilment_type}'."
             )
             raise ValueError(msg)
@@ -153,14 +97,15 @@ class ShippingService:
             update_fields=["label_generated_at", "tracking_number", "label_url"]
         )
 
+        # The fulfilment was already moved to SHIPPED by the transition() call
+        # that triggered this dispatch (see FulfilmentService._dispatch_handler);
+        # SHIPPED -> SHIPPED isn't a valid transition, so backfill the
+        # carrier-provided details as a plain field update, not another
+        # transition.
         fulfilment.tracking_number = tracking_number
-        fulfilment.save(update_fields=["tracking_number", "modified"])
+        fulfilment.carrier = carrier_name
+        fulfilment.save(update_fields=["tracking_number", "carrier", "modified"])
 
-        FulfilmentService.ship(
-            fulfilment,
-            tracking_number=tracking_number,
-            carrier=carrier_name,
-        )
         logger.info(
             "shipping.request_label.shipped",
             fulfilment_id=str(fulfilment_id),
@@ -176,9 +121,13 @@ class ShippingService:
         raw_payload: dict[str, Any],
     ) -> TrackingEvent | None:
         """Ingest a carrier tracking event and advance Fulfilment if delivered."""
-        shipment = Shipment.objects.select_related(
-            "fulfilment",
-        ).get(tracking_number=tracking_number)
+        try:
+            shipment = Shipment.objects.select_related(
+                "fulfilment",
+            ).get(tracking_number=tracking_number)
+        except Shipment.DoesNotExist as exc:
+            msg = f"No shipment found for tracking number '{tracking_number}'."
+            raise ShippingServiceError(msg) from exc
 
         fulfilment: Fulfilment = shipment.fulfilment
 

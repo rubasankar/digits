@@ -50,6 +50,7 @@ class FulfilmentAdmin(ModelAdmin):  # type: ignore[misc]
         "order_item",
         "warehouse",
         "fulfilment_type",
+        "status",
         "tracking_number",
         "carrier",
         "dispatch_error",

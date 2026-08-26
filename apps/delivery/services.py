@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import contextlib
 from dataclasses import dataclass
 from dataclasses import field
 from functools import partial
@@ -19,6 +20,7 @@ from apps.delivery.registry import FulfilmentRoutingRegistry
 from apps.inventory.services import StockMovementService
 from apps.orders.enums import OrderStatusEnum
 from apps.orders.service.order import OrderService
+from core.exceptions import InvalidStatusTransitionError as OrderInvalidTransitionError
 
 if TYPE_CHECKING:
     import uuid
@@ -144,9 +146,16 @@ class FulfilmentService:
                 note=note or "",
             )
             if new_status == FulfilmentStatusEnum.SHIPPED:
-                cls._dispatch_handler(fulfilment)
+                cls._maybe_ship_order(fulfilment)
             if new_status == FulfilmentStatusEnum.DELIVERED:
                 cls._maybe_deliver_order(fulfilment)
+
+        if new_status == FulfilmentStatusEnum.SHIPPED:
+            # Dispatch (which may call out to a carrier API) runs post-commit:
+            # the status transition is already durably committed by the time
+            # this fires, so a carrier/network failure can no longer roll it
+            # back, and DB locks aren't held open across external I/O.
+            transaction.on_commit(partial(cls._dispatch_handler_safely, fulfilment))
 
         cls._schedule_post_commit_hooks(
             fulfilment_id=fulfilment_id,
@@ -260,9 +269,36 @@ class FulfilmentService:
         )
         handler_class().dispatch(fulfilment)
 
+    @classmethod
+    def _dispatch_handler_safely(cls, fulfilment: Fulfilment) -> None:
+        """
+        Run the SHIPPED-transition handler post-commit; never let it raise.
+
+        Carrier/label side-effects can't be undone by rolling back the local
+        DB transaction anyway (the transition is already committed by the
+        time this runs), so failures here are recorded on the Fulfilment
+        (visible in FulfilmentAdmin's "Dispatch Error" field) rather than
+        propagated -- there's nothing left upstream to roll back.
+        """
+        try:
+            cls._dispatch_handler(fulfilment)
+        except Exception as exc:
+            logger.exception(
+                "delivery.dispatch_handler.failed",
+                fulfilment_id=str(fulfilment.pk),
+            )
+            cls._record_dispatch_error(fulfilment_id=fulfilment.pk, message=str(exc))
+
     @staticmethod
-    def _maybe_deliver_order(fulfilment: Fulfilment) -> None:
-        """Transition the parent order to DELIVERED if all items are now DELIVERED."""
+    def _maybe_ship_order(fulfilment: Fulfilment) -> None:
+        """
+        Advance the parent order once every fulfillable item has shipped.
+        CANCELLED siblings don't block this. Auto-advances through
+        PROCESSING first if the order hasn't been marked PROCESSING yet --
+        by the time items have physically shipped, that step has obviously
+        already happened, and _ORDER_TRANSITIONS only allows SHIPPED from
+        PROCESSING.
+        """
         order = fulfilment.order_item.order
         sibling_statuses = list(
             Fulfilment.objects.filter(order_item__order=order).values_list(
@@ -271,7 +307,47 @@ class FulfilmentService:
         )
         if not sibling_statuses:
             return
-        if all(s == FulfilmentStatusEnum.DELIVERED for s in sibling_statuses):
+        resolved = {
+            FulfilmentStatusEnum.SHIPPED,
+            FulfilmentStatusEnum.DELIVERED,
+            FulfilmentStatusEnum.CANCELLED,
+        }
+        shipped_or_beyond = {
+            FulfilmentStatusEnum.SHIPPED,
+            FulfilmentStatusEnum.DELIVERED,
+        }
+        if not (
+            all(s in resolved for s in sibling_statuses)
+            and any(s in shipped_or_beyond for s in sibling_statuses)
+        ):
+            return
+
+        with contextlib.suppress(OrderInvalidTransitionError):
+            if order.status == OrderStatusEnum.CONFIRMED:
+                OrderService.transition(order, OrderStatusEnum.PROCESSING)
+            OrderService.transition(order, OrderStatusEnum.SHIPPED)
+
+    @staticmethod
+    def _maybe_deliver_order(fulfilment: Fulfilment) -> None:
+        """
+        Transition the parent order to DELIVERED once every fulfillable item
+        has been delivered. CANCELLED siblings (e.g. an out-of-stock line)
+        don't block this -- they're terminal and were never going to be
+        delivered -- but an order with nothing delivered at all doesn't
+        qualify either.
+        """
+        order = fulfilment.order_item.order
+        sibling_statuses = list(
+            Fulfilment.objects.filter(order_item__order=order).values_list(
+                "status", flat=True
+            )
+        )
+        if not sibling_statuses:
+            return
+        resolved = {FulfilmentStatusEnum.DELIVERED, FulfilmentStatusEnum.CANCELLED}
+        if all(s in resolved for s in sibling_statuses) and any(
+            s == FulfilmentStatusEnum.DELIVERED for s in sibling_statuses
+        ):
             OrderService.transition(order, OrderStatusEnum.DELIVERED)
 
     @classmethod
@@ -338,10 +414,14 @@ class FulfilmentService:
                 quantity=item.quantity,
                 order_item=item,
             )
-        except Exception:
+        except Exception as exc:
             logger.exception(
                 "delivery.post_commit_stock_effects.release_failed",
                 fulfilment_id=str(fulfilment_id),
+            )
+            cls._record_dispatch_error(
+                fulfilment_id=fulfilment_id,
+                message=f"Failed to release stock reservation after shipping: {exc}",
             )
             return
 
@@ -352,10 +432,23 @@ class FulfilmentService:
                 quantity=item.quantity,
                 order_item=item,
             )
-        except Exception:
+        except Exception as exc:
             logger.exception(
                 "delivery.post_commit_stock_effects.sale_failed",
                 fulfilment_id=str(fulfilment_id),
+            )
+            # The reservation was already released above, but the on-hand
+            # quantity decrement failed -- Stock.quantity now overstates
+            # what's actually on hand. Surface this on the Fulfilment (shown
+            # in FulfilmentAdmin's "Dispatch Error" field) since there is no
+            # automatic retry or compensation for a post-commit failure.
+            cls._record_dispatch_error(
+                fulfilment_id=fulfilment_id,
+                message=(
+                    "Stock reservation was released but recording the sale "
+                    f"failed: {exc}. On-hand quantity may be overstated -- "
+                    "reconcile stock manually."
+                ),
             )
 
     @classmethod
@@ -395,8 +488,19 @@ class FulfilmentService:
                 quantity=item.quantity,
                 order_item=item,
             )
-        except Exception:
+        except Exception as exc:
             logger.exception(
                 "delivery.post_commit_release_reservation.release_failed",
                 fulfilment_id=str(fulfilment_id),
             )
+            cls._record_dispatch_error(
+                fulfilment_id=fulfilment_id,
+                message=(
+                    f"Failed to release stock reservation after cancellation: {exc}"
+                ),
+            )
+
+    @classmethod
+    def _record_dispatch_error(cls, *, fulfilment_id: uuid.UUID, message: str) -> None:
+        """Persist a post-commit failure onto the Fulfilment for staff visibility."""
+        Fulfilment.objects.filter(pk=fulfilment_id).update(dispatch_error=message)

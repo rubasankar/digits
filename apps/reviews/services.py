@@ -10,8 +10,8 @@ from django.utils.translation import gettext_lazy as _
 from apps.orders.enums import OrderStatusEnum
 from apps.orders.models import OrderItem
 from core.exceptions import PermissionDeniedError
-from core.models import GlobalSettings
 
+from .feature_flags import reviews_auto_publish_enabled
 from .models import ProductReview
 
 if TYPE_CHECKING:
@@ -61,7 +61,7 @@ class ReviewService:
         )
 
         # 4. Auto-publish
-        is_published = GlobalSettings.get().auto_publish_reviews
+        is_published = reviews_auto_publish_enabled()
 
         # 5. Create
         review = ProductReview(
@@ -181,15 +181,22 @@ class ReviewService:
         """
         Return True when the customer has a verified purchase of the product.
 
-        Fast path: if order_item is provided and ownership was already
-        validated, return True immediately - no extra query needed.
+        Fast path: if order_item is provided (ownership was already
+        validated), confirm it's actually for this product and DELIVERED --
+        a customer could otherwise pass an unrelated order_item to fake a
+        verified badge on a product they never bought.
 
         Slow path: scan the customer's DELIVERED order history for this product.
         """
 
-        # Fast path via direct order_item link.
+        # Fast path via direct order_item link -- still confirms it's for
+        # *this* product and DELIVERED, not just that the customer owns it.
         if order_item is not None:
-            return True
+            return OrderItem.objects.filter(
+                pk=order_item.pk,
+                order__status=OrderStatusEnum.DELIVERED,
+                variant__product=product,
+            ).exists()
 
         # Slow path: any DELIVERED order containing this product.
         return OrderItem.objects.filter(

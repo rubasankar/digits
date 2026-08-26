@@ -76,6 +76,16 @@ class Order(UUIDModel, TimeStampedModel):
         decimal_places=2,
         default=0,
     )
+    shipping_method = models.CharField(
+        _("Shipping Method"),
+        max_length=100,
+        blank=True,
+        help_text=_(
+            "Snapshot of the shipping method name chosen at checkout, e.g. "
+            "'Standard Post'. Blank when the order has no carrier-bound "
+            "items (e.g. store pickup only)."
+        ),
+    )
     tax_amount = models.DecimalField(
         _("Tax Amount"),
         max_digits=12,

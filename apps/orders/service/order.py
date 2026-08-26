@@ -35,6 +35,11 @@ _PHYSICAL_FULFILMENT_TYPES: frozenset[str] = frozenset(
     {"shipment", "local_delivery", "store_pickup"}
 )
 
+# Physical types that hand off to a carrier via the shipping app and therefore
+# need a ShippingMethod selected. store_pickup is physical (consumes warehouse
+# stock) but never touches the shipping app -- it's handled by delivery alone.
+_CARRIER_FULFILMENT_TYPES: frozenset[str] = frozenset({"shipment", "local_delivery"})
+
 
 # Data containers
 
@@ -64,6 +69,9 @@ class PlaceOrderInput:
     coupon_code: str = ""
     notes: str = ""
     shipping_method: uuid.UUID | None = field(default=None)
+    # Name snapshot persisted onto Order.shipping_method for staff/warehouse
+    # visibility; `shipping_method` above is only the id used for validation.
+    shipping_method_name: str = ""
 
 
 # Allowed transitions
@@ -75,7 +83,13 @@ _ORDER_TRANSITIONS: dict[str, set[str]] = {
     OrderStatusEnum.PROCESSING: {OrderStatusEnum.SHIPPED},
     OrderStatusEnum.SHIPPED: {OrderStatusEnum.DELIVERED},
     OrderStatusEnum.DELIVERED: {OrderStatusEnum.RETURN_REQUESTED},
-    OrderStatusEnum.RETURN_REQUESTED: {OrderStatusEnum.RETURNED},
+    # DELIVERED is allowed here too: OrderReturnService restores the order to
+    # DELIVERED when a return request is rejected or cancelled with no other
+    # active return remaining (see _maybe_restore_order_delivered()).
+    OrderStatusEnum.RETURN_REQUESTED: {
+        OrderStatusEnum.RETURNED,
+        OrderStatusEnum.DELIVERED,
+    },
     OrderStatusEnum.CANCELLED: set(),
     OrderStatusEnum.RETURNED: set(),
 }
@@ -94,14 +108,16 @@ class OrderService:
         if not data.lines:
             raise ValueError(_("Cannot place an order with no lines."))
 
-        # Validate: physical-group lines require a shipping_method.
-        has_physical = any(
-            line.variant.product.fulfilment_type in _PHYSICAL_FULFILMENT_TYPES
+        # Validate: carrier-bound lines (shipment/local_delivery) require a
+        # shipping_method. store_pickup is physical too but never touches a
+        # carrier, so it's excluded here.
+        has_carrier_line = any(
+            line.variant.product.fulfilment_type in _CARRIER_FULFILMENT_TYPES
             for line in data.lines
         )
-        if has_physical and data.shipping_method is None:
+        if has_carrier_line and data.shipping_method is None:
             raise ValidationError(
-                _("A shipping method is required for orders with physical items.")
+                _("A shipping method is required for orders with shipped items.")
             )
 
         #  Compute financials
@@ -126,6 +142,7 @@ class OrderService:
             sub_total=sub_total,
             discount_amount=data.discount_amount,
             shipping_cost=data.shipping_cost,
+            shipping_method=data.shipping_method_name,
             tax_amount=tax_amount,
             total_amount=total_amount,
             coupon_code=data.coupon_code,
@@ -275,7 +292,14 @@ class OrderService:
                 continue
 
             try:
-                FulfilmentService.cancel(fulfilment, changed_by=changed_by)
+                # This runs inside transition()'s outer @transaction.atomic
+                # block. Wrap each cancellation in its own savepoint so a
+                # DB-level failure here (e.g. IntegrityError) only rolls back
+                # this fulfilment, instead of aborting the connection and
+                # poisoning the outer transaction (the order's own status
+                # change and history row) for every later statement.
+                with transaction.atomic():
+                    FulfilmentService.cancel(fulfilment, changed_by=changed_by)
             except Exception:
                 logger.exception(
                     "orders.cancel_fulfilments.failed",

@@ -5,6 +5,7 @@ from django.utils.translation import gettext_lazy as _
 from unfold.admin import ModelAdmin
 
 from .models import ProductReview
+from .services import ReviewService
 
 if TYPE_CHECKING:
     from django.db.models import QuerySet
@@ -67,7 +68,7 @@ class ProductReviewAdmin(ModelAdmin):  # type: ignore[misc]
     def publish_reviews(
         self, request: HttpRequest, queryset: QuerySet[ProductReview]
     ) -> None:
-        updated = queryset.update(is_published=True)
+        updated = ReviewService.bulk_publish(queryset)
         self.message_user(
             request, _("%(count)d review(s) published.") % {"count": updated}
         )
@@ -76,7 +77,7 @@ class ProductReviewAdmin(ModelAdmin):  # type: ignore[misc]
     def unpublish_reviews(
         self, request: HttpRequest, queryset: QuerySet[ProductReview]
     ) -> None:
-        updated = queryset.update(is_published=False)
+        updated = ReviewService.bulk_unpublish(queryset)
         self.message_user(
             request, _("%(count)d review(s) unpublished.") % {"count": updated}
         )

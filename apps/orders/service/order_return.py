@@ -50,6 +50,15 @@ _RETURN_TRANSITIONS: dict[str, set[str]] = {
     ReturnRequestStatusEnum.CANCELLED: set(),
 }
 
+# Statuses that DON'T count against a unit's returnability: the return never
+# actually happened (staff rejected it, or the customer cancelled their own
+# request). Deliberately narrower than ReturnRequest.TERMINAL_STATUSES, which
+# also includes COMPLETED -- a completed return did take the units back, so
+# it must keep counting or the same units could be returned/refunded twice.
+_NON_COUNTING_RETURN_STATUSES = frozenset(
+    {ReturnRequestStatusEnum.REJECTED, ReturnRequestStatusEnum.CANCELLED}
+)
+
 
 # Input dataclass
 
@@ -262,6 +271,10 @@ class ReturnRequestService:
         received_quantities: dict[object, int],  # {ReturnRequestItem.pk: qty_received}
         condition_notes: dict[object, str] | None = None,
     ) -> ReturnRequest:
+        items = list(
+            return_request.items.select_related("order_item__variant__product").all()
+        )
+        cls._validate_received_quantities(items, received_quantities)
 
         cls._transition(
             return_request,
@@ -274,9 +287,7 @@ class ReturnRequestService:
         return_request.save(update_fields=["received_at", "modified"])
 
         # Update each line with received quantities and restock.
-        for item in return_request.items.select_related(
-            "order_item__variant__product"
-        ).all():
+        for item in items:
             qty_received = received_quantities.get(item.pk, 0)
             note_text = (condition_notes or {}).get(item.pk, "")
 
@@ -377,8 +388,11 @@ class ReturnRequestService:
         """
         Ensure no line requests more units than are eligible for return.
 
-        Eligible = OrderItem.quantity - units already requested in
-        non-terminal return requests.
+        Eligible = OrderItem.quantity - units already requested in return
+        requests that are still open OR already COMPLETED (those units were
+        actually returned/refunded and can't be returned again). Only
+        REJECTED and CANCELLED requests are excluded, since those never
+        actually took the units back.
         """
         for line in lines:
             oi = line.order_item
@@ -392,7 +406,7 @@ class ReturnRequestService:
                 ReturnRequestItem.objects.filter(
                     order_item=oi,
                 )
-                .exclude(return_request__status__in=ReturnRequest.TERMINAL_STATUSES)
+                .exclude(return_request__status__in=_NON_COUNTING_RETURN_STATUSES)
                 .values_list("quantity_requested", flat=True)
             )
             total_already = sum(already_requested)
@@ -403,6 +417,41 @@ class ReturnRequestService:
                     sku=oi.variant_sku,
                     requested=line.quantity_requested,
                     max_returnable=max_returnable,
+                )
+
+    @classmethod
+    def _validate_received_quantities(
+        cls,
+        items: list[ReturnRequestItem],
+        received_quantities: dict[object, int],
+    ) -> None:
+        """
+        Ensure every supplied qty_received is within [0, quantity_requested].
+
+        The DB CheckConstraint (return_item_received_lte_requested) would
+        also reject an out-of-range value, but only as a raw IntegrityError
+        once ReturnRequestItem.save() runs -- validate up front instead, so
+        a bad input is rejected cleanly before the RECEIVED transition and
+        any restocking happen at all.
+        """
+        for item in items:
+            qty_received = received_quantities.get(item.pk, 0)
+            if not 0 <= qty_received <= item.quantity_requested:
+                raise ReturnQuantityExceededError(
+                    sku=item.order_item.variant_sku,
+                    requested=qty_received,
+                    max_returnable=item.quantity_requested,
+                    message=str(
+                        _(
+                            "Cannot receive %(qty)s unit(s) of '%(sku)s': "
+                            "only %(max)s unit(s) were requested for return."
+                        )
+                        % {
+                            "qty": qty_received,
+                            "sku": item.order_item.variant_sku,
+                            "max": item.quantity_requested,
+                        }
+                    ),
                 )
 
     @classmethod

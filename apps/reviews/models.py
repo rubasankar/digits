@@ -8,7 +8,8 @@ from model_utils.models import TimeStampedModel
 from model_utils.models import UUIDModel
 
 from apps.orders.models import OrderItem
-from core.models import GlobalSettings
+
+from .feature_flags import reviews_auto_publish_enabled
 
 
 class ProductReview(UUIDModel, TimeStampedModel):
@@ -68,7 +69,7 @@ class ProductReview(UUIDModel, TimeStampedModel):
         db_index=True,
         help_text=_(
             "Controls storefront visibility. "
-            "When GlobalSettings.auto_publish_reviews is True this is set "
+            "When the reviews_auto_publish Waffle switch is enabled this is set "
             "automatically on submission. "
             "Otherwise staff set this manually to make the review visible."
         ),
@@ -97,15 +98,13 @@ class ProductReview(UUIDModel, TimeStampedModel):
 
     def save(self, *args: object, **kwargs: object) -> None:
         """
-        Auto-publish on first save when GlobalSettings.auto_publish_reviews is True.
+        Auto-publish on first save when the Waffle switch is enabled.
 
         Only sets is_published on creation (pk is None) to avoid overwriting
         a staff member who has intentionally unpublished a review.
         """
         if self.pk is None and not self.is_published:
-            # Import here to avoid circular imports at module load time.
-
-            if GlobalSettings.get().auto_publish_reviews:
+            if reviews_auto_publish_enabled():
                 self.is_published = True
         super().save(*args, **kwargs)
 

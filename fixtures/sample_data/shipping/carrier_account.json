@@ -1,0 +1,52 @@
+[
+  {
+    "fields": {
+      "credentials": {},
+      "is_active": true,
+      "name": "Local Delivery"
+    },
+    "lookup": {
+      "carrier_code": "local"
+    }
+  },
+  {
+    "fields": {
+      "credentials": {},
+      "is_active": true,
+      "name": "FedEx"
+    },
+    "lookup": {
+      "carrier_code": "fedex"
+    }
+  },
+  {
+    "fields": {
+      "credentials": {},
+      "is_active": true,
+      "name": "UPS"
+    },
+    "lookup": {
+      "carrier_code": "ups"
+    }
+  },
+  {
+    "fields": {
+      "credentials": {},
+      "is_active": true,
+      "name": "DHL Express"
+    },
+    "lookup": {
+      "carrier_code": "dhl"
+    }
+  },
+  {
+    "fields": {
+      "credentials": {},
+      "is_active": true,
+      "name": "USPS"
+    },
+    "lookup": {
+      "carrier_code": "usps"
+    }
+  }
+]

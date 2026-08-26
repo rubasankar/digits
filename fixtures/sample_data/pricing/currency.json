@@ -1,0 +1,90 @@
+[
+  {
+    "fields": {
+      "is_active": true,
+      "is_default": true,
+      "name": "US Dollar",
+      "symbol": "$"
+    },
+    "lookup": {
+      "code": "USD"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_default": false,
+      "name": "Euro",
+      "symbol": "\u20ac"
+    },
+    "lookup": {
+      "code": "EUR"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_default": false,
+      "name": "British Pound",
+      "symbol": "\u00a3"
+    },
+    "lookup": {
+      "code": "GBP"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_default": false,
+      "name": "Indian Rupee",
+      "symbol": "\u20b9"
+    },
+    "lookup": {
+      "code": "INR"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_default": false,
+      "name": "Japanese Yen",
+      "symbol": "\u00a5"
+    },
+    "lookup": {
+      "code": "JPY"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_default": false,
+      "name": "Canadian Dollar",
+      "symbol": "$"
+    },
+    "lookup": {
+      "code": "CAD"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_default": false,
+      "name": "Australian Dollar",
+      "symbol": "$"
+    },
+    "lookup": {
+      "code": "AUD"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_default": false,
+      "name": "UAE Dirham",
+      "symbol": "\u062f.\u0625"
+    },
+    "lookup": {
+      "code": "AED"
+    }
+  }
+]

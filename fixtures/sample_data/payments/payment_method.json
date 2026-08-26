@@ -1,0 +1,79 @@
+[
+  {
+    "fields": {
+      "description": "Pay securely with a credit or debit card",
+      "display_order": 1,
+      "gateway_code": "card",
+      "is_active": true
+    },
+    "lookup": {
+      "name": "Card"
+    }
+  },
+  {
+    "fields": {
+      "description": "Pay using your PayPal account",
+      "display_order": 2,
+      "gateway_code": "paypal",
+      "is_active": true
+    },
+    "lookup": {
+      "name": "PayPal"
+    }
+  },
+  {
+    "fields": {
+      "description": "Pay with cash upon delivery",
+      "display_order": 3,
+      "gateway_code": "cod",
+      "is_active": true
+    },
+    "lookup": {
+      "name": "Cash on Delivery"
+    }
+  },
+  {
+    "fields": {
+      "description": "Pay via direct bank transfer",
+      "display_order": 4,
+      "gateway_code": "bank_transfer",
+      "is_active": true
+    },
+    "lookup": {
+      "name": "Bank Transfer"
+    }
+  },
+  {
+    "fields": {
+      "description": "Pay quickly using Apple Pay",
+      "display_order": 5,
+      "gateway_code": "apple_pay",
+      "is_active": true
+    },
+    "lookup": {
+      "name": "Apple Pay"
+    }
+  },
+  {
+    "fields": {
+      "description": "Pay quickly using Google Pay",
+      "display_order": 6,
+      "gateway_code": "google_pay",
+      "is_active": true
+    },
+    "lookup": {
+      "name": "Google Pay"
+    }
+  },
+  {
+    "fields": {
+      "description": "Pay using store credit balance",
+      "display_order": 7,
+      "gateway_code": "store_credit",
+      "is_active": true
+    },
+    "lookup": {
+      "name": "Store Credit"
+    }
+  }
+]

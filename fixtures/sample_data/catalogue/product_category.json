@@ -1,0 +1,206 @@
+[
+  {
+    "fields": {
+      "default_tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      },
+      "description": "Smartphones, laptops, audio, cameras, and consumer electronics",
+      "image_url": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&q=80&fm=jpg&fit=crop",
+      "is_active": true,
+      "name": "Electronics"
+    },
+    "lookup": {
+      "slug": "electronics"
+    }
+  },
+  {
+    "fields": {
+      "default_tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      },
+      "description": "Men's, women's, and kids' clothing, shoes, and accessories",
+      "image_url": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80&fm=jpg&fit=crop",
+      "is_active": true,
+      "name": "Clothing & Apparel"
+    },
+    "lookup": {
+      "slug": "clothing-apparel"
+    }
+  },
+  {
+    "fields": {
+      "default_tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      },
+      "description": "Furniture, appliances, cookware, and home essentials",
+      "image_url": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80&fm=jpg&fit=crop",
+      "is_active": true,
+      "name": "Home & Kitchen"
+    },
+    "lookup": {
+      "slug": "home-kitchen"
+    }
+  },
+  {
+    "fields": {
+      "default_tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      },
+      "description": "Skincare, cosmetics, fragrances, and personal grooming",
+      "image_url": "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&q=80&fm=jpg&fit=crop",
+      "is_active": true,
+      "name": "Beauty & Personal Care"
+    },
+    "lookup": {
+      "slug": "beauty-personal-care"
+    }
+  },
+  {
+    "fields": {
+      "default_tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      },
+      "description": "Fitness gear, gym equipment, camping, and outdoor sports",
+      "image_url": "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=600&q=80&fm=jpg&fit=crop",
+      "is_active": true,
+      "name": "Sports & Outdoors"
+    },
+    "lookup": {
+      "slug": "sports-outdoors"
+    }
+  },
+  {
+    "fields": {
+      "default_tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "digital-goods-tax"
+        }
+      },
+      "description": "Software, e-books, courses, licenses, and digital downloads",
+      "image_url": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80&fm=jpg&fit=crop",
+      "is_active": true,
+      "name": "Digital Goods"
+    },
+    "lookup": {
+      "slug": "digital-goods"
+    }
+  },
+  {
+    "fields": {
+      "default_tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "zero-tax"
+        }
+      },
+      "description": "Physical books, notebooks, pens, art supplies, and office stationery",
+      "image_url": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600&q=80&fm=jpg&fit=crop",
+      "is_active": true,
+      "name": "Books & Stationery"
+    },
+    "lookup": {
+      "slug": "books-stationery"
+    }
+  },
+  {
+    "fields": {
+      "default_tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      },
+      "description": "Vitamins, supplements, medical devices, and wellness products",
+      "image_url": "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=600&q=80&fm=jpg&fit=crop",
+      "is_active": true,
+      "name": "Health & Wellness"
+    },
+    "lookup": {
+      "slug": "health-wellness"
+    }
+  },
+  {
+    "fields": {
+      "default_tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      },
+      "description": "Artisan foods, specialty drinks, snacks, and pantry staples",
+      "image_url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80&fm=jpg&fit=crop",
+      "is_active": true,
+      "name": "Food & Beverages"
+    },
+    "lookup": {
+      "slug": "food-beverages"
+    }
+  },
+  {
+    "fields": {
+      "default_tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      },
+      "description": "Car accessories, tools, electronics, and maintenance products",
+      "image_url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&q=80&fm=jpg&fit=crop",
+      "is_active": true,
+      "name": "Automotive"
+    },
+    "lookup": {
+      "slug": "automotive"
+    }
+  },
+  {
+    "fields": {
+      "default_tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      },
+      "description": "Board games, action figures, puzzles, and educational toys",
+      "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&fm=jpg&fit=crop",
+      "is_active": true,
+      "name": "Toys & Games"
+    },
+    "lookup": {
+      "slug": "toys-games"
+    }
+  },
+  {
+    "fields": {
+      "default_tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      },
+      "description": "Desks, chairs, organizers, printing supplies, and workspace accessories",
+      "image_url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80&fm=jpg&fit=crop",
+      "is_active": true,
+      "name": "Office Supplies"
+    },
+    "lookup": {
+      "slug": "office-supplies"
+    }
+  }
+]

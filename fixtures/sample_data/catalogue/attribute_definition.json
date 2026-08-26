@@ -1,0 +1,409 @@
+[
+  {
+    "fields": {
+      "label": "Colour",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "single_select"
+    },
+    "lookup": {
+      "name": "colour"
+    }
+  },
+  {
+    "fields": {
+      "label": "Size",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "single_select"
+    },
+    "lookup": {
+      "name": "size"
+    }
+  },
+  {
+    "fields": {
+      "label": "Material",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "single_select"
+    },
+    "lookup": {
+      "name": "material"
+    }
+  },
+  {
+    "fields": {
+      "label": "Weight",
+      "unit_dimension": "mass",
+      "unit_symbol": "gram",
+      "value_type": "decimal"
+    },
+    "lookup": {
+      "name": "weight_g"
+    }
+  },
+  {
+    "fields": {
+      "label": "Storage Capacity",
+      "unit_dimension": "storage",
+      "unit_symbol": "gigabyte",
+      "value_type": "integer"
+    },
+    "lookup": {
+      "name": "storage_gb"
+    }
+  },
+  {
+    "fields": {
+      "label": "RAM",
+      "unit_dimension": "storage",
+      "unit_symbol": "gigabyte",
+      "value_type": "integer"
+    },
+    "lookup": {
+      "name": "ram_gb"
+    }
+  },
+  {
+    "fields": {
+      "label": "Screen Size",
+      "unit_dimension": "length",
+      "unit_symbol": "inch",
+      "value_type": "decimal"
+    },
+    "lookup": {
+      "name": "screen_size_in"
+    }
+  },
+  {
+    "fields": {
+      "label": "Battery Life",
+      "unit_dimension": "time_unit",
+      "unit_symbol": "hour",
+      "value_type": "integer"
+    },
+    "lookup": {
+      "name": "battery_life_h"
+    }
+  },
+  {
+    "fields": {
+      "label": "Connectivity",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "multi_select"
+    },
+    "lookup": {
+      "name": "connectivity"
+    }
+  },
+  {
+    "fields": {
+      "label": "Operating System",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "single_select"
+    },
+    "lookup": {
+      "name": "os_platform"
+    }
+  },
+  {
+    "fields": {
+      "label": "Gender",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "single_select"
+    },
+    "lookup": {
+      "name": "gender"
+    }
+  },
+  {
+    "fields": {
+      "label": "Fit",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "single_select"
+    },
+    "lookup": {
+      "name": "fit_type"
+    }
+  },
+  {
+    "fields": {
+      "label": "US Shoe Size",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "single_select"
+    },
+    "lookup": {
+      "name": "shoe_size_us"
+    }
+  },
+  {
+    "fields": {
+      "label": "Scent Profile",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "single_select"
+    },
+    "lookup": {
+      "name": "scent_profile"
+    }
+  },
+  {
+    "fields": {
+      "label": "Skin Type",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "multi_select"
+    },
+    "lookup": {
+      "name": "skin_type"
+    }
+  },
+  {
+    "fields": {
+      "label": "Volume",
+      "unit_dimension": "volume",
+      "unit_symbol": "milliliter",
+      "value_type": "integer"
+    },
+    "lookup": {
+      "name": "volume_ml"
+    }
+  },
+  {
+    "fields": {
+      "label": "Flavour",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "single_select"
+    },
+    "lookup": {
+      "name": "flavour"
+    }
+  },
+  {
+    "fields": {
+      "label": "Roast Level",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "single_select"
+    },
+    "lookup": {
+      "name": "roast_level"
+    }
+  },
+  {
+    "fields": {
+      "label": "Author",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "text"
+    },
+    "lookup": {
+      "name": "author"
+    }
+  },
+  {
+    "fields": {
+      "label": "Format",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "single_select"
+    },
+    "lookup": {
+      "name": "book_format"
+    }
+  },
+  {
+    "fields": {
+      "label": "Page Count",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "integer"
+    },
+    "lookup": {
+      "name": "page_count"
+    }
+  },
+  {
+    "fields": {
+      "label": "Language",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "single_select"
+    },
+    "lookup": {
+      "name": "language"
+    }
+  },
+  {
+    "fields": {
+      "label": "Age Range",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "single_select"
+    },
+    "lookup": {
+      "name": "age_range"
+    }
+  },
+  {
+    "fields": {
+      "label": "Player Count",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "single_select"
+    },
+    "lookup": {
+      "name": "player_count"
+    }
+  },
+  {
+    "fields": {
+      "label": "Game Duration",
+      "unit_dimension": "time_unit",
+      "unit_symbol": "minute",
+      "value_type": "integer"
+    },
+    "lookup": {
+      "name": "duration_min"
+    }
+  },
+  {
+    "fields": {
+      "label": "Vehicle Compatibility",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "text"
+    },
+    "lookup": {
+      "name": "compatible_vehicles"
+    }
+  },
+  {
+    "fields": {
+      "label": "Supplement Form",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "single_select"
+    },
+    "lookup": {
+      "name": "supplement_form"
+    }
+  },
+  {
+    "fields": {
+      "label": "Certification",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "multi_select"
+    },
+    "lookup": {
+      "name": "certification"
+    }
+  },
+  {
+    "fields": {
+      "label": "Platform Support",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "multi_select"
+    },
+    "lookup": {
+      "name": "software_platform"
+    }
+  },
+  {
+    "fields": {
+      "label": "License Duration",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "single_select"
+    },
+    "lookup": {
+      "name": "license_duration"
+    }
+  },
+  {
+    "fields": {
+      "label": "Difficulty Level",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "single_select"
+    },
+    "lookup": {
+      "name": "difficulty_level"
+    }
+  },
+  {
+    "fields": {
+      "label": "Pack Quantity",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "integer"
+    },
+    "lookup": {
+      "name": "pack_quantity"
+    }
+  },
+  {
+    "fields": {
+      "label": "Power",
+      "unit_dimension": "power",
+      "unit_symbol": "watt",
+      "value_type": "integer"
+    },
+    "lookup": {
+      "name": "power_w"
+    }
+  },
+  {
+    "fields": {
+      "label": "Country of Origin",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "single_select"
+    },
+    "lookup": {
+      "name": "brand_country"
+    }
+  },
+  {
+    "fields": {
+      "label": "Vegan",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "boolean"
+    },
+    "lookup": {
+      "name": "is_vegan"
+    }
+  },
+  {
+    "fields": {
+      "label": "Organic",
+      "unit_dimension": "none",
+      "unit_symbol": "",
+      "value_type": "boolean"
+    },
+    "lookup": {
+      "name": "is_organic"
+    }
+  },
+  {
+    "fields": {
+      "label": "Warranty",
+      "unit_dimension": "time_unit",
+      "unit_symbol": "month",
+      "value_type": "integer"
+    },
+    "lookup": {
+      "name": "warranty_months"
+    }
+  }
+]

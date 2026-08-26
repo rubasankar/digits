@@ -1,0 +1,200 @@
+[
+  {
+    "fields": {
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": true,
+      "password": "pbkdf2_sha256$870000$samplehashADMIN$hashed+placeholder+admin+password="
+    },
+    "lookup": {
+      "email": "admin@digits.store"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$870000$samplehashOPS01$hashed+placeholder+ops+manager="
+    },
+    "lookup": {
+      "email": "ops.manager@digits.store"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$870000$samplehashSUP01$hashed+placeholder+support+lead="
+    },
+    "lookup": {
+      "email": "support.lead@digits.store"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$870000$samplehashWH01$hashed+placeholder+warehouse+la="
+    },
+    "lookup": {
+      "email": "warehouse.la@digits.store"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$870000$samplehashWH02$hashed+placeholder+warehouse+ny="
+    },
+    "lookup": {
+      "email": "warehouse.ny@digits.store"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$870000$samplehashFIN01$hashed+placeholder+finance+analyst="
+    },
+    "lookup": {
+      "email": "finance.analyst@digits.store"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$870000$samplehashMKT01$hashed+placeholder+marketing+exec="
+    },
+    "lookup": {
+      "email": "marketing.exec@digits.store"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$870000$samplehashIT01$hashed+placeholder+it+support="
+    },
+    "lookup": {
+      "email": "it.support@digits.store"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$870000$samplehashCUST01$hashed+placeholder+customer+01="
+    },
+    "lookup": {
+      "email": "james.carter@example.com"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$870000$samplehashCUST02$hashed+placeholder+customer+02="
+    },
+    "lookup": {
+      "email": "sophia.nguyen@example.com"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$870000$samplehashCUST03$hashed+placeholder+customer+03="
+    },
+    "lookup": {
+      "email": "liam.oconnor@example.com"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$870000$samplehashCUST04$hashed+placeholder+customer+04="
+    },
+    "lookup": {
+      "email": "amara.osei@example.com"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$870000$samplehashCUST05$hashed+placeholder+customer+05="
+    },
+    "lookup": {
+      "email": "priya.sharma@example.com"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$870000$samplehashCUST06$hashed+placeholder+customer+06="
+    },
+    "lookup": {
+      "email": "carlos.reyes@example.com"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$870000$samplehashCUST07$hashed+placeholder+customer+07="
+    },
+    "lookup": {
+      "email": "emily.watson@example.com"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$870000$samplehashCUST08$hashed+placeholder+customer+08="
+    },
+    "lookup": {
+      "email": "noah.thompson@example.com"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$870000$samplehashCUST09$hashed+placeholder+customer+09="
+    },
+    "lookup": {
+      "email": "fatima.malik@example.com"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$870000$samplehashCUST10$hashed+placeholder+customer+10="
+    },
+    "lookup": {
+      "email": "oliver.kim@example.com"
+    }
+  }
+]

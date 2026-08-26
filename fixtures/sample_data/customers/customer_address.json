@@ -1,0 +1,338 @@
+[
+  {
+    "fields": {
+      "address_line1": "742 Evergreen Terrace",
+      "address_line2": "Apt 3B",
+      "city": "Los Angeles",
+      "contact_number": "+12135558001",
+      "country": "US",
+      "full_name": "James Carter",
+      "landmark": "",
+      "pincode": "90028",
+      "state": "California"
+    },
+    "lookup": {
+      "address_type": "BOTH",
+      "customer": {
+        "$ref": "customer profile",
+        "lookup": {
+          "user": {
+            "$ref": "user account",
+            "lookup": {
+              "email": "james.carter@example.com"
+            }
+          }
+        }
+      },
+      "is_default": true
+    }
+  },
+  {
+    "fields": {
+      "address_line1": "1820 Lincoln Avenue",
+      "address_line2": "",
+      "city": "San Jose",
+      "contact_number": "+14085558002",
+      "country": "US",
+      "full_name": "Sophia Nguyen",
+      "landmark": "Near San Jose Tech Campus",
+      "pincode": "95126",
+      "state": "California"
+    },
+    "lookup": {
+      "address_type": "SHIP",
+      "customer": {
+        "$ref": "customer profile",
+        "lookup": {
+          "user": {
+            "$ref": "user account",
+            "lookup": {
+              "email": "sophia.nguyen@example.com"
+            }
+          }
+        }
+      },
+      "is_default": true
+    }
+  },
+  {
+    "fields": {
+      "address_line1": "980 University Avenue",
+      "address_line2": "Suite 200",
+      "city": "Palo Alto",
+      "contact_number": "+14085558002",
+      "country": "US",
+      "full_name": "Sophia Nguyen",
+      "landmark": "",
+      "pincode": "94301",
+      "state": "California"
+    },
+    "lookup": {
+      "address_type": "BILL",
+      "customer": {
+        "$ref": "customer profile",
+        "lookup": {
+          "user": {
+            "$ref": "user account",
+            "lookup": {
+              "email": "sophia.nguyen@example.com"
+            }
+          }
+        }
+      },
+      "is_default": true
+    }
+  },
+  {
+    "fields": {
+      "address_line1": "455 N Michigan Avenue",
+      "address_line2": "Floor 12",
+      "city": "Chicago",
+      "contact_number": "+13125558003",
+      "country": "US",
+      "full_name": "Liam O'Connor",
+      "landmark": "Magnificent Mile",
+      "pincode": "60611",
+      "state": "Illinois"
+    },
+    "lookup": {
+      "address_type": "BOTH",
+      "customer": {
+        "$ref": "customer profile",
+        "lookup": {
+          "user": {
+            "$ref": "user account",
+            "lookup": {
+              "email": "liam.oconnor@example.com"
+            }
+          }
+        }
+      },
+      "is_default": true
+    }
+  },
+  {
+    "fields": {
+      "address_line1": "38 Bedford Avenue",
+      "address_line2": "",
+      "city": "Brooklyn",
+      "contact_number": "+17185558004",
+      "country": "US",
+      "full_name": "Amara Osei",
+      "landmark": "Williamsburg",
+      "pincode": "11211",
+      "state": "New York"
+    },
+    "lookup": {
+      "address_type": "BOTH",
+      "customer": {
+        "$ref": "customer profile",
+        "lookup": {
+          "user": {
+            "$ref": "user account",
+            "lookup": {
+              "email": "amara.osei@example.com"
+            }
+          }
+        }
+      },
+      "is_default": true
+    }
+  },
+  {
+    "fields": {
+      "address_line1": "220 Bay Street",
+      "address_line2": "Apt 9A",
+      "city": "San Francisco",
+      "contact_number": "+14155558005",
+      "country": "US",
+      "full_name": "Priya Sharma",
+      "landmark": "",
+      "pincode": "94107",
+      "state": "California"
+    },
+    "lookup": {
+      "address_type": "SHIP",
+      "customer": {
+        "$ref": "customer profile",
+        "lookup": {
+          "user": {
+            "$ref": "user account",
+            "lookup": {
+              "email": "priya.sharma@example.com"
+            }
+          }
+        }
+      },
+      "is_default": true
+    }
+  },
+  {
+    "fields": {
+      "address_line1": "1100 Brickell Avenue",
+      "address_line2": "Unit 2204",
+      "city": "Miami",
+      "contact_number": "+13055558006",
+      "country": "US",
+      "full_name": "Carlos Reyes",
+      "landmark": "Brickell Financial District",
+      "pincode": "33131",
+      "state": "Florida"
+    },
+    "lookup": {
+      "address_type": "BOTH",
+      "customer": {
+        "$ref": "customer profile",
+        "lookup": {
+          "user": {
+            "$ref": "user account",
+            "lookup": {
+              "email": "carlos.reyes@example.com"
+            }
+          }
+        }
+      },
+      "is_default": true
+    }
+  },
+  {
+    "fields": {
+      "address_line1": "600 Massachusetts Avenue NW",
+      "address_line2": "",
+      "city": "Washington",
+      "contact_number": "+12025558007",
+      "country": "US",
+      "full_name": "Emily Watson",
+      "landmark": "Near Capitol Hill",
+      "pincode": "20001",
+      "state": "District of Columbia"
+    },
+    "lookup": {
+      "address_type": "BOTH",
+      "customer": {
+        "$ref": "customer profile",
+        "lookup": {
+          "user": {
+            "$ref": "user account",
+            "lookup": {
+              "email": "emily.watson@example.com"
+            }
+          }
+        }
+      },
+      "is_default": true
+    }
+  },
+  {
+    "fields": {
+      "address_line1": "3200 Main Street",
+      "address_line2": "Suite 110",
+      "city": "Houston",
+      "contact_number": "+17135558008",
+      "country": "US",
+      "full_name": "Noah Thompson",
+      "landmark": "Medical Center District",
+      "pincode": "77002",
+      "state": "Texas"
+    },
+    "lookup": {
+      "address_type": "BOTH",
+      "customer": {
+        "$ref": "customer profile",
+        "lookup": {
+          "user": {
+            "$ref": "user account",
+            "lookup": {
+              "email": "noah.thompson@example.com"
+            }
+          }
+        }
+      },
+      "is_default": true
+    }
+  },
+  {
+    "fields": {
+      "address_line1": "77 Hudson Street",
+      "address_line2": "Apt 14C",
+      "city": "Jersey City",
+      "contact_number": "+12015558009",
+      "country": "US",
+      "full_name": "Fatima Malik",
+      "landmark": "Jersey City Waterfront",
+      "pincode": "07302",
+      "state": "New Jersey"
+    },
+    "lookup": {
+      "address_type": "BOTH",
+      "customer": {
+        "$ref": "customer profile",
+        "lookup": {
+          "user": {
+            "$ref": "user account",
+            "lookup": {
+              "email": "fatima.malik@example.com"
+            }
+          }
+        }
+      },
+      "is_default": true
+    }
+  },
+  {
+    "fields": {
+      "address_line1": "925 NW 11th Avenue",
+      "address_line2": "",
+      "city": "Portland",
+      "contact_number": "+15035558010",
+      "country": "US",
+      "full_name": "Oliver Kim",
+      "landmark": "Pearl District",
+      "pincode": "97209",
+      "state": "Oregon"
+    },
+    "lookup": {
+      "address_type": "SHIP",
+      "customer": {
+        "$ref": "customer profile",
+        "lookup": {
+          "user": {
+            "$ref": "user account",
+            "lookup": {
+              "email": "oliver.kim@example.com"
+            }
+          }
+        }
+      },
+      "is_default": true
+    }
+  },
+  {
+    "fields": {
+      "address_line1": "1211 SW 5th Avenue",
+      "address_line2": "Suite 3000",
+      "city": "Portland",
+      "contact_number": "+15035558010",
+      "country": "US",
+      "full_name": "Oliver Kim",
+      "landmark": "Downtown Portland",
+      "pincode": "97204",
+      "state": "Oregon"
+    },
+    "lookup": {
+      "address_type": "BILL",
+      "customer": {
+        "$ref": "customer profile",
+        "lookup": {
+          "user": {
+            "$ref": "user account",
+            "lookup": {
+              "email": "oliver.kim@example.com"
+            }
+          }
+        }
+      },
+      "is_default": true
+    }
+  }
+]

@@ -1,0 +1,200 @@
+[
+  {
+    "fields": {
+      "discount": {
+        "$ref": "discount",
+        "lookup": {
+          "slug": "back-to-school-cart-10pct"
+        }
+      },
+      "is_active": true,
+      "usage_limit_per_user": 1,
+      "usage_limit_total": 2000,
+      "valid_from": "2026-08-01T00:00:00Z",
+      "valid_to": "2026-09-15T23:59:59Z"
+    },
+    "lookup": {
+      "code": "SCHOOL10"
+    }
+  },
+  {
+    "fields": {
+      "discount": {
+        "$ref": "discount",
+        "lookup": {
+          "slug": "back-to-school-electronics-15pct"
+        }
+      },
+      "is_active": true,
+      "usage_limit_per_user": 1,
+      "usage_limit_total": null,
+      "valid_from": "2026-08-01T00:00:00Z",
+      "valid_to": "2026-09-15T23:59:59Z"
+    },
+    "lookup": {
+      "code": "TECHBACK15"
+    }
+  },
+  {
+    "fields": {
+      "discount": {
+        "$ref": "discount",
+        "lookup": {
+          "slug": "labour-day-free-shipping"
+        }
+      },
+      "is_active": true,
+      "usage_limit_per_user": 2,
+      "usage_limit_total": null,
+      "valid_from": "2026-08-29T00:00:00Z",
+      "valid_to": "2026-09-01T23:59:59Z"
+    },
+    "lookup": {
+      "code": "LABORFREESHIP"
+    }
+  },
+  {
+    "fields": {
+      "discount": {
+        "$ref": "discount",
+        "lookup": {
+          "slug": "labour-day-apparel-20pct"
+        }
+      },
+      "is_active": true,
+      "usage_limit_per_user": 1,
+      "usage_limit_total": null,
+      "valid_from": "2026-08-29T00:00:00Z",
+      "valid_to": "2026-09-01T23:59:59Z"
+    },
+    "lookup": {
+      "code": "STYLE20"
+    }
+  },
+  {
+    "fields": {
+      "discount": {
+        "$ref": "discount",
+        "lookup": {
+          "slug": "digital-month-25pct"
+        }
+      },
+      "is_active": true,
+      "usage_limit_per_user": 1,
+      "usage_limit_total": null,
+      "valid_from": "2026-09-01T00:00:00Z",
+      "valid_to": "2026-09-30T23:59:59Z"
+    },
+    "lookup": {
+      "code": "DIGITAL25"
+    }
+  },
+  {
+    "fields": {
+      "discount": {
+        "$ref": "discount",
+        "lookup": {
+          "slug": "digital-month-25pct"
+        }
+      },
+      "is_active": true,
+      "usage_limit_per_user": 1,
+      "usage_limit_total": 500,
+      "valid_from": "2026-09-01T00:00:00Z",
+      "valid_to": "2026-09-30T23:59:59Z"
+    },
+    "lookup": {
+      "code": "LEARNMORE25"
+    }
+  },
+  {
+    "fields": {
+      "discount": {
+        "$ref": "discount",
+        "lookup": {
+          "slug": "black-friday-sitewide-25pct"
+        }
+      },
+      "is_active": false,
+      "usage_limit_per_user": 1,
+      "usage_limit_total": null,
+      "valid_from": "2026-11-27T00:00:00Z",
+      "valid_to": "2026-11-27T23:59:59Z"
+    },
+    "lookup": {
+      "code": "BF25"
+    }
+  },
+  {
+    "fields": {
+      "discount": {
+        "$ref": "discount",
+        "lookup": {
+          "slug": "cyber-monday-electronics-30pct"
+        }
+      },
+      "is_active": false,
+      "usage_limit_per_user": 1,
+      "usage_limit_total": null,
+      "valid_from": "2026-11-30T00:00:00Z",
+      "valid_to": "2026-11-30T23:59:59Z"
+    },
+    "lookup": {
+      "code": "CYBERDEAL30"
+    }
+  },
+  {
+    "fields": {
+      "discount": {
+        "$ref": "discount",
+        "lookup": {
+          "slug": "new-member-fixed-10"
+        }
+      },
+      "is_active": true,
+      "usage_limit_per_user": 1,
+      "usage_limit_total": null,
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_to": "2026-12-31T23:59:59Z"
+    },
+    "lookup": {
+      "code": "WELCOME10"
+    }
+  },
+  {
+    "fields": {
+      "discount": {
+        "$ref": "discount",
+        "lookup": {
+          "slug": "sports-clearance-running-shoes"
+        }
+      },
+      "is_active": true,
+      "usage_limit_per_user": 2,
+      "usage_limit_total": 500,
+      "valid_from": "2026-08-15T00:00:00Z",
+      "valid_to": "2026-08-31T23:59:59Z"
+    },
+    "lookup": {
+      "code": "RUNFAST22"
+    }
+  },
+  {
+    "fields": {
+      "discount": {
+        "$ref": "discount",
+        "lookup": {
+          "slug": "sports-clearance-sports-fixed-5"
+        }
+      },
+      "is_active": true,
+      "usage_limit_per_user": 1,
+      "usage_limit_total": null,
+      "valid_from": "2026-08-15T00:00:00Z",
+      "valid_to": "2026-08-31T23:59:59Z"
+    },
+    "lookup": {
+      "code": "LIFT5"
+    }
+  }
+]

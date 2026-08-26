@@ -1,0 +1,38 @@
+[
+  {
+    "fields": {
+      "description": "Default tax rate applied to most physical goods",
+      "name": "Standard Tax"
+    },
+    "lookup": {
+      "slug": "standard-tax"
+    }
+  },
+  {
+    "fields": {
+      "description": "Lower tax rate applied to essential goods",
+      "name": "Reduced Tax"
+    },
+    "lookup": {
+      "slug": "reduced-tax"
+    }
+  },
+  {
+    "fields": {
+      "description": "No tax applied, used for exempt goods and services",
+      "name": "Zero Tax"
+    },
+    "lookup": {
+      "slug": "zero-tax"
+    }
+  },
+  {
+    "fields": {
+      "description": "Tax rate applied to digital and downloadable products",
+      "name": "Digital Goods Tax"
+    },
+    "lookup": {
+      "slug": "digital-goods-tax"
+    }
+  }
+]

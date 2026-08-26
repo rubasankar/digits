@@ -1,0 +1,102 @@
+[
+  {
+    "fields": {
+      "address_line1": "2201 E 26th St",
+      "address_line2": "",
+      "city": "Los Angeles",
+      "code": "LA-01",
+      "contact_number": "+13234680100",
+      "country": "US",
+      "description": "Primary US west coast fulfilment hub serving California and neighbouring states.",
+      "is_active": true,
+      "landmark": "Near Downtown LA Industrial Zone",
+      "name": "Los Angeles Distribution Center",
+      "pincode": "90058",
+      "priority": 10,
+      "state": "California"
+    },
+    "lookup": {
+      "slug": "los-angeles-dc"
+    }
+  },
+  {
+    "fields": {
+      "address_line1": "550 West 34th Street",
+      "address_line2": "Suite 400",
+      "city": "New York",
+      "code": "NY-01",
+      "contact_number": "+12128881000",
+      "country": "US",
+      "description": "East coast hub serving New York, New Jersey, and the broader north-east region.",
+      "is_active": true,
+      "landmark": "Hudson Yards District",
+      "name": "New York Fulfilment Centre",
+      "pincode": "10001",
+      "priority": 9,
+      "state": "New York"
+    },
+    "lookup": {
+      "slug": "new-york-fulfillment"
+    }
+  },
+  {
+    "fields": {
+      "address_line1": "12 Bermondsey Street",
+      "address_line2": "Unit 7",
+      "city": "London",
+      "code": "LDN-01",
+      "contact_number": "+442071234567",
+      "country": "GB",
+      "description": "UK and Europe primary stock holding and dispatch site.",
+      "is_active": true,
+      "landmark": "Bermondsey Leather Market area",
+      "name": "London Warehouse",
+      "pincode": "SE1 3XJ",
+      "priority": 8,
+      "state": "England"
+    },
+    "lookup": {
+      "slug": "london-warehouse"
+    }
+  },
+  {
+    "fields": {
+      "address_line1": "47 McEvoy Street",
+      "address_line2": "",
+      "city": "Sydney",
+      "code": "SYD-01",
+      "contact_number": "+61291234567",
+      "country": "AU",
+      "description": "Australia and New Zealand fulfilment depot.",
+      "is_active": true,
+      "landmark": "Alexandria Industrial Estate",
+      "name": "Sydney Depot",
+      "pincode": "2015",
+      "priority": 6,
+      "state": "New South Wales"
+    },
+    "lookup": {
+      "slug": "sydney-depot"
+    }
+  },
+  {
+    "fields": {
+      "address_line1": "3210 Commerce Street",
+      "address_line2": "",
+      "city": "Dallas",
+      "code": "DAL-STORE",
+      "contact_number": "+12145550199",
+      "country": "US",
+      "description": "Retail showroom and click-and-collect pickup point for store_pickup fulfilment.",
+      "is_active": true,
+      "landmark": "Deep Ellum neighbourhood",
+      "name": "Dallas Store & Pickup Point",
+      "pincode": "75226",
+      "priority": 5,
+      "state": "Texas"
+    },
+    "lookup": {
+      "slug": "dallas-store-pickup"
+    }
+  }
+]

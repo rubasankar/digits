@@ -1,0 +1,2355 @@
+[
+  {
+    "fields": {
+      "display_order": 1,
+      "is_active": true,
+      "label": "Midnight Black",
+      "metadata": {
+        "hex": "#1a1a1a"
+      }
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "value": "midnight-black"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 2,
+      "is_active": true,
+      "label": "Pearl White",
+      "metadata": {
+        "hex": "#f5f5f0"
+      }
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "value": "pearl-white"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 3,
+      "is_active": true,
+      "label": "Navy Blue",
+      "metadata": {
+        "hex": "#001f5b"
+      }
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "value": "navy-blue"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 4,
+      "is_active": true,
+      "label": "Forest Green",
+      "metadata": {
+        "hex": "#228b22"
+      }
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "value": "forest-green"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 5,
+      "is_active": true,
+      "label": "Charcoal Grey",
+      "metadata": {
+        "hex": "#36454f"
+      }
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "value": "charcoal-grey"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 6,
+      "is_active": true,
+      "label": "Rose Gold",
+      "metadata": {
+        "hex": "#b76e79"
+      }
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "value": "rose-gold"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 7,
+      "is_active": true,
+      "label": "Crimson Red",
+      "metadata": {
+        "hex": "#dc143c"
+      }
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "value": "crimson-red"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 8,
+      "is_active": true,
+      "label": "Sky Blue",
+      "metadata": {
+        "hex": "#87ceeb"
+      }
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "value": "sky-blue"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 9,
+      "is_active": true,
+      "label": "Sand Beige",
+      "metadata": {
+        "hex": "#c2a882"
+      }
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "value": "sand-beige"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 10,
+      "is_active": true,
+      "label": "Lavender",
+      "metadata": {
+        "hex": "#967bb6"
+      }
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "value": "lavender"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 11,
+      "is_active": true,
+      "label": "Olive Green",
+      "metadata": {
+        "hex": "#6b7c3f"
+      }
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "value": "olive-green"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 12,
+      "is_active": true,
+      "label": "Space Grey",
+      "metadata": {
+        "hex": "#717378"
+      }
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "value": "space-grey"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 1,
+      "is_active": true,
+      "label": "XS",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "value": "XS"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 2,
+      "is_active": true,
+      "label": "S",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "value": "S"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 3,
+      "is_active": true,
+      "label": "M",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "value": "M"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 4,
+      "is_active": true,
+      "label": "L",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "value": "L"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 5,
+      "is_active": true,
+      "label": "XL",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "value": "XL"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 6,
+      "is_active": true,
+      "label": "XXL",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "value": "XXL"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 7,
+      "is_active": true,
+      "label": "One Size",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "value": "one-size"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 1,
+      "is_active": true,
+      "label": "100% Cotton",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "value": "100pct-cotton"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 2,
+      "is_active": true,
+      "label": "Polyester",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "value": "polyester"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 3,
+      "is_active": true,
+      "label": "Merino Wool",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "value": "merino-wool"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 4,
+      "is_active": true,
+      "label": "Linen",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "value": "linen"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 5,
+      "is_active": true,
+      "label": "Stainless Steel",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "value": "stainless-steel"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 6,
+      "is_active": true,
+      "label": "Cast Iron",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "value": "cast-iron"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 7,
+      "is_active": true,
+      "label": "Bamboo",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "value": "bamboo"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 8,
+      "is_active": true,
+      "label": "Glass",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "value": "glass"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 9,
+      "is_active": true,
+      "label": "Leather",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "value": "leather"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 10,
+      "is_active": true,
+      "label": "Silicone",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "value": "silicone"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 11,
+      "is_active": true,
+      "label": "Aluminium",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "value": "aluminium"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 12,
+      "is_active": true,
+      "label": "ABS Plastic",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "value": "plastic-abs"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 1,
+      "is_active": true,
+      "label": "Bluetooth 5.3",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "connectivity"
+        }
+      },
+      "value": "Bluetooth-5-3"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 2,
+      "is_active": true,
+      "label": "Wi-Fi 6 (802.11ax)",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "connectivity"
+        }
+      },
+      "value": "WiFi-6"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 3,
+      "is_active": true,
+      "label": "USB-C",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "connectivity"
+        }
+      },
+      "value": "USB-C"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 4,
+      "is_active": true,
+      "label": "USB-A",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "connectivity"
+        }
+      },
+      "value": "USB-A"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 5,
+      "is_active": true,
+      "label": "HDMI",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "connectivity"
+        }
+      },
+      "value": "HDMI"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 6,
+      "is_active": true,
+      "label": "3.5mm Headphone Jack",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "connectivity"
+        }
+      },
+      "value": "3-5mm-jack"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 7,
+      "is_active": true,
+      "label": "NFC",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "connectivity"
+        }
+      },
+      "value": "NFC"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 8,
+      "is_active": true,
+      "label": "5G",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "connectivity"
+        }
+      },
+      "value": "5G"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 1,
+      "is_active": true,
+      "label": "Android",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "os_platform"
+        }
+      },
+      "value": "Android"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 2,
+      "is_active": true,
+      "label": "iOS / iPadOS",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "os_platform"
+        }
+      },
+      "value": "iOS"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 3,
+      "is_active": true,
+      "label": "Windows 11",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "os_platform"
+        }
+      },
+      "value": "Windows-11"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 4,
+      "is_active": true,
+      "label": "macOS",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "os_platform"
+        }
+      },
+      "value": "macOS"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 5,
+      "is_active": true,
+      "label": "Linux",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "os_platform"
+        }
+      },
+      "value": "Linux"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 6,
+      "is_active": true,
+      "label": "No OS (Bare Hardware)",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "os_platform"
+        }
+      },
+      "value": "none"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 1,
+      "is_active": true,
+      "label": "Men's",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "gender"
+        }
+      },
+      "value": "mens"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 2,
+      "is_active": true,
+      "label": "Women's",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "gender"
+        }
+      },
+      "value": "womens"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 3,
+      "is_active": true,
+      "label": "Unisex",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "gender"
+        }
+      },
+      "value": "unisex"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 4,
+      "is_active": true,
+      "label": "Kids",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "gender"
+        }
+      },
+      "value": "kids"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 1,
+      "is_active": true,
+      "label": "Slim Fit",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "fit_type"
+        }
+      },
+      "value": "slim-fit"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 2,
+      "is_active": true,
+      "label": "Regular Fit",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "fit_type"
+        }
+      },
+      "value": "regular-fit"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 3,
+      "is_active": true,
+      "label": "Relaxed Fit",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "fit_type"
+        }
+      },
+      "value": "relaxed-fit"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 4,
+      "is_active": true,
+      "label": "Oversized",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "fit_type"
+        }
+      },
+      "value": "oversized"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 1,
+      "is_active": true,
+      "label": "US 6",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "shoe_size_us"
+        }
+      },
+      "value": "US-6"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 2,
+      "is_active": true,
+      "label": "US 7",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "shoe_size_us"
+        }
+      },
+      "value": "US-7"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 3,
+      "is_active": true,
+      "label": "US 8",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "shoe_size_us"
+        }
+      },
+      "value": "US-8"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 4,
+      "is_active": true,
+      "label": "US 9",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "shoe_size_us"
+        }
+      },
+      "value": "US-9"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 5,
+      "is_active": true,
+      "label": "US 10",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "shoe_size_us"
+        }
+      },
+      "value": "US-10"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 6,
+      "is_active": true,
+      "label": "US 11",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "shoe_size_us"
+        }
+      },
+      "value": "US-11"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 7,
+      "is_active": true,
+      "label": "US 12",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "shoe_size_us"
+        }
+      },
+      "value": "US-12"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 1,
+      "is_active": true,
+      "label": "Floral",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "scent_profile"
+        }
+      },
+      "value": "floral"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 2,
+      "is_active": true,
+      "label": "Woody & Earthy",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "scent_profile"
+        }
+      },
+      "value": "woody"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 3,
+      "is_active": true,
+      "label": "Citrus & Fresh",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "scent_profile"
+        }
+      },
+      "value": "citrus"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 4,
+      "is_active": true,
+      "label": "Oriental & Spicy",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "scent_profile"
+        }
+      },
+      "value": "oriental"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 5,
+      "is_active": true,
+      "label": "Aquatic & Marine",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "scent_profile"
+        }
+      },
+      "value": "aquatic"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 6,
+      "is_active": true,
+      "label": "Unscented",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "scent_profile"
+        }
+      },
+      "value": "unscented"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 1,
+      "is_active": true,
+      "label": "Oily",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "skin_type"
+        }
+      },
+      "value": "oily"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 2,
+      "is_active": true,
+      "label": "Dry",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "skin_type"
+        }
+      },
+      "value": "dry"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 3,
+      "is_active": true,
+      "label": "Combination",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "skin_type"
+        }
+      },
+      "value": "combination"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 4,
+      "is_active": true,
+      "label": "Sensitive",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "skin_type"
+        }
+      },
+      "value": "sensitive"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 5,
+      "is_active": true,
+      "label": "Normal",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "skin_type"
+        }
+      },
+      "value": "normal"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 6,
+      "is_active": true,
+      "label": "All Skin Types",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "skin_type"
+        }
+      },
+      "value": "all-skin-types"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 1,
+      "is_active": true,
+      "label": "Original / Unflavoured",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "flavour"
+        }
+      },
+      "value": "original"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 2,
+      "is_active": true,
+      "label": "Chocolate",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "flavour"
+        }
+      },
+      "value": "chocolate"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 3,
+      "is_active": true,
+      "label": "Vanilla",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "flavour"
+        }
+      },
+      "value": "vanilla"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 4,
+      "is_active": true,
+      "label": "Strawberry",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "flavour"
+        }
+      },
+      "value": "strawberry"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 5,
+      "is_active": true,
+      "label": "Matcha",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "flavour"
+        }
+      },
+      "value": "matcha"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 6,
+      "is_active": true,
+      "label": "Salted Caramel",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "flavour"
+        }
+      },
+      "value": "salted-caramel"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 1,
+      "is_active": true,
+      "label": "Light Roast",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "roast_level"
+        }
+      },
+      "value": "light"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 2,
+      "is_active": true,
+      "label": "Medium Roast",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "roast_level"
+        }
+      },
+      "value": "medium"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 3,
+      "is_active": true,
+      "label": "Medium-Dark Roast",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "roast_level"
+        }
+      },
+      "value": "medium-dark"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 4,
+      "is_active": true,
+      "label": "Dark Roast",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "roast_level"
+        }
+      },
+      "value": "dark"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 5,
+      "is_active": true,
+      "label": "Espresso",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "roast_level"
+        }
+      },
+      "value": "espresso"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 1,
+      "is_active": true,
+      "label": "Hardcover",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "book_format"
+        }
+      },
+      "value": "hardcover"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 2,
+      "is_active": true,
+      "label": "Paperback",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "book_format"
+        }
+      },
+      "value": "paperback"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 3,
+      "is_active": true,
+      "label": "Spiral Bound",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "book_format"
+        }
+      },
+      "value": "spiral-bound"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 1,
+      "is_active": true,
+      "label": "English",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "value": "English"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 2,
+      "is_active": true,
+      "label": "Spanish",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "value": "Spanish"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 3,
+      "is_active": true,
+      "label": "French",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "value": "French"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 4,
+      "is_active": true,
+      "label": "German",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "value": "German"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 5,
+      "is_active": true,
+      "label": "Japanese",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "value": "Japanese"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 1,
+      "is_active": true,
+      "label": "0 \u2013 3 years",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "age_range"
+        }
+      },
+      "value": "0-3"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 2,
+      "is_active": true,
+      "label": "3 \u2013 6 years",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "age_range"
+        }
+      },
+      "value": "3-6"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 3,
+      "is_active": true,
+      "label": "6 \u2013 12 years",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "age_range"
+        }
+      },
+      "value": "6-12"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 4,
+      "is_active": true,
+      "label": "12+ years",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "age_range"
+        }
+      },
+      "value": "12plus"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 5,
+      "is_active": true,
+      "label": "Adult (18+)",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "age_range"
+        }
+      },
+      "value": "adult"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 1,
+      "is_active": true,
+      "label": "Solo (1 player)",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "player_count"
+        }
+      },
+      "value": "1"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 2,
+      "is_active": true,
+      "label": "2 players",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "player_count"
+        }
+      },
+      "value": "2"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 3,
+      "is_active": true,
+      "label": "2 \u2013 4 players",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "player_count"
+        }
+      },
+      "value": "2-4"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 4,
+      "is_active": true,
+      "label": "2 \u2013 6 players",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "player_count"
+        }
+      },
+      "value": "2-6"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 5,
+      "is_active": true,
+      "label": "4 \u2013 8 players",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "player_count"
+        }
+      },
+      "value": "4-8"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 1,
+      "is_active": true,
+      "label": "Capsule",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "supplement_form"
+        }
+      },
+      "value": "capsule"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 2,
+      "is_active": true,
+      "label": "Tablet",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "supplement_form"
+        }
+      },
+      "value": "tablet"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 3,
+      "is_active": true,
+      "label": "Powder",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "supplement_form"
+        }
+      },
+      "value": "powder"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 4,
+      "is_active": true,
+      "label": "Liquid / Syrup",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "supplement_form"
+        }
+      },
+      "value": "liquid"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 5,
+      "is_active": true,
+      "label": "Gummy",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "supplement_form"
+        }
+      },
+      "value": "gummy"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 1,
+      "is_active": true,
+      "label": "ISO 9001",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "certification"
+        }
+      },
+      "value": "ISO-9001"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 2,
+      "is_active": true,
+      "label": "CE Mark",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "certification"
+        }
+      },
+      "value": "CE"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 3,
+      "is_active": true,
+      "label": "FDA Approved",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "certification"
+        }
+      },
+      "value": "FDA-approved"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 4,
+      "is_active": true,
+      "label": "USDA Organic",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "certification"
+        }
+      },
+      "value": "USDA-organic"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 5,
+      "is_active": true,
+      "label": "Cruelty-Free",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "certification"
+        }
+      },
+      "value": "cruelty-free"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 6,
+      "is_active": true,
+      "label": "Energy Star",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "certification"
+        }
+      },
+      "value": "energy-star"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 1,
+      "is_active": true,
+      "label": "Windows",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "software_platform"
+        }
+      },
+      "value": "Windows"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 2,
+      "is_active": true,
+      "label": "macOS",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "software_platform"
+        }
+      },
+      "value": "macOS"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 3,
+      "is_active": true,
+      "label": "Linux",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "software_platform"
+        }
+      },
+      "value": "Linux"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 4,
+      "is_active": true,
+      "label": "iOS",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "software_platform"
+        }
+      },
+      "value": "iOS"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 5,
+      "is_active": true,
+      "label": "Android",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "software_platform"
+        }
+      },
+      "value": "Android"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 6,
+      "is_active": true,
+      "label": "Web Browser",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "software_platform"
+        }
+      },
+      "value": "web"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 1,
+      "is_active": true,
+      "label": "1 Month",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "license_duration"
+        }
+      },
+      "value": "1-month"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 2,
+      "is_active": true,
+      "label": "1 Year",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "license_duration"
+        }
+      },
+      "value": "1-year"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 3,
+      "is_active": true,
+      "label": "2 Years",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "license_duration"
+        }
+      },
+      "value": "2-year"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 4,
+      "is_active": true,
+      "label": "3 Years",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "license_duration"
+        }
+      },
+      "value": "3-year"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 5,
+      "is_active": true,
+      "label": "Lifetime",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "license_duration"
+        }
+      },
+      "value": "lifetime"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 1,
+      "is_active": true,
+      "label": "Beginner",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "difficulty_level"
+        }
+      },
+      "value": "beginner"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 2,
+      "is_active": true,
+      "label": "Intermediate",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "difficulty_level"
+        }
+      },
+      "value": "intermediate"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 3,
+      "is_active": true,
+      "label": "Advanced",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "difficulty_level"
+        }
+      },
+      "value": "advanced"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 4,
+      "is_active": true,
+      "label": "Expert",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "difficulty_level"
+        }
+      },
+      "value": "expert"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 1,
+      "is_active": true,
+      "label": "United States",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "value": "US"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 2,
+      "is_active": true,
+      "label": "Germany",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "value": "DE"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 3,
+      "is_active": true,
+      "label": "Japan",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "value": "JP"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 4,
+      "is_active": true,
+      "label": "United Kingdom",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "value": "GB"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 5,
+      "is_active": true,
+      "label": "France",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "value": "FR"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 6,
+      "is_active": true,
+      "label": "China",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "value": "CN"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 7,
+      "is_active": true,
+      "label": "South Korea",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "value": "KR"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 8,
+      "is_active": true,
+      "label": "Italy",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "value": "IT"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 9,
+      "is_active": true,
+      "label": "New Zealand",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "value": "NZ"
+    }
+  },
+  {
+    "fields": {
+      "display_order": 10,
+      "is_active": true,
+      "label": "Canada",
+      "metadata": {}
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "value": "CA"
+    }
+  }
+]

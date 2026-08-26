@@ -1,0 +1,2510 @@
+[
+  {
+    "fields": {
+      "value": "midnight-black"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "SGS24U-256-BLK"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "256"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "storage_gb"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "SGS24U-256-BLK"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "12"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "ram_gb"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "SGS24U-256-BLK"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "charcoal-grey"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "SGS24U-512-TIT"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "512"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "storage_gb"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "SGS24U-512-TIT"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "12"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "ram_gb"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "SGS24U-512-TIT"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "space-grey"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MBP14-M3-8-512"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "512"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "storage_gb"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MBP14-M3-8-512"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "8"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "ram_gb"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MBP14-M3-8-512"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "space-grey"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MBP14-M3-16-1TB"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "1000"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "storage_gb"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MBP14-M3-16-1TB"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "16"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "ram_gb"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MBP14-M3-16-1TB"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "midnight-black"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "WH1000XM5-BLK"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "pearl-white"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "WH1000XM5-SLV"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "space-grey"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "IPADPRO129-256-WIFI"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "256"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "storage_gb"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "IPADPRO129-256-WIFI"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "pearl-white"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "IPADPRO129-512-WIFI"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "512"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "storage_gb"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "IPADPRO129-512-WIFI"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "charcoal-grey"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MXM3S-GRY"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "pearl-white"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MXM3S-WHT"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "crimson-red"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "KQ1PRO-RED-BNRY"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "navy-blue"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "KQ1PRO-BLU-BNRY"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "midnight-black"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GFX8-SOLAR-BLK-47"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "charcoal-grey"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GFX8-SOLAR-BLK-51"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "navy-blue"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LEVI501-IND-32-32"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "M"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LEVI501-IND-32-32"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "midnight-black"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LEVI501-BLK-32-32"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "M"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LEVI501-BLK-32-32"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "midnight-black"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "NIKE-THERMAFIT-BLK-M"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "M"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "NIKE-THERMAFIT-BLK-M"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "navy-blue"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "NIKE-THERMAFIT-NVY-L"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "L"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "NIKE-THERMAFIT-NVY-L"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "charcoal-grey"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ALLBIRDS-WR2-ASH-US9"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US-9"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "shoe_size_us"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ALLBIRDS-WR2-ASH-US9"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "navy-blue"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ALLBIRDS-WR2-NVY-US10"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US-10"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "shoe_size_us"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ALLBIRDS-WR2-NVY-US10"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "navy-blue"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "PAT-DOWN-NVY-M"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "M"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "PAT-DOWN-NVY-M"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "midnight-black"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "PAT-DOWN-BLK-L"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "L"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "PAT-DOWN-BLK-L"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "pearl-white"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "UNQ-HTECH-WHT-M"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "M"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "UNQ-HTECH-WHT-M"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "charcoal-grey"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "UNQ-HTECH-GRY-L"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "L"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "UNQ-HTECH-GRY-L"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "pearl-white"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CTT-OXF-WHT-15-5"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "M"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CTT-OXF-WHT-15-5"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "sky-blue"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CTT-OXF-BLU-16-33"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "L"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CTT-OXF-BLU-16-33"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "midnight-black"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LUL-ALIGN-BLK-4"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "S"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LUL-ALIGN-BLK-4"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "navy-blue"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LUL-ALIGN-NVY-6"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "M"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LUL-ALIGN-NVY-6"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "crimson-red"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "AJ1-CHI-US9"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US-9"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "shoe_size_us"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "AJ1-CHI-US9"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "crimson-red"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "AJ1-CHI-US10"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US-10"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "shoe_size_us"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "AJ1-CHI-US10"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "crimson-red"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LC-DO-28-CHERRY"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "crimson-red"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LC-DO-28-VOLCANIC"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "midnight-black"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BRV-BARISTA-BLK"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "charcoal-grey"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BRV-BARISTA-STEEL"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "crimson-red"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "KA-ARTISAN-EMPIRE-RED"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "sky-blue"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "KA-ARTISAN-ICE-BLUE"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "pearl-white"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "KALLAX-4X4-WHT"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "midnight-black"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "KALLAX-4X4-BLK-BRN"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "floral"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "scent_profile"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CHANEL-N5-EDP-50ML"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "50"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "volume_ml"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CHANEL-N5-EDP-50ML"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "floral"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "scent_profile"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CHANEL-N5-EDP-100ML"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "100"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "volume_ml"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CHANEL-N5-EDP-100ML"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "30"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "volume_ml"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LAMER-MC-30ML"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "60"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "volume_ml"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LAMER-MC-60ML"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "midnight-black"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GFR265-BLK-42MM"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "S"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GFR265-BLK-42MM"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "pearl-white"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GFR265-WHT-46MM"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "L"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GFR265-WHT-46MM"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "midnight-black"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "TREK-FX3-S-MATTE-BLK"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "S"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "TREK-FX3-S-MATTE-BLK"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "midnight-black"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "TREK-FX3-M-MATTE-BLK"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "M"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "TREK-FX3-M-MATTE-BLK"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "lavender"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HF32-TRAIL-MIST"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "midnight-black"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HF32-BLACK-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "midnight-black"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "UA-RIVAL-BLK-M"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "M"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "UA-RIVAL-BLK-M"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "navy-blue"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "UA-RIVAL-NVY-L"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "L"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "UA-RIVAL-NVY-L"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "S"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BD-MOMENTUM-S"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "M"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BD-MOMENTUM-M"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "midnight-black"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MAN-PRO-BLK-71"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "charcoal-grey"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MAN-PRO-GREYINK-71"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "1-year"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "license_duration"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ACC-1YR-WIN-MAC"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "1-month"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "license_duration"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "M365-FAM-MONTHLY"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "1-year"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "license_duration"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "M365-FAM-ANNUAL"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "1-month"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "license_duration"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "NOTION-AIPLUS-MONTHLY"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "1-year"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "license_duration"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "NOTION-AIPLUS-ANNUAL"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "1-year"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "license_duration"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "NRT360-1YR-5DEV"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "2-year"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "license_duration"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "NRT360-2YR-5DEV"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "1-month"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "license_duration"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "DGTANALYTICS-MONTHLY"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "1-year"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "license_duration"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "DGTANALYTICS-ANNUAL"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "1-year"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "license_duration"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "M365-BIZ-STD-1YR"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "paperback"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "book_format"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ATOMICHAB-PB-EN"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "hardcover"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "book_format"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ATOMICHAB-HC-EN"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "paperback"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "book_format"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "DEEPWORK-PB-EN"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "paperback"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "book_format"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "PRAGPROG-PB-20TH"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "hardcover"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "book_format"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LT1917-A5-BLK-DOT"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "midnight-black"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LT1917-A5-BLK-DOT"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "hardcover"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "book_format"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LT1917-A5-NVY-DOT"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "navy-blue"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LT1917-A5-NVY-DOT"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "paperback"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "book_format"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "THINKFS-PB-EN"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "paperback"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "book_format"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "SAPIENS-PB-EN"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "paperback"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "book_format"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "DOET-PB-EN"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "capsule"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "supplement_form"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GOL-VITD3K2-60CAP"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "60"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "pack_quantity"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GOL-VITD3K2-60CAP"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "capsule"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "supplement_form"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GOL-VITD3K2-120CAP"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "120"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "pack_quantity"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GOL-VITD3K2-120CAP"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "powder"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "supplement_form"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ON-WHEY-CHOC-2LB"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "chocolate"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "flavour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ON-WHEY-CHOC-2LB"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "powder"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "supplement_form"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ON-WHEY-VAN-5LB"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "vanilla"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "flavour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ON-WHEY-VAN-5LB"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "medium"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "roast_level"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LAV-SC-1KG-MED"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "1000"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LAV-SC-1KG-MED"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "medium"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "roast_level"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LAV-SC-250G-MED"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "250"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LAV-SC-250G-MED"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "250"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "COMVITA-MH-250G"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "500"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "COMVITA-MH-500G"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "chocolate"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "flavour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HALOTOP-CHOC-473ML"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "vanilla"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "flavour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HALOTOP-VAN-473ML"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "midnight-black"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BVU-DR900X-32GB"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "midnight-black"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BVU-DR900X-256GB"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "charcoal-grey"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HM-AERON-B-GRY"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "sky-blue"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HM-AERON-B-MINERAL"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "1"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "pack_quantity"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "OFF-BOX-MONTHLY-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "14"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "pack_quantity"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "3M-POSTIT-14PAD-MULTI"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "100"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "pack_quantity"
+        }
+      },
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "AVY-LBL-A4-1400"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "fields": {
+      "description": "Annual back-to-school sale on electronics, apparel, and digital goods.",
+      "end_date": "2026-09-15T23:59:59Z",
+      "is_active": true,
+      "name": "Back to School 2026",
+      "start_date": "2026-08-01T00:00:00Z"
+    },
+    "lookup": {
+      "slug": "back-to-school-2026"
+    }
+  },
+  {
+    "fields": {
+      "description": "Three-day sitewide sale to mark the Labour Day long weekend.",
+      "end_date": "2026-09-01T23:59:59Z",
+      "is_active": true,
+      "name": "Labour Day Weekend 2026",
+      "start_date": "2026-08-29T00:00:00Z"
+    },
+    "lookup": {
+      "slug": "labour-day-weekend-2026"
+    }
+  },
+  {
+    "fields": {
+      "description": "Month-long promotion on all digital goods, courses, and software licenses.",
+      "end_date": "2026-09-30T23:59:59Z",
+      "is_active": true,
+      "name": "Digital Downloads Month",
+      "start_date": "2026-09-01T00:00:00Z"
+    },
+    "lookup": {
+      "slug": "digital-downloads-month-2026"
+    }
+  },
+  {
+    "fields": {
+      "description": "The biggest sale of the year across all product categories.",
+      "end_date": "2026-11-27T23:59:59Z",
+      "is_active": false,
+      "name": "Black Friday 2026",
+      "start_date": "2026-11-27T00:00:00Z"
+    },
+    "lookup": {
+      "slug": "black-friday-2026"
+    }
+  },
+  {
+    "fields": {
+      "description": "Online-only deals focused on electronics, software, and digital subscriptions.",
+      "end_date": "2026-11-30T23:59:59Z",
+      "is_active": false,
+      "name": "Cyber Monday 2026",
+      "start_date": "2026-11-30T00:00:00Z"
+    },
+    "lookup": {
+      "slug": "cyber-monday-2026"
+    }
+  },
+  {
+    "fields": {
+      "description": "First-purchase discount for newly registered customers.",
+      "end_date": "2026-12-31T23:59:59Z",
+      "is_active": true,
+      "name": "New Member Welcome Offer",
+      "start_date": "2026-01-01T00:00:00Z"
+    },
+    "lookup": {
+      "slug": "new-member-welcome"
+    }
+  },
+  {
+    "fields": {
+      "description": "End-of-season clearance on kettlebells, running shoes, and sports accessories.",
+      "end_date": "2026-08-31T23:59:59Z",
+      "is_active": true,
+      "name": "Sports & Outdoors Clearance",
+      "start_date": "2026-08-15T00:00:00Z"
+    },
+    "lookup": {
+      "slug": "sports-outdoors-clearance"
+    }
+  }
+]

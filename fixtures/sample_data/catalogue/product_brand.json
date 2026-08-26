@@ -1,0 +1,57 @@
+[
+  {
+    "fields": {
+      "description": "Placeholder product brand",
+      "image_url": "",
+      "name": "Sample Brand",
+      "website": ""
+    },
+    "lookup": {
+      "slug": "sample-brand"
+    }
+  },
+  {
+    "fields": {
+      "description": "Everyday essentials at accessible prices",
+      "image_url": "",
+      "name": "Generic Goods",
+      "website": "https://www.example.com/generic-goods"
+    },
+    "lookup": {
+      "slug": "generic-goods"
+    }
+  },
+  {
+    "fields": {
+      "description": "In-house private label brand for everyday home and lifestyle products",
+      "image_url": "",
+      "name": "Storehouse",
+      "website": "https://www.example.com/storehouse"
+    },
+    "lookup": {
+      "slug": "storehouse"
+    }
+  },
+  {
+    "fields": {
+      "description": "Curated premium and luxury products for discerning customers",
+      "image_url": "",
+      "name": "Premium Select",
+      "website": "https://www.example.com/premium-select"
+    },
+    "lookup": {
+      "slug": "premium-select"
+    }
+  },
+  {
+    "fields": {
+      "description": "Budget-friendly basics for everyday use without compromise",
+      "image_url": "",
+      "name": "Value Basics",
+      "website": "https://www.example.com/value-basics"
+    },
+    "lookup": {
+      "slug": "value-basics"
+    }
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "fields": {
+      "active": true,
+      "note": "Automatically publish new product reviews without manual moderation"
+    },
+    "lookup": {
+      "name": "reviews_auto_publish"
+    }
+  },
+  {
+    "fields": {
+      "active": true,
+      "note": "Allow customers to check out without creating an account"
+    },
+    "lookup": {
+      "name": "guest_checkout_enabled"
+    }
+  },
+  {
+    "fields": {
+      "active": true,
+      "note": "Enable the wishlist feature for logged-in customers"
+    },
+    "lookup": {
+      "name": "wishlist_enabled"
+    }
+  },
+  {
+    "fields": {
+      "active": true,
+      "note": "Allow storefront pricing to be displayed in multiple currencies"
+    },
+    "lookup": {
+      "name": "multi_currency_enabled"
+    }
+  },
+  {
+    "fields": {
+      "active": false,
+      "note": "Puts the storefront into maintenance mode when enabled"
+    },
+    "lookup": {
+      "name": "maintenance_mode"
+    }
+  }
+]

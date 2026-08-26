@@ -1,0 +1,79 @@
+[
+  {
+    "fields": {
+      "description": "The item arrived damaged or defective",
+      "display_order": 1,
+      "is_active": true,
+      "requires_return": true
+    },
+    "lookup": {
+      "name": "Damaged Item"
+    }
+  },
+  {
+    "fields": {
+      "description": "Customer received an item different from what was ordered",
+      "display_order": 2,
+      "is_active": true,
+      "requires_return": true
+    },
+    "lookup": {
+      "name": "Wrong Item Received"
+    }
+  },
+  {
+    "fields": {
+      "description": "The item does not match the product description or images",
+      "display_order": 3,
+      "is_active": true,
+      "requires_return": true
+    },
+    "lookup": {
+      "name": "Item Not as Described"
+    }
+  },
+  {
+    "fields": {
+      "description": "Customer no longer needs the item",
+      "display_order": 4,
+      "is_active": true,
+      "requires_return": true
+    },
+    "lookup": {
+      "name": "No Longer Needed"
+    }
+  },
+  {
+    "fields": {
+      "description": "Customer accidentally ordered the wrong item or quantity",
+      "display_order": 5,
+      "is_active": true,
+      "requires_return": true
+    },
+    "lookup": {
+      "name": "Ordered by Mistake"
+    }
+  },
+  {
+    "fields": {
+      "description": "Order arrived significantly later than the estimated delivery date",
+      "display_order": 6,
+      "is_active": true,
+      "requires_return": false
+    },
+    "lookup": {
+      "name": "Late Delivery"
+    }
+  },
+  {
+    "fields": {
+      "description": "Customer was charged for a duplicate order",
+      "display_order": 7,
+      "is_active": true,
+      "requires_return": false
+    },
+    "lookup": {
+      "name": "Duplicate Order"
+    }
+  }
+]

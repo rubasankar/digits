@@ -1,0 +1,2537 @@
+[
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "samsung-galaxy-s24-ultra"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "SGS24U-256-BLK"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "samsung-galaxy-s24-ultra"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "SGS24U-512-TIT"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "apple-macbook-pro-14"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "MBP14-M3-8-512"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "apple-macbook-pro-14"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "MBP14-M3-16-1TB"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "sony-wh1000xm5-headphones"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "WH1000XM5-BLK"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "sony-wh1000xm5-headphones"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "WH1000XM5-SLV"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "ipad-pro-12-9"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "IPADPRO129-256-WIFI"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "ipad-pro-12-9"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "IPADPRO129-512-WIFI"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "logitech-mx-master-3s"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "MXM3S-GRY"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "logitech-mx-master-3s"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "MXM3S-WHT"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "gopro-hero12-black"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "GOPRO12-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "gopro-hero12-black"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "GOPRO12-CREATOR-BUNDLE"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "samsung-65-qled-tv"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "SAM65QLED-QN90C"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "dslr-camera-rental-kit"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "DSLR-RENTAL-1D"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "dslr-camera-rental-kit"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "DSLR-RENTAL-7D"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "smart-home-bundle"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "SMARTHOME-BUNDLE-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "mechanical-keyboard-keychron-q1"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "KQ1PRO-RED-BNRY"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "mechanical-keyboard-keychron-q1"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "KQ1PRO-BLU-BNRY"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "pre-order-next-gen-smartwatch"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "GFX8-SOLAR-BLK-47"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "pre-order-next-gen-smartwatch"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "GFX8-SOLAR-BLK-51"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "electronics-store-gift-card"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "ELEC-GC-50"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "electronics-store-gift-card"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "ELEC-GC-100"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "levis-501-original-jeans"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "LEVI501-IND-32-32"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "levis-501-original-jeans"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "LEVI501-BLK-32-32"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "nike-therma-fit-hoodie"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "NIKE-THERMAFIT-BLK-M"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "nike-therma-fit-hoodie"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "NIKE-THERMAFIT-NVY-L"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "allbirds-wool-runners"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "ALLBIRDS-WR2-ASH-US9"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "allbirds-wool-runners"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "ALLBIRDS-WR2-NVY-US10"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "patagonia-down-sweater-jacket"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "PAT-DOWN-NVY-M"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "patagonia-down-sweater-jacket"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "PAT-DOWN-BLK-L"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "uniqlo-heattech-crew-neck"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "UNQ-HTECH-WHT-M"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "uniqlo-heattech-crew-neck"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "UNQ-HTECH-GRY-L"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "classic-oxford-dress-shirt"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "CTT-OXF-WHT-15-5"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "classic-oxford-dress-shirt"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "CTT-OXF-BLU-16-33"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "lululemon-align-leggings"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "LUL-ALIGN-BLK-4"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "lululemon-align-leggings"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "LUL-ALIGN-NVY-6"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "limited-edition-air-jordan-1"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "AJ1-CHI-US9"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "limited-edition-air-jordan-1"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "AJ1-CHI-US10"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "personal-styling-session"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "STYLING-60MIN-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "clothing-store-membership"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "STYLECLUB-ANNUAL-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "le-creuset-dutch-oven-28cm"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "LC-DO-28-CHERRY"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "le-creuset-dutch-oven-28cm"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "LC-DO-28-VOLCANIC"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "breville-barista-express-espresso"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "BRV-BARISTA-BLK"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "breville-barista-express-espresso"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "BRV-BARISTA-STEEL"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "dyson-v15-detect-vacuum"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "DYS-V15-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "bambu-cutting-board-set"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "BAMBU-3PC-SET"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "nest-learning-thermostat"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "NEST-THERMO-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "kitchenaid-stand-mixer"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "KA-ARTISAN-EMPIRE-RED"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "kitchenaid-stand-mixer"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "KA-ARTISAN-ICE-BLUE"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "ikea-kallax-shelf-unit"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "KALLAX-4X4-WHT"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "ikea-kallax-shelf-unit"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "KALLAX-4X4-BLK-BRN"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "instant-pot-duo-7-in-1"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "IP-DUO-8QT-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "home-cleaning-subscription"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "HOMECLEAN-MONTHLY-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "interior-design-consultation"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "INTERIOR-90MIN-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "cerave-moisturising-cream"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "CERAVE-MC-454G"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "dyson-airwrap-styler"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "DYS-AIRWRAP-COMP-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "the-ordinary-niacinamide-serum"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "ORD-NIA10-30ML"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "chanel-no5-eau-de-parfum"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "CHANEL-N5-EDP-50ML"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "chanel-no5-eau-de-parfum"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "CHANEL-N5-EDP-100ML"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "la-mer-moisturising-cream"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "LAMER-MC-30ML"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "la-mer-moisturising-cream"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "LAMER-MC-60ML"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "philips-series-9000-shaver"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "PHI-S9000P-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "tatcha-dewy-skin-gift-set"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "TATCHA-DEWY-GIFT-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "beauty-box-subscription"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "LOOKFAN-BBOX-MONTHLY"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "custom-skincare-donation"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "BEAU4ALL-DON-10"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "virtual-skincare-consultation"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "DERM-CONSULT-30MIN"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "garmin-forerunner-265"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "GFR265-BLK-42MM"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "garmin-forerunner-265"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "GFR265-WHT-46MM"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "trek-fx3-disc-hybrid-bike"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "TREK-FX3-S-MATTE-BLK"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "trek-fx3-disc-hybrid-bike"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "TREK-FX3-M-MATTE-BLK"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "hydro-flask-32oz-wide-mouth"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "HF32-TRAIL-MIST"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "hydro-flask-32oz-wide-mouth"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "HF32-BLACK-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "under-armour-rival-fleece-joggers"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "UA-RIVAL-BLK-M"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "under-armour-rival-fleece-joggers"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "UA-RIVAL-NVY-L"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "black-diamond-climbing-harness"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "BD-MOMENTUM-S"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "black-diamond-climbing-harness"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "BD-MOMENTUM-M"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "peloton-bike-plus"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "PELO-BIKEPLUS-MONTHLY"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "gym-personal-training-sessions"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "PT-5SESS-IN-PERSON"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "sports-nutrition-subscription"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "MYP-NUTR-MONTHLY"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "sports-event-marathon-ticket"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "MARATHON-ENTRY-GEN"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "yoga-mat-premium"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "MAN-PRO-BLK-71"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "yoga-mat-premium"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "MAN-PRO-GREYINK-71"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "adobe-creative-cloud-license"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "ACC-1YR-WIN-MAC"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "microsoft-365-family"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "M365-FAM-MONTHLY"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "microsoft-365-family"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "M365-FAM-ANNUAL"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "notion-ai-workspace"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "NOTION-AIPLUS-MONTHLY"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "notion-ai-workspace"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "NOTION-AIPLUS-ANNUAL"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "python-full-stack-course"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "PYDJANGO-SELF-PACED"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "python-full-stack-course"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "PYDJANGO-MENTORED"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "figma-ui-ux-design-course"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "FIGMA-DL-EN"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "photoshop-ebook-2026"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "PS-EBOOK-2026-PDF"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "stock-photo-pack-premium"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "STOCKPHOTO-STD-500"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "stock-photo-pack-premium"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "STOCKPHOTO-EXT-500"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "antivirus-pro-license"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "NRT360-1YR-5DEV"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "antivirus-pro-license"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "NRT360-2YR-5DEV"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "digital-music-festival-ticket"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "DCSUMMIT-2026-FULL"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "saas-pro-subscription"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "DGTANALYTICS-MONTHLY"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "saas-pro-subscription"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "DGTANALYTICS-ANNUAL"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "atomic-habits-book"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "ATOMICHAB-PB-EN"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "atomic-habits-book"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "ATOMICHAB-HC-EN"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "deep-work-cal-newport"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "DEEPWORK-PB-EN"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "the-pragmatic-programmer"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "PRAGPROG-PB-20TH"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "leuchtturm-a5-notebook"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "LT1917-A5-BLK-DOT"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "leuchtturm-a5-notebook"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "LT1917-A5-NVY-DOT"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "thinking-fast-and-slow"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "THINKFS-PB-EN"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "muji-gel-ink-pen-set"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "MUJI-GEL-05-BLK-10PK"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "sapiens-yuval-noah-harari"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "SAPIENS-PB-EN"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "watercolour-art-kit"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "WN-COTMAN-PKT-BOX"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "design-of-everyday-things"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "DOET-PB-EN"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "book-subscription-box"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "BOTM-MONTHLY-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "garden-of-life-vitamin-d3"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "GOL-VITD3K2-60CAP"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "garden-of-life-vitamin-d3"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "GOL-VITD3K2-120CAP"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "whey-protein-isolate-optimum"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "ON-WHEY-CHOC-2LB"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "whey-protein-isolate-optimum"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "ON-WHEY-VAN-5LB"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "fitbit-charge-6"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "FIT-CHARGE6-BLK"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "fitbit-charge-6"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "FIT-CHARGE6-CORAL"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "omron-blood-pressure-monitor"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "OMRON-PLAT-BP-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "calm-meditation-app-subscription"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "CALM-PREM-ANNUAL"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "first-aid-kit-deluxe"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "SJA-FAK-200PC"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "online-nutrition-coaching"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "NUTR-COACH-4WK"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "health-membership-plan"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "WELLPASS-ANNUAL"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "health-donation-charity"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "MSF-DON-25"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "health-wellness-gift-card"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "HW-GC-PDF-50"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "lavazza-super-crema-coffee"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "LAV-SC-1KG-MED"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "lavazza-super-crema-coffee"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "LAV-SC-250G-MED"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "manuka-honey-mgo400"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "COMVITA-MH-250G"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "manuka-honey-mgo400"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "COMVITA-MH-500G"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "pukka-herbal-tea-collection"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "PUKKA-SEL-45BAG"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "lindt-excellence-chocolate-gift"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "LINDT-DARK-GIFT-20PC"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "jose-cuervo-tequila"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "JC-SILVER-750ML"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "halo-top-ice-cream"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "HALOTOP-CHOC-473ML"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "halo-top-ice-cream"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "HALOTOP-VAN-473ML"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "blue-bottle-coffee-subscription"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "BB-COFFEE-6OZ-WK"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "meal-kit-delivery-subscription"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "HF-3MEAL-2P-WEEKLY"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "cooking-masterclass-course"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "GORAMSAY-COOK-STREAM"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "specialty-tea-gift-set"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "FM-TEA-GIFT-6VAR"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "meguiars-ultimate-compound"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "MEG-ULTI-COMP-450G"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "blackvue-dr900x-dashcam"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "BVU-DR900X-32GB"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "blackvue-dr900x-dashcam"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "BVU-DR900X-256GB"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "michelin-car-tyres-225-45r17"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "MICH-PS5-225-45R17-X4"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "bosch-car-battery-s5"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "BOSCH-S5-70AH-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "garmin-dezl-otr1000-gps"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "GARMIN-OTR1000-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "car-vacuum-cleaner-portable"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "DYS-V7-CAR-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "mobile-tyre-fitting-service"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "MOB-TYRE-FIT-4W"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "car-service-subscription"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "CARSERV-ANNUAL-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "car-care-bundle"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "AUTOGLYM-BUNDLE-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "ev-charging-cable-type2"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "EV-T2-T2-7M-32A"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "catan-board-game"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "CATAN-5TH-EN"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "lego-technic-bugatti-chiron"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "LEGO-42083-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "mattel-uno-card-game"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "UNO-CLASSIC-112"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "hot-wheels-track-builder-set"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "HW-TRACK-STARTER"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "ravensburger-1000pc-puzzle"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "RAV-1000-WORLDMAP"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "nintendo-switch-game-pre-order"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "NSW2-LAUNCH-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "steam-gaming-gift-card"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "STEAM-GC-25"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "steam-gaming-gift-card"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "STEAM-GC-50"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "coding-for-kids-course"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "KIDSCODE-SELF-PACED"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "chess-set-deluxe-walnut"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "CHESS-WALNUT-20IN"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "online-chess-membership"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "CHESSDOTCOM-DIAMOND-ANNUAL"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "herman-miller-aeron-chair"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "HM-AERON-B-GRY"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "herman-miller-aeron-chair"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "HM-AERON-B-MINERAL"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "flexispot-e7-pro-standing-desk"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "FX-E7PRO-160-BAMBOO"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "brother-laser-printer-hl-l2350dw"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "BRO-HLL2350DW-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "avery-laser-label-pack"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "AVY-LBL-A4-1400"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "rhodia-a4-dot-pad"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "RHO-N38-A3-ORANGE"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "3m-post-it-notes-multipack"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "3M-POSTIT-14PAD-MULTI"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "office-supplies-subscription"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "OFF-BOX-MONTHLY-001"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "productivity-training-workshop"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "DEEPWORK-WS-HALFDAY"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "home-office-bundle"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "HO-BUNDLE-STARTER"
+    }
+  },
+  {
+    "fields": {
+      "is_active": true,
+      "other_attributes": {},
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "microsoft-365-business-license"
+        }
+      }
+    },
+    "lookup": {
+      "sku": "M365-BIZ-STD-1YR"
+    }
+  }
+]

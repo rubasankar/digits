@@ -1,0 +1,262 @@
+[
+  {
+    "fields": {
+      "applies_to": "CART",
+      "campaign": {
+        "$ref": "campaign",
+        "lookup": {
+          "slug": "back-to-school-2026"
+        }
+      },
+      "discount_type": "PERCENTAGE",
+      "max_discount_amount": "30.00",
+      "minimum_cart_value": "50.00",
+      "target_category": null,
+      "target_product": null,
+      "target_variant": null,
+      "times_used": 347,
+      "usage_limit_total": 2000,
+      "value": "10.00"
+    },
+    "lookup": {
+      "slug": "back-to-school-cart-10pct"
+    }
+  },
+  {
+    "fields": {
+      "applies_to": "CATEGORY",
+      "campaign": {
+        "$ref": "campaign",
+        "lookup": {
+          "slug": "back-to-school-2026"
+        }
+      },
+      "discount_type": "PERCENTAGE",
+      "max_discount_amount": "50.00",
+      "minimum_cart_value": "0.00",
+      "target_category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "target_product": null,
+      "target_variant": null,
+      "times_used": 198,
+      "usage_limit_total": null,
+      "value": "15.00"
+    },
+    "lookup": {
+      "slug": "back-to-school-electronics-15pct"
+    }
+  },
+  {
+    "fields": {
+      "applies_to": "CART",
+      "campaign": {
+        "$ref": "campaign",
+        "lookup": {
+          "slug": "labour-day-weekend-2026"
+        }
+      },
+      "discount_type": "FREE_SHIPPING",
+      "max_discount_amount": null,
+      "minimum_cart_value": "25.00",
+      "target_category": null,
+      "target_product": null,
+      "target_variant": null,
+      "times_used": 512,
+      "usage_limit_total": null,
+      "value": null
+    },
+    "lookup": {
+      "slug": "labour-day-free-shipping"
+    }
+  },
+  {
+    "fields": {
+      "applies_to": "CATEGORY",
+      "campaign": {
+        "$ref": "campaign",
+        "lookup": {
+          "slug": "labour-day-weekend-2026"
+        }
+      },
+      "discount_type": "PERCENTAGE",
+      "max_discount_amount": "40.00",
+      "minimum_cart_value": "0.00",
+      "target_category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "clothing-apparel"
+        }
+      },
+      "target_product": null,
+      "target_variant": null,
+      "times_used": 284,
+      "usage_limit_total": null,
+      "value": "20.00"
+    },
+    "lookup": {
+      "slug": "labour-day-apparel-20pct"
+    }
+  },
+  {
+    "fields": {
+      "applies_to": "CATEGORY",
+      "campaign": {
+        "$ref": "campaign",
+        "lookup": {
+          "slug": "digital-downloads-month-2026"
+        }
+      },
+      "discount_type": "PERCENTAGE",
+      "max_discount_amount": "60.00",
+      "minimum_cart_value": "0.00",
+      "target_category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "digital-goods"
+        }
+      },
+      "target_product": null,
+      "target_variant": null,
+      "times_used": 89,
+      "usage_limit_total": null,
+      "value": "25.00"
+    },
+    "lookup": {
+      "slug": "digital-month-25pct"
+    }
+  },
+  {
+    "fields": {
+      "applies_to": "CART",
+      "campaign": {
+        "$ref": "campaign",
+        "lookup": {
+          "slug": "black-friday-2026"
+        }
+      },
+      "discount_type": "PERCENTAGE",
+      "max_discount_amount": "100.00",
+      "minimum_cart_value": "0.00",
+      "target_category": null,
+      "target_product": null,
+      "target_variant": null,
+      "times_used": 0,
+      "usage_limit_total": null,
+      "value": "25.00"
+    },
+    "lookup": {
+      "slug": "black-friday-sitewide-25pct"
+    }
+  },
+  {
+    "fields": {
+      "applies_to": "CATEGORY",
+      "campaign": {
+        "$ref": "campaign",
+        "lookup": {
+          "slug": "cyber-monday-2026"
+        }
+      },
+      "discount_type": "PERCENTAGE",
+      "max_discount_amount": "80.00",
+      "minimum_cart_value": "0.00",
+      "target_category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "target_product": null,
+      "target_variant": null,
+      "times_used": 0,
+      "usage_limit_total": null,
+      "value": "30.00"
+    },
+    "lookup": {
+      "slug": "cyber-monday-electronics-30pct"
+    }
+  },
+  {
+    "fields": {
+      "applies_to": "CART",
+      "campaign": {
+        "$ref": "campaign",
+        "lookup": {
+          "slug": "new-member-welcome"
+        }
+      },
+      "discount_type": "FIXED",
+      "max_discount_amount": null,
+      "minimum_cart_value": "30.00",
+      "target_category": null,
+      "target_product": null,
+      "target_variant": null,
+      "times_used": 1043,
+      "usage_limit_total": null,
+      "value": "10.00"
+    },
+    "lookup": {
+      "slug": "new-member-fixed-10"
+    }
+  },
+  {
+    "fields": {
+      "applies_to": "PRODUCT",
+      "campaign": {
+        "$ref": "campaign",
+        "lookup": {
+          "slug": "sports-outdoors-clearance"
+        }
+      },
+      "discount_type": "PERCENTAGE",
+      "max_discount_amount": null,
+      "minimum_cart_value": "0.00",
+      "target_category": null,
+      "target_product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "allbirds-wool-runners"
+        }
+      },
+      "target_variant": null,
+      "times_used": 63,
+      "usage_limit_total": 500,
+      "value": "22.00"
+    },
+    "lookup": {
+      "slug": "sports-clearance-running-shoes"
+    }
+  },
+  {
+    "fields": {
+      "applies_to": "CATEGORY",
+      "campaign": {
+        "$ref": "campaign",
+        "lookup": {
+          "slug": "sports-outdoors-clearance"
+        }
+      },
+      "discount_type": "FIXED",
+      "max_discount_amount": null,
+      "minimum_cart_value": "0.00",
+      "target_category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "sports-outdoors"
+        }
+      },
+      "target_product": null,
+      "target_variant": null,
+      "times_used": 42,
+      "usage_limit_total": null,
+      "value": "5.00"
+    },
+    "lookup": {
+      "slug": "sports-clearance-sports-fixed-5"
+    }
+  }
+]

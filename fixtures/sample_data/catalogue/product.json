@@ -1,0 +1,4979 @@
+[
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "description": "6.8-inch Dynamic AMOLED 2X display, Snapdragon 8 Gen 3, 200MP camera, built-in S Pen, and 5000mAh battery. The ultimate Android flagship.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "Samsung Galaxy S24 Ultra with 200MP quad-camera, Snapdragon 8 Gen 3, S Pen, and 6.8-inch QHD+ display.",
+      "meta_title": "Samsung Galaxy S24 Ultra | 200MP Camera, S Pen, 5G",
+      "name": "Samsung Galaxy S24 Ultra",
+      "other_attributes": {
+        "height": 0.9,
+        "height_unit": "centimeter",
+        "length": 16.2,
+        "length_unit": "centimeter",
+        "weight": 0.232,
+        "weight_unit": "kilogram",
+        "width": 7.9,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "samsung-galaxy-s24-ultra"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "description": "Apple M3 chip, 14.2-inch Liquid Retina XDR display, 18-hour battery life, 1080p FaceTime HD camera, and MagSafe 3 charging.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "MacBook Pro 14-inch with M3 chip. Up to 22 hours battery, stunning Liquid Retina XDR display.",
+      "meta_title": "MacBook Pro 14\" M3 | Apple Silicon Laptop",
+      "name": "Apple MacBook Pro 14-inch M3",
+      "other_attributes": {
+        "height": 1.55,
+        "height_unit": "centimeter",
+        "length": 31.2,
+        "length_unit": "centimeter",
+        "weight": 1.55,
+        "weight_unit": "kilogram",
+        "width": 22.1,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "apple-macbook-pro-14"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "description": "Industry-leading noise cancellation, 30-hour battery life, multipoint Bluetooth connection, and ultra-comfortable ear cushions.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Sony WH-1000XM5 with 30hr battery, dual noise sensor technology, and multipoint Bluetooth 5.2.",
+      "meta_title": "Sony WH-1000XM5 | Best Noise Cancelling Headphones",
+      "name": "Sony WH-1000XM5 Wireless Headphones",
+      "other_attributes": {
+        "height": 8.0,
+        "height_unit": "centimeter",
+        "length": 19.5,
+        "length_unit": "centimeter",
+        "weight": 0.25,
+        "weight_unit": "kilogram",
+        "width": 17.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "sony-wh1000xm5-headphones"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "description": "12.9-inch Liquid Retina XDR display, M2 chip, ProMotion 120Hz, Wi-Fi 6E, and optional 5G. Perfect for creative professionals.",
+      "fulfilment_type": "store_pickup",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "iPad Pro 12.9-inch with M2 chip, Liquid Retina XDR display, and Apple Pencil 2 support.",
+      "meta_title": "iPad Pro 12.9\" M2 | Apple Tablet for Professionals",
+      "name": "Apple iPad Pro 12.9-inch M2",
+      "other_attributes": {
+        "height": 0.64,
+        "height_unit": "centimeter",
+        "length": 28.1,
+        "length_unit": "centimeter",
+        "weight": 0.682,
+        "weight_unit": "kilogram",
+        "width": 21.5,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "ipad-pro-12-9"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "description": "8000 DPI sensor, MagSpeed electromagnetic scroll wheel, quiet click switches, USB-C charging, and multi-device Bluetooth pairing.",
+      "fulfilment_type": "local_delivery",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Logitech MX Master 3S with 8000 DPI, MagSpeed scroll, quiet clicks, and 70-day battery life.",
+      "meta_title": "Logitech MX Master 3S | Advanced Wireless Mouse",
+      "name": "Logitech MX Master 3S Wireless Mouse",
+      "other_attributes": {
+        "height": 5.1,
+        "height_unit": "centimeter",
+        "length": 12.4,
+        "length_unit": "centimeter",
+        "weight": 0.141,
+        "weight_unit": "kilogram",
+        "width": 8.4,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "logitech-mx-master-3s"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "description": "5.3K60 video, 27MP photos, HyperSmooth 6.0 stabilisation, 30m waterproof without housing, and 1-hour 23-minute battery life.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "GoPro HERO12 Black with 5.3K60 video, HyperSmooth 6.0, and 30m waterproof rating.",
+      "meta_title": "GoPro HERO12 Black | 5.3K Action Camera",
+      "name": "GoPro HERO12 Black Action Camera",
+      "other_attributes": {
+        "height": 3.3,
+        "height_unit": "centimeter",
+        "length": 7.1,
+        "length_unit": "centimeter",
+        "weight": 0.154,
+        "weight_unit": "kilogram",
+        "width": 5.5,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "gopro-hero12-black"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "description": "Neo QLED 4K with Quantum Mini LED, HDR32+, 144Hz refresh rate, Object Tracking Sound+, and Tizen smart OS with built-in Alexa.",
+      "fulfilment_type": "local_delivery",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "Samsung 65-inch Neo QLED 4K TV with 144Hz, Quantum Mini LED, HDR32+ and Object Tracking Sound.",
+      "meta_title": "Samsung 65\" QLED 4K QN90C | Neo QLED Smart TV",
+      "name": "Samsung 65\" QLED 4K Smart TV QN90C",
+      "other_attributes": {
+        "height": 8.1,
+        "height_unit": "centimeter",
+        "length": 145.4,
+        "length_unit": "centimeter",
+        "weight": 25.4,
+        "weight_unit": "kilogram",
+        "width": 83.9,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "samsung-65-qled-tv"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "description": "Rent the Canon EOS R6 Mark II full-frame mirrorless camera kit. Includes RF 24-105mm lens, two batteries, charger, 128GB CFexpress card, and carry bag.",
+      "fulfilment_type": "store_pickup",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Rent Canon EOS R6 Mark II with 24-105mm lens. Pick up in-store, deposit required.",
+      "meta_title": "Canon EOS R6 Mark II Camera Rental | 1, 3 & 7-Day",
+      "name": "Canon EOS R6 Mark II Camera Rental",
+      "other_attributes": {
+        "height": 18.0,
+        "height_unit": "centimeter",
+        "length": 38.0,
+        "length_unit": "centimeter",
+        "weight": 3.2,
+        "weight_unit": "kilogram",
+        "width": 28.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "rental",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "dslr-camera-rental-kit"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "description": "Complete smart home setup: Amazon Echo Dot 5th Gen, Philips Hue White Ambiance Starter Kit (3 bulbs + bridge), and TP-Link Kasa smart plug. Works with Alexa and Google Home.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "Start your smart home with Echo Dot, Philips Hue lights, and Kasa smart plug in one bundle.",
+      "meta_title": "Smart Home Starter Bundle | Echo, Hue & Smart Plug",
+      "name": "Smart Home Starter Bundle",
+      "other_attributes": {
+        "height": 12.0,
+        "height_unit": "centimeter",
+        "length": 32.0,
+        "length_unit": "centimeter",
+        "weight": 1.8,
+        "weight_unit": "kilogram",
+        "width": 24.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "bundle",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "smart-home-bundle"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "description": "75% layout, QMK/VIA programmable, hot-swappable PCB, double gasket-mounted design, RGB backlight, and wireless Bluetooth 5.1 / wired USB-C.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Keychron Q1 Pro: 75% QMK/VIA mechanical keyboard with hot-swap, double gasket mount, and wireless.",
+      "meta_title": "Keychron Q1 Pro | QMK Mechanical Keyboard Wireless",
+      "name": "Keychron Q1 Pro QMK Mechanical Keyboard",
+      "other_attributes": {
+        "height": 4.2,
+        "height_unit": "centimeter",
+        "length": 32.8,
+        "length_unit": "centimeter",
+        "weight": 1.36,
+        "weight_unit": "kilogram",
+        "width": 13.5,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "mechanical-keyboard-keychron-q1"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "description": "Pre-order the Garmin Fenix 8 Solar with built-in solar charging, AMOLED display, multi-band GPS, 40-day battery in smartwatch mode, and advanced health monitoring.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Pre-order Garmin Fenix 8 Solar smartwatch. AMOLED display, solar charging, 40-day battery.",
+      "meta_title": "Garmin Fenix 8 Solar Pre-Order | AMOLED Smartwatch",
+      "name": "Garmin Fenix 8 Solar Smartwatch Pre-Order",
+      "other_attributes": {
+        "height": 1.5,
+        "height_unit": "centimeter",
+        "length": 5.1,
+        "length_unit": "centimeter",
+        "weight": 0.089,
+        "weight_unit": "kilogram",
+        "width": 5.1,
+        "width_unit": "centimeter"
+      },
+      "product_type": "pre_order",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "pre-order-next-gen-smartwatch"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "value-basics"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "description": "Give the gift of tech. Delivered instantly by email, redeemable on any product in the Electronics category. No expiry date.",
+      "fulfilment_type": "email",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Digits Electronics Gift Card delivered by email. Redeemable on any electronics product.",
+      "meta_title": "Electronics Gift Card | $25, $50, $100",
+      "name": "Digits Electronics Gift Card",
+      "other_attributes": {
+        "delivery_method": "Email",
+        "validity": "Never expires"
+      },
+      "product_type": "gift_card",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "zero-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "electronics-store-gift-card"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "clothing-apparel"
+        }
+      },
+      "description": "The original straight-leg jean since 1873. 100% cotton denim, button fly, and a relaxed fit through the seat and thigh. Built to last.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "Levi's 501 Original Fit Jeans in 100% cotton denim. Iconic button fly and straight leg.",
+      "meta_title": "Levi's 501 Original Fit Jeans | Classic Straight Denim",
+      "name": "Levi's 501 Original Fit Jeans",
+      "other_attributes": {
+        "height": 3.0,
+        "height_unit": "centimeter",
+        "length": 30.0,
+        "length_unit": "centimeter",
+        "weight": 0.65,
+        "weight_unit": "kilogram",
+        "width": 22.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "levis-501-original-jeans"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "clothing-apparel"
+        }
+      },
+      "description": "Therma-FIT technology moves sweat away and helps keep you warm. Relaxed fit with a kangaroo pocket and adjustable drawstring hood.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Nike Therma-FIT Hoodie with moisture-wicking fleece. Warm, lightweight, and perfect for training.",
+      "meta_title": "Nike Therma-FIT Pullover Hoodie | Men's Fleece Sweatshirt",
+      "name": "Nike Therma-FIT Pullover Hoodie",
+      "other_attributes": {
+        "height": 3.0,
+        "height_unit": "centimeter",
+        "length": 32.0,
+        "length_unit": "centimeter",
+        "weight": 0.45,
+        "weight_unit": "kilogram",
+        "width": 25.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "nike-therma-fit-hoodie"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "clothing-apparel"
+        }
+      },
+      "description": "Made from ZQ-certified merino wool, naturally odour-resistant, machine washable, and built on a sugarcane-based SweetFoam sole. Carbon-negative footwear.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Allbirds Wool Runner 2: merino wool upper, sugarcane sole, naturally odour-resistant. Carbon-negative.",
+      "meta_title": "Allbirds Wool Runner 2 | Sustainable Merino Wool Sneakers",
+      "name": "Allbirds Wool Runner 2 Sneakers",
+      "other_attributes": {
+        "height": 11.0,
+        "height_unit": "centimeter",
+        "length": 34.0,
+        "length_unit": "centimeter",
+        "weight": 0.26,
+        "weight_unit": "kilogram",
+        "width": 13.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "allbirds-wool-runners"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "clothing-apparel"
+        }
+      },
+      "description": "800-fill-power RDS-certified down insulation, Fair Trade Certified sewing, water-repellent DWR finish, and two zip hand pockets plus an internal chest pocket.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "Patagonia Down Sweater with 800-fill RDS down, Fair Trade certified, and DWR finish.",
+      "meta_title": "Patagonia Down Sweater Jacket | 800-Fill Insulated",
+      "name": "Patagonia Down Sweater Jacket",
+      "other_attributes": {
+        "height": 4.0,
+        "height_unit": "centimeter",
+        "length": 35.0,
+        "length_unit": "centimeter",
+        "weight": 0.34,
+        "weight_unit": "kilogram",
+        "width": 28.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "patagonia-down-sweater-jacket"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "clothing-apparel"
+        }
+      },
+      "description": "HEATTECH Extra Warm technology generates heat from moisture and retains it for 2.25x more warmth than standard HEATTECH. Smooth, non-itchy stretch fabric.",
+      "fulfilment_type": "local_delivery",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Uniqlo HEATTECH Extra Warm crew neck. 2.25x warmer, moisture-wicking stretch thermal.",
+      "meta_title": "Uniqlo HEATTECH Extra Warm T-Shirt | Thermal Base Layer",
+      "name": "Uniqlo HEATTECH Extra Warm Crew Neck T-Shirt",
+      "other_attributes": {
+        "height": 2.0,
+        "height_unit": "centimeter",
+        "length": 28.0,
+        "length_unit": "centimeter",
+        "weight": 0.18,
+        "weight_unit": "kilogram",
+        "width": 22.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "uniqlo-heattech-crew-neck"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "clothing-apparel"
+        }
+      },
+      "description": "100% brushed cotton Oxford weave, classic fit, button-down collar, double-button cuffs, and non-iron finish. A wardrobe staple for smart-casual and business dress.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Charles Tyrwhitt Classic Fit Oxford Shirt. 100% cotton, non-iron finish, button-down collar.",
+      "meta_title": "Classic Oxford Dress Shirt | Non-Iron Cotton Button-Down",
+      "name": "Charles Tyrwhitt Classic Fit Oxford Shirt",
+      "other_attributes": {
+        "height": 3.0,
+        "height_unit": "centimeter",
+        "length": 35.0,
+        "length_unit": "centimeter",
+        "weight": 0.25,
+        "weight_unit": "kilogram",
+        "width": 28.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "classic-oxford-dress-shirt"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "clothing-apparel"
+        }
+      },
+      "description": "Buttery-soft Nulu fabric, naked sensation, high-rise waistband with internal drawcord, and a 25-inch inseam. The best-selling yoga and studio legging.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Lululemon Align High-Rise Leggings in buttery Nulu fabric. Naked-feel comfort for yoga and studio.",
+      "meta_title": "Lululemon Align Leggings 25\" | High-Rise Nulu Yoga Pants",
+      "name": "Lululemon Align High-Rise Leggings 25\"",
+      "other_attributes": {
+        "height": 2.0,
+        "height_unit": "centimeter",
+        "length": 30.0,
+        "length_unit": "centimeter",
+        "weight": 0.16,
+        "weight_unit": "kilogram",
+        "width": 20.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "lululemon-align-leggings"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "clothing-apparel"
+        }
+      },
+      "description": "The iconic 1985 Chicago colourway returns. Full-grain leather upper, Nike Air cushioning, and the original red-black-white colour-blocking. Limited quantities.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "Pre-order Air Jordan 1 Retro High OG Chicago. Full-grain leather, Nike Air, limited stock.",
+      "meta_title": "Air Jordan 1 Retro High OG Chicago | Pre-Order Limited",
+      "name": "Air Jordan 1 Retro High OG Chicago Re-Release",
+      "other_attributes": {
+        "height": 14.0,
+        "height_unit": "centimeter",
+        "length": 35.0,
+        "length_unit": "centimeter",
+        "weight": 0.56,
+        "weight_unit": "kilogram",
+        "width": 15.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "pre_order",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "limited-edition-air-jordan-1"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "clothing-apparel"
+        }
+      },
+      "description": "One-to-one 60-minute video or in-person session with a certified personal stylist. Includes wardrobe audit, style profile, and a curated shopping shortlist.",
+      "fulfilment_type": "service_appointment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Book a 60-minute personal styling session. Wardrobe audit, style profile, and shopping shortlist.",
+      "meta_title": "Personal Styling Consultation | 60-Minute Session",
+      "name": "Personal Styling Consultation (60 min)",
+      "other_attributes": {
+        "delivery_format": [
+          "Video call",
+          "In-person"
+        ],
+        "revision_policy": "Follow-up email included"
+      },
+      "product_type": "service",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "personal-styling-session"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "clothing-apparel"
+        }
+      },
+      "description": "Unlock 15% off all apparel year-round, priority access to new collections, free standard shipping on every order, and two complimentary styling sessions.",
+      "fulfilment_type": "account_provision",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Style Club Annual Membership: 15% discount, free shipping, priority access, and styling sessions.",
+      "meta_title": "Style Club Membership | 15% Off All Apparel + Free Shipping",
+      "name": "Style Club Annual Membership",
+      "other_attributes": {
+        "membership_duration": "1 year",
+        "perks": [
+          "15_percent_discount",
+          "free_shipping",
+          "priority_access"
+        ]
+      },
+      "product_type": "membership",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "zero-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "clothing-store-membership"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "home-kitchen"
+        }
+      },
+      "description": "Enamelled cast iron 28cm round casserole with tight-fitting lid, heat-resistant composite knob (up to 260\u00b0C), and dishwasher-safe interior. Lifetime guarantee.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "Le Creuset 28cm Signature Cast Iron Dutch Oven. Oven-safe to 260\u00b0C, dishwasher safe, lifetime guarantee.",
+      "meta_title": "Le Creuset Dutch Oven 28cm | Cast Iron Casserole",
+      "name": "Le Creuset Signature Cast Iron Dutch Oven 28cm",
+      "other_attributes": {
+        "height": 18.0,
+        "height_unit": "centimeter",
+        "length": 36.0,
+        "length_unit": "centimeter",
+        "weight": 4.1,
+        "weight_unit": "kilogram",
+        "width": 30.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "le-creuset-dutch-oven-28cm"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "home-kitchen"
+        }
+      },
+      "description": "Built-in conical burr grinder, 54mm portafilter, 9-bar Italian pump, dual-wall filter baskets, and steam wand for microfoam milk texturing. 2L water tank.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "Breville Barista Express with integrated grinder, 9-bar pump, and steam wand. Caf\u00e9 quality at home.",
+      "meta_title": "Breville Barista Express | Built-In Grinder Espresso Machine",
+      "name": "Breville Barista Express Espresso Machine",
+      "other_attributes": {
+        "height": 40.4,
+        "height_unit": "centimeter",
+        "length": 39.4,
+        "length_unit": "centimeter",
+        "weight": 12.7,
+        "weight_unit": "kilogram",
+        "width": 31.2,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "breville-barista-express-espresso"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "home-kitchen"
+        }
+      },
+      "description": "Laser Detect technology reveals hidden dust, HEPA filtration captures 99.99% of particles, up to 60 minutes run time, and LCD screen showing real-time particle count.",
+      "fulfilment_type": "local_delivery",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Dyson V15 Detect with laser dust detection, HEPA filtration, and 60-minute run time.",
+      "meta_title": "Dyson V15 Detect | Laser Cordless Vacuum Cleaner",
+      "name": "Dyson V15 Detect Absolute Cordless Vacuum",
+      "other_attributes": {
+        "height": 128.3,
+        "height_unit": "centimeter",
+        "length": 25.2,
+        "length_unit": "centimeter",
+        "weight": 3.1,
+        "weight_unit": "kilogram",
+        "width": 25.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "dyson-v15-detect-vacuum"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "home-kitchen"
+        }
+      },
+      "description": "USDA-certified organic bamboo, juice grooves on large and medium boards, hanging holes, non-slip rubber feet, and a natural antimicrobial surface. Small, medium, large.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Bambu 3-piece organic bamboo cutting board set with juice grooves and non-slip feet.",
+      "meta_title": "Bamboo Cutting Board Set 3-Piece | Organic, Antimicrobial",
+      "name": "Bambu Organic Bamboo Cutting Board Set (3-Piece)",
+      "other_attributes": {
+        "height": 4.0,
+        "height_unit": "centimeter",
+        "length": 46.0,
+        "length_unit": "centimeter",
+        "weight": 1.8,
+        "weight_unit": "kilogram",
+        "width": 31.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "bambu-cutting-board-set"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "home-kitchen"
+        }
+      },
+      "description": "Learns your schedule in about a week, Farsight display turns on when you approach, works with Alexa, Google Home, and most 24V heating and cooling systems.",
+      "fulfilment_type": "store_pickup",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Google Nest Thermostat 4th Gen. Self-learning, Farsight display, works with Alexa and Google Home.",
+      "meta_title": "Google Nest Learning Thermostat 4th Gen | Smart Home",
+      "name": "Google Nest Learning Thermostat 4th Gen",
+      "other_attributes": {
+        "height": 3.3,
+        "height_unit": "centimeter",
+        "length": 8.4,
+        "length_unit": "centimeter",
+        "weight": 0.25,
+        "weight_unit": "kilogram",
+        "width": 8.4,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "nest-learning-thermostat"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "home-kitchen"
+        }
+      },
+      "description": "5-quart stainless steel bowl, 10-speed settings, 325-watt motor, planetary mixing action, and includes flat beater, dough hook, and wire whip. Over 15 attachments available.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "KitchenAid Artisan 5-quart stand mixer. 10 speeds, 325W, planetary mixing. Accepts 15+ attachments.",
+      "meta_title": "KitchenAid Artisan 5-Qt Stand Mixer | 10-Speed 325W",
+      "name": "KitchenAid Artisan Series 5-Qt Stand Mixer",
+      "other_attributes": {
+        "height": 35.5,
+        "height_unit": "centimeter",
+        "length": 37.2,
+        "length_unit": "centimeter",
+        "weight": 11.9,
+        "weight_unit": "kilogram",
+        "width": 22.2,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "kitchenaid-stand-mixer"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "value-basics"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "home-kitchen"
+        }
+      },
+      "description": "16-cube modular shelf unit, compatible with KALLAX inserts and doors, can be used freestanding or wall-mounted, holds up to 13kg per square. Particleboard.",
+      "fulfilment_type": "store_pickup",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "IKEA KALLAX 4x4 shelf unit. 16 cubes, wall-mountable, compatible with all KALLAX inserts.",
+      "meta_title": "IKEA KALLAX 4x4 Shelf Unit | 16-Cube Modular Storage",
+      "name": "IKEA KALLAX Shelf Unit 4x4",
+      "other_attributes": {
+        "height": 39.0,
+        "height_unit": "centimeter",
+        "length": 147.0,
+        "length_unit": "centimeter",
+        "weight": 51.2,
+        "weight_unit": "kilogram",
+        "width": 147.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "ikea-kallax-shelf-unit"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "home-kitchen"
+        }
+      },
+      "description": "7-in-1: pressure cooker, slow cooker, rice/grain cooker, steamer, saut\u00e9 pan, yogurt maker, and warmer. 8-quart stainless steel inner pot. 13 one-touch programs.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Instant Pot Duo 8-quart, 7 cooking functions, 13 programs. Up to 70% faster than traditional cooking.",
+      "meta_title": "Instant Pot Duo 8Qt 7-in-1 | Electric Pressure Cooker",
+      "name": "Instant Pot Duo 7-in-1 Electric Pressure Cooker 8Qt",
+      "other_attributes": {
+        "height": 38.5,
+        "height_unit": "centimeter",
+        "length": 33.8,
+        "length_unit": "centimeter",
+        "weight": 6.35,
+        "weight_unit": "kilogram",
+        "width": 31.1,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "instant-pot-duo-7-in-1"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "home-kitchen"
+        }
+      },
+      "description": "Monthly professional deep-clean service for homes up to 2,000 sq ft. Eco-friendly products, fully insured cleaners, and flexible scheduling via the app.",
+      "fulfilment_type": "subscription",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Subscribe to monthly professional home deep-cleaning. Eco products, insured staff, flexible booking.",
+      "meta_title": "Monthly Home Deep-Clean Subscription | Eco-Friendly Cleaners",
+      "name": "Home Deep-Clean Service (Monthly Subscription)",
+      "other_attributes": {
+        "billing_cycle_options": [
+          "monthly"
+        ],
+        "cancellation_policy": "Cancel anytime with 7-day notice",
+        "trial_days": 0
+      },
+      "product_type": "subscription",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "home-cleaning-subscription"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "home-kitchen"
+        }
+      },
+      "description": "90-minute session with a qualified interior designer. Covers room layout, colour palettes, furniture selection, and a follow-up mood board delivered within 48 hours.",
+      "fulfilment_type": "service_appointment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "90-minute interior design consultation with mood board. Room layout, colours, and furniture advice.",
+      "meta_title": "Interior Design Consultation 90 min | Room Makeover Planning",
+      "name": "Interior Design Consultation (90 min)",
+      "other_attributes": {
+        "delivery_format": [
+          "Video call",
+          "In-person"
+        ],
+        "revision_policy": "Mood board included"
+      },
+      "product_type": "service",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "interior-design-consultation"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "beauty-personal-care"
+        }
+      },
+      "description": "Developed with dermatologists. Contains three essential ceramides and hyaluronic acid. Non-greasy, fragrance-free formula for dry to very dry skin. 48-hour moisture.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "CeraVe Moisturising Cream with ceramides and hyaluronic acid. Fragrance-free, 48-hour hydration.",
+      "meta_title": "CeraVe Moisturising Cream 454g | Ceramides for Dry Skin",
+      "name": "CeraVe Moisturising Cream 454g",
+      "other_attributes": {
+        "height": 8.0,
+        "height_unit": "centimeter",
+        "length": 12.0,
+        "length_unit": "centimeter",
+        "weight": 0.5,
+        "weight_unit": "kilogram",
+        "width": 10.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "cerave-moisturising-cream"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "beauty-personal-care"
+        }
+      },
+      "description": "Uses the Coanda effect to style, wave, smooth, and dry without extreme heat. Includes long barrels, firm and soft smoothing brushes, and a paddle brush. 110-240V.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "Dyson Airwrap Complete styler. Style without extreme heat. Includes 6 attachments for all hair types.",
+      "meta_title": "Dyson Airwrap Multi-Styler Complete | Curl, Wave & Smooth",
+      "name": "Dyson Airwrap Multi-Styler Complete",
+      "other_attributes": {
+        "height": 10.0,
+        "height_unit": "centimeter",
+        "length": 30.0,
+        "length_unit": "centimeter",
+        "weight": 1.4,
+        "weight_unit": "kilogram",
+        "width": 12.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "dyson-airwrap-styler"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "value-basics"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "beauty-personal-care"
+        }
+      },
+      "description": "High-strength vitamin and mineral blemish formula. Niacinamide reduces appearance of skin blemishes, zinc balances sebum activity. Vegan and cruelty-free.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "The Ordinary Niacinamide 10% + Zinc 1%. Reduces blemishes, balances sebum. Vegan, cruelty-free.",
+      "meta_title": "The Ordinary Niacinamide 10% + Zinc 1% | Blemish Serum 30ml",
+      "name": "The Ordinary Niacinamide 10% + Zinc 1% Serum 30ml",
+      "other_attributes": {
+        "height": 11.0,
+        "height_unit": "centimeter",
+        "length": 4.0,
+        "length_unit": "centimeter",
+        "weight": 0.05,
+        "weight_unit": "kilogram",
+        "width": 4.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "the-ordinary-niacinamide-serum"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "beauty-personal-care"
+        }
+      },
+      "description": "The world's most iconic fragrance. Aldehydic floral with top notes of neroli and ylang-ylang, heart of jasmine and rose, and a warm, sensual base of vetiver and sandalwood.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "Chanel No. 5 EDP. Iconic aldehyde-floral with jasmine, rose, neroli, and sandalwood. 35ml, 50ml, 100ml.",
+      "meta_title": "Chanel No. 5 Eau de Parfum | Iconic Floral Fragrance",
+      "name": "Chanel No. 5 Eau de Parfum",
+      "other_attributes": {
+        "height": 12.0,
+        "height_unit": "centimeter",
+        "length": 5.0,
+        "length_unit": "centimeter",
+        "weight": 0.22,
+        "weight_unit": "kilogram",
+        "width": 5.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "chanel-no5-eau-de-parfum"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "beauty-personal-care"
+        }
+      },
+      "description": "The legendary Miracle Broth with fermented sea kelp heals and restores the skin's barrier. Rich, creamy texture that leaves skin visibly lifted, firmed, and radiant.",
+      "fulfilment_type": "local_delivery",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "La Mer Moisturising Cream with Miracle Broth sea kelp. Restores, firms, and lifts skin.",
+      "meta_title": "La Mer Moisturising Cream 30ml | Miracle Broth Luxury Skincare",
+      "name": "La Mer Moisturising Cream 30ml",
+      "other_attributes": {
+        "height": 5.0,
+        "height_unit": "centimeter",
+        "length": 6.0,
+        "length_unit": "centimeter",
+        "weight": 0.1,
+        "weight_unit": "kilogram",
+        "width": 6.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "la-mer-moisturising-cream"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "beauty-personal-care"
+        }
+      },
+      "description": "SkinIQ AI technology adapts to your beard, 72,000 cutting actions per minute, 360-D Flex heads, NanoTech precision blades, and wet-or-dry use with 60-minute run time.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Philips Series 9000 Prestige with SkinIQ, 72,000 cuts/min, and 60-minute cordless run time.",
+      "meta_title": "Philips Series 9000 Prestige | AI Electric Shaver Wet & Dry",
+      "name": "Philips Series 9000 Prestige Electric Shaver",
+      "other_attributes": {
+        "height": 17.0,
+        "height_unit": "centimeter",
+        "length": 8.0,
+        "length_unit": "centimeter",
+        "weight": 0.19,
+        "weight_unit": "kilogram",
+        "width": 5.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "philips-series-9000-shaver"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "beauty-personal-care"
+        }
+      },
+      "description": "A curated luxury skincare set: The Rice Wash cleanser, The Dewy Skin Cream 50ml, The Water Cream 50ml, and The Essence 150ml \u2014 all in a signature gift box.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Tatcha Dewy Skin Ritual: cleanser, The Dewy Skin Cream, Water Cream, and Essence in gift packaging.",
+      "meta_title": "Tatcha Dewy Skin Ritual Gift Set | Luxury Skincare Bundle",
+      "name": "Tatcha Dewy Skin Ritual Gift Set",
+      "other_attributes": {
+        "height": 8.0,
+        "height_unit": "centimeter",
+        "length": 22.0,
+        "length_unit": "centimeter",
+        "weight": 0.85,
+        "weight_unit": "kilogram",
+        "width": 17.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "gift_card",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "tatcha-dewy-skin-gift-set"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "beauty-personal-care"
+        }
+      },
+      "description": "Receive 6+ full-size and premium beauty products curated by experts, delivered monthly. Value worth over $50 every box. Cancel anytime.",
+      "fulfilment_type": "subscription",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Monthly beauty box subscription. 6+ curated skincare and makeup products. Over $50 value per box.",
+      "meta_title": "LOOKFANTASTIC Beauty Box Monthly | 6+ Products Per Box",
+      "name": "LOOKFANTASTIC Beauty Box Monthly Subscription",
+      "other_attributes": {
+        "billing_cycle_options": [
+          "monthly",
+          "annual"
+        ],
+        "cancellation_policy": "Cancel anytime",
+        "trial_days": 0
+      },
+      "product_type": "subscription",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "beauty-box-subscription"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "value-basics"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "beauty-personal-care"
+        }
+      },
+      "description": "Your donation funds skincare product donations for women in shelters and community programmes. 100% of proceeds go directly to the Beauty For All Foundation.",
+      "fulfilment_type": "email",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Donate to Beauty For All Foundation. Funds skincare products for women in shelters. 100% to charity.",
+      "meta_title": "Beauty For All Foundation Donation | Support Women's Shelters",
+      "name": "Beauty For All Foundation Donation",
+      "other_attributes": {
+        "charity_name": "Beauty For All Foundation",
+        "tax_deductible": true
+      },
+      "product_type": "donation",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "zero-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "custom-skincare-donation"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "beauty-personal-care"
+        }
+      },
+      "description": "30-minute live video consultation with a licensed dermatologist. Covers skin analysis, product recommendations, and a personalised routine plan emailed within 24 hours.",
+      "fulfilment_type": "service_appointment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Book a 30-min virtual dermatologist consultation. Skin analysis, routine plan, and product advice.",
+      "meta_title": "Virtual Dermatologist Skincare Consultation 30 min",
+      "name": "Virtual Skincare Consultation with Dermatologist (30 min)",
+      "other_attributes": {
+        "delivery_format": [
+          "Video call"
+        ],
+        "revision_policy": "Routine plan emailed within 24h"
+      },
+      "product_type": "service",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "virtual-skincare-consultation"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "sports-outdoors"
+        }
+      },
+      "description": "AMOLED display, multi-band GPS, race predictor, morning report, HRV status, up to 15 days in smartwatch mode, and ANT+/BLE sensor connectivity.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "Garmin Forerunner 265 with AMOLED display, multi-band GPS, 15-day battery, and race predictor.",
+      "meta_title": "Garmin Forerunner 265 | AMOLED Running GPS Watch",
+      "name": "Garmin Forerunner 265 Running GPS Watch",
+      "other_attributes": {
+        "height": 1.26,
+        "height_unit": "centimeter",
+        "length": 4.6,
+        "length_unit": "centimeter",
+        "weight": 0.047,
+        "weight_unit": "kilogram",
+        "width": 4.6,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "garmin-forerunner-265"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "sports-outdoors"
+        }
+      },
+      "description": "Alpha Gold aluminium frame, Shimano Deore hydraulic disc brakes, 24-speed Shimano drivetrain, 700c wheels with puncture-resistant tyres. Assembly required, available in store.",
+      "fulfilment_type": "store_pickup",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Trek FX 3 Disc hybrid bike with Shimano Deore hydraulics, 24-speed, 700c. Store pickup only.",
+      "meta_title": "Trek FX 3 Disc Hybrid Bike 2024 | Shimano Deore Hydraulic",
+      "name": "Trek FX 3 Disc Hybrid Bike 2024",
+      "other_attributes": {
+        "height": 100.0,
+        "height_unit": "centimeter",
+        "length": 180.0,
+        "length_unit": "centimeter",
+        "weight": 11.0,
+        "weight_unit": "kilogram",
+        "width": 60.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "trek-fx3-disc-hybrid-bike"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "sports-outdoors"
+        }
+      },
+      "description": "TempShield double-wall vacuum insulation keeps liquids cold 24 hours or hot 12 hours. BPA-free 18/8 stainless steel, Flex Cap, and Powder Coat finish. Dishwasher safe.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Hydro Flask 32oz Wide Mouth. 24-hour cold, 12-hour hot. BPA-free stainless steel. Dishwasher safe.",
+      "meta_title": "Hydro Flask 32oz Wide Mouth | Insulated Water Bottle",
+      "name": "Hydro Flask 32 oz Wide Mouth Water Bottle",
+      "other_attributes": {
+        "height": 24.0,
+        "height_unit": "centimeter",
+        "length": 9.5,
+        "length_unit": "centimeter",
+        "weight": 0.454,
+        "weight_unit": "kilogram",
+        "width": 9.5,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "hydro-flask-32oz-wide-mouth"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "sports-outdoors"
+        }
+      },
+      "description": "Mid-weight brushed fleece interior, soft outer face, encased elastic waistband with external drawcord, open hand pockets, and ribbed cuffs. Regular fit.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Under Armour Rival Fleece Joggers. Brushed fleece, elastic waist, open pockets. Regular fit.",
+      "meta_title": "Under Armour Rival Fleece Joggers | Comfortable Training Pants",
+      "name": "Under Armour Rival Fleece Joggers",
+      "other_attributes": {
+        "height": 3.0,
+        "height_unit": "centimeter",
+        "length": 30.0,
+        "length_unit": "centimeter",
+        "weight": 0.4,
+        "weight_unit": "kilogram",
+        "width": 22.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "under-armour-rival-fleece-joggers"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "sports-outdoors"
+        }
+      },
+      "description": "USAA-certified, Dual-Core Construction for a breathable and comfortable waistbelt, four gear loops, and a Speed Adjust buckle. CE and UIAA certified for top-rope and lead climbing.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Black Diamond Momentum Harness. CE/UIAA certified, Dual-Core waistbelt, Speed Adjust buckle.",
+      "meta_title": "Black Diamond Momentum Climbing Harness | CE & UIAA Certified",
+      "name": "Black Diamond Momentum Harness",
+      "other_attributes": {
+        "height": 5.0,
+        "height_unit": "centimeter",
+        "length": 25.0,
+        "length_unit": "centimeter",
+        "weight": 0.35,
+        "weight_unit": "kilogram",
+        "width": 20.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "black-diamond-climbing-harness"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "sports-outdoors"
+        }
+      },
+      "description": "Rent a Peloton Bike+ with auto-follow resistance, 24-inch rotating touchscreen, and Peloton All-Access Membership included. Delivered and installed at your home.",
+      "fulfilment_type": "local_delivery",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Rent Peloton Bike+ monthly. Auto-follow resistance, 24-inch screen. All-Access Membership included.",
+      "meta_title": "Peloton Bike+ Monthly Rental | Local Delivery & Setup",
+      "name": "Peloton Bike+ Rental (Monthly)",
+      "other_attributes": {
+        "height": 145.0,
+        "height_unit": "centimeter",
+        "length": 137.0,
+        "length_unit": "centimeter",
+        "weight": 62.6,
+        "weight_unit": "kilogram",
+        "width": 59.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "rental",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "peloton-bike-plus"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "sports-outdoors"
+        }
+      },
+      "description": "5 x 60-minute 1-on-1 personal training sessions with a certified PT. Sessions available in-person at our Dallas facility or via live video. Includes programme plan.",
+      "fulfilment_type": "service_appointment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "5 x 60-min personal training sessions with certified PT. In-person or live video. Programme plan included.",
+      "meta_title": "Personal Training Bundle | 5 x 60-min Sessions",
+      "name": "Personal Training Session Bundle (5 Sessions)",
+      "other_attributes": {
+        "delivery_format": [
+          "In-person",
+          "Video call"
+        ],
+        "revision_policy": "Programme plan included"
+      },
+      "product_type": "service",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "gym-personal-training-sessions"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "sports-outdoors"
+        }
+      },
+      "description": "Monthly curated box of 5\u20137 full-size Myprotein sports nutrition products: protein bars, shakers, pre-workout, recovery supplements, and snacks. Value worth over $60.",
+      "fulfilment_type": "subscription",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Monthly Myprotein nutrition subscription box. 5-7 full-size sports nutrition products, $60+ value.",
+      "meta_title": "Myprotein Elite Nutrition Box Monthly | 5-7 Products",
+      "name": "Myprotein Elite Performance Nutrition Box (Monthly)",
+      "other_attributes": {
+        "billing_cycle_options": [
+          "monthly"
+        ],
+        "cancellation_policy": "Cancel anytime",
+        "trial_days": 0
+      },
+      "product_type": "subscription",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "sports-nutrition-subscription"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "sports-outdoors"
+        }
+      },
+      "description": "Official race entry for the City Annual Marathon (42.2km). Includes race bib, timing chip, finisher medal, and post-race refreshments. Entry confirmation sent by email.",
+      "fulfilment_type": "event_access",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Register for the City Annual Marathon. 42.2km, timing chip, finisher medal, and post-race pack.",
+      "meta_title": "City Annual Marathon Race Entry | 42.2km Running Event",
+      "name": "City Annual Marathon Race Entry",
+      "other_attributes": {
+        "entry_format": "QR code + bib",
+        "event_date": "2026-11-15",
+        "venue": "City Park Start Line"
+      },
+      "product_type": "event",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "sports-event-marathon-ticket"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "sports-outdoors"
+        }
+      },
+      "description": "6mm thick closed-cell surface prevents sweat from seeping in, high-density cushioning, non-slip bottom, lifetime guarantee, and free of PVC, AZO dyes, and phthalates.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Manduka PRO Yoga Mat 6mm. Dense cushion, non-slip bottom, lifetime guarantee. PVC-free and vegan.",
+      "meta_title": "Manduka PRO Yoga Mat 6mm 71\" | Lifetime Guarantee",
+      "name": "Manduka PRO Yoga Mat 6mm 71\"",
+      "other_attributes": {
+        "height": 0.6,
+        "height_unit": "centimeter",
+        "length": 180.3,
+        "length_unit": "centimeter",
+        "weight": 3.2,
+        "weight_unit": "kilogram",
+        "width": 61.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "yoga-mat-premium"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "digital-goods"
+        }
+      },
+      "description": "Full access to 20+ Creative Cloud desktop and mobile apps including Photoshop, Illustrator, Premiere Pro, After Effects, and 100GB cloud storage. For one named user.",
+      "fulfilment_type": "license_key",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "Adobe Creative Cloud All Apps. 20+ apps including Photoshop and Premiere Pro. 100GB cloud storage.",
+      "meta_title": "Adobe Creative Cloud All Apps | Annual License Key",
+      "name": "Adobe Creative Cloud All Apps License",
+      "other_attributes": {
+        "delivery_method": "License key via email",
+        "max_devices": 2,
+        "platform_support": [
+          "Windows",
+          "macOS"
+        ]
+      },
+      "product_type": "software_license",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "digital-goods-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "adobe-creative-cloud-license"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "digital-goods"
+        }
+      },
+      "description": "Word, Excel, PowerPoint, Outlook, Teams, OneNote, and OneDrive for up to 6 users. 1TB OneDrive storage per person, advanced security, and premium features.",
+      "fulfilment_type": "account_provision",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Microsoft 365 Family for up to 6 users. Office apps, 1TB OneDrive per user, Teams, and Outlook.",
+      "meta_title": "Microsoft 365 Family | 6 Users, 1TB OneDrive Each",
+      "name": "Microsoft 365 Family Subscription",
+      "other_attributes": {
+        "billing_cycle_options": [
+          "monthly",
+          "annual"
+        ],
+        "cancellation_policy": "Cancel anytime",
+        "trial_days": 30
+      },
+      "product_type": "subscription",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "digital-goods-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "microsoft-365-family"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "digital-goods"
+        }
+      },
+      "description": "Unlimited AI writes and edits, unlimited blocks, unlimited file uploads, 30-day version history, custom automation, and API access. Billed annually for best value.",
+      "fulfilment_type": "streaming",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Notion AI Plus plan. Unlimited AI, unlimited blocks, custom automation, and API access.",
+      "meta_title": "Notion AI Plus Annual | Unlimited AI, Blocks & Automation",
+      "name": "Notion AI Plus Annual Plan",
+      "other_attributes": {
+        "billing_cycle_options": [
+          "monthly",
+          "annual"
+        ],
+        "cancellation_policy": "Cancel anytime",
+        "trial_days": 7
+      },
+      "product_type": "subscription",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "digital-goods-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "notion-ai-workspace"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "digital-goods"
+        }
+      },
+      "description": "95 hours of HD video covering Python fundamentals, Django, REST APIs, PostgreSQL, Docker, CI/CD, and deployment to AWS. Includes 40 coding projects and a certificate.",
+      "fulfilment_type": "streaming",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "Complete Python Django course. 95 hours, 40 projects, REST APIs, Docker, AWS deployment.",
+      "meta_title": "Python & Django Full-Stack Course | 95h Video + Certificate",
+      "name": "Complete Python & Django Full-Stack Development Course",
+      "other_attributes": {
+        "certificate": true,
+        "language": "English",
+        "platform": "Streaming",
+        "total_hours": 95
+      },
+      "product_type": "course",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "digital-goods-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "python-full-stack-course"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "digital-goods"
+        }
+      },
+      "description": "60-hour downloadable course covering Figma fundamentals, wireframing, prototyping, design systems, auto layout, and a full portfolio project from brief to handoff.",
+      "fulfilment_type": "download",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "60-hour Figma UI/UX course. Wireframing, prototyping, design systems, and portfolio project.",
+      "meta_title": "Figma UI/UX Design Masterclass | 60h Download Course",
+      "name": "Figma UI/UX Design Masterclass",
+      "other_attributes": {
+        "certificate": true,
+        "language": "English",
+        "platform": "Download",
+        "total_hours": 60
+      },
+      "product_type": "course",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "digital-goods-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "figma-ui-ux-design-course"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "value-basics"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "digital-goods"
+        }
+      },
+      "description": "300-page comprehensive PDF guide covering Photoshop layers, masks, smart objects, Camera Raw, neural filters, and non-destructive retouching. Updated for 2026.",
+      "fulfilment_type": "download",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "300-page Photoshop guide PDF. Covers layers, masks, Camera Raw, neural filters. Instant download.",
+      "meta_title": "Photoshop Mastery Guide 2026 | 300-Page PDF Download",
+      "name": "Adobe Photoshop Mastery Guide 2026 Edition (PDF)",
+      "other_attributes": {
+        "file_format": "PDF",
+        "file_size_mb": 48.0,
+        "language": "English",
+        "page_count": 300
+      },
+      "product_type": "digital",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "digital-goods-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "photoshop-ebook-2026"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "digital-goods"
+        }
+      },
+      "description": "500 high-resolution (5000\u00d73333px) royalty-free stock photos across 12 lifestyle and business categories. ZIP download, no attribution required, commercial use permitted.",
+      "fulfilment_type": "download",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "500 royalty-free high-res stock photos. Commercial use, no attribution. Standard and Extended licenses.",
+      "meta_title": "Premium Stock Photo Pack | 500 Royalty-Free Commercial Images",
+      "name": "Premium Stock Photo Pack \u2013 500 Royalty-Free Images",
+      "other_attributes": {
+        "file_format": "ZIP (JPG)",
+        "image_count": 500,
+        "language": "English",
+        "resolution": "5000x3333px"
+      },
+      "product_type": "digital",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "digital-goods-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "stock-photo-pack-premium"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "digital-goods"
+        }
+      },
+      "description": "Real-time threat protection, 50GB secure cloud backup, VPN, Password Manager, Dark Web Monitoring, and Parental Controls for up to 5 devices. Key delivered by email.",
+      "fulfilment_type": "email",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Norton 360 Deluxe for 5 devices. Antivirus, VPN, 50GB backup, Password Manager. Key by email.",
+      "meta_title": "Norton 360 Deluxe | 5 Devices, VPN & Dark Web Monitoring",
+      "name": "Norton 360 Deluxe Antivirus License",
+      "other_attributes": {
+        "delivery_method": "License key via email",
+        "max_devices": 5,
+        "platform_support": [
+          "Windows",
+          "macOS",
+          "Android",
+          "iOS"
+        ]
+      },
+      "product_type": "software_license",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "digital-goods-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "antivirus-pro-license"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "digital-goods"
+        }
+      },
+      "description": "Full-day virtual conference with 20+ keynote speakers, live workshops on AI tools, design, development, and marketing, plus 12-month on-demand replay access.",
+      "fulfilment_type": "event_access",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Digital Creator Summit 2026 virtual pass. 20+ speakers, live workshops, 12-month replay access.",
+      "meta_title": "Digital Creator Summit 2026 | Virtual Event + Replay Access",
+      "name": "Digital Creator Summit 2026 \u2013 Virtual Event Pass",
+      "other_attributes": {
+        "entry_format": "Unique event link",
+        "event_date": "2026-10-18",
+        "venue": "Online"
+      },
+      "product_type": "event",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "digital-goods-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "digital-music-festival-ticket"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "digital-goods"
+        }
+      },
+      "description": "Unlimited data sources, advanced reporting dashboards, AI-powered insights, team collaboration tools, priority support, and 100GB data storage. Cancel anytime.",
+      "fulfilment_type": "account_provision",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Digits Analytics Pro. Unlimited sources, AI insights, team tools, priority support. Monthly or annual.",
+      "meta_title": "Digits Analytics Pro | Unlimited Data, AI Insights & Teams",
+      "name": "Digits Analytics Pro Subscription",
+      "other_attributes": {
+        "billing_cycle_options": [
+          "monthly",
+          "annual"
+        ],
+        "cancellation_policy": "Cancel anytime",
+        "trial_days": 14
+      },
+      "product_type": "subscription",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "digital-goods-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "saas-pro-subscription"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "books-stationery"
+        }
+      },
+      "description": "The definitive guide to building good habits and breaking bad ones. No. 1 New York Times bestseller with over 15 million copies sold. By James Clear.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "Atomic Habits by James Clear. The ultimate guide to building good habits. 15M+ copies sold worldwide.",
+      "meta_title": "Atomic Habits by James Clear | #1 NYT Bestseller",
+      "name": "Atomic Habits by James Clear",
+      "other_attributes": {},
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "zero-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "atomic-habits-book"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "books-stationery"
+        }
+      },
+      "description": "Rules for focused success in a distracted world. Cal Newport argues that the ability to focus without distraction is the superpower of the 21st century.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Deep Work by Cal Newport. Master deep focus for career success in a distracted world.",
+      "meta_title": "Deep Work by Cal Newport | Focus Without Distraction",
+      "name": "Deep Work by Cal Newport",
+      "other_attributes": {},
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "zero-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "deep-work-cal-newport"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "books-stationery"
+        }
+      },
+      "description": "Fully revised and updated for modern software development. Covers DRY principle, orthogonality, tracer bullets, metaprogramming, and agile practices.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "The Pragmatic Programmer 20th Anniversary Edition. Updated for modern development practices.",
+      "meta_title": "The Pragmatic Programmer 20th Anniversary | Software Dev Bible",
+      "name": "The Pragmatic Programmer 20th Anniversary Edition",
+      "other_attributes": {},
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "zero-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "the-pragmatic-programmer"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "books-stationery"
+        }
+      },
+      "description": "249 numbered pages, 2 ribbon bookmarks, elastic closure, and an expandable inner pocket. Acid-free 80g/m\u00b2 paper. The notebook of choice for bullet journaling.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Leuchtturm1917 A5 hardcover dot grid notebook. 249 pages, numbered, 80g/m\u00b2 paper. Perfect for BuJo.",
+      "meta_title": "Leuchtturm1917 A5 Dot Grid Notebook | Bullet Journal",
+      "name": "Leuchtturm1917 A5 Hardcover Dot Grid Notebook",
+      "other_attributes": {},
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "zero-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "leuchtturm-a5-notebook"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "books-stationery"
+        }
+      },
+      "description": "Nobel Prize-winning economist Daniel Kahneman explains the two systems that drive the way we think \u2014 fast, intuitive System 1 and slow, deliberate System 2.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Thinking, Fast and Slow by Daniel Kahneman. Explore the psychology of decision-making and bias.",
+      "meta_title": "Thinking Fast and Slow | Daniel Kahneman Nobel Prize Book",
+      "name": "Thinking, Fast and Slow by Daniel Kahneman",
+      "other_attributes": {},
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "zero-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "thinking-fast-and-slow"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "value-basics"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "books-stationery"
+        }
+      },
+      "description": "10-pack of MUJI signature smooth gel ink pens in 0.5mm. Capped design, water-resistant ink, consistent flow, and a minimalist design. Available in black, blue, and red.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "MUJI Smooth Gel Ink Pens 0.5mm, 10-pack. Water-resistant, consistent ink flow. Black, blue, and red.",
+      "meta_title": "MUJI Gel Ink Pen 0.5mm 10-Pack | Smooth Writing",
+      "name": "MUJI Smooth Gel Ink Pen Set 0.5mm (10-Pack)",
+      "other_attributes": {},
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "zero-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "muji-gel-ink-pen-set"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "books-stationery"
+        }
+      },
+      "description": "A bold, breathtaking journey through the history of our species. Covers cognitive revolution, the unification of humankind, and the scientific revolution.",
+      "fulfilment_type": "local_delivery",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Sapiens by Yuval Noah Harari. A sweeping history of our species from the Stone Age to the present.",
+      "meta_title": "Sapiens by Yuval Noah Harari | Brief History of Humankind",
+      "name": "Sapiens: A Brief History of Humankind by Yuval Noah Harari",
+      "other_attributes": {},
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "zero-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "sapiens-yuval-noah-harari"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "books-stationery"
+        }
+      },
+      "description": "16 half-pan watercolours, a fold-out palette lid, a 308gsm Cotman watercolour paper pad (20 sheets), and a Cotman brush. Compact and perfect for outdoor painting.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Winsor & Newton Cotman Pocket Box. 16 watercolours, palette lid, paper pad, and brush.",
+      "meta_title": "Winsor & Newton Cotman Watercolour Pocket Box | 16 Colours",
+      "name": "Winsor & Newton Cotman Watercolour Sketchers' Pocket Box",
+      "other_attributes": {},
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "zero-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "watercolour-art-kit"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "books-stationery"
+        }
+      },
+      "description": "The classic guide to human-centred design. Explains why good design requires an understanding of psychology, communication, and affordances. Required reading for designers.",
+      "fulfilment_type": "store_pickup",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "The Design of Everyday Things by Don Norman. Essential UX and product design reading.",
+      "meta_title": "The Design of Everyday Things | Don Norman UX Design Classic",
+      "name": "The Design of Everyday Things by Don Norman",
+      "other_attributes": {},
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "zero-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "design-of-everyday-things"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "books-stationery"
+        }
+      },
+      "description": "Choose 1 hardcover book per month from 5 curated editor picks across fiction, non-fiction, and debut authors. Free shipping, skip any month, cancel anytime.",
+      "fulfilment_type": "subscription",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Book of the Month Club. Choose 1 hardcover monthly from 5 editor picks. Free shipping.",
+      "meta_title": "Book of the Month Club | Monthly Hardcover Subscription",
+      "name": "Book of the Month Club Subscription",
+      "other_attributes": {
+        "billing_cycle_options": [
+          "monthly"
+        ],
+        "cancellation_policy": "Skip or cancel anytime",
+        "trial_days": 0
+      },
+      "product_type": "subscription",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "zero-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "book-subscription-box"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "health-wellness"
+        }
+      },
+      "description": "2000 IU Vitamin D3 + 100mcg Vitamin K2 (MK-7 form) per capsule. USDA Organic, Non-GMO Verified, vegan, and third-party tested for purity. 60-capsule bottle.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Garden of Life Vitamin D3 2000 IU + K2 100mcg. USDA Organic, Non-GMO, vegan. 60 capsules.",
+      "meta_title": "Garden of Life Vitamin D3 + K2 | Organic Vegan Supplement",
+      "name": "Garden of Life Vitamin D3 + K2 Supplement",
+      "other_attributes": {},
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "garden-of-life-vitamin-d3"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "health-wellness"
+        }
+      },
+      "description": "24g protein per serving, 5.5g naturally occurring BCAAs, 4g glutamine, low sugar, and gluten-free. Mixes instantly with a glass, shaker cup, or blender. NSF certified.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "ON Gold Standard Whey Protein. 24g protein, 5.5g BCAAs per serving. NSF certified. Multiple flavours.",
+      "meta_title": "Optimum Nutrition Gold Standard Whey | 24g Protein NSF Cert",
+      "name": "Optimum Nutrition Gold Standard 100% Whey Protein",
+      "other_attributes": {},
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "whey-protein-isolate-optimum"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "health-wellness"
+        }
+      },
+      "description": "Built-in GPS, ECG app, EDA stress sensor, real-time heart rate zones, sleep tracking with Sleep Profile, Google Maps, and Wallet. Up to 7-day battery life.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Fitbit Charge 6 fitness tracker. Built-in GPS, ECG, EDA stress, sleep tracking, 7-day battery.",
+      "meta_title": "Fitbit Charge 6 | GPS, ECG & Stress Tracking Fitness Band",
+      "name": "Fitbit Charge 6 Fitness Tracker",
+      "other_attributes": {
+        "height": 1.1,
+        "height_unit": "centimeter",
+        "length": 4.4,
+        "length_unit": "centimeter",
+        "weight": 0.039,
+        "weight_unit": "kilogram",
+        "width": 2.2,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "fitbit-charge-6"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "health-wellness"
+        }
+      },
+      "description": "Clinically validated, Bluetooth-enabled, stores 200 readings per user (2 users), TruRead technology takes 3 consecutive readings and displays the average, with irregular heartbeat detection.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Omron Platinum BP monitor. Clinically validated, Bluetooth, 200 readings, TruRead technology.",
+      "meta_title": "Omron Platinum Blood Pressure Monitor | Clinically Validated",
+      "name": "Omron Platinum Upper Arm Blood Pressure Monitor",
+      "other_attributes": {
+        "height": 9.0,
+        "height_unit": "centimeter",
+        "length": 14.0,
+        "length_unit": "centimeter",
+        "weight": 0.35,
+        "weight_unit": "kilogram",
+        "width": 10.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "omron-blood-pressure-monitor"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "health-wellness"
+        }
+      },
+      "description": "Unlimited access to 500+ guided meditations, Sleep Stories narrated by celebrities, breathing exercises, daily mindfulness programmes, and offline listening.",
+      "fulfilment_type": "account_provision",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Calm Premium annual subscription. 500+ meditations, Sleep Stories, breathing exercises.",
+      "meta_title": "Calm Premium Annual | 500+ Guided Meditations & Sleep Stories",
+      "name": "Calm Premium Annual Meditation Subscription",
+      "other_attributes": {
+        "billing_cycle_options": [
+          "annual"
+        ],
+        "cancellation_policy": "Cancel before renewal",
+        "trial_days": 7
+      },
+      "product_type": "subscription",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "calm-meditation-app-subscription"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "health-wellness"
+        }
+      },
+      "description": "200-piece comprehensive first aid kit in a hard-shell carry case. Includes bandages, gauze pads, antiseptic wipes, CPR face shield, thermometer, and instruction guide. BS-8599 compliant.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "200-piece first aid kit. Hard case, BS-8599 compliant. Bandages, antiseptics, CPR shield.",
+      "meta_title": "St. John 200-Piece First Aid Kit | BS-8599 Compliant Hard Case",
+      "name": "St. John Ambulance Deluxe First Aid Kit (200-Piece)",
+      "other_attributes": {
+        "height": 12.0,
+        "height_unit": "centimeter",
+        "length": 30.0,
+        "length_unit": "centimeter",
+        "weight": 1.2,
+        "weight_unit": "kilogram",
+        "width": 22.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "first-aid-kit-deluxe"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "health-wellness"
+        }
+      },
+      "description": "4-week 1-on-1 nutrition coaching with a registered dietitian. Includes an initial 60-min consultation, personalised meal plan, weekly check-ins, and a progress review call.",
+      "fulfilment_type": "service_appointment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "4-week nutrition coaching with registered dietitian. Meal plan, weekly check-ins, progress review.",
+      "meta_title": "4-Week Online Nutrition Coaching | Registered Dietitian",
+      "name": "Online Nutrition & Meal Plan Coaching (4 Weeks)",
+      "other_attributes": {
+        "delivery_format": [
+          "Video call",
+          "Async messaging"
+        ],
+        "revision_policy": "Weekly meal plan revisions included"
+      },
+      "product_type": "service",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "online-nutrition-coaching"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "health-wellness"
+        }
+      },
+      "description": "Annual membership providing unlimited gym access at 3,000+ partner facilities, unlimited group classes, digital wellness content library, and a dedicated health concierge.",
+      "fulfilment_type": "email",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "WellPass Corporate Health Membership. 3,000+ gyms, unlimited classes, wellness content. Annual.",
+      "meta_title": "WellPass Health Membership | 3,000+ Gyms, Classes & Wellness",
+      "name": "WellPass Corporate Health Membership",
+      "other_attributes": {
+        "membership_duration": "1 year",
+        "perks": [
+          "gym_access",
+          "group_classes",
+          "wellness_content"
+        ]
+      },
+      "product_type": "membership",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "health-membership-plan"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "value-basics"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "health-wellness"
+        }
+      },
+      "description": "Support M\u00e9decins Sans Fronti\u00e8res' emergency medical work in conflict zones and natural disasters worldwide. Every dollar funds life-saving medical care.",
+      "fulfilment_type": "manual",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Donate to Doctors Without Borders. Funds emergency medical care in crisis regions worldwide.",
+      "meta_title": "Doctors Without Borders Donation | Emergency Medical Aid",
+      "name": "Doctors Without Borders Charitable Donation",
+      "other_attributes": {
+        "charity_name": "Medecins Sans Frontieres",
+        "tax_deductible": true
+      },
+      "product_type": "donation",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "zero-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "health-donation-charity"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "value-basics"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "health-wellness"
+        }
+      },
+      "description": "A printable digital gift card redeemable on any health and wellness product. Delivered as a downloadable PDF with a unique code. Never expires.",
+      "fulfilment_type": "download",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Health and Wellness digital gift card. PDF download, unique code, redeemable on all wellness products.",
+      "meta_title": "Health & Wellness Gift Card | Printable PDF Download",
+      "name": "Health & Wellness Digital Gift Card",
+      "other_attributes": {
+        "delivery_method": "PDF Download",
+        "validity": "Never expires"
+      },
+      "product_type": "gift_card",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "zero-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "health-wellness-gift-card"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "food-beverages"
+        }
+      },
+      "description": "A blend of Arabica from Brazil, Colombia, and India plus Robusta from Vietnam. Medium roast with notes of hazelnut and brown sugar. 70% Arabica, 30% Robusta. 1kg bag.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "Lavazza Super Crema 1kg whole beans. Medium roast, hazelnut and brown sugar notes. 70% Arabica.",
+      "meta_title": "Lavazza Super Crema Espresso Beans 1kg | Medium Roast Blend",
+      "name": "Lavazza Super Crema Espresso Whole Bean Coffee",
+      "other_attributes": {},
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "lavazza-super-crema-coffee"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "food-beverages"
+        }
+      },
+      "description": "Independently certified UMF 15+ / MGO 400+ New Zealand Manuka honey. Raw, unpasteurised, non-GMO, and traceable from hive to jar. 250g glass jar.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Comvita Manuka Honey UMF 15+ MGO 400+. Certified NZ, raw, non-GMO. 250g glass jar.",
+      "meta_title": "Comvita Manuka Honey UMF 15+ MGO 400+ | 250g NZ Certified",
+      "name": "Comvita Manuka Honey MGO 400+ UMF 15+",
+      "other_attributes": {},
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "manuka-honey-mgo400"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "food-beverages"
+        }
+      },
+      "description": "45 individually wrapped organic herbal tea bags across 9 varieties: Three Mint, Lemon Ginger Manuka, Turmeric Gold, Chamomile Vanilla Manuka, and more. Plastic-free packaging.",
+      "fulfilment_type": "local_delivery",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Pukka 45-bag organic herbal tea selection. 9 varieties, individually wrapped, plastic-free packaging.",
+      "meta_title": "Pukka Organic Herbal Tea Selection 45 Bags | 9 Varieties",
+      "name": "Pukka Herbs Organic Herbal Tea Selection Box (45 Bags)",
+      "other_attributes": {},
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "pukka-herbal-tea-collection"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "food-beverages"
+        }
+      },
+      "description": "Premium selection of 20 Lindt Excellence dark chocolate pieces: 70%, 85%, 90% cocoa and salted caramel in an elegant gift box. Ideal for corporate gifting.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Lindt Excellence 20-piece dark chocolate gift box. 70%, 85%, 90% cocoa and salted caramel.",
+      "meta_title": "Lindt Excellence Dark Chocolate Gift Box | 20 Piece",
+      "name": "Lindt Excellence Dark Chocolate Gift Box (20-Piece)",
+      "other_attributes": {
+        "height": 5.0,
+        "height_unit": "centimeter",
+        "length": 22.0,
+        "length_unit": "centimeter",
+        "weight": 0.25,
+        "weight_unit": "kilogram",
+        "width": 16.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "gift_card",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "lindt-excellence-chocolate-gift"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "food-beverages"
+        }
+      },
+      "description": "A clean and crisp silver tequila made from a blend of Blue Agave and other sugars. Light agave sweetness, hints of citrus, and a smooth finish. 40% ABV. Store pickup only.",
+      "fulfilment_type": "store_pickup",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Jose Cuervo Especial Silver Tequila 750ml. 40% ABV, citrus notes, smooth finish. Store pickup only.",
+      "meta_title": "Jose Cuervo Especial Silver Tequila 750ml | Store Pickup",
+      "name": "Jose Cuervo Especial Silver Tequila 750ml",
+      "other_attributes": {
+        "height": 28.0,
+        "height_unit": "centimeter",
+        "length": 7.5,
+        "length_unit": "centimeter",
+        "weight": 1.1,
+        "weight_unit": "kilogram",
+        "width": 7.5,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "jose-cuervo-tequila"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "food-beverages"
+        }
+      },
+      "description": "Only 280-360 calories per pint. Made with real milk and cream, sweetened with stevia and erythritol. Gluten-free, no artificial colours or flavours. 60\u201370g protein per pint.",
+      "fulfilment_type": "local_delivery",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Halo Top Light Ice Cream. 280-360 cal per pint, high protein, gluten-free, no artificial colours.",
+      "meta_title": "Halo Top Light Ice Cream Pint | 280-360 Cal, High Protein",
+      "name": "Halo Top Light Ice Cream Pint",
+      "other_attributes": {},
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "halo-top-ice-cream"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "food-beverages"
+        }
+      },
+      "description": "Freshly roasted single-origin and seasonal blend coffees delivered weekly. Choose whole bean or ground, roast preference, and 6oz, 12oz, or 1lb bag sizes. Skip or pause anytime.",
+      "fulfilment_type": "subscription",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Blue Bottle weekly coffee subscription. Fresh roasted, choose grind and size. Pause or skip anytime.",
+      "meta_title": "Blue Bottle Coffee Weekly Subscription | Fresh Roast Delivered",
+      "name": "Blue Bottle Coffee Weekly Subscription",
+      "other_attributes": {
+        "billing_cycle_options": [
+          "weekly",
+          "bi-weekly"
+        ],
+        "cancellation_policy": "Pause or cancel anytime",
+        "trial_days": 0
+      },
+      "product_type": "subscription",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "blue-bottle-coffee-subscription"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "food-beverages"
+        }
+      },
+      "description": "3 chef-designed meals per week for 2 people. Pre-portioned ingredients with step-by-step recipe cards delivered to your door. Flexible delivery days, skip any week, cancel anytime.",
+      "fulfilment_type": "local_delivery",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "HelloFresh 3 meals/week for 2 people. Pre-portioned ingredients, recipe cards. Skip or cancel free.",
+      "meta_title": "HelloFresh Meal Kit 3 Meals / 2 People | Weekly Delivery",
+      "name": "HelloFresh Meal Kit Subscription (3 Meals / 2 People)",
+      "other_attributes": {
+        "billing_cycle_options": [
+          "weekly"
+        ],
+        "cancellation_policy": "Skip or cancel anytime",
+        "trial_days": 0
+      },
+      "product_type": "subscription",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "meal-kit-delivery-subscription"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "food-beverages"
+        }
+      },
+      "description": "13 video lessons totalling 4.5 hours with Gordon Ramsay. Covers mise en place, knife skills, stocks, sauces, pasta, and signature dishes. Includes a workbook PDF.",
+      "fulfilment_type": "streaming",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Gordon Ramsay Teaches Cooking. 13 lessons, 4.5 hours, online streaming. Includes workbook PDF.",
+      "meta_title": "Gordon Ramsay Cooking MasterClass | 13 Video Lessons",
+      "name": "Gordon Ramsay Teaches Cooking MasterClass",
+      "other_attributes": {
+        "certificate": false,
+        "language": "English",
+        "platform": "Streaming",
+        "total_hours": 5
+      },
+      "product_type": "course",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "cooking-masterclass-course"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "food-beverages"
+        }
+      },
+      "description": "Six varieties of Fortnum & Mason loose-leaf tea in a keepsake tin: Royal Blend, Earl Grey Classic, Darjeeling, Assam, Chamomile, and Peppermint. 75g each.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Fortnum & Mason 6-variety tea gift set in keepsake tin. Royal Blend, Earl Grey, Darjeeling, and more.",
+      "meta_title": "Fortnum & Mason Classic Tea Gift Set | 6 Varieties Keepsake Tin",
+      "name": "Fortnum & Mason Classic Tea Selection Gift Set",
+      "other_attributes": {},
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "specialty-tea-gift-set"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "automotive"
+        }
+      },
+      "description": "Micro-abrasive technology removes heavy oxidation, severe water spots, swirl marks, and scratches without creating new swirls. Safe for all glossy paint finishes.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Meguiar's Ultimate Compound. Removes oxidation, swirls, and scratches. Safe for all glossy paint.",
+      "meta_title": "Meguiar's Ultimate Compound 450g | Paint Scratch Remover",
+      "name": "Meguiar's Ultimate Compound Paint Correction 450g",
+      "other_attributes": {
+        "height": 14.0,
+        "height_unit": "centimeter",
+        "length": 8.0,
+        "length_unit": "centimeter",
+        "weight": 0.5,
+        "weight_unit": "kilogram",
+        "width": 8.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "meguiars-ultimate-compound"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "automotive"
+        }
+      },
+      "description": "4K UHD front camera with Sony STARVIS 2 sensor, 1080p rear camera, built-in GPS, Wi-Fi, Cloud connectivity, and Parking Mode. Supported by BlackVue Cloud subscription.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "BlackVue DR900X-2CH 4K front, 1080p rear dashcam. GPS, Wi-Fi, Cloud Parking Mode.",
+      "meta_title": "BlackVue DR900X 4K Dashcam Front & Rear | Cloud GPS Wi-Fi",
+      "name": "BlackVue DR900X-2CH 4K UHD Dashcam",
+      "other_attributes": {
+        "height": 4.5,
+        "height_unit": "centimeter",
+        "length": 14.5,
+        "length_unit": "centimeter",
+        "weight": 0.28,
+        "weight_unit": "kilogram",
+        "width": 4.5,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "blackvue-dr900x-dashcam"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "automotive"
+        }
+      },
+      "description": "Ultra-high performance summer tyre with FleX-Ice compound for wet grip, Dynamic Response Technology for steering precision, and a fuel-efficient tread pattern. Set of 4.",
+      "fulfilment_type": "store_pickup",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Michelin Pilot Sport 5 225/45 R17. Ultra-high performance summer tyre. Set of 4, store fitment.",
+      "meta_title": "Michelin Pilot Sport 5 225/45 R17 Set of 4 | UHP Summer Tyre",
+      "name": "Michelin Pilot Sport 5 Tyre 225/45 R17 (Set of 4)",
+      "other_attributes": {
+        "height": 65.0,
+        "height_unit": "centimeter",
+        "length": 65.0,
+        "length_unit": "centimeter",
+        "weight": 28.0,
+        "weight_unit": "kilogram",
+        "width": 24.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "michelin-car-tyres-225-45r17"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "automotive"
+        }
+      },
+      "description": "Enhanced Flooded Battery (EFB) for start-stop vehicles. 70Ah capacity, 760A cold crank, PowerFrame grid for extended cyclic durability. Fits most European and Asian saloons.",
+      "fulfilment_type": "local_delivery",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Bosch S5 EFB 70Ah 760A battery for start-stop vehicles. Delivered and fitted at your location.",
+      "meta_title": "Bosch S5 EFB 70Ah Car Battery | Start-Stop 760A CCA",
+      "name": "Bosch S5 EFB Car Battery 70Ah 760A",
+      "other_attributes": {
+        "height": 19.0,
+        "height_unit": "centimeter",
+        "length": 27.8,
+        "length_unit": "centimeter",
+        "weight": 17.0,
+        "weight_unit": "kilogram",
+        "width": 17.5,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "bosch-car-battery-s5"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "automotive"
+        }
+      },
+      "description": "10-inch edge-to-edge display, custom truck routing using size and weight restrictions, live traffic, pre-loaded maps of North America, and a built-in dashcam.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Garmin dezl OTR1000 truck GPS. 10-inch screen, truck routing, live traffic, built-in dashcam.",
+      "meta_title": "Garmin dezl OTR1000 10\" Truck GPS | Custom Truck Routing",
+      "name": "Garmin dezl OTR1000 10\" Truck GPS Navigator",
+      "other_attributes": {
+        "height": 2.3,
+        "height_unit": "centimeter",
+        "length": 25.8,
+        "length_unit": "centimeter",
+        "weight": 0.55,
+        "weight_unit": "kilogram",
+        "width": 15.6,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "garmin-dezl-otr1000-gps"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "automotive"
+        }
+      },
+      "description": "Powerful cordless handheld with two-tier radial cyclones, 100 AW suction, 30-minute run time, and a full set of car-cleaning tools including a mattress tool and crevice tool.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Dyson V7 Car + Boat cordless vacuum. 100AW, 30-min run time, full car cleaning tool set.",
+      "meta_title": "Dyson V7 Car + Boat | Cordless Handheld Vacuum",
+      "name": "Dyson V7 Car + Boat Cordless Vacuum",
+      "other_attributes": {
+        "height": 11.3,
+        "height_unit": "centimeter",
+        "length": 49.9,
+        "length_unit": "centimeter",
+        "weight": 1.54,
+        "weight_unit": "kilogram",
+        "width": 20.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "car-vacuum-cleaner-portable"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "automotive"
+        }
+      },
+      "description": "A certified tyre technician comes to your home or workplace to fit, balance, and dispose of your old tyres. Covers up to 4 wheels. Same-day or next-day slots available.",
+      "fulfilment_type": "local_delivery",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Mobile tyre fitting at your location. Certified technician, fit and balance up to 4 wheels.",
+      "meta_title": "Mobile Tyre Fitting Service | At-Home or Workplace",
+      "name": "Mobile Tyre Fitting Service",
+      "other_attributes": {
+        "delivery_format": [
+          "At-home",
+          "At-workplace"
+        ],
+        "revision_policy": "Old tyre disposal included"
+      },
+      "product_type": "service",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "mobile-tyre-fitting-service"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "automotive"
+        }
+      },
+      "description": "Annual plan covering 2 full-service visits, 2 MOT checks, unlimited oil-change reminders, roadside assistance, and 10% discount on all parts and labour.",
+      "fulfilment_type": "subscription",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Annual car maintenance subscription. 2 services, 2 MOTs, roadside assistance, and 10% off parts.",
+      "meta_title": "Annual Car Maintenance Subscription | 2 Services + MOT",
+      "name": "Annual Car Maintenance Subscription Plan",
+      "other_attributes": {
+        "billing_cycle_options": [
+          "annual"
+        ],
+        "cancellation_policy": "Non-refundable after first service",
+        "trial_days": 0
+      },
+      "product_type": "subscription",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "car-service-subscription"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "automotive"
+        }
+      },
+      "description": "Complete bodywork detailing bundle: Bodywork Shampoo Conditioner 500ml, Super Resin Polish 325ml, Extra Gloss Protection 325ml, and High-Performance Wax 450g.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Autoglym 4-product car care bundle. Shampoo, polish, extra gloss protection, and wax.",
+      "meta_title": "Autoglym Perfect Bodywork Bundle | Complete Car Polish Kit",
+      "name": "Autoglym Perfect Bodywork Bundle",
+      "other_attributes": {
+        "height": 15.0,
+        "height_unit": "centimeter",
+        "length": 28.0,
+        "length_unit": "centimeter",
+        "weight": 1.5,
+        "weight_unit": "kilogram",
+        "width": 20.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "bundle",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "car-care-bundle"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "automotive"
+        }
+      },
+      "description": "32A 7.4kW single-phase Type 2 to Type 2 EV charging cable. 7-metre cable length, IP55 weatherproof rating, LED charge indicator, and universal compatibility with all Type 2 EVs.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "EV Type 2 to Type 2 charging cable. 32A 7.4kW, 7m, IP55, LED indicator. Fits all Type 2 EVs.",
+      "meta_title": "EV Type 2 Charging Cable 7.4kW 7m | 32A IP55 Universal",
+      "name": "EV Charging Cable Type 2 to Type 2 \u2013 7.4kW 7m",
+      "other_attributes": {
+        "height": 10.0,
+        "height_unit": "centimeter",
+        "length": 30.0,
+        "length_unit": "centimeter",
+        "weight": 1.2,
+        "weight_unit": "kilogram",
+        "width": 15.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "ev-charging-cable-type2"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "toys-games"
+        }
+      },
+      "description": "The classic strategy game of trading, building, and settling. For 3\u20134 players, ages 10+, 60\u2013120 minutes. Modular hex board ensures a different island every game.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "Catan 5th Edition. Classic strategy board game for 3-4 players, ages 10+. 60-120 min playtime.",
+      "meta_title": "Catan 5th Edition Board Game | 3-4 Players Ages 10+",
+      "name": "Catan 5th Edition Board Game",
+      "other_attributes": {
+        "height": 7.5,
+        "height_unit": "centimeter",
+        "length": 29.5,
+        "length_unit": "centimeter",
+        "weight": 1.1,
+        "weight_unit": "kilogram",
+        "width": 29.5,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "catan-board-game"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "toys-games"
+        }
+      },
+      "description": "3,599 pieces, 1:8 scale replica of the Bugatti Chiron featuring a functioning W16 engine with moving pistons, 8-speed gearbox, and steering. Ages 16+.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "LEGO Technic Bugatti Chiron. 3,599 pieces, W16 engine, 8-speed gearbox. 1:8 scale. Ages 16+.",
+      "meta_title": "LEGO Technic Bugatti Chiron 42083 | 3,599 Pieces Ages 16+",
+      "name": "LEGO Technic Bugatti Chiron 42083",
+      "other_attributes": {
+        "height": 12.0,
+        "height_unit": "centimeter",
+        "length": 58.0,
+        "length_unit": "centimeter",
+        "weight": 3.4,
+        "weight_unit": "kilogram",
+        "width": 38.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "lego-technic-bugatti-chiron"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "value-basics"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "toys-games"
+        }
+      },
+      "description": "The classic colour-matching card game. 112-card deck with action cards (Skip, Reverse, Draw Two, Wild, and Wild Draw Four). 2\u201310 players, ages 7+. 30 minutes.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Mattel UNO Classic. 112-card deck, 2-10 players, ages 7+. The beloved colour-matching card game.",
+      "meta_title": "Mattel UNO Classic Card Game | 2-10 Players Ages 7+",
+      "name": "Mattel UNO Classic Card Game",
+      "other_attributes": {
+        "height": 3.5,
+        "height_unit": "centimeter",
+        "length": 14.0,
+        "length_unit": "centimeter",
+        "weight": 0.22,
+        "weight_unit": "kilogram",
+        "width": 10.5,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "mattel-uno-card-game"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "toys-games"
+        }
+      },
+      "description": "Create custom tracks with 10 feet of flexible track, a launcher, three Hot Wheels cars, two curves, a straight track, and a crash zone. Ages 5+. Connects to all Hot Wheels track systems.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Hot Wheels Track Builder Starter Kit. 10ft flexible track, launcher, and 3 cars. Ages 5+.",
+      "meta_title": "Hot Wheels Track Builder Starter Kit | 10ft Track Ages 5+",
+      "name": "Hot Wheels Track Builder Unlimited Starter Kit",
+      "other_attributes": {
+        "height": 8.0,
+        "height_unit": "centimeter",
+        "length": 45.0,
+        "length_unit": "centimeter",
+        "weight": 1.0,
+        "weight_unit": "kilogram",
+        "width": 28.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "hot-wheels-track-builder-set"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "toys-games"
+        }
+      },
+      "description": "1,000 precision-cut pieces with Softclick technology that fit together perfectly. FSC-certified recycled board and ink. Finished size 70\u00d750cm. Ages 14+.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Ravensburger World Map 1000-piece puzzle. Softclick precision cut, FSC certified. 70x50cm.",
+      "meta_title": "Ravensburger 1000-Piece World Map Puzzle | 70x50cm Adults",
+      "name": "Ravensburger 1000-Piece Jigsaw Puzzle \u2013 World Map",
+      "other_attributes": {
+        "height": 6.0,
+        "height_unit": "centimeter",
+        "length": 37.5,
+        "length_unit": "centimeter",
+        "weight": 0.8,
+        "weight_unit": "kilogram",
+        "width": 27.5,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "ravensburger-1000pc-puzzle"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "toys-games"
+        }
+      },
+      "description": "Pre-order the Nintendo Switch 2 Launch Edition. Includes console, dock, two Joy-Con 2 controllers, HDMI cable, power adaptor, and a free launch game download code.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "Pre-order Nintendo Switch 2 Launch Edition. Console, dock, Joy-Con 2, and free game code.",
+      "meta_title": "Nintendo Switch 2 Pre-Order | Launch Edition Bundle",
+      "name": "Nintendo Switch 2 Pre-Order (Launch Edition)",
+      "other_attributes": {
+        "height": 5.5,
+        "height_unit": "centimeter",
+        "length": 28.0,
+        "length_unit": "centimeter",
+        "weight": 0.61,
+        "weight_unit": "kilogram",
+        "width": 12.2,
+        "width_unit": "centimeter"
+      },
+      "product_type": "pre_order",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "nintendo-switch-game-pre-order"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "value-basics"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "toys-games"
+        }
+      },
+      "description": "Add funds directly to any Steam account. Code delivered instantly by email. Redeemable on games, DLC, and in-game items from the Steam Store.",
+      "fulfilment_type": "email",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Steam Wallet Gift Card. Instant email delivery. Redeem on games, DLC, and Steam Store items.",
+      "meta_title": "Steam Gift Card | $10, $25, $50 Instant Email Delivery",
+      "name": "Steam Gaming Wallet Gift Card",
+      "other_attributes": {
+        "delivery_method": "Email",
+        "validity": "Never expires"
+      },
+      "product_type": "gift_card",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "zero-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "steam-gaming-gift-card"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "toys-games"
+        }
+      },
+      "description": "40 self-paced video lessons teaching Scratch (beginner) and Python (intermediate). Kids build 8 games and 5 apps. Certificate on completion. Ages 8\u201314.",
+      "fulfilment_type": "account_provision",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Coding for kids course. 40 lessons, Scratch and Python, 8 games, 5 apps. Certificate. Ages 8-14.",
+      "meta_title": "Coding for Kids Course Scratch & Python | Ages 8-14 Online",
+      "name": "Scratch & Python Coding for Kids Course (Ages 8\u201314)",
+      "other_attributes": {
+        "certificate": true,
+        "language": "English",
+        "platform": "Account provision",
+        "total_hours": 20
+      },
+      "product_type": "course",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "digital-goods-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "coding-for-kids-course"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "toys-games"
+        }
+      },
+      "description": "Hand-crafted walnut and maple inlaid board (20\u00d720 inch, 2.25-inch squares), 4-inch triple-weighted Staunton pieces in ebonised boxwood and natural boxwood, and a fitted storage box.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Deluxe walnut chess set. 20-inch board, 4-inch weighted Staunton pieces, fitted storage box.",
+      "meta_title": "Deluxe Walnut Chess Set 20\" | Weighted Staunton Pieces",
+      "name": "Deluxe Walnut & Maple Chess Set with Board 20\"",
+      "other_attributes": {
+        "height": 8.0,
+        "height_unit": "centimeter",
+        "length": 52.0,
+        "length_unit": "centimeter",
+        "weight": 2.8,
+        "weight_unit": "kilogram",
+        "width": 52.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "chess-set-deluxe-walnut"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "toys-games"
+        }
+      },
+      "description": "Unlimited games, advanced analysis with 5 engines, 1,000+ video lessons, interactive puzzles, tournaments, and an ad-free experience. Billed annually.",
+      "fulfilment_type": "account_provision",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Chess.com Diamond Membership. Unlimited games, 5 engines, video lessons, and tournaments.",
+      "meta_title": "Chess.com Diamond Membership Annual | Unlimited Analysis",
+      "name": "Chess.com Diamond Membership (Annual)",
+      "other_attributes": {
+        "membership_duration": "1 year",
+        "perks": [
+          "unlimited_games",
+          "5_engines",
+          "video_lessons"
+        ]
+      },
+      "product_type": "membership",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "digital-goods-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "online-chess-membership"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "office-supplies"
+        }
+      },
+      "description": "The iconic ergonomic chair with 8Z Pellicle suspension, PostureFit SL lumbar support, fully adjustable arms, tilt limiter, and forward tilt. 12-year warranty. Size B (medium).",
+      "fulfilment_type": "local_delivery",
+      "is_active": true,
+      "is_featured": true,
+      "meta_description": "Herman Miller Aeron Size B. 8Z Pellicle, PostureFit SL, fully adjustable. 12-year warranty.",
+      "meta_title": "Herman Miller Aeron Chair Size B | Ergonomic 8Z Pellicle",
+      "name": "Herman Miller Aeron Task Chair (Size B)",
+      "other_attributes": {
+        "height": 102.0,
+        "height_unit": "centimeter",
+        "length": 67.3,
+        "length_unit": "centimeter",
+        "weight": 21.3,
+        "weight_unit": "kilogram",
+        "width": 67.3,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "herman-miller-aeron-chair"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "office-supplies"
+        }
+      },
+      "description": "Dual motor, 125kg load capacity, 58\u2013123cm height range, memory presets, child lock, anti-collision detection, and a solid bamboo desktop. Assembled and delivered.",
+      "fulfilment_type": "local_delivery",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "FlexiSpot E7 Pro electric standing desk. Dual motor, 125kg load, anti-collision. Bamboo top.",
+      "meta_title": "FlexiSpot E7 Pro Standing Desk 160x80cm | Dual Motor Bamboo",
+      "name": "FlexiSpot E7 Pro Electric Standing Desk 160x80cm",
+      "other_attributes": {
+        "height": 75.0,
+        "height_unit": "centimeter",
+        "length": 160.0,
+        "length_unit": "centimeter",
+        "weight": 42.0,
+        "weight_unit": "kilogram",
+        "width": 80.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "flexispot-e7-pro-standing-desk"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "office-supplies"
+        }
+      },
+      "description": "30ppm mono laser, automatic two-sided printing, 250-sheet paper tray, Wi-Fi, USB, and Ethernet connectivity. First page out in under 8.5 seconds. Energy Star certified.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Brother HL-L2350DW. 30ppm mono laser, auto-duplex, Wi-Fi, 250-sheet tray. Energy Star certified.",
+      "meta_title": "Brother HL-L2350DW Mono Laser Printer | 30ppm Wi-Fi Duplex",
+      "name": "Brother HL-L2350DW Mono Laser Printer",
+      "other_attributes": {
+        "height": 18.7,
+        "height_unit": "centimeter",
+        "length": 35.6,
+        "length_unit": "centimeter",
+        "weight": 7.4,
+        "weight_unit": "kilogram",
+        "width": 36.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "brother-laser-printer-hl-l2350dw"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "value-basics"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "office-supplies"
+        }
+      },
+      "description": "1,400 peel-and-stick self-adhesive address labels per pack. 99.1\u00d738.1mm, compatible with laser and inkjet printers, and all major word-processing software via free Avery templates.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Avery A4 address labels. 1,400 per pack, 99.1x38.1mm, laser and inkjet compatible.",
+      "meta_title": "Avery Laser Address Labels A4 1400 Pack | 99x38mm",
+      "name": "Avery Laser Address Labels A4 (100 Sheets, 14 Labels/Sheet)",
+      "other_attributes": {
+        "height": 4.0,
+        "height_unit": "centimeter",
+        "length": 31.0,
+        "length_unit": "centimeter",
+        "weight": 0.8,
+        "weight_unit": "kilogram",
+        "width": 22.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "avery-laser-label-pack"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "generic-goods"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "office-supplies"
+        }
+      },
+      "description": "80 perforated sheets of 90g/m\u00b2 Clairefontaine paper with a subtle 5mm dot grid. Micro-perforated tear-off, hard back cover, and orange elastic closure. For architects and designers.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Rhodia A3+ DotPad. 80 sheets, 90g/m\u00b2, dot grid, micro-perforated tear-off. Perfect for architects.",
+      "meta_title": "Rhodia No.38 A3+ DotPad | 90gsm Dot Grid Architect Pad",
+      "name": "Rhodia No. 38 A3+ DotPad Notebook",
+      "other_attributes": {
+        "height": 1.5,
+        "height_unit": "centimeter",
+        "length": 42.7,
+        "length_unit": "centimeter",
+        "weight": 0.45,
+        "weight_unit": "kilogram",
+        "width": 29.7,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "rhodia-a4-dot-pad"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "value-basics"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "office-supplies"
+        }
+      },
+      "description": "14 pads of original 3M Post-it Notes in 10 assorted colours. 76\u00d776mm, 100 sheets per pad (1,400 sheets total), repositionable adhesive, and colour-coordinated dispenser box.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "3M Post-it Notes 14-pad multicolour pack. 76x76mm, 100 sheets each, repositionable adhesive.",
+      "meta_title": "3M Post-it Notes Value Pack 14 Pads | 10 Colours 76x76mm",
+      "name": "3M Post-it Notes Multicolour Value Pack (14 Pads)",
+      "other_attributes": {
+        "height": 8.0,
+        "height_unit": "centimeter",
+        "length": 24.0,
+        "length_unit": "centimeter",
+        "weight": 0.55,
+        "weight_unit": "kilogram",
+        "width": 20.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "physical",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "3m-post-it-notes-multipack"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "office-supplies"
+        }
+      },
+      "description": "Auto-replenishment of your essential office supplies every month: paper, pens, staples, tape, sticky notes, and printer ink cartridges based on your customised profile.",
+      "fulfilment_type": "subscription",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Monthly office supplies subscription. Auto-replenish paper, pens, ink, and stationery essentials.",
+      "meta_title": "Office Essentials Monthly Subscription | Auto-Replenishment",
+      "name": "Office Essentials Monthly Subscription Box",
+      "other_attributes": {
+        "billing_cycle_options": [
+          "monthly"
+        ],
+        "cancellation_policy": "Cancel anytime",
+        "trial_days": 0
+      },
+      "product_type": "subscription",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "office-supplies-subscription"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "office-supplies"
+        }
+      },
+      "description": "4-hour interactive workshop teaching deep work principles, time-blocking methods, digital minimalism, and distraction elimination. For teams of up to 12 participants.",
+      "fulfilment_type": "service_appointment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "4-hour deep work productivity workshop for teams up to 12. Time-blocking, digital minimalism.",
+      "meta_title": "Deep Work Productivity Workshop | Half-Day Team Training",
+      "name": "Deep Work Productivity Workshop (Half-Day)",
+      "other_attributes": {
+        "delivery_format": [
+          "In-person",
+          "Virtual"
+        ],
+        "revision_policy": "Workshop materials included"
+      },
+      "product_type": "service",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "productivity-training-workshop"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "storehouse"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "office-supplies"
+        }
+      },
+      "description": "Everything to equip a home office: Logitech MK470 wireless keyboard and mouse combo, Anker USB-C hub (7-in-1), Cable Matters monitor arm, and a leather desk pad.",
+      "fulfilment_type": "shipment",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Home office bundle: wireless keyboard+mouse, USB-C hub, monitor arm, and desk pad.",
+      "meta_title": "Ultimate Home Office Starter Bundle | Keyboard, Hub & Desk Pad",
+      "name": "Ultimate Home Office Starter Bundle",
+      "other_attributes": {
+        "height": 15.0,
+        "height_unit": "centimeter",
+        "length": 50.0,
+        "length_unit": "centimeter",
+        "weight": 3.0,
+        "weight_unit": "kilogram",
+        "width": 35.0,
+        "width_unit": "centimeter"
+      },
+      "product_type": "bundle",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "home-office-bundle"
+    }
+  },
+  {
+    "fields": {
+      "brand": {
+        "$ref": "product brand",
+        "lookup": {
+          "slug": "premium-select"
+        }
+      },
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "office-supplies"
+        }
+      },
+      "description": "Office apps on up to 5 PCs/Macs and 5 mobile devices, 1TB OneDrive, Exchange email hosting, Teams, SharePoint, and advanced security. Annual subscription key by email.",
+      "fulfilment_type": "license_key",
+      "is_active": true,
+      "is_featured": false,
+      "meta_description": "Microsoft 365 Business Standard. Office apps, 1TB OneDrive, Teams, Exchange. 1-user annual key.",
+      "meta_title": "Microsoft 365 Business Standard | 1-User Annual License Key",
+      "name": "Microsoft 365 Business Standard License (1 User)",
+      "other_attributes": {
+        "delivery_method": "License key via email",
+        "max_devices": 5,
+        "platform_support": [
+          "Windows",
+          "macOS",
+          "iOS",
+          "Android"
+        ]
+      },
+      "product_type": "software_license",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "digital-goods-tax"
+        }
+      }
+    },
+    "lookup": {
+      "slug": "microsoft-365-business-license"
+    }
+  }
+]

@@ -1,0 +1,410 @@
+[
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "10.25"
+    },
+    "lookup": {
+      "country": "US",
+      "effective_from": "2024-01-01",
+      "state": "CA",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "8.52"
+    },
+    "lookup": {
+      "country": "US",
+      "effective_from": "2024-01-01",
+      "state": "NY",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "8.25"
+    },
+    "lookup": {
+      "country": "US",
+      "effective_from": "2024-01-01",
+      "state": "TX",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "7.00"
+    },
+    "lookup": {
+      "country": "US",
+      "effective_from": "2024-01-01",
+      "state": "FL",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "10.10"
+    },
+    "lookup": {
+      "country": "US",
+      "effective_from": "2024-01-01",
+      "state": "WA",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "20.00"
+    },
+    "lookup": {
+      "country": "GB",
+      "effective_from": "2024-01-01",
+      "state": "",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "19.00"
+    },
+    "lookup": {
+      "country": "DE",
+      "effective_from": "2024-01-01",
+      "state": "",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "20.00"
+    },
+    "lookup": {
+      "country": "FR",
+      "effective_from": "2024-01-01",
+      "state": "",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "13.00"
+    },
+    "lookup": {
+      "country": "CA",
+      "effective_from": "2024-01-01",
+      "state": "ON",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "10.00"
+    },
+    "lookup": {
+      "country": "AU",
+      "effective_from": "2024-01-01",
+      "state": "",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "18.00"
+    },
+    "lookup": {
+      "country": "IN",
+      "effective_from": "2024-01-01",
+      "state": "",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "standard-tax"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "5.00"
+    },
+    "lookup": {
+      "country": "GB",
+      "effective_from": "2024-01-01",
+      "state": "",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "7.00"
+    },
+    "lookup": {
+      "country": "DE",
+      "effective_from": "2024-01-01",
+      "state": "",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "5.50"
+    },
+    "lookup": {
+      "country": "FR",
+      "effective_from": "2024-01-01",
+      "state": "",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "3.00"
+    },
+    "lookup": {
+      "country": "US",
+      "effective_from": "2024-01-01",
+      "state": "CA",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "0.00"
+    },
+    "lookup": {
+      "country": "AU",
+      "effective_from": "2024-01-01",
+      "state": "",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "reduced-tax"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "0.00"
+    },
+    "lookup": {
+      "country": "US",
+      "effective_from": "2024-01-01",
+      "state": "",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "zero-tax"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "0.00"
+    },
+    "lookup": {
+      "country": "GB",
+      "effective_from": "2024-01-01",
+      "state": "",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "zero-tax"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "0.00"
+    },
+    "lookup": {
+      "country": "AE",
+      "effective_from": "2024-01-01",
+      "state": "",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "zero-tax"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "20.00"
+    },
+    "lookup": {
+      "country": "GB",
+      "effective_from": "2024-01-01",
+      "state": "",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "digital-goods-tax"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "19.00"
+    },
+    "lookup": {
+      "country": "DE",
+      "effective_from": "2024-01-01",
+      "state": "",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "digital-goods-tax"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "20.00"
+    },
+    "lookup": {
+      "country": "FR",
+      "effective_from": "2024-01-01",
+      "state": "",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "digital-goods-tax"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "0.00"
+    },
+    "lookup": {
+      "country": "US",
+      "effective_from": "2024-01-01",
+      "state": "",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "digital-goods-tax"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "effective_to": null,
+      "rate_percent": "10.00"
+    },
+    "lookup": {
+      "country": "AU",
+      "effective_from": "2024-01-01",
+      "state": "",
+      "tax_class": {
+        "$ref": "tax class",
+        "lookup": {
+          "slug": "digital-goods-tax"
+        }
+      }
+    }
+  }
+]

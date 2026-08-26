@@ -1,0 +1,3720 @@
+[
+  {
+    "fields": {
+      "amount": "1299.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "SGS24U-256-BLK"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "1419.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "SGS24U-512-TIT"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "1599.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MBP14-M3-8-512"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "1999.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MBP14-M3-16-1TB"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "349.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "WH1000XM5-BLK"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "349.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "WH1000XM5-SLV"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "1099.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "IPADPRO129-256-WIFI"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "1299.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "IPADPRO129-512-WIFI"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "99.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MXM3S-GRY"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "99.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MXM3S-WHT"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "399.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GOPRO12-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "499.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GOPRO12-CREATOR-BUNDLE"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "1799.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "SAM65QLED-QN90C"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "85.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "DSLR-RENTAL-1D"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "420.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "DSLR-RENTAL-7D"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "149.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "SMARTHOME-BUNDLE-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "199.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "KQ1PRO-RED-BNRY"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "199.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "KQ1PRO-BLU-BNRY"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "899.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GFX8-SOLAR-BLK-47"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "999.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GFX8-SOLAR-BLK-51"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "50.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ELEC-GC-50"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "100.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ELEC-GC-100"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "69.50",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LEVI501-IND-32-32"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "69.50",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LEVI501-BLK-32-32"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "65.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "NIKE-THERMAFIT-BLK-M"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "65.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "NIKE-THERMAFIT-NVY-L"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "135.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ALLBIRDS-WR2-ASH-US9"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "135.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ALLBIRDS-WR2-NVY-US10"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "279.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "PAT-DOWN-NVY-M"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "279.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "PAT-DOWN-BLK-L"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "19.90",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "UNQ-HTECH-WHT-M"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "19.90",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "UNQ-HTECH-GRY-L"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "79.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CTT-OXF-WHT-15-5"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "79.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CTT-OXF-BLU-16-33"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "118.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LUL-ALIGN-BLK-4"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "118.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LUL-ALIGN-NVY-6"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "180.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "AJ1-CHI-US9"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "180.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "AJ1-CHI-US10"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "120.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "STYLING-60MIN-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "99.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "STYLECLUB-ANNUAL-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "395.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LC-DO-28-CHERRY"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "395.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LC-DO-28-VOLCANIC"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "699.95",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BRV-BARISTA-BLK"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "699.95",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BRV-BARISTA-STEEL"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "749.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "DYS-V15-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "39.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BAMBU-3PC-SET"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "279.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "NEST-THERMO-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "449.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "KA-ARTISAN-EMPIRE-RED"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "449.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "KA-ARTISAN-ICE-BLUE"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "199.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "KALLAX-4X4-WHT"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "199.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "KALLAX-4X4-BLK-BRN"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "109.95",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "IP-DUO-8QT-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "149.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HOMECLEAN-MONTHLY-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "199.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "INTERIOR-90MIN-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "19.97",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CERAVE-MC-454G"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "599.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "DYS-AIRWRAP-COMP-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "7.90",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ORD-NIA10-30ML"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "149.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CHANEL-N5-EDP-50ML"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "219.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CHANEL-N5-EDP-100ML"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "195.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LAMER-MC-30ML"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "335.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LAMER-MC-60ML"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "299.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "PHI-S9000P-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "185.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "TATCHA-DEWY-GIFT-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "19.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LOOKFAN-BBOX-MONTHLY"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "10.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BEAU4ALL-DON-10"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "79.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "DERM-CONSULT-30MIN"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "449.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GFR265-BLK-42MM"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "499.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GFR265-WHT-46MM"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "999.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "TREK-FX3-S-MATTE-BLK"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "999.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "TREK-FX3-M-MATTE-BLK"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "49.95",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HF32-TRAIL-MIST"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "49.95",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HF32-BLACK-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "45.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "UA-RIVAL-BLK-M"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "45.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "UA-RIVAL-NVY-L"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "79.95",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BD-MOMENTUM-S"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "79.95",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BD-MOMENTUM-M"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "99.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "PELO-BIKEPLUS-MONTHLY"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "350.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "PT-5SESS-IN-PERSON"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "29.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MYP-NUTR-MONTHLY"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "85.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MARATHON-ENTRY-GEN"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "120.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MAN-PRO-BLK-71"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "120.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MAN-PRO-GREYINK-71"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "599.88",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ACC-1YR-WIN-MAC"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "12.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "M365-FAM-MONTHLY"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "129.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "M365-FAM-ANNUAL"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "16.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "NOTION-AIPLUS-MONTHLY"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "144.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "NOTION-AIPLUS-ANNUAL"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "199.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "PYDJANGO-SELF-PACED"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "549.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "PYDJANGO-MENTORED"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "149.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "FIGMA-DL-EN"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "29.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "PS-EBOOK-2026-PDF"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "49.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "STOCKPHOTO-STD-500"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "149.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "STOCKPHOTO-EXT-500"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "49.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "NRT360-1YR-5DEV"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "79.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "NRT360-2YR-5DEV"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "49.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "DCSUMMIT-2026-FULL"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "49.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "DGTANALYTICS-MONTHLY"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "468.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "DGTANALYTICS-ANNUAL"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "16.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ATOMICHAB-PB-EN"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "26.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ATOMICHAB-HC-EN"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "15.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "DEEPWORK-PB-EN"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "49.95",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "PRAGPROG-PB-20TH"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "24.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LT1917-A5-BLK-DOT"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "24.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LT1917-A5-NVY-DOT"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "17.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "THINKFS-PB-EN"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "12.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MUJI-GEL-05-BLK-10PK"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "18.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "SAPIENS-PB-EN"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "32.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "WN-COTMAN-PKT-BOX"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "19.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "DOET-PB-EN"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "15.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BOTM-MONTHLY-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "22.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GOL-VITD3K2-60CAP"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "39.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GOL-VITD3K2-120CAP"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "34.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ON-WHEY-CHOC-2LB"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "74.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ON-WHEY-VAN-5LB"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "159.95",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "FIT-CHARGE6-BLK"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "159.95",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "FIT-CHARGE6-CORAL"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "79.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "OMRON-PLAT-BP-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "69.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CALM-PREM-ANNUAL"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "49.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "SJA-FAK-200PC"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "299.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "NUTR-COACH-4WK"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "588.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "WELLPASS-ANNUAL"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "25.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MSF-DON-25"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "50.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HW-GC-PDF-50"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "24.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LAV-SC-1KG-MED"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "8.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LAV-SC-250G-MED"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "39.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "COMVITA-MH-250G"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "69.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "COMVITA-MH-500G"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "14.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "PUKKA-SEL-45BAG"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "34.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LINDT-DARK-GIFT-20PC"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "29.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "JC-SILVER-750ML"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "5.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HALOTOP-CHOC-473ML"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "5.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HALOTOP-VAN-473ML"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "14.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BB-COFFEE-6OZ-WK"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "59.94",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HF-3MEAL-2P-WEEKLY"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "120.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GORAMSAY-COOK-STREAM"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "45.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "FM-TEA-GIFT-6VAR"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "19.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MEG-ULTI-COMP-450G"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "379.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BVU-DR900X-32GB"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "449.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BVU-DR900X-256GB"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "559.96",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MICH-PS5-225-45R17-X4"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "119.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BOSCH-S5-70AH-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "549.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GARMIN-OTR1000-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "249.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "DYS-V7-CAR-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "49.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MOB-TYRE-FIT-4W"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "299.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CARSERV-ANNUAL-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "44.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "AUTOGLYM-BUNDLE-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "69.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "EV-T2-T2-7M-32A"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "44.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CATAN-5TH-EN"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "369.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LEGO-42083-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "9.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "UNO-CLASSIC-112"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "29.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HW-TRACK-STARTER"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "19.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "RAV-1000-WORLDMAP"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "399.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "NSW2-LAUNCH-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "25.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "STEAM-GC-25"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "50.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "STEAM-GC-50"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "79.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "KIDSCODE-SELF-PACED"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "189.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CHESS-WALNUT-20IN"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "99.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CHESSDOTCOM-DIAMOND-ANNUAL"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "1745.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HM-AERON-B-GRY"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "1745.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HM-AERON-B-MINERAL"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "549.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "FX-E7PRO-160-BAMBOO"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "179.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BRO-HLL2350DW-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "24.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "AVY-LBL-A4-1400"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "18.50",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "RHO-N38-A3-ORANGE"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "19.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "3M-POSTIT-14PAD-MULTI"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "39.99",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "OFF-BOX-MONTHLY-001"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "499.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "DEEPWORK-WS-HALFDAY"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "219.00",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HO-BUNDLE-STARTER"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "amount": "179.88",
+      "valid_from": null,
+      "valid_to": null
+    },
+    "lookup": {
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "price_type": "BASE",
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "M365-BIZ-STD-1YR"
+        }
+      }
+    }
+  }
+]

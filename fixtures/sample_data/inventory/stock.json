@@ -1,0 +1,2739 @@
+[
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 80,
+      "reorder_point": 15,
+      "reserved_quantity": 6
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "SGS24U-256-BLK"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 55,
+      "reorder_point": 10,
+      "reserved_quantity": 4
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "SGS24U-512-TIT"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 60,
+      "reorder_point": 10,
+      "reserved_quantity": 3
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "SGS24U-256-BLK"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "new-york-fulfillment"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 1,
+      "minimum_order_qty": 1,
+      "quantity": 45,
+      "reorder_point": 8,
+      "reserved_quantity": 5
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MBP14-M3-8-512"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 1,
+      "minimum_order_qty": 1,
+      "quantity": 30,
+      "reorder_point": 5,
+      "reserved_quantity": 3
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MBP14-M3-16-1TB"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 5,
+      "minimum_order_qty": 1,
+      "quantity": 120,
+      "reorder_point": 20,
+      "reserved_quantity": 8
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "WH1000XM5-BLK"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 5,
+      "minimum_order_qty": 1,
+      "quantity": 90,
+      "reorder_point": 15,
+      "reserved_quantity": 5
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "WH1000XM5-SLV"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 5,
+      "minimum_order_qty": 1,
+      "quantity": 75,
+      "reorder_point": 10,
+      "reserved_quantity": 4
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "WH1000XM5-BLK"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "new-york-fulfillment"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 60,
+      "reorder_point": 10,
+      "reserved_quantity": 4
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "IPADPRO129-256-WIFI"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 40,
+      "reorder_point": 8,
+      "reserved_quantity": 2
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "IPADPRO129-512-WIFI"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 10,
+      "minimum_order_qty": 1,
+      "quantity": 200,
+      "reorder_point": 30,
+      "reserved_quantity": 12
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MXM3S-GRY"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 10,
+      "minimum_order_qty": 1,
+      "quantity": 150,
+      "reorder_point": 25,
+      "reserved_quantity": 8
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MXM3S-WHT"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 3,
+      "minimum_order_qty": 1,
+      "quantity": 85,
+      "reorder_point": 15,
+      "reserved_quantity": 5
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GOPRO12-001"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 40,
+      "reorder_point": 8,
+      "reserved_quantity": 3
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GOPRO12-CREATOR-BUNDLE"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 1,
+      "minimum_order_qty": 1,
+      "quantity": 25,
+      "reorder_point": 5,
+      "reserved_quantity": 2
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "SAM65QLED-QN90C"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 3,
+      "minimum_order_qty": 1,
+      "quantity": 70,
+      "reorder_point": 12,
+      "reserved_quantity": 5
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "SMARTHOME-BUNDLE-001"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 5,
+      "minimum_order_qty": 1,
+      "quantity": 110,
+      "reorder_point": 20,
+      "reserved_quantity": 6
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "KQ1PRO-RED-BNRY"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 5,
+      "minimum_order_qty": 1,
+      "quantity": 95,
+      "reorder_point": 15,
+      "reserved_quantity": 4
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "KQ1PRO-BLU-BNRY"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 10,
+      "minimum_order_qty": 1,
+      "quantity": 180,
+      "reorder_point": 30,
+      "reserved_quantity": 10
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LEVI501-IND-32-32"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 10,
+      "minimum_order_qty": 1,
+      "quantity": 160,
+      "reorder_point": 25,
+      "reserved_quantity": 8
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LEVI501-BLK-32-32"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 10,
+      "minimum_order_qty": 1,
+      "quantity": 220,
+      "reorder_point": 35,
+      "reserved_quantity": 14
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "NIKE-THERMAFIT-BLK-M"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 10,
+      "minimum_order_qty": 1,
+      "quantity": 195,
+      "reorder_point": 30,
+      "reserved_quantity": 12
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "NIKE-THERMAFIT-NVY-L"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 4,
+      "minimum_order_qty": 1,
+      "quantity": 90,
+      "reorder_point": 15,
+      "reserved_quantity": 6
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ALLBIRDS-WR2-ASH-US9"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 4,
+      "minimum_order_qty": 1,
+      "quantity": 85,
+      "reorder_point": 12,
+      "reserved_quantity": 5
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ALLBIRDS-WR2-NVY-US10"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 3,
+      "minimum_order_qty": 1,
+      "quantity": 65,
+      "reorder_point": 10,
+      "reserved_quantity": 4
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "PAT-DOWN-NVY-M"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 3,
+      "minimum_order_qty": 1,
+      "quantity": 70,
+      "reorder_point": 10,
+      "reserved_quantity": 5
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "PAT-DOWN-BLK-L"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 20,
+      "minimum_order_qty": 1,
+      "quantity": 350,
+      "reorder_point": 50,
+      "reserved_quantity": 18
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "UNQ-HTECH-WHT-M"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 20,
+      "minimum_order_qty": 1,
+      "quantity": 310,
+      "reorder_point": 45,
+      "reserved_quantity": 15
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "UNQ-HTECH-GRY-L"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 5,
+      "minimum_order_qty": 1,
+      "quantity": 120,
+      "reorder_point": 20,
+      "reserved_quantity": 7
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CTT-OXF-WHT-15-5"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "new-york-fulfillment"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 5,
+      "minimum_order_qty": 1,
+      "quantity": 110,
+      "reorder_point": 18,
+      "reserved_quantity": 6
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CTT-OXF-BLU-16-33"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "new-york-fulfillment"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 5,
+      "minimum_order_qty": 1,
+      "quantity": 140,
+      "reorder_point": 20,
+      "reserved_quantity": 9
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LUL-ALIGN-BLK-4"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 5,
+      "minimum_order_qty": 1,
+      "quantity": 125,
+      "reorder_point": 20,
+      "reserved_quantity": 7
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LUL-ALIGN-NVY-6"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 40,
+      "reorder_point": 5,
+      "reserved_quantity": 12
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "AJ1-CHI-US9"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 38,
+      "reorder_point": 5,
+      "reserved_quantity": 10
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "AJ1-CHI-US10"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 50,
+      "reorder_point": 8,
+      "reserved_quantity": 3
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LC-DO-28-CHERRY"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 45,
+      "reorder_point": 8,
+      "reserved_quantity": 2
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LC-DO-28-VOLCANIC"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 1,
+      "minimum_order_qty": 1,
+      "quantity": 35,
+      "reorder_point": 6,
+      "reserved_quantity": 3
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BRV-BARISTA-BLK"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 1,
+      "minimum_order_qty": 1,
+      "quantity": 30,
+      "reorder_point": 5,
+      "reserved_quantity": 2
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BRV-BARISTA-STEEL"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 55,
+      "reorder_point": 10,
+      "reserved_quantity": 4
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "DYS-V15-001"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 10,
+      "minimum_order_qty": 1,
+      "quantity": 160,
+      "reorder_point": 25,
+      "reserved_quantity": 8
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BAMBU-3PC-SET"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 3,
+      "minimum_order_qty": 1,
+      "quantity": 80,
+      "reorder_point": 12,
+      "reserved_quantity": 5
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "NEST-THERMO-001"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 45,
+      "reorder_point": 8,
+      "reserved_quantity": 4
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "KA-ARTISAN-EMPIRE-RED"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 40,
+      "reorder_point": 8,
+      "reserved_quantity": 3
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "KA-ARTISAN-ICE-BLUE"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 30,
+      "reorder_point": 5,
+      "reserved_quantity": 2
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "KALLAX-4X4-WHT"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "dallas-store-pickup"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 25,
+      "reorder_point": 5,
+      "reserved_quantity": 1
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "KALLAX-4X4-BLK-BRN"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "dallas-store-pickup"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 3,
+      "minimum_order_qty": 1,
+      "quantity": 90,
+      "reorder_point": 15,
+      "reserved_quantity": 6
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "IP-DUO-8QT-001"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 20,
+      "minimum_order_qty": 1,
+      "quantity": 400,
+      "reorder_point": 60,
+      "reserved_quantity": 20
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CERAVE-MC-454G"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 1,
+      "minimum_order_qty": 1,
+      "quantity": 35,
+      "reorder_point": 6,
+      "reserved_quantity": 3
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "DYS-AIRWRAP-COMP-001"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 20,
+      "minimum_order_qty": 1,
+      "quantity": 500,
+      "reorder_point": 80,
+      "reserved_quantity": 25
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ORD-NIA10-30ML"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 3,
+      "minimum_order_qty": 1,
+      "quantity": 60,
+      "reorder_point": 10,
+      "reserved_quantity": 5
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CHANEL-N5-EDP-50ML"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 45,
+      "reorder_point": 8,
+      "reserved_quantity": 4
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CHANEL-N5-EDP-100ML"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 40,
+      "reorder_point": 8,
+      "reserved_quantity": 3
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LAMER-MC-30ML"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 30,
+      "reorder_point": 5,
+      "reserved_quantity": 2
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LAMER-MC-60ML"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 3,
+      "minimum_order_qty": 1,
+      "quantity": 75,
+      "reorder_point": 12,
+      "reserved_quantity": 5
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "PHI-S9000P-001"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 3,
+      "minimum_order_qty": 1,
+      "quantity": 55,
+      "reorder_point": 10,
+      "reserved_quantity": 4
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "TATCHA-DEWY-GIFT-001"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 3,
+      "minimum_order_qty": 1,
+      "quantity": 70,
+      "reorder_point": 12,
+      "reserved_quantity": 5
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GFR265-BLK-42MM"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 3,
+      "minimum_order_qty": 1,
+      "quantity": 55,
+      "reorder_point": 10,
+      "reserved_quantity": 4
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GFR265-WHT-46MM"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 1,
+      "minimum_order_qty": 1,
+      "quantity": 15,
+      "reorder_point": 3,
+      "reserved_quantity": 2
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "TREK-FX3-S-MATTE-BLK"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "dallas-store-pickup"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 1,
+      "minimum_order_qty": 1,
+      "quantity": 18,
+      "reorder_point": 3,
+      "reserved_quantity": 3
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "TREK-FX3-M-MATTE-BLK"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "dallas-store-pickup"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 10,
+      "minimum_order_qty": 1,
+      "quantity": 250,
+      "reorder_point": 40,
+      "reserved_quantity": 15
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HF32-TRAIL-MIST"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 10,
+      "minimum_order_qty": 1,
+      "quantity": 280,
+      "reorder_point": 45,
+      "reserved_quantity": 18
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HF32-BLACK-001"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 10,
+      "minimum_order_qty": 1,
+      "quantity": 190,
+      "reorder_point": 30,
+      "reserved_quantity": 12
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "UA-RIVAL-BLK-M"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 10,
+      "minimum_order_qty": 1,
+      "quantity": 170,
+      "reorder_point": 25,
+      "reserved_quantity": 10
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "UA-RIVAL-NVY-L"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 3,
+      "minimum_order_qty": 1,
+      "quantity": 80,
+      "reorder_point": 12,
+      "reserved_quantity": 5
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BD-MOMENTUM-S"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 3,
+      "minimum_order_qty": 1,
+      "quantity": 85,
+      "reorder_point": 12,
+      "reserved_quantity": 6
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BD-MOMENTUM-M"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 3,
+      "minimum_order_qty": 1,
+      "quantity": 60,
+      "reorder_point": 10,
+      "reserved_quantity": 4
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MAN-PRO-BLK-71"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 3,
+      "minimum_order_qty": 1,
+      "quantity": 50,
+      "reorder_point": 8,
+      "reserved_quantity": 3
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MAN-PRO-GREYINK-71"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 20,
+      "minimum_order_qty": 1,
+      "quantity": 300,
+      "reorder_point": 50,
+      "reserved_quantity": 18
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ATOMICHAB-PB-EN"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 10,
+      "minimum_order_qty": 1,
+      "quantity": 120,
+      "reorder_point": 20,
+      "reserved_quantity": 8
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ATOMICHAB-HC-EN"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 15,
+      "minimum_order_qty": 1,
+      "quantity": 180,
+      "reorder_point": 30,
+      "reserved_quantity": 10
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "DEEPWORK-PB-EN"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 10,
+      "minimum_order_qty": 1,
+      "quantity": 90,
+      "reorder_point": 15,
+      "reserved_quantity": 6
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "PRAGPROG-PB-20TH"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 10,
+      "minimum_order_qty": 1,
+      "quantity": 200,
+      "reorder_point": 30,
+      "reserved_quantity": 12
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LT1917-A5-BLK-DOT"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 10,
+      "minimum_order_qty": 1,
+      "quantity": 180,
+      "reorder_point": 25,
+      "reserved_quantity": 10
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LT1917-A5-NVY-DOT"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 15,
+      "minimum_order_qty": 1,
+      "quantity": 150,
+      "reorder_point": 25,
+      "reserved_quantity": 9
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "THINKFS-PB-EN"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 30,
+      "minimum_order_qty": 1,
+      "quantity": 500,
+      "reorder_point": 80,
+      "reserved_quantity": 30
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MUJI-GEL-05-BLK-10PK"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 15,
+      "minimum_order_qty": 1,
+      "quantity": 160,
+      "reorder_point": 25,
+      "reserved_quantity": 10
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "SAPIENS-PB-EN"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 5,
+      "minimum_order_qty": 1,
+      "quantity": 75,
+      "reorder_point": 12,
+      "reserved_quantity": 5
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "WN-COTMAN-PKT-BOX"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 10,
+      "minimum_order_qty": 1,
+      "quantity": 60,
+      "reorder_point": 10,
+      "reserved_quantity": 4
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "DOET-PB-EN"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "dallas-store-pickup"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 10,
+      "minimum_order_qty": 1,
+      "quantity": 300,
+      "reorder_point": 50,
+      "reserved_quantity": 18
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GOL-VITD3K2-60CAP"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 8,
+      "minimum_order_qty": 1,
+      "quantity": 220,
+      "reorder_point": 35,
+      "reserved_quantity": 14
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GOL-VITD3K2-120CAP"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 6,
+      "minimum_order_qty": 1,
+      "quantity": 180,
+      "reorder_point": 30,
+      "reserved_quantity": 12
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ON-WHEY-CHOC-2LB"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 4,
+      "minimum_order_qty": 1,
+      "quantity": 130,
+      "reorder_point": 20,
+      "reserved_quantity": 9
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "ON-WHEY-VAN-5LB"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 3,
+      "minimum_order_qty": 1,
+      "quantity": 100,
+      "reorder_point": 18,
+      "reserved_quantity": 7
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "FIT-CHARGE6-BLK"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 3,
+      "minimum_order_qty": 1,
+      "quantity": 85,
+      "reorder_point": 15,
+      "reserved_quantity": 6
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "FIT-CHARGE6-CORAL"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 3,
+      "minimum_order_qty": 1,
+      "quantity": 70,
+      "reorder_point": 12,
+      "reserved_quantity": 5
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "OMRON-PLAT-BP-001"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 5,
+      "minimum_order_qty": 1,
+      "quantity": 120,
+      "reorder_point": 20,
+      "reserved_quantity": 8
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "SJA-FAK-200PC"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 12,
+      "minimum_order_qty": 1,
+      "quantity": 200,
+      "reorder_point": 35,
+      "reserved_quantity": 14
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LAV-SC-1KG-MED"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 24,
+      "minimum_order_qty": 1,
+      "quantity": 350,
+      "reorder_point": 60,
+      "reserved_quantity": 22
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LAV-SC-250G-MED"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 6,
+      "minimum_order_qty": 1,
+      "quantity": 90,
+      "reorder_point": 15,
+      "reserved_quantity": 6
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "COMVITA-MH-250G"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 4,
+      "minimum_order_qty": 1,
+      "quantity": 65,
+      "reorder_point": 10,
+      "reserved_quantity": 4
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "COMVITA-MH-500G"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 20,
+      "minimum_order_qty": 1,
+      "quantity": 280,
+      "reorder_point": 45,
+      "reserved_quantity": 18
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "PUKKA-SEL-45BAG"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 10,
+      "minimum_order_qty": 1,
+      "quantity": 120,
+      "reorder_point": 20,
+      "reserved_quantity": 8
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LINDT-DARK-GIFT-20PC"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 3,
+      "minimum_order_qty": 1,
+      "quantity": 45,
+      "reorder_point": 8,
+      "reserved_quantity": 3
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "JC-SILVER-750ML"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "dallas-store-pickup"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 20,
+      "minimum_order_qty": 1,
+      "quantity": 400,
+      "reorder_point": 60,
+      "reserved_quantity": 25
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HALOTOP-CHOC-473ML"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 20,
+      "minimum_order_qty": 1,
+      "quantity": 380,
+      "reorder_point": 55,
+      "reserved_quantity": 22
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HALOTOP-VAN-473ML"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 6,
+      "minimum_order_qty": 1,
+      "quantity": 80,
+      "reorder_point": 12,
+      "reserved_quantity": 5
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "FM-TEA-GIFT-6VAR"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "new-york-fulfillment"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 10,
+      "minimum_order_qty": 1,
+      "quantity": 200,
+      "reorder_point": 30,
+      "reserved_quantity": 12
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MEG-ULTI-COMP-450G"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 45,
+      "reorder_point": 8,
+      "reserved_quantity": 4
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BVU-DR900X-32GB"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 35,
+      "reorder_point": 6,
+      "reserved_quantity": 3
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BVU-DR900X-256GB"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 20,
+      "reorder_point": 4,
+      "reserved_quantity": 2
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "MICH-PS5-225-45R17-X4"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "dallas-store-pickup"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 3,
+      "minimum_order_qty": 1,
+      "quantity": 60,
+      "reorder_point": 10,
+      "reserved_quantity": 4
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BOSCH-S5-70AH-001"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 30,
+      "reorder_point": 5,
+      "reserved_quantity": 2
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "GARMIN-OTR1000-001"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 55,
+      "reorder_point": 10,
+      "reserved_quantity": 4
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "DYS-V7-CAR-001"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 6,
+      "minimum_order_qty": 1,
+      "quantity": 150,
+      "reorder_point": 25,
+      "reserved_quantity": 10
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "AUTOGLYM-BUNDLE-001"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 4,
+      "minimum_order_qty": 1,
+      "quantity": 90,
+      "reorder_point": 15,
+      "reserved_quantity": 6
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "EV-T2-T2-7M-32A"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 5,
+      "minimum_order_qty": 1,
+      "quantity": 120,
+      "reorder_point": 20,
+      "reserved_quantity": 8
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CATAN-5TH-EN"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 35,
+      "reorder_point": 6,
+      "reserved_quantity": 3
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "LEGO-42083-001"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 20,
+      "minimum_order_qty": 1,
+      "quantity": 400,
+      "reorder_point": 60,
+      "reserved_quantity": 25
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "UNO-CLASSIC-112"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 5,
+      "minimum_order_qty": 1,
+      "quantity": 150,
+      "reorder_point": 25,
+      "reserved_quantity": 10
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HW-TRACK-STARTER"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 10,
+      "minimum_order_qty": 1,
+      "quantity": 180,
+      "reorder_point": 30,
+      "reserved_quantity": 12
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "RAV-1000-WORLDMAP"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 60,
+      "reorder_point": 10,
+      "reserved_quantity": 20
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "NSW2-LAUNCH-001"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 25,
+      "reorder_point": 5,
+      "reserved_quantity": 2
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "CHESS-WALNUT-20IN"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 1,
+      "minimum_order_qty": 1,
+      "quantity": 20,
+      "reorder_point": 4,
+      "reserved_quantity": 2
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HM-AERON-B-GRY"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 1,
+      "minimum_order_qty": 1,
+      "quantity": 18,
+      "reorder_point": 3,
+      "reserved_quantity": 1
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HM-AERON-B-MINERAL"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 2,
+      "minimum_order_qty": 1,
+      "quantity": 40,
+      "reorder_point": 8,
+      "reserved_quantity": 3
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "BRO-HLL2350DW-001"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 20,
+      "minimum_order_qty": 1,
+      "quantity": 300,
+      "reorder_point": 50,
+      "reserved_quantity": 20
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "AVY-LBL-A4-1400"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 10,
+      "minimum_order_qty": 1,
+      "quantity": 90,
+      "reorder_point": 15,
+      "reserved_quantity": 6
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "RHO-N38-A3-ORANGE"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 20,
+      "minimum_order_qty": 1,
+      "quantity": 500,
+      "reorder_point": 80,
+      "reserved_quantity": 30
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "3M-POSTIT-14PAD-MULTI"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "maximum_order_qty": 3,
+      "minimum_order_qty": 1,
+      "quantity": 55,
+      "reorder_point": 10,
+      "reserved_quantity": 4
+    },
+    "lookup": {
+      "variant": {
+        "$ref": "product variant",
+        "lookup": {
+          "sku": "HO-BUNDLE-STARTER"
+        }
+      },
+      "warehouse": {
+        "$ref": "warehouse",
+        "lookup": {
+          "slug": "los-angeles-dc"
+        }
+      }
+    }
+  }
+]

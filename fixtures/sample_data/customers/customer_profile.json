@@ -1,0 +1,182 @@
+[
+  {
+    "fields": {
+      "accepts_marketing": true,
+      "date_of_birth": "1988-04-15",
+      "first_name": "James",
+      "gender": "M",
+      "last_name": "Carter",
+      "phone_number": "+12135558001"
+    },
+    "lookup": {
+      "user": {
+        "$ref": "user account",
+        "lookup": {
+          "email": "james.carter@example.com"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "accepts_marketing": true,
+      "date_of_birth": "1995-11-23",
+      "first_name": "Sophia",
+      "gender": "F",
+      "last_name": "Nguyen",
+      "phone_number": "+14085558002"
+    },
+    "lookup": {
+      "user": {
+        "$ref": "user account",
+        "lookup": {
+          "email": "sophia.nguyen@example.com"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "accepts_marketing": false,
+      "date_of_birth": "1991-07-08",
+      "first_name": "Liam",
+      "gender": "M",
+      "last_name": "O'Connor",
+      "phone_number": "+13125558003"
+    },
+    "lookup": {
+      "user": {
+        "$ref": "user account",
+        "lookup": {
+          "email": "liam.oconnor@example.com"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "accepts_marketing": true,
+      "date_of_birth": "1993-02-17",
+      "first_name": "Amara",
+      "gender": "F",
+      "last_name": "Osei",
+      "phone_number": "+17185558004"
+    },
+    "lookup": {
+      "user": {
+        "$ref": "user account",
+        "lookup": {
+          "email": "amara.osei@example.com"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "accepts_marketing": true,
+      "date_of_birth": "1990-09-30",
+      "first_name": "Priya",
+      "gender": "F",
+      "last_name": "Sharma",
+      "phone_number": "+14155558005"
+    },
+    "lookup": {
+      "user": {
+        "$ref": "user account",
+        "lookup": {
+          "email": "priya.sharma@example.com"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "accepts_marketing": false,
+      "date_of_birth": "1986-12-05",
+      "first_name": "Carlos",
+      "gender": "M",
+      "last_name": "Reyes",
+      "phone_number": "+13055558006"
+    },
+    "lookup": {
+      "user": {
+        "$ref": "user account",
+        "lookup": {
+          "email": "carlos.reyes@example.com"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "accepts_marketing": true,
+      "date_of_birth": "1997-06-19",
+      "first_name": "Emily",
+      "gender": "F",
+      "last_name": "Watson",
+      "phone_number": "+12025558007"
+    },
+    "lookup": {
+      "user": {
+        "$ref": "user account",
+        "lookup": {
+          "email": "emily.watson@example.com"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "accepts_marketing": false,
+      "date_of_birth": "1983-03-27",
+      "first_name": "Noah",
+      "gender": "M",
+      "last_name": "Thompson",
+      "phone_number": "+17135558008"
+    },
+    "lookup": {
+      "user": {
+        "$ref": "user account",
+        "lookup": {
+          "email": "noah.thompson@example.com"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "accepts_marketing": true,
+      "date_of_birth": "1994-08-11",
+      "first_name": "Fatima",
+      "gender": "F",
+      "last_name": "Malik",
+      "phone_number": "+12015558009"
+    },
+    "lookup": {
+      "user": {
+        "$ref": "user account",
+        "lookup": {
+          "email": "fatima.malik@example.com"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "accepts_marketing": true,
+      "date_of_birth": "1989-01-14",
+      "first_name": "Oliver",
+      "gender": "M",
+      "last_name": "Kim",
+      "phone_number": "+15035558010"
+    },
+    "lookup": {
+      "user": {
+        "$ref": "user account",
+        "lookup": {
+          "email": "oliver.kim@example.com"
+        }
+      }
+    }
+  }
+]

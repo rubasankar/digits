@@ -1,0 +1,1916 @@
+[
+  {
+    "fields": {
+      "allow_override": false,
+      "default_value": "",
+      "display_order": 1,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": true,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "12",
+      "display_order": 2,
+      "generates_variants": false,
+      "is_comparable": true,
+      "is_filterable": true,
+      "is_required": true,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "warranty_months"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 3,
+      "generates_variants": false,
+      "is_comparable": true,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "os_platform"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 1,
+      "generates_variants": true,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "scope": "variant"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 2,
+      "generates_variants": true,
+      "is_comparable": true,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "storage_gb"
+        }
+      },
+      "scope": "variant"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 3,
+      "generates_variants": true,
+      "is_comparable": true,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "ram_gb"
+        }
+      },
+      "scope": "variant"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 4,
+      "generates_variants": false,
+      "is_comparable": true,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "connectivity"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 5,
+      "generates_variants": false,
+      "is_comparable": true,
+      "is_filterable": false,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "battery_life_h"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 6,
+      "generates_variants": false,
+      "is_comparable": true,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "screen_size_in"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 7,
+      "generates_variants": false,
+      "is_comparable": true,
+      "is_filterable": false,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "electronics"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": false,
+      "default_value": "unisex",
+      "display_order": 1,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": true,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "clothing-apparel"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "gender"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 2,
+      "generates_variants": false,
+      "is_comparable": true,
+      "is_filterable": true,
+      "is_required": true,
+      "is_searchable": true,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "clothing-apparel"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "regular-fit",
+      "display_order": 3,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "clothing-apparel"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "fit_type"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 1,
+      "generates_variants": true,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": true,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "clothing-apparel"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "scope": "variant"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 2,
+      "generates_variants": true,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": true,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "clothing-apparel"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "scope": "variant"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 3,
+      "generates_variants": true,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "clothing-apparel"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "shoe_size_us"
+        }
+      },
+      "scope": "variant"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 4,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": false,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "clothing-apparel"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 1,
+      "generates_variants": false,
+      "is_comparable": true,
+      "is_filterable": true,
+      "is_required": true,
+      "is_searchable": true,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "home-kitchen"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 2,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "home-kitchen"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "12",
+      "display_order": 3,
+      "generates_variants": false,
+      "is_comparable": true,
+      "is_filterable": false,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "home-kitchen"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "warranty_months"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 4,
+      "generates_variants": false,
+      "is_comparable": true,
+      "is_filterable": false,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "home-kitchen"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "power_w"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 1,
+      "generates_variants": true,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "home-kitchen"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "scope": "variant"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "all-skin-types",
+      "display_order": 1,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": true,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "beauty-personal-care"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "skin_type"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 2,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "beauty-personal-care"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "certification"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "false",
+      "display_order": 3,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "beauty-personal-care"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "is_vegan"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 4,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "beauty-personal-care"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 1,
+      "generates_variants": true,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "beauty-personal-care"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "scent_profile"
+        }
+      },
+      "scope": "variant"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 2,
+      "generates_variants": true,
+      "is_comparable": true,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "beauty-personal-care"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "volume_ml"
+        }
+      },
+      "scope": "variant"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 1,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "sports-outdoors"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 2,
+      "generates_variants": false,
+      "is_comparable": true,
+      "is_filterable": false,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "sports-outdoors"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 1,
+      "generates_variants": true,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "sports-outdoors"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "scope": "variant"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 2,
+      "generates_variants": true,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "sports-outdoors"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "size"
+        }
+      },
+      "scope": "variant"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 3,
+      "generates_variants": true,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "sports-outdoors"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "shoe_size_us"
+        }
+      },
+      "scope": "variant"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 1,
+      "generates_variants": false,
+      "is_comparable": true,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "digital-goods"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "software_platform"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "English",
+      "display_order": 2,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "digital-goods"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 3,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "digital-goods"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "difficulty_level"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 1,
+      "generates_variants": true,
+      "is_comparable": true,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "digital-goods"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "license_duration"
+        }
+      },
+      "scope": "variant"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 1,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": false,
+      "is_required": false,
+      "is_searchable": true,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "books-stationery"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "author"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "English",
+      "display_order": 2,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": true,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "books-stationery"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 3,
+      "generates_variants": false,
+      "is_comparable": true,
+      "is_filterable": false,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "books-stationery"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "page_count"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "paperback",
+      "display_order": 1,
+      "generates_variants": true,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": true,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "books-stationery"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "book_format"
+        }
+      },
+      "scope": "variant"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 2,
+      "generates_variants": true,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "books-stationery"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "scope": "variant"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 1,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "health-wellness"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "certification"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "false",
+      "display_order": 2,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "health-wellness"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "is_vegan"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 3,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "health-wellness"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 1,
+      "generates_variants": true,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": true,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "health-wellness"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "supplement_form"
+        }
+      },
+      "scope": "variant"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 2,
+      "generates_variants": true,
+      "is_comparable": true,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "health-wellness"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "pack_quantity"
+        }
+      },
+      "scope": "variant"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "false",
+      "display_order": 1,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "food-beverages"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "is_organic"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "false",
+      "display_order": 2,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "food-beverages"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "is_vegan"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 3,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "food-beverages"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 1,
+      "generates_variants": true,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "food-beverages"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "roast_level"
+        }
+      },
+      "scope": "variant"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 2,
+      "generates_variants": true,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "food-beverages"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "flavour"
+        }
+      },
+      "scope": "variant"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 3,
+      "generates_variants": true,
+      "is_comparable": true,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "food-beverages"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "scope": "variant"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "Universal fit",
+      "display_order": 1,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": false,
+      "is_required": false,
+      "is_searchable": true,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "automotive"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "compatible_vehicles"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 2,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "automotive"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "12",
+      "display_order": 3,
+      "generates_variants": false,
+      "is_comparable": true,
+      "is_filterable": false,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "automotive"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "warranty_months"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 1,
+      "generates_variants": true,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "automotive"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "scope": "variant"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": false,
+      "default_value": "",
+      "display_order": 1,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": true,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "toys-games"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "age_range"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 2,
+      "generates_variants": false,
+      "is_comparable": true,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "toys-games"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "player_count"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 3,
+      "generates_variants": false,
+      "is_comparable": true,
+      "is_filterable": false,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "toys-games"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "duration_min"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 4,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "toys-games"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "difficulty_level"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 1,
+      "generates_variants": true,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "toys-games"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "scope": "variant"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 1,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "office-supplies"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 2,
+      "generates_variants": false,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": false
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "office-supplies"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "scope": "product"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 1,
+      "generates_variants": true,
+      "is_comparable": true,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "office-supplies"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "pack_quantity"
+        }
+      },
+      "scope": "variant"
+    }
+  },
+  {
+    "fields": {
+      "allow_override": true,
+      "default_value": "",
+      "display_order": 2,
+      "generates_variants": true,
+      "is_comparable": false,
+      "is_filterable": true,
+      "is_required": false,
+      "is_searchable": false,
+      "visible_on_detail": true,
+      "visible_on_listing": true
+    },
+    "lookup": {
+      "category": {
+        "$ref": "product category",
+        "lookup": {
+          "slug": "office-supplies"
+        }
+      },
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "colour"
+        }
+      },
+      "scope": "variant"
+    }
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "fields": {
+      "description": "Handles day-to-day store operations",
+      "display_order": 1,
+      "is_active": true
+    },
+    "lookup": {
+      "name": "Operations"
+    }
+  },
+  {
+    "fields": {
+      "description": "Handles customer inquiries, complaints, and support tickets",
+      "display_order": 2,
+      "is_active": true
+    },
+    "lookup": {
+      "name": "Customer Support"
+    }
+  },
+  {
+    "fields": {
+      "description": "Manages inventory, picking, packing, and fulfillment",
+      "display_order": 3,
+      "is_active": true
+    },
+    "lookup": {
+      "name": "Warehouse"
+    }
+  },
+  {
+    "fields": {
+      "description": "Handles billing, refunds, and financial reporting",
+      "display_order": 4,
+      "is_active": true
+    },
+    "lookup": {
+      "name": "Finance"
+    }
+  },
+  {
+    "fields": {
+      "description": "Manages promotions, campaigns, and brand strategy",
+      "display_order": 5,
+      "is_active": true
+    },
+    "lookup": {
+      "name": "Marketing"
+    }
+  },
+  {
+    "fields": {
+      "description": "Maintains platform infrastructure and technical support",
+      "display_order": 6,
+      "is_active": true
+    },
+    "lookup": {
+      "name": "IT Support"
+    }
+  }
+]

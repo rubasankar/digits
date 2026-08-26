@@ -1,0 +1,4695 @@
+[
+  {
+    "fields": {
+      "value": "KR"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "samsung-galaxy-s24-ultra"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "12"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "warranty_months"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "samsung-galaxy-s24-ultra"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "Android"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "os_platform"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "samsung-galaxy-s24-ultra"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "5G,Bluetooth-5-3,WiFi-6,USB-C,NFC"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "connectivity"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "samsung-galaxy-s24-ultra"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "27"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "battery_life_h"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "samsung-galaxy-s24-ultra"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "6.8"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "screen_size_in"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "samsung-galaxy-s24-ultra"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "232"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "samsung-galaxy-s24-ultra"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "apple-macbook-pro-14"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "12"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "warranty_months"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "apple-macbook-pro-14"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "macOS"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "os_platform"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "apple-macbook-pro-14"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "Bluetooth-5-3,WiFi-6,USB-C,HDMI"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "connectivity"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "apple-macbook-pro-14"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "18"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "battery_life_h"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "apple-macbook-pro-14"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "14.2"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "screen_size_in"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "apple-macbook-pro-14"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "1550"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "apple-macbook-pro-14"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "JP"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "sony-wh1000xm5-headphones"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "12"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "warranty_months"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "sony-wh1000xm5-headphones"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "Bluetooth-5-3,USB-C,3-5mm-jack"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "connectivity"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "sony-wh1000xm5-headphones"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "30"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "battery_life_h"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "sony-wh1000xm5-headphones"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "250"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "sony-wh1000xm5-headphones"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "ipad-pro-12-9"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "12"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "warranty_months"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "ipad-pro-12-9"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "iOS"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "os_platform"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "ipad-pro-12-9"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "WiFi-6,USB-C,Bluetooth-5-3"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "connectivity"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "ipad-pro-12-9"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "10"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "battery_life_h"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "ipad-pro-12-9"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "12.9"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "screen_size_in"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "ipad-pro-12-9"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "682"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "ipad-pro-12-9"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "logitech-mx-master-3s"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "24"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "warranty_months"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "logitech-mx-master-3s"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "Bluetooth-5-3,USB-A"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "connectivity"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "logitech-mx-master-3s"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "1680"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "battery_life_h"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "logitech-mx-master-3s"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "141"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "logitech-mx-master-3s"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "gopro-hero12-black"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "12"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "warranty_months"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "gopro-hero12-black"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "Bluetooth-5-3,WiFi-6,USB-C"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "connectivity"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "gopro-hero12-black"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "1"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "battery_life_h"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "gopro-hero12-black"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "154"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "gopro-hero12-black"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "KR"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "samsung-65-qled-tv"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "12"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "warranty_months"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "samsung-65-qled-tv"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "65"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "screen_size_in"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "samsung-65-qled-tv"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "WiFi-6,Bluetooth-5-3,HDMI,USB-A"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "connectivity"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "samsung-65-qled-tv"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "JP"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "dslr-camera-rental-kit"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "3200"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "dslr-camera-rental-kit"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "smart-home-bundle"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "12"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "warranty_months"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "smart-home-bundle"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "WiFi-6,Bluetooth-5-3"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "connectivity"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "smart-home-bundle"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "mechanical-keyboard-keychron-q1"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "12"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "warranty_months"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "mechanical-keyboard-keychron-q1"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "Bluetooth-5-3,USB-C"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "connectivity"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "mechanical-keyboard-keychron-q1"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "1360"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "mechanical-keyboard-keychron-q1"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "pre-order-next-gen-smartwatch"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "12"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "warranty_months"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "pre-order-next-gen-smartwatch"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "Bluetooth-5-3,WiFi-6"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "connectivity"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "pre-order-next-gen-smartwatch"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "960"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "battery_life_h"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "pre-order-next-gen-smartwatch"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "89"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "pre-order-next-gen-smartwatch"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "mens"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "gender"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "levis-501-original-jeans"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "100pct-cotton"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "levis-501-original-jeans"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "regular-fit"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "fit_type"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "levis-501-original-jeans"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "650"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "levis-501-original-jeans"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "mens"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "gender"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "nike-therma-fit-hoodie"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "polyester"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "nike-therma-fit-hoodie"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "relaxed-fit"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "fit_type"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "nike-therma-fit-hoodie"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "450"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "nike-therma-fit-hoodie"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "unisex"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "gender"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "allbirds-wool-runners"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "merino-wool"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "allbirds-wool-runners"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "regular-fit"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "fit_type"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "allbirds-wool-runners"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "260"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "allbirds-wool-runners"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "unisex"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "gender"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "patagonia-down-sweater-jacket"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "polyester"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "patagonia-down-sweater-jacket"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "regular-fit"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "fit_type"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "patagonia-down-sweater-jacket"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "340"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "patagonia-down-sweater-jacket"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "unisex"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "gender"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "uniqlo-heattech-crew-neck"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "polyester"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "uniqlo-heattech-crew-neck"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "slim-fit"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "fit_type"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "uniqlo-heattech-crew-neck"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "180"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "uniqlo-heattech-crew-neck"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "mens"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "gender"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "classic-oxford-dress-shirt"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "100pct-cotton"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "classic-oxford-dress-shirt"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "regular-fit"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "fit_type"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "classic-oxford-dress-shirt"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "womens"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "gender"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "lululemon-align-leggings"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "polyester"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "lululemon-align-leggings"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "slim-fit"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "fit_type"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "lululemon-align-leggings"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "unisex"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "gender"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "limited-edition-air-jordan-1"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "leather"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "limited-edition-air-jordan-1"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "regular-fit"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "fit_type"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "limited-edition-air-jordan-1"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "cast-iron"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "le-creuset-dutch-oven-28cm"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "FR"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "le-creuset-dutch-oven-28cm"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "999"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "warranty_months"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "le-creuset-dutch-oven-28cm"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "stainless-steel"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "breville-barista-express-espresso"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "breville-barista-express-espresso"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "24"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "warranty_months"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "breville-barista-express-espresso"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "1600"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "power_w"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "breville-barista-express-espresso"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "GB"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "dyson-v15-detect-vacuum"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "24"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "warranty_months"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "dyson-v15-detect-vacuum"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "240"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "power_w"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "dyson-v15-detect-vacuum"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "bamboo"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "bambu-cutting-board-set"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "bambu-cutting-board-set"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "nest-learning-thermostat"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "24"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "warranty_months"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "nest-learning-thermostat"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "stainless-steel"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "kitchenaid-stand-mixer"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "kitchenaid-stand-mixer"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "12"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "warranty_months"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "kitchenaid-stand-mixer"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "325"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "power_w"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "kitchenaid-stand-mixer"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "plastic-abs"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "ikea-kallax-shelf-unit"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "DE"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "ikea-kallax-shelf-unit"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "stainless-steel"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "instant-pot-duo-7-in-1"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "instant-pot-duo-7-in-1"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "12"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "warranty_months"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "instant-pot-duo-7-in-1"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "1200"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "power_w"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "instant-pot-duo-7-in-1"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "dry,sensitive,normal"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "skin_type"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "cerave-moisturising-cream"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "false"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "is_vegan"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "cerave-moisturising-cream"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "cerave-moisturising-cream"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "cruelty-free"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "certification"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "cerave-moisturising-cream"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "all-skin-types"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "skin_type"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "dyson-airwrap-styler"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "GB"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "dyson-airwrap-styler"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "CE"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "certification"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "dyson-airwrap-styler"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "oily,combination"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "skin_type"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "the-ordinary-niacinamide-serum"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "true"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "is_vegan"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "the-ordinary-niacinamide-serum"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "the-ordinary-niacinamide-serum"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "cruelty-free"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "certification"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "the-ordinary-niacinamide-serum"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "all-skin-types"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "skin_type"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "chanel-no5-eau-de-parfum"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "FR"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "chanel-no5-eau-de-parfum"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "dry,sensitive"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "skin_type"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "la-mer-moisturising-cream"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "la-mer-moisturising-cream"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "all-skin-types"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "skin_type"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "philips-series-9000-shaver"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "DE"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "philips-series-9000-shaver"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "CE"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "certification"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "philips-series-9000-shaver"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "plastic-abs"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "garmin-forerunner-265"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "47"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "garmin-forerunner-265"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "stainless-steel"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "hydro-flask-32oz-wide-mouth"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "454"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "hydro-flask-32oz-wide-mouth"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "polyester"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "under-armour-rival-fleece-joggers"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "400"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "under-armour-rival-fleece-joggers"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "polyester"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "black-diamond-climbing-harness"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "350"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "black-diamond-climbing-harness"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "plastic-abs"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "yoga-mat-premium"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "3200"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "weight_g"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "yoga-mat-premium"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "web"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "software_platform"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "python-full-stack-course"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "English"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "python-full-stack-course"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "beginner"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "difficulty_level"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "python-full-stack-course"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "web"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "software_platform"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "figma-ui-ux-design-course"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "English"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "figma-ui-ux-design-course"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "intermediate"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "difficulty_level"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "figma-ui-ux-design-course"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "web"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "software_platform"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "photoshop-ebook-2026"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "English"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "photoshop-ebook-2026"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "intermediate"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "difficulty_level"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "photoshop-ebook-2026"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "Windows,macOS"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "software_platform"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "adobe-creative-cloud-license"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "English"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "adobe-creative-cloud-license"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "Windows,macOS,iOS,Android"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "software_platform"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "antivirus-pro-license"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "English"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "antivirus-pro-license"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "Windows,macOS,iOS,Android,web"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "software_platform"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "microsoft-365-family"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "English"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "microsoft-365-family"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "web,iOS,Android"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "software_platform"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "notion-ai-workspace"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "English"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "notion-ai-workspace"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "English"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "stock-photo-pack-premium"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "web"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "software_platform"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "saas-pro-subscription"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "English"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "saas-pro-subscription"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "James Clear"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "author"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "atomic-habits-book"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "English"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "atomic-habits-book"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "320"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "page_count"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "atomic-habits-book"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "Cal Newport"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "author"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "deep-work-cal-newport"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "English"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "deep-work-cal-newport"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "296"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "page_count"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "deep-work-cal-newport"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "David Thomas and Andrew Hunt"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "author"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "the-pragmatic-programmer"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "English"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "the-pragmatic-programmer"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "352"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "page_count"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "the-pragmatic-programmer"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "Daniel Kahneman"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "author"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "thinking-fast-and-slow"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "English"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "thinking-fast-and-slow"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "499"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "page_count"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "thinking-fast-and-slow"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "Yuval Noah Harari"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "author"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "sapiens-yuval-noah-harari"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "English"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "sapiens-yuval-noah-harari"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "443"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "page_count"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "sapiens-yuval-noah-harari"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "Don Norman"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "author"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "design-of-everyday-things"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "English"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "design-of-everyday-things"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "368"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "page_count"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "design-of-everyday-things"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "English"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "leuchtturm-a5-notebook"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "249"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "page_count"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "leuchtturm-a5-notebook"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "USDA-organic,FDA-approved"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "certification"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "garden-of-life-vitamin-d3"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "true"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "is_vegan"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "garden-of-life-vitamin-d3"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "garden-of-life-vitamin-d3"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "ISO-9001"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "certification"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "whey-protein-isolate-optimum"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "false"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "is_vegan"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "whey-protein-isolate-optimum"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "whey-protein-isolate-optimum"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "CE"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "certification"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "first-aid-kit-deluxe"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "GB"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "first-aid-kit-deluxe"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "FDA-approved,CE"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "certification"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "omron-blood-pressure-monitor"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "JP"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "omron-blood-pressure-monitor"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "false"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "is_organic"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "lavazza-super-crema-coffee"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "true"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "is_vegan"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "lavazza-super-crema-coffee"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "IT"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "lavazza-super-crema-coffee"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "true"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "is_organic"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "manuka-honey-mgo400"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "false"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "is_vegan"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "manuka-honey-mgo400"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "NZ"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "manuka-honey-mgo400"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "true"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "is_organic"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "pukka-herbal-tea-collection"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "true"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "is_vegan"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "pukka-herbal-tea-collection"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "GB"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "pukka-herbal-tea-collection"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "false"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "is_organic"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "halo-top-ice-cream"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "false"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "is_vegan"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "halo-top-ice-cream"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "halo-top-ice-cream"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "Universal fit - all glossy paint finishes"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "compatible_vehicles"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "meguiars-ultimate-compound"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "plastic-abs"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "meguiars-ultimate-compound"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "meguiars-ultimate-compound"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "Universal fit - 12V vehicles"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "compatible_vehicles"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "blackvue-dr900x-dashcam"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "KR"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "blackvue-dr900x-dashcam"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "12"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "warranty_months"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "blackvue-dr900x-dashcam"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "225/45 R17 fitment - check manufacturer guide"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "compatible_vehicles"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "michelin-car-tyres-225-45r17"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "FR"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "michelin-car-tyres-225-45r17"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "Start-stop vehicles - 70Ah 760A - check fitment guide"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "compatible_vehicles"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "bosch-car-battery-s5"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "DE"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "bosch-car-battery-s5"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "48"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "warranty_months"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "bosch-car-battery-s5"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "HGV trucks and commercial vehicles"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "compatible_vehicles"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "garmin-dezl-otr1000-gps"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "garmin-dezl-otr1000-gps"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "Universal - all vehicle interiors"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "compatible_vehicles"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "car-vacuum-cleaner-portable"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "GB"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "car-vacuum-cleaner-portable"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "All Type 2 EV - BMW, Audi, VW, Mercedes, Tesla CCS"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "compatible_vehicles"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "ev-charging-cable-type2"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "DE"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "ev-charging-cable-type2"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "12plus"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "age_range"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "catan-board-game"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "2-4"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "player_count"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "catan-board-game"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "90"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "duration_min"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "catan-board-game"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "intermediate"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "difficulty_level"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "catan-board-game"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "adult"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "age_range"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "lego-technic-bugatti-chiron"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "1"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "player_count"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "lego-technic-bugatti-chiron"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "600"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "duration_min"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "lego-technic-bugatti-chiron"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "advanced"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "difficulty_level"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "lego-technic-bugatti-chiron"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "6-12"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "age_range"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "mattel-uno-card-game"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "2-6"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "player_count"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "mattel-uno-card-game"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "30"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "duration_min"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "mattel-uno-card-game"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "beginner"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "difficulty_level"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "mattel-uno-card-game"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "3-6"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "age_range"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "hot-wheels-track-builder-set"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "1"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "player_count"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "hot-wheels-track-builder-set"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "12plus"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "age_range"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "ravensburger-1000pc-puzzle"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "1"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "player_count"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "ravensburger-1000pc-puzzle"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "intermediate"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "difficulty_level"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "ravensburger-1000pc-puzzle"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "6-12"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "age_range"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "nintendo-switch-game-pre-order"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "2-4"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "player_count"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "nintendo-switch-game-pre-order"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "12plus"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "age_range"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "chess-set-deluxe-walnut"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "2"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "player_count"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "chess-set-deluxe-walnut"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "intermediate"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "difficulty_level"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "chess-set-deluxe-walnut"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "plastic-abs"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "herman-miller-aeron-chair"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "herman-miller-aeron-chair"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "bamboo"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "material"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "flexispot-e7-pro-standing-desk"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "CN"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "flexispot-e7-pro-standing-desk"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "JP"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "brother-laser-printer-hl-l2350dw"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "12"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "warranty_months"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "brother-laser-printer-hl-l2350dw"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "FR"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "rhodia-a4-dot-pad"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "US"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "3m-post-it-notes-multipack"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "DE"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "brand_country"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "avery-laser-label-pack"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "Windows,macOS,iOS,Android,web"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "software_platform"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "microsoft-365-business-license"
+        }
+      }
+    }
+  },
+  {
+    "fields": {
+      "value": "English"
+    },
+    "lookup": {
+      "definition": {
+        "$ref": "attribute definition",
+        "lookup": {
+          "name": "language"
+        }
+      },
+      "product": {
+        "$ref": "product",
+        "lookup": {
+          "slug": "microsoft-365-business-license"
+        }
+      }
+    }
+  }
+]

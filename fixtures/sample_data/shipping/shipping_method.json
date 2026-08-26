@@ -1,0 +1,122 @@
+[
+  {
+    "fields": {
+      "base_rate": "0.00",
+      "carrier": {
+        "$ref": "carrier account",
+        "lookup": {
+          "carrier_code": "local"
+        }
+      },
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "description": "Free standard shipping on all orders",
+      "estimated_days_max": 5,
+      "estimated_days_min": 3,
+      "is_active": true
+    },
+    "lookup": {
+      "name": "Standard Shipping"
+    }
+  },
+  {
+    "fields": {
+      "base_rate": "15.00",
+      "carrier": {
+        "$ref": "carrier account",
+        "lookup": {
+          "carrier_code": "fedex"
+        }
+      },
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "description": "Fast delivery within 1-2 business days",
+      "estimated_days_max": 2,
+      "estimated_days_min": 1,
+      "is_active": true
+    },
+    "lookup": {
+      "name": "Express Shipping"
+    }
+  },
+  {
+    "fields": {
+      "base_rate": "35.00",
+      "carrier": {
+        "$ref": "carrier account",
+        "lookup": {
+          "carrier_code": "ups"
+        }
+      },
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "description": "Next business day delivery",
+      "estimated_days_max": 1,
+      "estimated_days_min": 1,
+      "is_active": true
+    },
+    "lookup": {
+      "name": "Overnight Shipping"
+    }
+  },
+  {
+    "fields": {
+      "base_rate": "0.00",
+      "carrier": {
+        "$ref": "carrier account",
+        "lookup": {
+          "carrier_code": "usps"
+        }
+      },
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "description": "Slow, low-cost delivery option",
+      "estimated_days_max": 10,
+      "estimated_days_min": 5,
+      "is_active": true
+    },
+    "lookup": {
+      "name": "Economy Shipping"
+    }
+  },
+  {
+    "fields": {
+      "base_rate": "45.00",
+      "carrier": {
+        "$ref": "carrier account",
+        "lookup": {
+          "carrier_code": "dhl"
+        }
+      },
+      "currency": {
+        "$ref": "currency",
+        "lookup": {
+          "code": "USD"
+        }
+      },
+      "description": "Delivery to international destinations",
+      "estimated_days_max": 21,
+      "estimated_days_min": 7,
+      "is_active": true
+    },
+    "lookup": {
+      "name": "International Shipping"
+    }
+  }
+]

@@ -1,0 +1,18 @@
+{% extends "entrance_auth.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "Sign Up Closed" %}
+{% endblock title %}
+{% block auth_content %}
+  <c-lb.text as="h1" size="xl" class="font-bold">
+    {% trans "Sign Up Closed" %}
+  </c-lb.text>
+  <c-lb.alert variant="info">
+    <p>{% trans "We are sorry, but sign up is currently closed." %}</p>
+  </c-lb.alert>
+  <c-lb.button as="a" href="{% url 'core:home' %}" btnStyle="ghost" class="w-full">
+    {% trans "Back to Home" %}
+  </c-lb.button>
+{% endblock auth_content %}

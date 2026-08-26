@@ -1,0 +1,25 @@
+{% extends "entrance.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "Verify Your Email Address" %}
+{% endblock title %}
+{% block content %}
+  <section class="container mx-auto max-w-lg px-4 py-12">
+    <c-lb.text as="h1" size="2xl" class="mb-6 font-bold">
+      {% trans "Verify Your Email Address" %}
+    </c-lb.text>
+    <div class="flex flex-col gap-3">
+      <c-lb.text as="p" variant="neutral">
+        {% trans "This part of the site requires us to verify that you are who you claim to be. For this purpose, we require that you verify ownership of your email address." %}
+      </c-lb.text>
+      <c-lb.text as="p" variant="neutral">
+        {% trans "We have sent an email to you for verification. Please click on the link inside that email. If you do not see it in your main inbox, check your spam folder." %}
+      </c-lb.text>
+      <c-lb.text as="p" variant="neutral">
+        {% blocktrans %}Note: you can still <a href="{% url 'account_email' %}">change your email address</a>.{% endblocktrans %}
+      </c-lb.text>
+    </div>
+  </section>
+{% endblock content %}

@@ -8,46 +8,34 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>
       {% block title %}
-        Title
+        {% trans "Title" %}
       {% endblock title %}
     </title>
-    <meta name="description" content="Universal Online Store/Shop" />
-    <c-lb.m.dependencies setThemeEndpoint="{% url 'set_theme' %}" />
+    <meta name="description" content="{% trans "Description" %}" />
+    <c-lb.m.dependencies setThemeEndpoint="{% url 'set_theme' %}" alpine />
     {% block css %}
       {% compress css %}
         <link href="{% static 'css/project.css' %}" rel="stylesheet" />
       {% endcompress %}
     {% endblock css %}
-    {# Allow child templates to add extra CSS/head content #}
     {% block extra_head %}
     {% endblock extra_head %}
   </head>
   <body class="{% block bodyclass %}min-h-screen bg-base-100 text-base-content grainy-bg antialiased{% endblock bodyclass %}">
     {% block body %}
       {% block navbar %}
-        <c-layouts.navbar />
       {% endblock navbar %}
-      <main id="main-content" class="min-h-screen">
-        {% if messages %}
-          <div class="container mx-auto px-4 py-4" aria-live="polite">
-            {% for message in messages %}
-              <c-lb.alert variant="{% if message.tags %}{{ message.tags }}{% else %}info{% endif %}">
-                {{ message }}
-              </c-lb.alert>
-            {% endfor %}
-          </div>
-        {% endif %}
+      <main id="main-content" class="flex-1">
         {% block main %}
           {% block content %}
-            <div class="container mx-auto px-4 py-8">
-              <p>
-                Use this document as a base template
-                for the application.
-              </p>
-            </div>
+            <c-lb.text as="p" size="2xl">
+              {% trans "Use this document as a base template for the application." %}
+            </c-lb.text>
           {% endblock content %}
         {% endblock main %}
       </main>
+      {% block footer %}
+      {% endblock footer %}
       {% block modal %}
       {% endblock modal %}
     {% endblock body %}

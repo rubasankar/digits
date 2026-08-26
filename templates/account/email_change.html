@@ -1,0 +1,79 @@
+{% extends "entrance.html" %}
+
+{% load i18n lb_tags %}
+
+{% block title %}
+  {% trans "Email Address" %}
+{% endblock title %}
+{% block content %}
+  <section class="container mx-auto max-w-lg px-4 py-12">
+    <c-lb.text as="h1" size="2xl" class="mb-6 font-bold">
+      {% trans "Email Address" %}
+    </c-lb.text>
+    <div class="flex flex-col gap-4">
+      {% if current_emailaddress %}
+        <c-lb.fieldset legend="{% trans 'Current email' %}">
+          <c-lb.input type="email" value="{{ current_emailaddress.email }}" disabled />
+        </c-lb.fieldset>
+      {% endif %}
+      {% if new_emailaddress %}
+        <c-lb.fieldset legend="{% trans 'Changing to' %}">
+          <c-lb.input type="email" value="{{ new_emailaddress.email }}" disabled />
+          <c-lb.text as="p" size="sm" variant="neutral">
+            {% trans "Your email address is still pending verification." %}
+          </c-lb.text>
+          <div class="flex gap-2">
+            <form method="post" action="{% url 'account_email' %}">
+              {% csrf_token %}
+              <input type="hidden" name="email" value="{{ new_emailaddress.email }}" />
+              <c-lb.button type="submit" name="action_send" size="sm" btnStyle="outline">
+                {% trans "Re-send Verification" %}
+              </c-lb.button>
+            </form>
+            {% if current_emailaddress %}
+              <form method="post" action="{% url 'account_email' %}">
+                {% csrf_token %}
+                <input type="hidden" name="email" value="{{ new_emailaddress.email }}" />
+                <c-lb.button type="submit"
+                             name="action_remove"
+                             size="sm"
+                             variant="error"
+                             btnStyle="outline">
+                  {% trans "Cancel Change" %}
+                </c-lb.button>
+              </form>
+            {% endif %}
+          </div>
+        </c-lb.fieldset>
+      {% endif %}
+      {% if form.non_field_errors %}
+        <c-lb.alert variant="error">
+          {% for err in form.non_field_errors %}<p>{{ err }}</p>{% endfor %}
+        </c-lb.alert>
+      {% endif %}
+      <form method="post"
+            action="{% url 'account_email' %}"
+            class="flex flex-col gap-4">
+        {% csrf_token %}
+        <c-lb.fieldset legend="{% trans 'Change to' %}">
+          <c-lb.input type="email"
+                      name="{{ form.email.html_name }}"
+                      id="{{ form.email.id_for_label }}"
+                      value="{{ form.email.value|default:'' }}"
+                      variant="{% if form.email.errors %}error{% endif %}"
+                      required />
+          {% if form.email.errors %}
+            <c-lb.validator.hint>
+              {{ form.email.errors|first }}
+            </c-lb.validator.hint>
+          {% endif %}
+        </c-lb.fieldset>
+        <div>
+          <c-lb.button type="submit" name="action_add" variant="primary">
+            {% trans "Change Email" %}
+          </c-lb.button>
+        </div>
+      </form>
+    </div>
+  </section>
+{% endblock content %}

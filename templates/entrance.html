@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% load static i18n lb_tags cotton %}
+
+{% block title %}
+  {% trans "Home" %}
+{% endblock %}
+{% block extra_head %}
+  {% block seo_meta %}
+    <meta name="description"
+          content="{% block meta_description %}{% trans "online store." %}{% endblock %}" />
+  {% endblock seo_meta %}
+  {% block json_ld %}
+  {% endblock json_ld %}
+{% endblock extra_head %}
+{% block body %}
+  <c-lb.drawer drawerId="app-drawer"
+               sideClass="z-99"
+               overlayClass="bg-black bg-opacity-50">
+    <c-slot name="sideContent">
+      {% block drawer_side %}
+        <c-lb.menu>
+          <c-lb.menu.item title="{% trans "Home" %}" href="{% url 'core:home' %}" />
+          <c-lb.menu.item title="{% trans "Browse" %}" href="{% url 'catalogue:index' %}" />
+          {% if user.is_authenticated %}
+            <c-lb.menu.item type="submenu-details" title="{% trans 'Account' %}" open>
+              <c-lb.menu.item title="{% trans "Account" %}" href="{% url 'customers:dashboard' %}" />
+              <c-lb.menu.item title="{% trans "Orders" %}" href="{% url 'orders:history' %}" />
+              <c-lb.menu.item title="{% trans "Wishlist" %}" href="{% url 'customers:wishlist' %}" />
+            </c-lb.menu.item>
+            {% if user.is_staff %}
+              <c-lb.menu.item title="{% trans "Admin" %}" href="{% url 'admin:index' %}" />
+            {% endif %}
+            <c-lb.menu.item title="{% trans "Log Out" %}" href="{% url 'account_logout' %}" />
+          {% else %}
+            <c-lb.menu.item title="{% trans "Log In" %}" href="{% url 'account_login' %}" />
+            <c-lb.menu.item title="{% trans "Register" %}" href="{% url 'account_signup' %}" />
+          {% endif %}
+        </c-lb.menu>
+      {% endblock drawer_side %}
+    </c-slot>
+    <c-slot name="content">
+      <c-lb.drawer.content class="flex min-h-screen flex-col">
+        {% block navbar %}
+          <c-layouts.navbar />
+        {% endblock navbar %}
+        <main id="main-content" class="flex-1">
+          <c-components.message />
+          {% block main %}
+            {% block content %}
+            {% endblock content %}
+          {% endblock main %}
+        </main>
+        {% block footer %}
+          <c-layouts.footer />
+        {% endblock footer %}
+        {% block modal %}
+        {% endblock modal %}
+      </c-lb.drawer.content>
+    </c-slot>
+  </c-lb.drawer>
+{% endblock body %}

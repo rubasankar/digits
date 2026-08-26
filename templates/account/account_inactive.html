@@ -1,0 +1,18 @@
+{% extends "entrance_auth.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "Account Inactive" %}
+{% endblock title %}
+{% block auth_content %}
+  <c-lb.text as="h1" size="xl" class="font-bold">
+    {% trans "Account Inactive" %}
+  </c-lb.text>
+  <c-lb.alert variant="warning">
+    <p>{% trans "This account is inactive." %}</p>
+  </c-lb.alert>
+  <c-lb.button as="a" href="{% url 'core:home' %}" btnStyle="ghost" class="w-full">
+    {% trans "Back to Home" %}
+  </c-lb.button>
+{% endblock auth_content %}

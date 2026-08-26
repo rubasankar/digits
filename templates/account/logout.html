@@ -1,0 +1,25 @@
+{% extends "entrance_auth.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "Sign Out" %}
+{% endblock title %}
+{% block auth_content %}
+  <c-lb.text as="h1" size="xl" class="font-bold">
+    {% trans "Sign Out" %}
+  </c-lb.text>
+  <c-lb.text as="p" variant="neutral">
+    {% trans "Are you sure you want to sign out?" %}
+  </c-lb.text>
+  <form method="post" class="flex flex-col gap-3">
+    {% csrf_token %}
+    {{ redirect_field }}
+    <c-lb.button type="submit" variant="primary" class="w-full">
+      {% trans "Sign Out" %}
+    </c-lb.button>
+    <c-lb.button as="a" href="{% url 'core:home' %}" btnStyle="ghost" class="w-full">
+      {% trans "Cancel" %}
+    </c-lb.button>
+  </form>
+{% endblock auth_content %}

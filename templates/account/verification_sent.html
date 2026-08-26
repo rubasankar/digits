@@ -1,0 +1,20 @@
+{% extends "entrance_auth.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "Verify Your Email Address" %}
+{% endblock title %}
+{% block auth_content %}
+  <c-lb.text as="h1" size="xl" class="font-bold">
+    {% trans "Verify Your Email Address" %}
+  </c-lb.text>
+  <c-lb.alert variant="info">
+    <p>
+      {% blocktrans %}We have sent an email to you for verification. Follow the link provided to finalize the signup process. If you do not see the verification email in your main inbox, check your spam folder.{% endblocktrans %}
+    </p>
+  </c-lb.alert>
+  <c-lb.button as="a" href="{% url 'core:home' %}" btnStyle="ghost" class="w-full">
+    {% trans "Back to Home" %}
+  </c-lb.button>
+{% endblock auth_content %}

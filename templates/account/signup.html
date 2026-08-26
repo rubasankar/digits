@@ -1,0 +1,69 @@
+{% extends "entrance_auth.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "Register" %}
+{% endblock title %}
+{% block auth_content %}
+  <c-lb.text as="h1" size="xl" class="font-bold">
+    {% trans "Create an Account" %}
+  </c-lb.text>
+  {% if form.non_field_errors %}
+    <c-lb.alert variant="error">
+      {% for err in form.non_field_errors %}<p>{{ err }}</p>{% endfor %}
+    </c-lb.alert>
+  {% endif %}
+  <form method="post" class="flex flex-col gap-4">
+    {% csrf_token %}
+    {{ redirect_field }}
+    <c-lb.fieldset legend="{% trans 'Email' %}">
+      <c-lb.input type="email"
+                  name="{{ form.email.html_name }}"
+                  id="{{ form.email.id_for_label }}"
+                  value="{{ form.email.value|default:'' }}"
+                  variant="{% if form.email.errors %}error{% endif %}"
+                  autofocus
+                  required />
+      {% if form.email.errors %}
+        <c-lb.validator.hint>
+          {{ form.email.errors|first }}
+        </c-lb.validator.hint>
+      {% endif %}
+    </c-lb.fieldset>
+    <c-lb.fieldset legend="{% trans 'Password' %}">
+      <c-lb.input type="password"
+                  name="{{ form.password1.html_name }}"
+                  id="{{ form.password1.id_for_label }}"
+                  variant="{% if form.password1.errors %}error{% endif %}"
+                  required />
+      {% if form.password1.errors %}
+        <c-lb.validator.hint>
+          {{ form.password1.errors|first }}
+        </c-lb.validator.hint>
+      {% endif %}
+    </c-lb.fieldset>
+    <c-lb.fieldset legend="{% trans 'Confirm Password' %}">
+      <c-lb.input type="password"
+                  name="{{ form.password2.html_name }}"
+                  id="{{ form.password2.id_for_label }}"
+                  variant="{% if form.password2.errors %}error{% endif %}"
+                  required />
+      {% if form.password2.errors %}
+        <c-lb.validator.hint>
+          {{ form.password2.errors|first }}
+        </c-lb.validator.hint>
+      {% endif %}
+    </c-lb.fieldset>
+    <c-lb.button type="submit" variant="primary" class="w-full">
+      {% trans "Sign Up" %}
+    </c-lb.button>
+  </form>
+  <c-components.social_login />
+  <c-lb.text as="p" size="sm" variant="neutral" class="text-center">
+    {% trans "Already have an account?" %}
+    <c-lb.link href="{% url 'account_login' %}">
+      {% trans "Log In" %}
+    </c-lb.link>
+  </c-lb.text>
+{% endblock auth_content %}

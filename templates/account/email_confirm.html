@@ -1,0 +1,46 @@
+{% extends "entrance_auth.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "Confirm Email Address" %}
+{% endblock title %}
+{% block auth_content %}
+  <c-lb.text as="h1" size="xl" class="font-bold">
+    {% trans "Confirm Email Address" %}
+  </c-lb.text>
+  {% if confirmation %}
+    {% if can_confirm %}
+      <c-lb.text as="p" variant="neutral">
+        {% blocktrans with email=confirmation.email_address.email %}Please confirm that <strong>{{ email }}</strong> is your email address.{% endblocktrans %}
+      </c-lb.text>
+      <form method="post" class="flex flex-col gap-3">
+        {% csrf_token %}
+        {{ redirect_field }}
+        <input type="hidden" name="key" value="{{ confirmation.key }}" />
+        <c-lb.button type="submit" variant="primary" class="w-full">
+          {% trans "Confirm" %}
+        </c-lb.button>
+      </form>
+      <c-lb.text as="p" size="sm" variant="neutral">
+        {% trans "If you did not request this confirmation, you can safely ignore this message." %}
+      </c-lb.text>
+    {% else %}
+      <c-lb.alert variant="error">
+        <p>
+          {% blocktrans with email=confirmation.email_address.email %}Unable to confirm {{ email }} because it is already confirmed by a different account.{% endblocktrans %}
+        </p>
+      </c-lb.alert>
+    {% endif %}
+  {% else %}
+    <c-lb.alert variant="error">
+      <p>{% trans "This email confirmation link expired or is invalid." %}</p>
+    </c-lb.alert>
+    <c-lb.button as="a"
+                 href="{% url 'account_login' %}"
+                 btnStyle="ghost"
+                 class="w-full">
+      {% trans "Back to Log In" %}
+    </c-lb.button>
+  {% endif %}
+{% endblock auth_content %}

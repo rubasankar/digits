@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "Bad Request" %}
+{% endblock title %}
+{% block content %}
+  <c-lb.hero class="min-h-[60vh]">
+    <c-lb.hero.content class="text-center">
+      <div class="flex max-w-md flex-col items-center gap-4">
+        <div class="rounded-full bg-error/10 p-5 text-error">
+          <c-lbi n="rmx.error-warning" w="2.5em" h="2.5em" />
+        </div>
+        <c-lb.text as="h1" class="text-6xl font-extrabold tracking-tight">
+          400
+        </c-lb.text>
+        <c-lb.text as="h2" size="xl" class="font-semibold">
+          {% trans "Bad Request" %}
+        </c-lb.text>
+        <c-lb.text as="p" variant="neutral">
+          {% trans "The server could not understand your request. Please check your input and try again." %}
+        </c-lb.text>
+        <c-lb.button as="a" href="{% url 'core:home' %}" variant="primary">
+          {% trans "Back to Home" %}
+        </c-lb.button>
+      </div>
+    </c-lb.hero.content>
+  </c-lb.hero>
+{% endblock content %}

@@ -1,0 +1,68 @@
+{% extends "entrance_auth.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "Log In" %}
+{% endblock title %}
+{% block auth_content %}
+  <c-lb.text as="h1" size="xl" class="font-bold">
+    {% trans "Log In" %}
+  </c-lb.text>
+  {% if form.non_field_errors %}
+    <c-lb.alert variant="error">
+      {% for err in form.non_field_errors %}<p>{{ err }}</p>{% endfor %}
+    </c-lb.alert>
+  {% endif %}
+  <form method="post" class="flex flex-col gap-4">
+    {% csrf_token %}
+    {{ redirect_field }}
+    <c-lb.fieldset legend="{% trans 'Email' %}">
+      <c-lb.input type="email"
+                  name="{{ form.login.html_name }}"
+                  id="{{ form.login.id_for_label }}"
+                  value="{{ form.login.value|default:'' }}"
+                  variant="{% if form.login.errors %}error{% endif %}"
+                  autofocus
+                  required />
+      {% if form.login.errors %}
+        <c-lb.validator.hint>
+          {{ form.login.errors|first }}
+        </c-lb.validator.hint>
+      {% endif %}
+    </c-lb.fieldset>
+    <c-lb.fieldset legend="{% trans 'Password' %}">
+      <c-lb.input type="password"
+                  name="{{ form.password.html_name }}"
+                  id="{{ form.password.id_for_label }}"
+                  variant="{% if form.password.errors %}error{% endif %}"
+                  required />
+      {% if form.password.errors %}
+        <c-lb.validator.hint>
+          {{ form.password.errors|first }}
+        </c-lb.validator.hint>
+      {% endif %}
+    </c-lb.fieldset>
+    <div class="flex items-center justify-between text-sm">
+      <label class="flex items-center gap-2">
+        <c-lb.checkbox name="{{ form.remember.html_name }}"
+                       id="{{ form.remember.id_for_label }}"
+                       size="sm" />
+        <span>{% trans "Remember Me" %}</span>
+      </label>
+      <c-lb.link href="{% url 'account_reset_password' %}">
+        {% trans "Forgot Password?" %}
+      </c-lb.link>
+    </div>
+    <c-lb.button type="submit" variant="primary" class="w-full">
+      {% trans "Log In" %}
+    </c-lb.button>
+  </form>
+  <c-components.social_login />
+  <c-lb.text as="p" size="sm" variant="neutral" class="text-center">
+    {% trans "Don't have an account?" %}
+    <c-lb.link href="{% url 'account_signup' %}">
+      {% trans "Register" %}
+    </c-lb.link>
+  </c-lb.text>
+{% endblock auth_content %}

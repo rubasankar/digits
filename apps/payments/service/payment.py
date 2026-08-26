@@ -8,6 +8,7 @@ from typing import TYPE_CHECKING
 from django.db import transaction
 from django.utils import timezone
 
+from apps.orders.enums import OrderStatusEnum
 from apps.orders.service.order import OrderService
 from apps.payments.enums import PaymentStatusEnum
 from apps.payments.models import Payment
@@ -158,6 +159,9 @@ class PaymentService:
         # Sync the denormalised payment_status on the Order.
         cls._sync_order_payment_status(payment, new_status)
 
+        if new_status == PaymentStatusEnum.PAID:
+            cls._maybe_confirm_order(payment)
+
         return payment
 
     # Gateway webhook handler
@@ -207,3 +211,13 @@ class PaymentService:
         # Non-fatal - Order sync is best-effort.
         with contextlib.suppress(Exception):
             OrderService.update_payment_status(payment.order, new_payment_status)
+
+    @classmethod
+    def _maybe_confirm_order(cls, payment: Payment) -> None:
+        """Advance the order to CONFIRMED once its payment has been PAID.
+
+        Non-fatal and a no-op if the order isn't PENDING (e.g. it was already
+        confirmed by an earlier payment attempt, or already cancelled).
+        """
+        with contextlib.suppress(InvalidStatusTransitionError):
+            OrderService.transition(payment.order, OrderStatusEnum.CONFIRMED)

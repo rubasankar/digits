@@ -111,14 +111,17 @@ class Payment(UUIDModel, TimeStampedModel):
     PaymentStatus = PaymentStatusEnum
 
     # Terminal statuses -- payment service sets completed_at when reached.
-    # Note: PARTIALLY_REFUNDED is a terminal-ish state but not included here
-    # because completed_at is set when fully refunded or other terminal states.
+    # PARTIALLY_REFUNDED is deliberately excluded: it's the only status with
+    # an outgoing transition (-> REFUNDED, see _PAYMENT_TRANSITIONS), so it
+    # isn't actually terminal. In practice this doesn't change completed_at's
+    # value either way -- the only path to PARTIALLY_REFUNDED is via PAID,
+    # which already stamped it -- but keeping it out matches the field's
+    # real semantics.
     TERMINAL_STATUSES = {
         PaymentStatus.PAID,
         PaymentStatus.FAILED,
         PaymentStatus.CANCELLED,
         PaymentStatus.REFUNDED,
-        PaymentStatus.PARTIALLY_REFUNDED,
     }
 
     order = models.ForeignKey(

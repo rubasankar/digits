@@ -244,10 +244,21 @@ class RefundService:
     @classmethod
     def _update_payment_after_refund(cls, payment: Payment) -> None:
         """
-        After a refund is confirmed, sync the Payment status.
+        Roll the Payment's aggregate status up from its confirmed Refunds.
 
-        - total_refunded == payment.amount -> REFUNDED
-        - total_refunded < payment.amount  -> PARTIALLY_REFUNDED
+        apps/payments is a ledger, not a payment engine: it doesn't decide
+        gateway-side outcomes. This rollup is safe within that boundary only
+        because every Refund summed here was itself already gateway-confirmed
+        by RefundService.confirm() (called with the gateway's own call
+        result) -- this just aggregates those confirmed records into the
+        Payment-level field. If the gateway ever reports a payment-level
+        refund status directly (e.g. a webhook carrying the charge's own
+        `amount_refunded`), that should be applied via
+        PaymentService.handle_webhook() instead, which takes priority since
+        it comes straight from the gateway rather than a local sum.
+
+        - total_refunded >= payment.amount -> REFUNDED
+        - total_refunded <  payment.amount -> PARTIALLY_REFUNDED
         """
 
         total_refunded = cls._total_refunded(payment)

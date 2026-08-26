@@ -127,12 +127,13 @@ class CheckoutSession(UUIDModel, TimeStampedModel):
                 condition=~Q(status="COMPLETED") | Q(order__isnull=False),
                 name="checkout_completed_requires_order",
             ),
-            # ADDRESS step requires shipping_address to be set
+            # ADDRESS step allows null shipping_address (user is selecting it)
             models.CheckConstraint(
-                condition=~Q(step="ADDRESS") | Q(shipping_address__isnull=False),
+                condition=Q(step="ADDRESS") | Q(shipping_address__isnull=False),
                 name="checkout_address_step_requires_address",
             ),
-            # PAYMENT step requires billing_address to be set
+            # billing_address is only required once the session reaches PAYMENT,
+            # matching _validate_step_requirements().
             models.CheckConstraint(
                 condition=~Q(step="PAYMENT") | Q(billing_address__isnull=False),
                 name="checkout_payment_step_requires_billing",
@@ -145,9 +146,13 @@ class CheckoutSession(UUIDModel, TimeStampedModel):
         self._validate_status_requirements()
 
     def _validate_step_requirements(self) -> None:
-        if self.step == CheckoutStep.ADDRESS and not self.shipping_address_id:
+        if self.step != CheckoutStep.ADDRESS and not self.shipping_address_id:
             raise ValidationError(
-                {"shipping_address": _("Shipping address is required at ADDRESS step.")}
+                {
+                    "shipping_address": _(
+                        "Shipping address is required before proceeding."
+                    )
+                }
             )
 
         if self.step == CheckoutStep.PAYMENT and not self.billing_address_id:

@@ -1,9 +1,6 @@
 from typing import TYPE_CHECKING
-from typing import Any
-from typing import override
 
 from django.contrib import admin
-from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 from unfold.admin import ModelAdmin
 from unfold.admin import TabularInline
@@ -15,7 +12,6 @@ from .models import Refund
 from .models import RefundReason
 
 if TYPE_CHECKING:
-    from django import forms
     from django.http import HttpRequest
 
 
@@ -184,7 +180,17 @@ class RefundAdmin(ModelAdmin):  # type: ignore[misc]
         "payment__order__number",
         "transaction_id",
     ]
-    readonly_fields = ["payment", "transaction_id", "created", "modified"]
+    readonly_fields = [
+        "payment",
+        "transaction_id",
+        "amount",
+        "reason",
+        "notes",
+        "status",
+        "refunded_by",
+        "created",
+        "modified",
+    ]
     autocomplete_fields = ["reason", "refunded_by"]
     ordering = ["-created"]
     fieldsets = (
@@ -196,18 +202,10 @@ class RefundAdmin(ModelAdmin):  # type: ignore[misc]
         ),
     )
 
-    @override
-    def save_model(
-        self,
-        request: HttpRequest,
-        obj: Refund,
-        form: forms.ModelForm[Any],
-        change: bool,
-    ) -> None:
-        try:
-            obj.full_clean()
-        except ValidationError as exc:
-            # Re-raise as a form error so the admin renders it properly.
-            form._update_errors(exc)  # type: ignore[attr-defined]  # noqa: SLF001
-            return
-        super().save_model(request, obj, form, change)
+    def has_add_permission(self, request: HttpRequest) -> bool:
+        return False
+
+    def has_delete_permission(
+        self, request: HttpRequest, obj: Refund | None = None
+    ) -> bool:
+        return False

@@ -10,7 +10,10 @@ from django.db import transaction
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
-from apps.customers.services import CustomerService
+from apps.checkout.enums import CheckoutStep
+from apps.checkout.enums import SessionStatus
+from apps.checkout.models import CheckoutSession
+from apps.customers.service.profile import CustomerService
 from apps.inventory.services import StockMovementService
 from apps.orders.service import OrderService
 from apps.orders.service.order import OrderLineInput
@@ -19,16 +22,13 @@ from apps.pricing.services import PricingService
 from apps.pricing.services import TaxService
 from apps.promotions.services import CouponService
 from apps.promotions.services import DiscountService
+from apps.shipping.models import ShippingMethod
 from core.exceptions import CheckoutAlreadyCompletedError
 from core.exceptions import CheckoutError
 from core.exceptions import CheckoutSessionExpiredError
 from core.exceptions import EmptyCartError
 from core.exceptions import InsufficientStockError
 from core.exceptions import NoPriceFoundError
-
-from .enums import CheckoutStep
-from .enums import SessionStatus
-from .models import CheckoutSession
 
 if TYPE_CHECKING:
     from uuid import UUID
@@ -39,6 +39,10 @@ if TYPE_CHECKING:
     from apps.pricing.models import Currency
     from apps.shopping.models import Cart
     from apps.shopping.models import CartItem
+
+
+class CheckoutIncompleteError(Exception):
+    """Raised when checkout.complete() is called with missing required fields."""
 
 
 # Result containers
@@ -52,45 +56,59 @@ class PlaceOrderResult:
     session: CheckoutSession
 
 
+# Step order used by build_step_context and require_checkout_step
+
+STEP_ORDER = [
+    CheckoutStep.ADDRESS,
+    CheckoutStep.SHIPPING,
+    CheckoutStep.PAYMENT,
+    CheckoutStep.CONFIRMATION,
+]
+
+_STEP_URL_MAP: dict[str, str] = {
+    CheckoutStep.ADDRESS: "checkout:address",
+    CheckoutStep.SHIPPING: "checkout:shipping",
+    CheckoutStep.PAYMENT: "checkout:payment",
+    CheckoutStep.CONFIRMATION: "checkout:review",
+}
+
+
+def build_step_context(session: CheckoutSession) -> dict[str, object]:
+    """Return checkout_steps list and checkout_session for template step indicator."""
+    current_idx = STEP_ORDER.index(CheckoutStep(session.step))
+    steps: list[dict[str, str]] = []
+    for i, step in enumerate(STEP_ORDER):
+        if i < current_idx:
+            state = "done"
+        elif i == current_idx:
+            state = "current"
+        else:
+            state = "upcoming"
+        steps.append({"name": step, "url": _STEP_URL_MAP[step], "state": state})
+    return {"checkout_steps": steps, "checkout_session": session}
+
+
 # CheckoutService
 
 
 class CheckoutService:
+    SESSION_TTL_MINUTES = 30
+
     # Session lifecycle
 
     @classmethod
     @transaction.atomic
-    def start(
-        cls,
-        cart: Cart,
-        *,
-        customer: CustomerProfile | None = None,
-        ttl_hours: int = 24,
-    ) -> CheckoutSession:
-        # Guard: cart must have items.
-        if not cart.items.exists():
-            raise EmptyCartError
-
-        # Guard: don't create a second session for a cart that's already completed.
-        existing = CheckoutSession.objects.filter(cart=cart).first()
-        if existing is not None:
-            if existing.status == SessionStatus.COMPLETED:
-                raise CheckoutAlreadyCompletedError
-            # Reuse the existing active session rather than creating a duplicate.
-            return existing
-
-        expires_at = timezone.now() + timedelta(hours=ttl_hours)
-
-        session = CheckoutSession(
+    def get_or_create_session(cls, cart: Cart) -> CheckoutSession:
+        """Create or resume the active CheckoutSession for this cart (design API)."""
+        session, _ = CheckoutSession.objects.get_or_create(
             cart=cart,
-            customer=customer,
-            currency=cart.currency,
-            coupon_code=cart.coupon_code,
             status=SessionStatus.ACTIVE,
-            step=CheckoutStep.ADDRESS,
-            expires_at=expires_at,
+            defaults={
+                "customer": cart.customer,
+                "expires_at": timezone.now()
+                + timedelta(minutes=cls.SESSION_TTL_MINUTES),
+            },
         )
-        session.save()
         return session
 
     @classmethod
@@ -102,6 +120,7 @@ class CheckoutService:
         shipping_address: CustomerAddress,
         billing_address: CustomerAddress | None = None,
     ) -> CheckoutSession:
+        """Set shipping and billing addresses; advance step to SHIPPING."""
         cls._assert_mutable(session)
         session.shipping_address = shipping_address
         session.billing_address = billing_address or shipping_address
@@ -113,26 +132,40 @@ class CheckoutService:
 
     @classmethod
     @transaction.atomic
-    def set_shipping(
+    def set_shipping_method(
         cls,
         session: CheckoutSession,
-        *,
-        shipping_method: str,
-        shipping_cost: Decimal,
+        method_name: str,
+        cost: Decimal,
     ) -> CheckoutSession:
-        """Record shipping method and cost; advance to PAYMENT step."""
+        """Record selected shipping method; advance step to PAYMENT (design API)."""
         cls._assert_mutable(session)
-        if shipping_cost < Decimal("0"):
+        if cost < Decimal("0"):
             raise ValidationError(
                 {"shipping_cost": _("Shipping cost cannot be negative.")}
             )
-
-        session.shipping_method = shipping_method
-        session.shipping_cost = shipping_cost
+        session.shipping_method = method_name
+        session.shipping_cost = cost
         session.step = CheckoutStep.PAYMENT
         session.save(
             update_fields=["shipping_method", "shipping_cost", "step", "modified"]
         )
+        return session
+
+    @classmethod
+    @transaction.atomic
+    def set_billing_address(
+        cls,
+        session: CheckoutSession,
+        *,
+        billing_address: CustomerAddress,
+    ) -> CheckoutSession:
+        """Record the billing address for payment; advance to CONFIRMATION step."""
+        cls._assert_mutable(session)
+        session.billing_address = billing_address
+        session.status = SessionStatus.PROCESSING
+        session.step = CheckoutStep.CONFIRMATION
+        session.save(update_fields=["billing_address", "status", "step", "modified"])
         return session
 
     @classmethod
@@ -144,18 +177,11 @@ class CheckoutService:
         *,
         customer: CustomerProfile,
     ) -> CheckoutSession:
-        """
-        Validate and store a coupon code on the session.
-
-        Raises a ``CouponError`` subclass when the code is invalid.
-        """
-
+        """Validate and store a coupon code on the session."""
         cls._assert_mutable(session)
 
-        # Calculate current sub-total for minimum-cart-value check.
         cart_sub_total = cls._calculate_sub_total(session.cart)
 
-        # validate() raises CouponError on failure - let it propagate.
         CouponService.validate(
             code,
             customer=customer,
@@ -178,24 +204,35 @@ class CheckoutService:
     @classmethod
     @transaction.atomic
     def abandon(cls, session: CheckoutSession) -> CheckoutSession:
-        """Mark the session as ABANDONED (customer left checkout)."""
+        """Mark the session as ABANDONED."""
         if session.status in {SessionStatus.COMPLETED, SessionStatus.ABANDONED}:
             return session
         session.status = SessionStatus.ABANDONED
         session.save(update_fields=["status", "modified"])
         return session
 
+    @classmethod
+    @transaction.atomic
+    def complete(cls, session: CheckoutSession) -> Order:
+        """
+        Finalise checkout: create Order and mark session COMPLETED.
+        Raises CheckoutIncompleteError if required fields are missing.
+        """
+        if not session.shipping_address_id or not session.shipping_method:
+            msg = "Checkout session is missing shipping address or shipping method."
+            raise CheckoutIncompleteError(msg)
+        result = cls.place_order(session)
+        return result.order
+
     # Place order (the full pipeline)
 
     @classmethod
     @transaction.atomic
     def place_order(cls, session: CheckoutSession) -> PlaceOrderResult:
-
-        #  Step 1: guard session state
+        """Run the full order placement pipeline."""
         cls._assert_mutable(session)
         cls._assert_not_expired(session)
 
-        #  Step 2: validate cart
         cart = session.cart
         cart_items = list(
             cart.items.select_related(
@@ -207,7 +244,6 @@ class CheckoutService:
             raise EmptyCartError
         cls._validate_cart_items(cart_items)
 
-        #  Step 3: address snapshots
         shipping_address = session.shipping_address
         billing_address = session.billing_address
         if shipping_address is None or billing_address is None:
@@ -218,10 +254,21 @@ class CheckoutService:
         shipping_snap = CustomerService.snapshot_address(shipping_address)
         billing_snap = CustomerService.snapshot_address(billing_address)
 
-        #  Step 4: currency
+        shipping_method_id: UUID | None = None
+        if session.shipping_method:
+            try:
+                shipping_method_id = (
+                    ShippingMethod.objects.only("pk")
+                    .get(name=session.shipping_method)
+                    .pk
+                )
+            except ShippingMethod.DoesNotExist as exc:
+                raise CheckoutError(
+                    str(_("Selected shipping method is no longer available."))
+                ) from exc
+
         currency = session.currency or PricingService.get_default_currency()
 
-        #  Step 5: resolve prices, warehouses, tax per line
         lines = cls._resolve_order_lines(
             cart_items,
             currency,
@@ -229,7 +276,6 @@ class CheckoutService:
             state=shipping_snap.get("state", ""),
         )
 
-        #  Step 6 & 7: coupon + discount
         coupon = None
         discount_amount = Decimal("0.00")
 
@@ -238,8 +284,6 @@ class CheckoutService:
                 (line.unit_price * line.quantity for line in lines),
                 Decimal("0.00"),
             )
-            # Re-validate at placement time
-            # (things may have changed since apply_coupon).
             coupon = CouponService.validate(
                 session.coupon_code,
                 customer=session.customer,
@@ -252,7 +296,6 @@ class CheckoutService:
                 cart_items=cart_items,
             )
 
-        #  Step 8: create order via OrderService
         session.status = SessionStatus.PROCESSING
         session.save(update_fields=["status", "modified"])
 
@@ -267,10 +310,11 @@ class CheckoutService:
                 discount_amount=discount_amount,
                 coupon_code=session.coupon_code,
                 notes="",
+                shipping_method=shipping_method_id,
+                shipping_method_name=session.shipping_method,
             )
         )
 
-        #  Step 9: record coupon redemption
         if coupon is not None and session.customer:
             CouponService.redeem(
                 coupon,
@@ -278,12 +322,10 @@ class CheckoutService:
                 order=order,
             )
 
-        #  Step 10: complete session
         session.status = SessionStatus.COMPLETED
         session.order = order
         session.save(update_fields=["status", "order", "modified"])
 
-        #  Step 11: archive the cart
         cart.coupon_code = ""
         cart.save(update_fields=["coupon_code", "modified"])
 
@@ -323,7 +365,6 @@ class CheckoutService:
         for ci in cart_items:
             variant = ci.variant
 
-            # 5a. Price
             try:
                 resolved_price = PricingService.get_current_price(variant, currency)
             except NoPriceFoundError as err:
@@ -331,17 +372,17 @@ class CheckoutService:
                     sku=variant.sku, currency_code=currency.code
                 ) from err
 
-            # 5b. Warehouse selection
-            warehouse = StockMovementService.select_warehouse(variant, ci.quantity)
-            if warehouse is None:
-                raise InsufficientStockError(
-                    sku=variant.sku,
-                    requested=ci.quantity,
-                    available=StockMovementService.get_available_quantity(variant),
-                )
-
-            # 5c. Tax rate
             product = variant.product
+            warehouse = None
+            if product.is_shippable:
+                warehouse = StockMovementService.select_warehouse(variant, ci.quantity)
+                if warehouse is None:
+                    raise InsufficientStockError(
+                        sku=variant.sku,
+                        requested=ci.quantity,
+                        available=StockMovementService.get_available_quantity(variant),
+                    )
+
             tax_class_id: UUID | None = product.tax_class_id or None
             if tax_class_id:
                 _, tax_rate = TaxService.calculate_tax_amount(

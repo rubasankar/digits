@@ -64,3 +64,16 @@ lint.ignore = [
 lint.isort.force-single-line = true
 [lint.per-file-ignores]
 "manage.py" = ["PLC0415"]
+"*/tests/*.py" = [
+  "PLC0415", # local imports inside test methods are fine
+  "PLR2004", # magic numbers in assertions are readable
+  "S106",    # hardcoded passwords in test fixtures are intentional
+  "SLF001",  # testing private methods is legitimate
+  "BLE001",  # broad except in test helpers is acceptable
+  "TRY301",  # abstract raise rule doesn't apply in tests
+  "ERA001",  # commented-out explanatory notes in tests are fine
+  "PT017",   # assertion-in-except: handled manually in some tests
+  "N806",    # uppercase mock aliases (MockSvc, MP, etc.) are conventional
+  "PT012",   # single-statement pytest.raises: handled case by case
+  "E501",    # long lines with mock.patch strings are acceptable
+]

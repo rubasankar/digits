@@ -1,0 +1,66 @@
+{% extends "entrance.html" %}
+
+{% load i18n lb_tags %}
+
+{% block title %}
+  {% trans "Set Up Two-Factor Authentication" %}
+{% endblock title %}
+{% block content %}
+  <section class="container mx-auto max-w-lg px-4 py-12">
+    <c-lb.text as="h1" size="2xl" class="mb-6 font-bold">
+      {% trans "Set Up Two-Factor Authentication" %}
+    </c-lb.text>
+    {% if form.non_field_errors %}
+      <c-lb.alert variant="error" class="mb-4">
+        {% for err in form.non_field_errors %}<p>{{ err }}</p>{% endfor %}
+      </c-lb.alert>
+    {% endif %}
+    <div class="flex flex-col items-center gap-3 text-center">
+      <div class="rounded-box bg-white p-4">
+        <img src="{{ totp_svg_data_uri }}"
+             alt="{% trans 'QR Code' %}"
+             class="h-40 w-40" />
+      </div>
+      <c-lb.text as="p" size="sm" variant="neutral">
+        {% trans "Scan this QR code with your authenticator app, or enter the URL manually:" %}
+      </c-lb.text>
+      <c-lb.text as="p" size="sm" class="break-all font-mono">
+        {{ totp_url }}
+      </c-lb.text>
+    </div>
+    <c-lb.text as="p" variant="neutral" class="mt-6 mb-2">
+      {% trans "After scanning, enter the 6-digit code shown in your authenticator app:" %}
+    </c-lb.text>
+    <form method="post" class="flex flex-col gap-4">
+      {% csrf_token %}
+      <c-lb.fieldset legend="{% trans 'Authentication Code' %}">
+        <c-lb.input type="text"
+                    name="{{ form.code.html_name }}"
+                    id="{{ form.code.id_for_label }}"
+                    value="{{ form.code.value|default:'' }}"
+                    variant="{% if form.code.errors %}error{% endif %}"
+                    autocomplete="one-time-code"
+                    maxlength="6"
+                    pattern="[0-9]*"
+                    inputmode="numeric"
+                    autofocus
+                    required />
+        {% if form.code.errors %}
+          <c-lb.validator.hint>
+            {{ form.code.errors|first }}
+          </c-lb.validator.hint>
+        {% endif %}
+      </c-lb.fieldset>
+      <div>
+        <c-lb.button type="submit" variant="primary">
+          {% trans "Activate" %}
+        </c-lb.button>
+      </div>
+    </form>
+    <c-lb.alert variant="warning" class="mt-6">
+      <p>
+        {% trans "Make sure to save your backup codes in a secure place. You will need them if you lose access to your authenticator device." %}
+      </p>
+    </c-lb.alert>
+  </section>
+{% endblock content %}

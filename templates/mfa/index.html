@@ -1,0 +1,101 @@
+{% extends "entrance.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "Two-Factor Authentication" %}
+{% endblock title %}
+{% block content %}
+  <section class="container mx-auto max-w-lg px-4 py-12">
+    <c-lb.text as="h1" size="2xl" class="mb-6 font-bold">
+      {% trans "Two-Factor Authentication" %}
+    </c-lb.text>
+    <div class="flex flex-col gap-4">
+      <c-lb.card border>
+        <c-lb.card.body>
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <div class="flex items-center gap-2">
+                <c-lb.card.title>
+                  {% trans "Authenticator App" %}
+                </c-lb.card.title>
+                {% if authenticators.totp %}
+                  <c-lb.badge variant="success">
+                    {% trans "Enabled" %}
+                  </c-lb.badge>
+                {% else %}
+                  <c-lb.badge variant="neutral">
+                    {% trans "Disabled" %}
+                  </c-lb.badge>
+                {% endif %}
+              </div>
+              <c-lb.text as="p" size="sm" variant="neutral">
+                {% trans "Use a TOTP app like Google Authenticator or 1Password to generate login codes." %}
+              </c-lb.text>
+            </div>
+          </div>
+          <c-lb.card.actions justify="start">
+            {% if authenticators.totp %}
+              <c-lb.button as="a"
+                           href="{% url 'mfa_deactivate_totp' %}"
+                           btnStyle="outline"
+                           variant="error"
+                           size="sm">
+                {% trans "Disable" %}
+              </c-lb.button>
+            {% else %}
+              <c-lb.button as="a"
+                           href="{% url 'mfa_activate_totp' %}"
+                           variant="primary"
+                           size="sm">
+                {% trans "Enable" %}
+              </c-lb.button>
+            {% endif %}
+          </c-lb.card.actions>
+        </c-lb.card.body>
+      </c-lb.card>
+      <c-lb.card border>
+        <c-lb.card.body>
+          <div class="flex items-center gap-2">
+            <c-lb.card.title>
+              {% trans "Recovery Codes" %}
+            </c-lb.card.title>
+            {% if authenticators.recovery_codes %}
+              <c-lb.badge variant="success">
+                {% trans "Generated" %}
+              </c-lb.badge>
+            {% else %}
+              <c-lb.badge variant="neutral">
+                {% trans "Not Generated" %}
+              </c-lb.badge>
+            {% endif %}
+          </div>
+          <c-lb.text as="p" size="sm" variant="neutral">
+            {% trans "One-time backup codes you can use to log in if you lose access to your authenticator app." %}
+          </c-lb.text>
+          <c-lb.card.actions justify="start">
+            {% if authenticators.recovery_codes %}
+              <c-lb.button as="a"
+                           href="{% url 'mfa_view_recovery_codes' %}"
+                           btnStyle="outline"
+                           size="sm">
+                {% trans "View Codes" %}
+              </c-lb.button>
+            {% elif authenticators.totp %}
+              <c-lb.button as="a"
+                           href="{% url 'mfa_generate_recovery_codes' %}"
+                           variant="primary"
+                           size="sm">
+                {% trans "Generate Codes" %}
+              </c-lb.button>
+            {% else %}
+              <c-lb.text as="p" size="sm" variant="neutral">
+                {% trans "Enable an authenticator app first." %}
+              </c-lb.text>
+            {% endif %}
+          </c-lb.card.actions>
+        </c-lb.card.body>
+      </c-lb.card>
+    </div>
+  </section>
+{% endblock content %}

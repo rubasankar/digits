@@ -1,0 +1,23 @@
+{# Treebeard + Unfold integration template #}
+{% extends "admin/change_list.html" %}
+
+{% load admin_list admin_tree static unfold_list %}
+
+{% block extrastyle %}
+  {{ block.super }}
+  <link rel="stylesheet"
+        type="text/css"
+        href="{% static 'treebeard/treebeard-admin.css' %}" />
+{% endblock %}
+{% block extrahead %}
+  {{ block.super }}
+  <script src="{% url 'admin:jsi18n' %}"></script>
+  <script data-csrftoken="{{ csrf_token }}"
+          src="{% static 'treebeard/treebeard-admin.js' %}"></script>
+{% endblock %}
+{% block result_list %}
+  {% include "unfold/helpers/change_list_actions.html" %}
+  {% unfold_result_list cl %}
+  {% tree_context cl request as node_context %}
+  {{ node_context|json_script:"tree-context" }}
+{% endblock %}

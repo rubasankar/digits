@@ -1,0 +1,41 @@
+{% extends "entrance_auth.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "Two-Factor Authentication" %}
+{% endblock title %}
+{% block auth_content %}
+  <c-lb.text as="h1" size="xl" class="font-bold">
+    {% trans "Two-Factor Authentication" %}
+  </c-lb.text>
+  {% if form.non_field_errors %}
+    <c-lb.alert variant="error">
+      {% for err in form.non_field_errors %}<p>{{ err }}</p>{% endfor %}
+    </c-lb.alert>
+  {% endif %}
+  <c-lb.text as="p" variant="neutral">
+    {% trans "Enter the 6-digit code from your authenticator app, or one of your backup codes." %}
+  </c-lb.text>
+  <form method="post" class="flex flex-col gap-4">
+    {% csrf_token %}
+    <c-lb.fieldset legend="{% trans 'Authentication Code' %}">
+      <c-lb.input type="text"
+                  name="{{ form.code.html_name }}"
+                  id="{{ form.code.id_for_label }}"
+                  value="{{ form.code.value|default:'' }}"
+                  variant="{% if form.code.errors %}error{% endif %}"
+                  autocomplete="one-time-code"
+                  autofocus
+                  required />
+      {% if form.code.errors %}
+        <c-lb.validator.hint>
+          {{ form.code.errors|first }}
+        </c-lb.validator.hint>
+      {% endif %}
+    </c-lb.fieldset>
+    <c-lb.button type="submit" variant="primary" class="w-full">
+      {% trans "Confirm" %}
+    </c-lb.button>
+  </form>
+{% endblock auth_content %}

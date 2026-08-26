@@ -1,0 +1,21 @@
+{% extends "entrance_auth.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "Third-Party Login Failure" %}
+{% endblock title %}
+{% block auth_content %}
+  <c-lb.text as="h1" size="xl" class="font-bold">
+    {% trans "Third-Party Login Failure" %}
+  </c-lb.text>
+  <c-lb.alert variant="error">
+    <p>{% trans "An error occurred while attempting to log in via your third-party account." %}</p>
+  </c-lb.alert>
+  <c-lb.button as="a"
+               href="{% url 'account_login' %}"
+               variant="primary"
+               class="w-full">
+    {% trans "Back to Log In" %}
+  </c-lb.button>
+{% endblock auth_content %}

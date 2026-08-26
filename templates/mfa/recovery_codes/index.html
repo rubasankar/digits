@@ -1,0 +1,71 @@
+{% extends "entrance.html" %}
+
+{% load i18n lb_tags %}
+
+{% block title %}
+  {% trans "Backup Codes" %}
+{% endblock title %}
+{% block content %}
+  <section class="container mx-auto max-w-lg px-4 py-12">
+    <c-lb.text as="h1" size="2xl" class="mb-6 font-bold">
+      {% trans "Backup Codes" %}
+    </c-lb.text>
+    {% if unused_codes|length == 0 %}
+      <c-lb.alert variant="error" class="mb-4">
+        <p>{% trans "You have no unused backup codes. Generate new codes to continue using backup authentication." %}</p>
+      </c-lb.alert>
+      {% if can_generate_codes %}
+        <c-lb.button as="a"
+                     href="{% url 'mfa_generate_recovery_codes' %}"
+                     variant="primary">
+          {% trans "Generate New Codes" %}
+        </c-lb.button>
+      {% endif %}
+    {% else %}
+      <c-lb.alert variant="info" class="mb-4">
+        <p>
+          {% blocktrans with unused=unused_codes|length total=total_count %}You have {{ unused }} of {{ total }} backup codes remaining.{% endblocktrans %}
+        </p>
+      </c-lb.alert>
+      {% if unused_codes|length <= 5 %}
+        <c-lb.alert variant="warning" class="mb-4">
+          <p>{% trans "You are running low on backup codes. Generate new codes to ensure you can access your account." %}</p>
+        </c-lb.alert>
+      {% endif %}
+      {% if can_view_codes %}
+        <c-lb.card border class="mb-4">
+          <c-lb.card.body>
+            <c-lb.card.title>
+              {% trans "Your Backup Codes" %}
+            </c-lb.card.title>
+            <c-lb.text as="p" size="sm" variant="neutral">
+              {% trans "Use these codes if you cannot access your authenticator app. Each code can only be used once." %}
+            </c-lb.text>
+            <div class="grid grid-cols-2 gap-2 font-mono text-sm">
+              {% for code in unused_codes %}<div>{{ code }}</div>{% endfor %}
+            </div>
+          </c-lb.card.body>
+        </c-lb.card>
+      {% endif %}
+      <div class="flex flex-wrap gap-3">
+        {% if can_download_codes %}
+          <c-lb.button as="a"
+                       href="{% url 'mfa_download_recovery_codes' %}"
+                       btnStyle="outline">
+            {% trans "Download Codes" %}
+          </c-lb.button>
+        {% endif %}
+        {% if can_generate_codes %}
+          <c-lb.button as="a"
+                       href="{% url 'mfa_generate_recovery_codes' %}"
+                       variant="secondary">
+            {% trans "Generate New Codes" %}
+          </c-lb.button>
+        {% endif %}
+      </div>
+    {% endif %}
+    <c-lb.button as="a" href="{% url 'mfa_index' %}" btnStyle="ghost" class="mt-6">
+      {% trans "Back to Two-Factor Authentication" %}
+    </c-lb.button>
+  </section>
+{% endblock content %}

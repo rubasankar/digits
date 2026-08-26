@@ -1,0 +1,21 @@
+{% extends "entrance_auth.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "Login Cancelled" %}
+{% endblock title %}
+{% block auth_content %}
+  <c-lb.text as="h1" size="xl" class="font-bold">
+    {% trans "Login Cancelled" %}
+  </c-lb.text>
+  <c-lb.text as="p" variant="neutral">
+    {% trans "You decided to cancel logging in to our site using one of your existing accounts. If this was a mistake, please proceed to sign in." %}
+  </c-lb.text>
+  <c-lb.button as="a"
+               href="{% url 'account_login' %}"
+               variant="primary"
+               class="w-full">
+    {% trans "Sign In" %}
+  </c-lb.button>
+{% endblock auth_content %}

@@ -1,0 +1,45 @@
+{% extends "entrance_auth.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% if process == "connect" %}
+    {% trans "Connect Social Account" %}
+  {% else %}
+    {% trans "Sign In with Social Account" %}
+  {% endif %}
+{% endblock title %}
+{% block auth_content %}
+  <c-lb.text as="h1" size="xl" class="font-bold">
+    {% if process == "connect" %}
+      {% trans "Connect Social Account" %}
+    {% else %}
+      {% trans "Sign In with Social Account" %}
+    {% endif %}
+  </c-lb.text>
+  <c-lb.alert variant="info">
+    <p>
+      {% if process == "connect" %}
+        {% blocktrans with provider_name=provider.name %}You are about to connect a third-party account from {{ provider_name }}.{% endblocktrans %}
+      {% else %}
+        {% blocktrans with provider_name=provider.name %}You are about to sign in with a third-party account from {{ provider_name }}.{% endblocktrans %}
+      {% endif %}
+    </p>
+  </c-lb.alert>
+  <form method="post" class="flex flex-col gap-3">
+    {% csrf_token %}
+    <c-lb.button type="submit" variant="primary" class="w-full">
+      {% if process == "connect" %}
+        {% trans "Connect Account" %}
+      {% else %}
+        {% trans "Continue" %}
+      {% endif %}
+    </c-lb.button>
+  </form>
+  <c-lb.button as="a"
+               href="{% url 'account_login' %}"
+               btnStyle="ghost"
+               class="w-full">
+    {% trans "Use Email Instead" %}
+  </c-lb.button>
+{% endblock auth_content %}

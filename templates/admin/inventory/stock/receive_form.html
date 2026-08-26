@@ -1,0 +1,45 @@
+{% extends "admin/base.html" %}
+
+{% load i18n unfold %}
+
+{% block title %}
+  {{ title }} | {{ site_title|default:_("Django site admin") }}
+{% endblock %}
+{% block content %}
+  {% component "unfold/components/container.html" %}
+    <div class="flex flex-col gap-6">
+      <div class="flex flex-col gap-2">
+        <h1 class="text-2xl font-semibold tracking-tight">{% trans "Receive Stock" %}</h1>
+        <p class="text-sm text-gray-500 dark:text-gray-400">
+          {% trans "Records a stock receipt against a variant and warehouse. This goes through the movement ledger, the same as any other stock change." %}
+        </p>
+      </div>
+      <form method="post" class="flex max-w-lg flex-col gap-4">
+        {% csrf_token %}
+        {% if form.non_field_errors %}
+          {% for error in form.non_field_errors %}
+            {% include "unfold/helpers/messages/error.html" with message=error %}
+          {% endfor %}
+        {% endif %}
+        {% for field in form %}
+          <div class="flex flex-col gap-1">
+            {% include "unfold/helpers/form_label.html" with field=field %}
+            {{ field }}
+            {% include "unfold/helpers/form_errors.html" with field=field %}
+            {% if field.help_text %}
+              <p class="text-xs text-gray-500 dark:text-gray-400">{{ field.help_text }}</p>
+            {% endif %}
+          </div>
+        {% endfor %}
+        <div class="flex gap-2">
+          {% component "unfold/components/button.html" with submit=1 %}
+            {% trans "Receive Stock" %}
+          {% endcomponent %}
+          {% component "unfold/components/button.html" with href=cancel_url variant="default" %}
+            {% trans "Cancel" %}
+          {% endcomponent %}
+        </div>
+      </form>
+    </div>
+  {% endcomponent %}
+{% endblock content %}

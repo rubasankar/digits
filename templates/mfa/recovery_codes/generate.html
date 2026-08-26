@@ -1,0 +1,35 @@
+{% extends "entrance.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "Generate Backup Codes" %}
+{% endblock title %}
+{% block content %}
+  <section class="container mx-auto max-w-lg px-4 py-12">
+    <c-lb.text as="h1" size="2xl" class="mb-6 font-bold">
+      {% trans "Generate New Backup Codes" %}
+    </c-lb.text>
+    {% if form.non_field_errors %}
+      <c-lb.alert variant="error" class="mb-4">
+        {% for err in form.non_field_errors %}<p>{{ err }}</p>{% endfor %}
+      </c-lb.alert>
+    {% endif %}
+    {% if unused_code_count %}
+      <c-lb.alert variant="warning" class="mb-4">
+        <p>
+          {% blocktrans count counter=unused_code_count %}You have {{ counter }} unused backup code. Generating new codes will invalidate it.{% plural %}You have {{ counter }} unused backup codes. Generating new codes will invalidate them.{% endblocktrans %}
+        </p>
+      </c-lb.alert>
+    {% endif %}
+    <form method="post" class="flex gap-3">
+      {% csrf_token %}
+      <c-lb.button type="submit" variant="primary">
+        {% trans "Generate New Codes" %}
+      </c-lb.button>
+      <c-lb.button as="a" href="{% url 'mfa_index' %}" btnStyle="ghost">
+        {% trans "Cancel" %}
+      </c-lb.button>
+    </form>
+  </section>
+{% endblock content %}

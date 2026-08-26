@@ -1,0 +1,31 @@
+{% extends "entrance.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "Disable Two-Factor Authentication" %}
+{% endblock title %}
+{% block content %}
+  <section class="container mx-auto max-w-lg px-4 py-12">
+    <c-lb.text as="h1" size="2xl" class="mb-6 font-bold">
+      {% trans "Disable Two-Factor Authentication" %}
+    </c-lb.text>
+    {% if form.non_field_errors %}
+      <c-lb.alert variant="error" class="mb-4">
+        {% for err in form.non_field_errors %}<p>{{ err }}</p>{% endfor %}
+      </c-lb.alert>
+    {% endif %}
+    <c-lb.alert variant="warning" class="mb-4">
+      <p>{% trans "This will remove your authenticator app as a sign-in method. Your account will be less secure." %}</p>
+    </c-lb.alert>
+    <form method="post" class="flex gap-3">
+      {% csrf_token %}
+      <c-lb.button type="submit" variant="error">
+        {% trans "Disable Two-Factor Authentication" %}
+      </c-lb.button>
+      <c-lb.button as="a" href="{% url 'mfa_index' %}" btnStyle="ghost">
+        {% trans "Cancel" %}
+      </c-lb.button>
+    </form>
+  </section>
+{% endblock content %}

@@ -384,6 +384,28 @@ UNFOLD = {
                 ],
             },
             {
+                "title": _("Feature flags"),
+                "separator": True,
+                "collapsible": True,
+                "items": [
+                    {
+                        "title": _("Flags"),
+                        "icon": "flag",
+                        "link": reverse_lazy("admin:waffle_flag_changelist"),
+                    },
+                    {
+                        "title": _("Samples"),
+                        "icon": "science",
+                        "link": reverse_lazy("admin:waffle_sample_changelist"),
+                    },
+                    {
+                        "title": _("Switches"),
+                        "icon": "toggle_on",
+                        "link": reverse_lazy("admin:waffle_switch_changelist"),
+                    },
+                ],
+            },
+            {
                 "title": _("System"),
                 "separator": True,
                 "collapsible": True,
@@ -399,7 +421,7 @@ UNFOLD = {
         ],
     },
     "TABS": "config.settings.apps.unfold.tabs_callback",
-    "THEME": "light",
+    "THEME": None,
     "LANGUAGES": {
         "navigation": [
             ("en", _("English")),

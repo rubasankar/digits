@@ -3,6 +3,7 @@ Base Django configuration.
 """
 # ruff: noqa: E402, F403
 
+from importlib.util import find_spec
 from pathlib import Path
 from typing import Any
 
@@ -78,6 +79,9 @@ THIRD_PARTY_APPS: list[str] = [
     "labbicons",
 ]
 
+WAFFLE_APPS: list[str] = ["waffle"] if find_spec("waffle") is not None else []
+WAFFLE_ENABLE_ADMIN_PAGES = True
+
 INSTALLED_APPS = (
     UNFOLD_APPS
     + DJANGO_APPS
@@ -86,6 +90,7 @@ INSTALLED_APPS = (
     + COTTON_APPS
     + IMAGEKIT_APPS
     + STRUCTLOG_APPS
+    + WAFFLE_APPS
     + LOCAL_APPS
     + THIRD_PARTY_APPS
 )
@@ -128,6 +133,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "waffle.middleware.WaffleMiddleware",
     *ALLAUTH_MIDDLEWARE,
     *STRUCTLOG_MIDDLEWARE,
 ]
@@ -160,6 +166,7 @@ TEMPLATES = [
                 "django.template.context_processors.static",
                 "django.template.context_processors.tz",
                 "django.contrib.messages.context_processors.messages",
+                "apps.shopping.context_processors.cart_context",
             ],
             "loaders": [
                 (

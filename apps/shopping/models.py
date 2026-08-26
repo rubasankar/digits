@@ -37,7 +37,9 @@ class Cart(UUIDModel, TimeStampedModel):
          to the customer (set cart.customer, clear cart.session_key).
       2. For each CartItem in the guest cart:
            - If an identical variant already exists in the customer cart,
-             add quantities (capped at Stock.maximum_order_qty).
+             add quantities (capped the same way CartService.add_item caps
+             a manual add: available stock for shippable products,
+             CartService.MAX_QUANTITY otherwise).
            - Otherwise move the CartItem to the customer cart.
       3. Copy coupon_code from guest cart if customer cart has none.
       4. Set guest_cart.cart_type = CartType.MERGED and

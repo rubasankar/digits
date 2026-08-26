@@ -18,11 +18,14 @@ from apps.catalogue.constants import IMAGE_THUMBNAIL_SIZE
 from apps.catalogue.constants import PRODUCT_IMAGE_UPLOAD_PATH
 from apps.catalogue.constants import PRODUCT_TYPE_MAX_LENGTH
 from apps.catalogue.constants import SKU_MAX_LENGTH
+from apps.catalogue.enums import AttributeScope
 from apps.catalogue.enums import FulfilmentType
 from apps.catalogue.enums import ProductType
 from apps.catalogue.managers import ProductManager
 from apps.catalogue.managers import ProductVariantManager
+from apps.catalogue.models.attribute import get_missing_required_labels
 from apps.catalogue.models.category import ProductCategory
+from apps.catalogue.models.mixins import MerchandisingMixin
 from apps.catalogue.validators import validate_sku
 from apps.catalogue.validators import validate_type_fulfilment_combination
 from core.models import BaseModel
@@ -45,7 +48,18 @@ class ProductBrand(BaseModel):
         return f"<ProductBrand id={self.id} name={self.name!r}>"
 
 
-class Product(BaseModel):
+# Fulfilment types that involve physical stock (must match the equivalent
+# sets in apps.orders.service.order, apps.delivery.services, apps.shipping.services).
+SHIPPABLE_FULFILMENT_TYPES: frozenset[str] = frozenset(
+    {
+        FulfilmentType.SHIPMENT,
+        FulfilmentType.LOCAL_DELIVERY,
+        FulfilmentType.STORE_PICKUP,
+    }
+)
+
+
+class Product(MerchandisingMixin, BaseModel):
     objects: ProductManager = ProductManager()
 
     category = models.ForeignKey(
@@ -130,6 +144,16 @@ class Product(BaseModel):
         verbose_name_plural = _("Products")
         ordering = ["name"]
 
+    @property
+    def is_shippable(self) -> bool:
+        """Whether this product involves physical stock/shipping.
+
+        Digital and service fulfilment types (download, email, license key,
+        streaming, subscription, etc.) never carry inventory, so stock checks
+        must not gate them.
+        """
+        return self.fulfilment_type in SHIPPABLE_FULFILMENT_TYPES
+
     def clean(self) -> None:
         super().clean()
 
@@ -146,41 +170,59 @@ class Product(BaseModel):
                 self.product_type, self.fulfilment_type
             )
         self._validate_shipping_dimensions()
+        self._validate_required_attributes()
+
+    def _validate_required_attributes(self) -> None:
+        if not self.is_active or not self.category_id:
+            return
+        missing = get_missing_required_labels(self, AttributeScope.PRODUCT)
+        if missing:
+            raise ValidationError(
+                {
+                    "is_active": _(
+                        "Cannot activate: required attributes are missing "
+                        "a value: %(labels)s."
+                    )
+                    % {"labels": ", ".join(missing)}
+                }
+            )
 
     def _validate_shipping_dimensions(self) -> None:
-        shippable_fulfilment_types = {
-            FulfilmentType.SHIPMENT,
-            FulfilmentType.LOCAL_DELIVERY,
-            FulfilmentType.STORE_PICKUP,
-        }
-
-        if self.fulfilment_type not in shippable_fulfilment_types:
+        if not self.is_shippable:
             return
 
         other_attrs = self.other_attributes or {}
 
-        # json_key, expected_python_type
-        required_fields: list[tuple[str, type]] = [
-            ("weight", float),
-            ("weight_unit", str),
-            ("length", float),
-            ("length_unit", str),
-            ("width", float),
-            ("width_unit", str),
-            ("height", float),
-            ("height_unit", str),
+        # json_key, expected_kind ("number" accepts int or float, not bool)
+        required_fields: list[tuple[str, str]] = [
+            ("weight", "number"),
+            ("weight_unit", "text"),
+            ("length", "number"),
+            ("length_unit", "text"),
+            ("width", "number"),
+            ("width_unit", "text"),
+            ("height", "number"),
+            ("height_unit", "text"),
         ]
 
         errors: dict[str, str] = {}
-        for key, expected_type in required_fields:
+        for key, expected_kind in required_fields:
             if key not in other_attrs:
                 errors[key] = _("'%(field)s' is required for shippable products.") % {
                     "field": key
                 }
-            elif not isinstance(other_attrs[key], expected_type):
-                errors[key] = _("'%(field)s' must be %(type)s.") % {
+                continue
+
+            value = other_attrs[key]
+            if expected_kind == "number":
+                valid = isinstance(value, (int, float)) and not isinstance(value, bool)
+            else:
+                valid = isinstance(value, str)
+
+            if not valid:
+                errors[key] = _("'%(field)s' must be a %(type)s.") % {
                     "field": key,
-                    "type": expected_type.__name__,
+                    "type": expected_kind,
                 }
 
         if errors:
@@ -229,6 +271,22 @@ class ProductVariant(UUIDModel, TimeStampedModel):
         verbose_name = _("Product Variant")
         verbose_name_plural = _("Product Variants")
         ordering = ["product", "sku"]
+
+    def clean(self) -> None:
+        super().clean()
+        if not self.is_active or not self.product_id:
+            return
+        missing = get_missing_required_labels(self, AttributeScope.VARIANT)
+        if missing:
+            raise ValidationError(
+                {
+                    "is_active": _(
+                        "Cannot activate: required attributes are missing "
+                        "a value: %(labels)s."
+                    )
+                    % {"labels": ", ".join(missing)}
+                }
+            )
 
     def __str__(self) -> str:
         return f"{self.product.name} -- {self.sku}"

@@ -1,3 +1,8 @@
+from __future__ import annotations
+
+import re
+from typing import TYPE_CHECKING
+
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils.translation import gettext_lazy as _
@@ -13,6 +18,7 @@ from apps.catalogue.constants import ATTRIBUTE_VALUE_TYPE_MAX_LENGTH
 from apps.catalogue.constants import CONSTRAINT_UNIQUE_ATTRIBUTE_OPTION_VALUE
 from apps.catalogue.constants import CONSTRAINT_UNIQUE_PRODUCT_ATTRIBUTE_VALUE
 from apps.catalogue.constants import CONSTRAINT_UNIQUE_VARIANT_ATTRIBUTE_VALUE
+from apps.catalogue.constants import MULTI_SELECT_SEPARATOR
 from apps.catalogue.enums import SELECT_VALUE_TYPES
 from apps.catalogue.enums import UNITS_BY_DIMENSION
 from apps.catalogue.enums import AttributeScope
@@ -24,6 +30,10 @@ from apps.catalogue.validators import validate_attribute_name
 from apps.catalogue.validators import validate_option_value
 from apps.catalogue.validators import validate_unit_symbol
 from apps.catalogue.validators import validate_unit_symbol_matches_dimension
+
+if TYPE_CHECKING:
+    from apps.catalogue.models.product import Product
+    from apps.catalogue.models.product import ProductVariant
 
 
 class AttributeDefinition(UUIDModel, TimeStampedModel):
@@ -188,6 +198,47 @@ class AttributeOption(UUIDModel, TimeStampedModel):
                     "attribute definitions (got '%(t)s')."
                 )
                 % {"t": self.definition.value_type}
+            )
+        self._validate_value_immutable()
+
+    def _validate_value_immutable(self) -> None:
+        """
+        Block changing `value` once it's referenced by a saved attribute value.
+
+        ProductAttributeValue/VariantAttributeValue store this option's `value`
+        as a raw string (not an FK), so silently editing it would orphan every
+        existing attribute value that selected this option.
+        """
+        if not self.pk:
+            return
+        try:
+            original_value = AttributeOption.objects.only("value").get(pk=self.pk).value
+        except AttributeOption.DoesNotExist:
+            return
+        if original_value == self.value:
+            return
+
+        pattern = (
+            rf"(^|{MULTI_SELECT_SEPARATOR}){re.escape(original_value)}"
+            rf"({MULTI_SELECT_SEPARATOR}|$)"
+        )
+        in_use = (
+            ProductAttributeValue.objects.filter(
+                definition_id=self.definition_id, value__regex=pattern
+            ).exists()
+            or VariantAttributeValue.objects.filter(
+                definition_id=self.definition_id, value__regex=pattern
+            ).exists()
+        )
+        if in_use:
+            raise ValidationError(
+                {
+                    "value": _(
+                        "Cannot change 'value' once it has been saved against "
+                        "existing attribute values. Deactivate this option and "
+                        "add a new one instead."
+                    )
+                }
             )
 
     def __str__(self) -> str:
@@ -372,3 +423,42 @@ class VariantAttributeValue(AttributeValueMixin, UUIDModel, TimeStampedModel):
             f"definition={self.definition_id} "
             f"value={self.value!r}>"
         )
+
+
+def get_missing_required_labels(
+    entity: Product | ProductVariant, scope: str
+) -> list[str]:
+    """Return labels of category-required attributes still missing a value."""
+    from apps.catalogue.models.product import Product  # noqa: PLC0415
+    from apps.catalogue.models.product import ProductVariant  # noqa: PLC0415
+
+    if scope == AttributeScope.PRODUCT:
+        if not isinstance(entity, Product):
+            msg = "scope=PRODUCT requires a Product entity"
+            raise TypeError(msg)
+        category = entity.category
+        filled_defn_ids = set(
+            ProductAttributeValue.objects.filter(product=entity)
+            .exclude(value="")
+            .values_list("definition_id", flat=True)
+        )
+    else:
+        if not isinstance(entity, ProductVariant):
+            msg = "scope=VARIANT requires a ProductVariant entity"
+            raise TypeError(msg)
+        category = entity.product.category
+        filled_defn_ids = set(
+            VariantAttributeValue.objects.filter(variant=entity)
+            .exclude(value="")
+            .values_list("definition_id", flat=True)
+        )
+
+    required = AttributeAssignment.objects.filter(
+        category=category,
+        scope=scope,
+        is_required=True,
+    ).select_related("definition")
+
+    return [
+        a.definition.label for a in required if a.definition_id not in filled_defn_ids
+    ]

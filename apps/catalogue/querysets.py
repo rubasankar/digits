@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from typing import TYPE_CHECKING
-from typing import cast
 
 from django.apps import apps as django_apps
 from django.db import models
@@ -45,10 +44,7 @@ class ProductCategoryQuerySet(models.QuerySet["ProductCategory"]):
         )
 
     def with_product_count(self) -> ProductCategoryQuerySet:
-        return cast(
-            "ProductCategoryQuerySet",
-            self.annotate(product_count=Count("products")),
-        )
+        return self.annotate(product_count=Count("products"))
 
 
 class ProductQuerySet(models.QuerySet["Product"]):

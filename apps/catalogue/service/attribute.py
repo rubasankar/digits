@@ -16,6 +16,7 @@ from apps.catalogue.models.attribute import AttributeDefinition
 from apps.catalogue.models.attribute import AttributeOption
 from apps.catalogue.models.attribute import ProductAttributeValue
 from apps.catalogue.models.attribute import VariantAttributeValue
+from apps.catalogue.models.attribute import get_missing_required_labels
 from apps.catalogue.validators import validate_attribute_name
 from apps.catalogue.validators import validate_option_value
 
@@ -223,6 +224,24 @@ class AttributeValueService:
 
 
 class AttributeProvision:
+    @classmethod
+    def get_missing_required_labels(
+        cls,
+        entity: Product | ProductVariant,
+        scope: str,
+    ) -> list[str]:
+        """
+        Return labels of category-required attributes still missing a value.
+
+        `entity` is a Product for scope=PRODUCT or a ProductVariant for
+        scope=VARIANT. Used to gate activation -- a required attribute is
+        allowed to sit blank on a draft, but must be filled in before the
+        entity goes active. The actual query lives on the models layer
+        (Product.clean()/ProductVariant.clean() call it too) so every save
+        path enforces the same rule; this is a thin, discoverable wrapper.
+        """
+        return get_missing_required_labels(entity, scope)
+
     @classmethod
     @transaction.atomic
     def provision_product_attributes(

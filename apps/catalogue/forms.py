@@ -1,6 +1,7 @@
 from typing import Any
 
 from django import forms
+from unfold.widgets import UnfoldAdminSelectWidget
 
 from apps.catalogue.enums import UnitDimension
 from apps.catalogue.models.attribute import AttributeDefinition
@@ -42,7 +43,7 @@ class AttributeDefinitionAdminForm(forms.ModelForm["AttributeDefinition"]):
         self.fields["unit_symbol"].widget.attrs["data-current-dimension"] = current_dim
 
         # Also restrict unit_dimension to a plain Select (it already is by default)
-        self.fields["unit_dimension"].widget = forms.Select(
+        self.fields["unit_dimension"].widget = UnfoldAdminSelectWidget(
             choices=UnitDimension.choices,
             attrs={"id": "id_unit_dimension"},
         )

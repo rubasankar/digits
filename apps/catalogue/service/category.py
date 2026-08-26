@@ -27,11 +27,13 @@ class CategoryService:
 
         return cast(
             "ProductCategory",
-            ProductCategory.add_root(
-                name=name,
-                slug=resolved_slug,
-                description=description,
-                is_active=is_active,
+            ProductCategory.objects.add_root(
+                create_kwargs={
+                    "name": name,
+                    "slug": resolved_slug,
+                    "description": description,
+                    "is_active": is_active,
+                },
             ),
         )
 
@@ -52,10 +54,12 @@ class CategoryService:
         return cast(
             "ProductCategory",
             parent.add_child(
-                name=name,
-                slug=resolved_slug,
-                description=description,
-                is_active=is_active,
+                create_kwargs={
+                    "name": name,
+                    "slug": resolved_slug,
+                    "description": description,
+                    "is_active": is_active,
+                },
             ),
         )
 

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from typing import Any
 from typing import cast
 
 from django.db import models
@@ -14,9 +15,10 @@ from apps.catalogue.constants import IMAGE_FORMAT
 from apps.catalogue.constants import IMAGE_THUMBNAIL_QUALITY
 from apps.catalogue.constants import IMAGE_THUMBNAIL_SIZE
 from apps.catalogue.managers import CategoryManager
+from apps.catalogue.models.mixins import MerchandisingMixin
 
 
-class ProductCategory(MP_Node):  # type: ignore[misc]
+class ProductCategory(MerchandisingMixin, MP_Node):  # type: ignore[misc]
     node_order_by = ["name"]
 
     objects = CategoryManager()
@@ -54,7 +56,7 @@ class ProductCategory(MP_Node):  # type: ignore[misc]
         verbose_name = _("Product Category")
         verbose_name_plural = _("Product Categories")
 
-    def save(self, *args: object, **kwargs: object) -> None:
+    def save(self, *args: Any, **kwargs: Any) -> None:
         if not self.slug:
             self.slug = slugify(self.name)
         super().save(*args, **kwargs)

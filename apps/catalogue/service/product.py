@@ -44,6 +44,10 @@ class ProductCreateData:
     provision_attributes: bool = True
     # Arbitrary extra attributes not covered by the structured assignment system.
     other_attributes: dict[str, Any] = field(default_factory=dict)
+    # SKU for the default variant that's auto-created alongside the product.
+    # Defaults to the product's slug (every Product must have >= 1 variant --
+    # everything downstream keys off the variant, never the product directly).
+    variant_sku: str | None = None
 
 
 class ProductService:
@@ -74,7 +78,7 @@ class ProductService:
             fulfilment_type=data.fulfilment_type,
             brand=data.brand,
             description=data.description,
-            is_active=data.is_active,
+            is_active=False,  # activated below, after attributes are provisioned
             other_attributes=data.other_attributes,
         )
         product.full_clean()
@@ -82,6 +86,19 @@ class ProductService:
 
         if data.provision_attributes:
             AttributeProvision.provision_product_attributes(product)
+
+        variant = VariantService.create(
+            VariantCreateData(
+                product=product,
+                sku=data.variant_sku or resolved_slug,
+                is_active=False,
+                provision_attributes=data.provision_attributes,
+            )
+        )
+
+        if data.is_active:
+            cls.set_active(product, is_active=True)
+            VariantService.set_active(variant, is_active=True)
 
         return product
 
@@ -96,6 +113,21 @@ class ProductService:
         is_active: bool,
         cascade_variants: bool = False,
     ) -> Product:
+        if is_active:
+            missing = AttributeProvision.get_missing_required_labels(
+                product, AttributeScope.PRODUCT
+            )
+            if missing:
+                raise ValidationError(
+                    {
+                        "is_active": _(
+                            "Cannot activate: required attributes are missing "
+                            "a value: %(labels)s."
+                        )
+                        % {"labels": ", ".join(missing)}
+                    }
+                )
+
         product.is_active = is_active
         product.save(update_fields=["is_active", "modified"])
 
@@ -309,6 +341,21 @@ class VariantService:
         *,
         is_active: bool,
     ) -> ProductVariant:
+        if is_active:
+            missing = AttributeProvision.get_missing_required_labels(
+                variant, AttributeScope.VARIANT
+            )
+            if missing:
+                raise ValidationError(
+                    {
+                        "is_active": _(
+                            "Cannot activate: required attributes are missing "
+                            "a value: %(labels)s."
+                        )
+                        % {"labels": ", ".join(missing)}
+                    }
+                )
+
         variant.is_active = is_active
         variant.save(update_fields=["is_active", "modified"])
         return variant

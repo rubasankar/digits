@@ -330,6 +330,7 @@ class AttributeValueMixin(models.Model):
     value = models.CharField(
         _("Value"),
         max_length=ATTRIBUTE_VALUE_MAX_LENGTH,
+        blank=True,
         help_text=_(
             "All types stored as strings. "
             "Integer/BigInteger: '256'. Decimal/Float: '0.350'. "
@@ -367,6 +368,12 @@ class AttributeValueMixin(models.Model):
         defn = self.definition
         vt: str = defn.value_type
         v: str = self.value
+
+        if not v:
+            # Blank means "not yet set" (e.g. an assignment with no default_value
+            # provisioned at category/product/variant creation) - only type-specific
+            # format checks are skipped, not presence, which is enforced elsewhere.
+            return
 
         validate = _VALIDATE.get(vt)
         if validate is not None:
@@ -413,3 +420,19 @@ class AttributeValueMixin(models.Model):
                         % {"bad": ", ".join(invalid), "opts": ", ".join(allowed)}
                     }
                 )
+
+
+class MerchandisingMixin(models.Model):
+    """Adds an is_featured flag for storefront promotion sections."""
+
+    is_featured = models.BooleanField(
+        _("Featured"),
+        default=False,
+        db_index=True,
+        help_text=_(
+            "Show this item in featured/promotional sections on the storefront."
+        ),
+    )
+
+    class Meta:
+        abstract = True

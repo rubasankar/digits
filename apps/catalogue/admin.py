@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import contextlib
+import typing
 from typing import Any
 from typing import cast
 
@@ -9,16 +10,23 @@ from django.contrib import admin
 from django.db.models import Count
 from django.utils.translation import gettext_lazy as _
 from treebeard.admin import TreeAdmin
+from treebeard.forms import MoveNodeForm
 from treebeard.forms import movenodeform_factory
 from unfold.admin import ModelAdmin
 from unfold.admin import TabularInline
+from unfold.widgets import UnfoldAdminSelect2Widget
+from unfold.widgets import UnfoldAdminSelectWidget
 
 from apps.catalogue.forms import ProductAdminForm
 from apps.catalogue.forms import ProductVariantAdminForm
+from apps.catalogue.service.attribute import AttributeProvision
+from apps.catalogue.service.product import VariantCreateData
+from apps.catalogue.service.product import VariantService
+from apps.catalogue.widgets import AttributeValueWidget
+from apps.pricing.models import Pricing
 
 from .enums import SELECT_VALUE_TYPES
 from .enums import AttributeScope
-from .enums import AttributeValueType
 from .forms import AttributeDefinitionAdminForm
 from .models.attribute import AttributeAssignment
 from .models.attribute import AttributeDefinition
@@ -197,9 +205,21 @@ class AttributeAssignmentInline(TabularInline):  # type: ignore[misc]
         return super().get_queryset(request).select_related("definition")
 
 
+class ProductCategoryMoveForm(MoveNodeForm):  # type: ignore[misc]
+    def __init__(self, *args: Any, **kwargs: Any) -> None:
+        super().__init__(*args, **kwargs)
+        self.fields["treebeard_position"].widget = UnfoldAdminSelectWidget(
+            choices=self.fields["treebeard_position"].choices,
+        )
+        self.fields["treebeard_ref_node"].widget = UnfoldAdminSelectWidget(
+            choices=self.fields["treebeard_ref_node"].choices,
+        )
+
+
 @admin.register(ProductCategory)
 class ProductCategoryAdmin(TreeAdmin, ModelAdmin):  # type: ignore[misc]
-    form = movenodeform_factory(ProductCategory)
+    form = movenodeform_factory(ProductCategory, form=ProductCategoryMoveForm)
+    change_list_template = "admin/tree_change_list.html"
     list_display = ["name", "slug", "depth", "is_active", "assignment_count"]
     list_filter = ["is_active"]
     search_fields = ["name", "slug"]
@@ -232,34 +252,7 @@ def apply_value_widget(
     fields: dict[str, forms.Field],
     defn: AttributeDefinition,
 ) -> None:
-    vt = defn.value_type
-    vtype = AttributeValueType
-
-    if vt == vtype.BOOLEAN:
-        fields["value"].widget = forms.Select(
-            choices=[("true", _("Yes")), ("false", _("No"))]
-        )
-    elif vt in (vtype.DECIMAL, vtype.FLOAT):
-        fields["value"].widget = forms.NumberInput(attrs={"step": "0.0001"})
-    elif vt in (vtype.INTEGER, vtype.BIG_INTEGER):
-        fields["value"].widget = forms.NumberInput(attrs={"step": "1"})
-    elif vt == vtype.SINGLE_SELECT:
-        choices = [("", "---------")] + [
-            (opt.value, opt.label)
-            for opt in defn.options.filter(is_active=True).order_by("display_order")
-        ]
-        fields["value"].widget = forms.Select(choices=choices)
-    elif vt == vtype.MULTI_SELECT:
-        choices = [
-            (opt.value, opt.label)
-            for opt in defn.options.filter(is_active=True).order_by("display_order")
-        ]
-        fields["value"].widget = forms.CheckboxSelectMultiple(choices=choices)
-    elif vt == vtype.LONG_TEXT:
-        fields["value"].widget = forms.Textarea(attrs={"rows": 4})
-    elif vt == vtype.COLOR:
-        fields["value"].widget = forms.TextInput(attrs={"type": "color"})
-    # TEXT, EMAIL, URL, UUID, DATE, TIME, DATETIME, JSON: default TextInput.
+    fields["value"].widget = AttributeValueWidget(definition=defn)
 
 
 def _defn_label(obj: AttributeDefinition) -> str:
@@ -295,6 +288,9 @@ class ProductAttributeValueForm(forms.ModelForm[ProductAttributeValue]):
             self.fields["definition"],
         )
         definition_field.queryset = qs
+        definition_field.widget = UnfoldAdminSelect2Widget(
+            choices=definition_field.choices,
+        )
         cast("Any", definition_field).label_from_instance = _defn_label
 
         defn: AttributeDefinition | None = None
@@ -427,6 +423,40 @@ class ProductAdmin(ModelAdmin):  # type: ignore[misc]
             return [ProductVariantInline]
         return [ProductAttributeValueInline, ProductVariantInline]
 
+    @typing.override
+    def save_model(
+        self,
+        request: Any,
+        obj: Product,
+        form: Any,
+        change: bool,
+    ) -> None:
+        super().save_model(request, obj, form, change)
+        if not change:
+            # New product: provision blank placeholder attribute values for
+            # every category assignment now that obj has a pk, so they're
+            # ready to fill in (and gate activation) on the next edit.
+            AttributeProvision.provision_product_attributes(obj)
+
+    @typing.override
+    def save_related(
+        self,
+        request: Any,
+        form: Any,
+        formsets: Any,
+        change: bool,
+    ) -> None:
+        super().save_related(request, form, formsets, change)
+        obj: Product = form.instance
+        if not obj.variants.exists():
+            # Every Product must have >= 1 variant; the inline lets staff
+            # supply one explicitly, this is the automatic fallback.
+            VariantService.create(
+                VariantCreateData(product=obj, sku=obj.slug, is_active=False)
+            )
+        for variant in obj.variants.all():
+            AttributeProvision.provision_variant_attributes(variant)
+
 
 class VariantAttributeValueForm(forms.ModelForm[VariantAttributeValue]):
     class Meta:
@@ -457,6 +487,9 @@ class VariantAttributeValueForm(forms.ModelForm[VariantAttributeValue]):
             self.fields["definition"],
         )
         definition_field.queryset = qs
+        definition_field.widget = UnfoldAdminSelect2Widget(
+            choices=definition_field.choices,
+        )
         cast("Any", definition_field).label_from_instance = _defn_label
 
         defn: AttributeDefinition | None = None
@@ -512,6 +545,18 @@ class ProductImageInline(TabularInline):  # type: ignore[misc]
     fields = ["image", "alt_text", "is_primary", "display_order"]
 
 
+class PricingInline(TabularInline):  # type: ignore[misc]
+    model = Pricing
+    extra = 1
+    fields = ["currency", "price_type", "amount", "valid_from", "valid_to"]
+    autocomplete_fields = ["currency"]
+    verbose_name = _("Price")
+    verbose_name_plural = _("Prices")
+
+    def get_queryset(self, request: Any) -> Any:
+        return super().get_queryset(request).select_related("currency")
+
+
 @admin.register(ProductVariant)
 class ProductVariantAdmin(ModelAdmin):  # type: ignore[misc]
     form = ProductVariantAdminForm
@@ -555,4 +600,19 @@ class ProductVariantAdmin(ModelAdmin):  # type: ignore[misc]
     ) -> list[Any]:
         if obj is None:
             return []
-        return [VariantAttributeValueInline, ProductImageInline]
+        return [PricingInline, VariantAttributeValueInline, ProductImageInline]
+
+    @typing.override
+    def save_model(
+        self,
+        request: Any,
+        obj: ProductVariant,
+        form: Any,
+        change: bool,
+    ) -> None:
+        super().save_model(request, obj, form, change)
+        if not change:
+            # New variant: provision blank placeholder attribute values for
+            # every VARIANT-scope category assignment, ready to fill in (and
+            # gate activation) on the next edit.
+            AttributeProvision.provision_variant_attributes(obj)

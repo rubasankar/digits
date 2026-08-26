@@ -1,10 +1,9 @@
 from typing import TYPE_CHECKING
 from typing import Any
 from typing import cast
-from typing import override
 
 from django.contrib import admin
-from django.core.exceptions import ValidationError
+from django.utils.html import format_html
 from django.utils.translation import gettext_lazy as _
 from unfold.admin import ModelAdmin
 
@@ -15,7 +14,6 @@ if TYPE_CHECKING:
     from typing import Any
     from typing import ClassVar
 
-    from django import forms
     from django.db.models import QuerySet
     from django.http import HttpRequest
 
@@ -59,10 +57,14 @@ class StaffProfileAdmin(ModelAdmin):  # type: ignore[misc]
     ]
     list_filter = ["department", "is_active"]
     search_fields = ["first_name", "last_name", "user__email", "role"]
-    readonly_fields = ["created", "modified"]
+    readonly_fields = ["created", "modified", "avatar_display"]
     fieldsets = (
         (None, {"fields": ("user", "first_name", "last_name")}),
-        (_("Role"), {"fields": ("role", "department", "avatar")}),
+        (_("Role"), {"fields": ("role", "department")}),
+        (
+            _("Avatar"),
+            {"fields": ("avatar", "avatar_display"), "classes": ("collapse",)},
+        ),
         (_("Contact"), {"fields": ("phone_number",)}),
         (
             _("Access"),
@@ -90,8 +92,36 @@ class StaffProfileAdmin(ModelAdmin):  # type: ignore[misc]
         ),
     )
     SELF_SERVICE_FIELDSETS: ClassVar[tuple[tuple[str | None, dict[str, Any]], ...]] = (
-        (None, {"fields": ("first_name", "last_name", "avatar", "phone_number")}),
+        (
+            None,
+            {
+                "fields": (
+                    "first_name",
+                    "last_name",
+                    "avatar",
+                    "avatar_display",
+                    "phone_number",
+                )
+            },
+        ),
     )
+
+    def formfield_for_foreignkey(
+        self, db_field: Any, request: HttpRequest, **kwargs: Any
+    ) -> Any:
+        if db_field.name == "department":
+            # Inactive departments are hidden from the dropdown, but keep the
+            # currently-assigned one visible even if it was since deactivated.
+            qs = StaffDepartment.objects.filter(is_active=True)
+            object_id = (
+                request.resolver_match.kwargs.get("object_id")
+                if request.resolver_match
+                else None
+            )
+            if object_id:
+                qs = qs | StaffDepartment.objects.filter(staff__pk=object_id)
+            kwargs["queryset"] = qs.distinct()
+        return super().formfield_for_foreignkey(db_field, request, **kwargs)
 
     def get_fieldsets(
         self, request: HttpRequest, obj: StaffProfile | None = None
@@ -114,6 +144,15 @@ class StaffProfileAdmin(ModelAdmin):  # type: ignore[misc]
             return bool(getattr(user, "is_staff", False))
         return bool(obj.user_id == cast("UserAccount", user).pk)
 
+    @admin.display(description=_("Avatar"))
+    def avatar_display(self, obj: StaffProfile) -> str:
+        if obj.avatar:
+            return format_html(
+                '<img src="{}" style="max-height: 150px; border-radius: 8px;" />',
+                obj.avatar.url,
+            )
+        return str(_("No avatar uploaded"))
+
     def get_queryset(self, request: HttpRequest) -> QuerySet[StaffProfile]:
         qs = cast("QuerySet[StaffProfile]", super().get_queryset(request))
         user = cast("UserAccount", request.user)
@@ -128,18 +167,3 @@ class StaffProfileAdmin(ModelAdmin):  # type: ignore[misc]
         self, request: HttpRequest, obj: StaffProfile | None = None
     ) -> bool:
         return bool(getattr(request.user, "is_superuser", False))
-
-    @override
-    def save_model(
-        self,
-        request: HttpRequest,
-        obj: StaffProfile,
-        form: forms.ModelForm[Any],
-        change: bool,
-    ) -> None:
-        try:
-            obj.full_clean()
-        except ValidationError as exc:
-            form._update_errors(exc)  # type: ignore[attr-defined]  # noqa: SLF001
-            return
-        super().save_model(request, obj, form, change)

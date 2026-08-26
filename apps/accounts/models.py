@@ -10,6 +10,7 @@ from model_utils.models import UUIDModel
 from .managers import UserManager
 
 if TYPE_CHECKING:
+    from apps.customers.models import CustomerProfile
     from apps.staff.models import StaffProfile
 
 
@@ -51,16 +52,26 @@ class UserAccount(UUIDModel, AbstractUser, TimeStampedModel):
         return hasattr(self, "staff_profile")
 
     def get_full_name(self) -> str:
-        profile: StaffProfile | None = getattr(self, "staff_profile", None)
-        if profile is not None and profile.full_name:
-            return profile.full_name
+        staff_profile: StaffProfile | None = getattr(self, "staff_profile", None)
+        if staff_profile is not None and staff_profile.full_name:
+            return staff_profile.full_name
+        customer_profile: CustomerProfile | None = getattr(
+            self, "customer_profile", None
+        )
+        if customer_profile is not None and customer_profile.full_name:
+            return customer_profile.full_name
         return self.email.split("@")[0]
 
     @property
     def avatar_url(self) -> str:
-        profile: StaffProfile | None = getattr(self, "staff_profile", None)
-        if profile is not None and profile.avatar:
-            return profile.avatar.url
+        staff_profile: StaffProfile | None = getattr(self, "staff_profile", None)
+        if staff_profile is not None and staff_profile.avatar:
+            return staff_profile.avatar.url
+        customer_profile: CustomerProfile | None = getattr(
+            self, "customer_profile", None
+        )
+        if customer_profile is not None and customer_profile.avatar:
+            return customer_profile.avatar.url
         return ""
 
     def get_short_name(self) -> str:

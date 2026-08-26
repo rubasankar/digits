@@ -3,7 +3,6 @@ from typing import Any
 from typing import override
 
 from django.contrib import admin
-from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 from unfold.admin import ModelAdmin
 
@@ -51,16 +50,12 @@ class CurrencyAdmin(ModelAdmin):  # type: ignore[misc]
         form: forms.ModelForm[Any],
         change: bool,
     ) -> None:
-        """Atomically swap the default-currency flag.
-
-        Delegates to CurrencyService so the business rule (only one default)
-        is enforced consistently whether called from admin or application code.
-        """
-
         if obj.is_default:
+            # Unset any existing default *before* obj is persisted, otherwise the
+            # partial unique constraint on is_default=True rejects the interim
+            # state where two currencies are both flagged as default.
             CurrencyService.set_default(obj)
-        else:
-            super().save_model(request, obj, form, change)
+        super().save_model(request, obj, form, change)
 
 
 @admin.register(TaxClass)
@@ -111,21 +106,6 @@ class TaxRateAdmin(ModelAdmin):  # type: ignore[misc]
         ),
     )
 
-    @override
-    def save_model(
-        self,
-        request: HttpRequest,
-        obj: TaxRate,
-        form: forms.ModelForm[Any],
-        change: bool,
-    ) -> None:
-        try:
-            obj.full_clean()
-        except ValidationError as exc:
-            form._update_errors(exc)  # type: ignore[attr-defined]  # noqa: SLF001
-            return
-        super().save_model(request, obj, form, change)
-
 
 @admin.register(Pricing)
 class PricingAdmin(ModelAdmin):  # type: ignore[misc]
@@ -162,18 +142,3 @@ class PricingAdmin(ModelAdmin):  # type: ignore[misc]
             {"fields": ("created", "modified"), "classes": ("collapse",)},
         ),
     )
-
-    @override
-    def save_model(
-        self,
-        request: HttpRequest,
-        obj: Pricing,
-        form: forms.ModelForm[Any],
-        change: bool,
-    ) -> None:
-        try:
-            obj.full_clean()
-        except ValidationError as exc:
-            form._update_errors(exc)  # type: ignore[attr-defined]  # noqa: SLF001
-            return
-        super().save_model(request, obj, form, change)

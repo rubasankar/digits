@@ -65,6 +65,30 @@ class Currency(UUIDModel, TimeStampedModel):
             ),
         ]
 
+    def clean(self) -> None:
+        super().clean()
+        if self.pk and not self.is_default:
+            try:
+                was_default = (
+                    Currency.objects.only("is_default").get(pk=self.pk).is_default
+                )
+            except Currency.DoesNotExist:
+                was_default = False
+            if (
+                was_default
+                and not Currency.objects.filter(is_default=True)
+                .exclude(pk=self.pk)
+                .exists()
+            ):
+                raise ValidationError(
+                    {
+                        "is_default": _(
+                            "At least one currency must be set as default -- "
+                            "set a different currency as default first."
+                        )
+                    }
+                )
+
     def __str__(self) -> str:
         return f"{self.code} ({self.symbol})"
 

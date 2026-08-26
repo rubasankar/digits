@@ -32,6 +32,35 @@ if TYPE_CHECKING:
 
 class CouponService:
     @classmethod
+    def _check_campaign_dates(cls, coupon: Coupon) -> None:
+        """Raise if the coupon or its campaign is outside its active window."""
+        now = timezone.now()
+        campaign = coupon.discount.campaign
+        if now < campaign.start_date or now > campaign.end_date:
+            raise CouponExpiredError(
+                str(_("This coupon's campaign is not currently running."))
+            )
+        if now < coupon.valid_from:
+            msg = f"Coupon is not yet valid (starts {coupon.valid_from.date()})."
+            raise CouponExpiredError(msg)
+        if now > coupon.valid_to:
+            msg_0 = "This coupon has expired."
+            raise CouponExpiredError(msg_0)
+
+    @classmethod
+    def _check_usage_limits(cls, coupon: Coupon, customer: CustomerProfile) -> None:
+        """Raise if total or per-user redemption limits have been reached."""
+        if coupon.usage_limit_total is not None:
+            total_used = CouponRedemption.objects.filter(coupon=coupon).count()
+            if total_used >= coupon.usage_limit_total:
+                raise CouponUsageLimitReachedError
+        user_used = CouponRedemption.objects.filter(
+            coupon=coupon, customer=customer
+        ).count()
+        if user_used >= coupon.usage_limit_per_user:
+            raise CouponAlreadyUsedByCustomerError
+
+    @classmethod
     def validate(
         cls,
         code: str,
@@ -49,26 +78,12 @@ class CouponService:
         if not coupon.is_active:
             raise CouponInactiveError
 
-        now = timezone.now()
-        if now < coupon.valid_from:
-            msg = f"Coupon is not yet valid (starts {coupon.valid_from.date()})."
-            raise CouponExpiredError(msg)
-        if now > coupon.valid_to:
-            msg = "This coupon has expired."
-            raise CouponExpiredError(msg)
+        campaign = coupon.discount.campaign
+        if not campaign.is_active:
+            raise CouponInactiveError
 
-        # Total usage limit
-        if coupon.usage_limit_total is not None:
-            total_used = CouponRedemption.objects.filter(coupon=coupon).count()
-            if total_used >= coupon.usage_limit_total:
-                raise CouponUsageLimitReachedError
-
-        # Per-user usage limit
-        user_used = CouponRedemption.objects.filter(
-            coupon=coupon, customer=customer
-        ).count()
-        if user_used >= coupon.usage_limit_per_user:
-            raise CouponAlreadyUsedByCustomerError
+        cls._check_campaign_dates(coupon)
+        cls._check_usage_limits(coupon, customer)
 
         # Minimum cart value
         discount = coupon.discount
@@ -89,23 +104,33 @@ class CouponService:
         customer: CustomerProfile,
         order: Order,
     ) -> CouponRedemption:
+        # validate() checks the usage limits without locking, so two
+        # concurrent redemptions could both pass it before either commits.
+        # Lock the coupon row here to serialise concurrent redeem() calls for
+        # the same coupon, then re-check the limits under that lock -- this
+        # is the authoritative check, right before the redemption commits.
+        locked_coupon = Coupon.objects.select_for_update().get(pk=coupon.pk)
+
+        if locked_coupon.usage_limit_total is not None:
+            total_used = CouponRedemption.objects.filter(coupon=locked_coupon).count()
+            if total_used >= locked_coupon.usage_limit_total:
+                raise CouponUsageLimitReachedError
+
+        user_used = CouponRedemption.objects.filter(
+            coupon=locked_coupon, customer=customer
+        ).count()
+        if user_used >= locked_coupon.usage_limit_per_user:
+            raise CouponAlreadyUsedByCustomerError
+
         redemption = CouponRedemption(
-            coupon=coupon,
+            coupon=locked_coupon,
             customer=customer,
             order=order,
         )
         redemption.save()
 
-        # Increment times_used atomically to avoid lost updates.
-        Discount.objects.filter(pk=coupon.discount_id).update(
-            times_used=Discount.objects.filter(pk=coupon.discount_id).values(
-                "times_used"
-            )[0]["times_used"]
-            + 1
-        )
-        # Simpler approach using F() expression:
-
-        Discount.objects.filter(pk=coupon.discount_id).update(
+        # Increment times_used atomically (via F() expression) to avoid lost updates.
+        Discount.objects.filter(pk=locked_coupon.discount_id).update(
             times_used=F("times_used") + 1
         )
 

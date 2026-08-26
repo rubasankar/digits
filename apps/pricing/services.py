@@ -5,6 +5,7 @@ from decimal import Decimal
 from typing import TYPE_CHECKING
 
 from django.db import transaction
+from django.db.models import F
 from django.db.models import Q
 from django.utils import timezone
 
@@ -59,7 +60,9 @@ class PricingService:
                 # valid_to is None OR valid_to > now
                 models_q_valid_to_ok(now),
             )
-            .order_by("-valid_from")
+            # A dated sale (more specific) must outrank a perpetual one with no
+            # valid_from; NULLS LAST keeps perpetual sales from sorting first.
+            .order_by(F("valid_from").desc(nulls_last=True))
             .first()
         )
         if sale is not None:
@@ -128,7 +131,7 @@ class PricingService:
             )
             .filter(models_q_valid_from_ok(now))
             .filter(models_q_valid_to_ok(now))
-            .order_by("variant_id", "-valid_from")
+            .order_by("variant_id", F("valid_from").desc(nulls_last=True))
             .select_related("currency")
         )
         base_rows = {
@@ -264,10 +267,6 @@ class CurrencyService:
     @classmethod
     @transaction.atomic
     def set_default(cls, currency: Currency) -> Currency:
-        if currency.is_default and currency.pk:
-            # Already the default - nothing to do.
-            return currency
-
         # Lock existing default to prevent concurrent race.
         existing_defaults = Currency.objects.select_for_update().filter(is_default=True)
         if currency.pk:
@@ -277,11 +276,12 @@ class CurrencyService:
             existing_default.is_default = False
             existing_default.save(update_fields=["is_default"])
 
-        currency.is_default = True
-        if currency.pk:
-            currency.save(update_fields=["is_default"])
-        else:
-            currency.save()
+        if not currency.is_default:
+            currency.is_default = True
+            if currency.pk:
+                currency.save(update_fields=["is_default"])
+            else:
+                currency.save()
 
         return currency
 

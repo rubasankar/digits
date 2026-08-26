@@ -148,8 +148,10 @@ class StockMovementService:
                 }
             )
 
-        # After computing, reserved must not exceed quantity.
-        if new_reserved > new_quantity:
+        # After computing, reserved must not exceed quantity. Skip this when
+        # nothing is reserved so manual adjustments can still take quantity
+        # negative (staff decides) without tripping over the 0 > negative case.
+        if new_reserved > 0 and new_reserved > new_quantity:
             raise ValidationError(
                 _(
                     "Movement would result in reserved_quantity (%(r)s) "
@@ -170,6 +172,10 @@ class StockMovementService:
             order_item=meta.order_item,
             performed_by=meta.performed_by,
         )
+        # full_clean() exercises StockMovement.clean() (delta/note checks) so
+        # it can't silently drift out of sync with the checks above -- it's
+        # the authoritative source, these are just a fail-fast before the lock.
+        movement.full_clean()
         movement.save()  # StockMovement.save() raises if pk is set (immutability guard)
 
         # Update the Stock counters in the same transaction.

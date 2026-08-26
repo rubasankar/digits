@@ -1,10 +1,7 @@
-from typing import TYPE_CHECKING
 from typing import Any
 from typing import cast
-from typing import override
 
 from django.contrib import admin
-from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 from unfold.admin import ModelAdmin
 from unfold.admin import TabularInline
@@ -12,10 +9,6 @@ from unfold.admin import TabularInline
 from .models import Campaign
 from .models import Coupon
 from .models import Discount
-
-if TYPE_CHECKING:
-    from django import forms
-    from django.http import HttpRequest
 
 
 class DiscountInline(TabularInline):  # type: ignore[misc]
@@ -75,21 +68,6 @@ class CampaignAdmin(ModelAdmin):  # type: ignore[misc]
     def discount_count(self, obj: Campaign) -> int:
         return int(cast("Any", obj).discounts.count())
 
-    @override
-    def save_model(
-        self,
-        request: HttpRequest,
-        obj: Campaign,
-        form: forms.ModelForm[Any],
-        change: bool,
-    ) -> None:
-        try:
-            obj.full_clean()
-        except ValidationError as exc:
-            form._update_errors(exc)  # type: ignore[attr-defined]  # noqa: SLF001
-            return
-        super().save_model(request, obj, form, change)
-
 
 @admin.register(Discount)
 class DiscountAdmin(ModelAdmin):  # type: ignore[misc]
@@ -143,21 +121,6 @@ class DiscountAdmin(ModelAdmin):  # type: ignore[misc]
     def coupon_count(self, obj: Discount) -> int:
         return int(cast("Any", obj).coupons.count())
 
-    @override
-    def save_model(
-        self,
-        request: HttpRequest,
-        obj: Discount,
-        form: forms.ModelForm[Any],
-        change: bool,
-    ) -> None:
-        try:
-            obj.full_clean()
-        except ValidationError as exc:
-            form._update_errors(exc)  # type: ignore[attr-defined]  # noqa: SLF001
-            return
-        super().save_model(request, obj, form, change)
-
 
 @admin.register(Coupon)
 class CouponAdmin(ModelAdmin):  # type: ignore[misc]
@@ -192,18 +155,3 @@ class CouponAdmin(ModelAdmin):  # type: ignore[misc]
     @admin.display(description=_("Redeemed"))
     def redemption_count(self, obj: Coupon) -> int:
         return int(cast("Any", obj).redemptions.count())
-
-    @override
-    def save_model(
-        self,
-        request: HttpRequest,
-        obj: Coupon,
-        form: forms.ModelForm[Any],
-        change: bool,
-    ) -> None:
-        try:
-            obj.full_clean()
-        except ValidationError as exc:
-            form._update_errors(exc)  # type: ignore[attr-defined]  # noqa: SLF001
-            return
-        super().save_model(request, obj, form, change)

@@ -1,16 +1,29 @@
 from typing import TYPE_CHECKING
+from typing import Any
 
 from django.contrib import admin
+from django.core.exceptions import PermissionDenied
+from django.core.exceptions import ValidationError
+from django.shortcuts import redirect
+from django.template.response import TemplateResponse
+from django.urls import URLPattern
+from django.urls import path
+from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 from unfold.admin import ModelAdmin
 from unfold.admin import TabularInline
 
+from .forms import ReceiveStockForm
 from .models import Stock
 from .models import StockMovement
 from .models import Warehouse
+from .services import MovementMeta
+from .services import StockMovementService
 
 if TYPE_CHECKING:
     from django.http import HttpRequest
+    from django.http import HttpResponse
+    from django.urls import URLPattern
 
 
 class StockMovementInline(TabularInline):  # type: ignore[misc]
@@ -143,7 +156,66 @@ class StockAdmin(ModelAdmin):  # type: ignore[misc]
         return obj.is_in_stock
 
     def has_add_permission(self, request: HttpRequest) -> bool:
-        return False  # Stock rows are created by the service, not manually.
+        # Rows still aren't hand-editable (see readonly_fields above); "Add"
+        # instead opens the Receive Stock form, which posts through
+        # StockMovementService so the movement ledger stays accurate.
+        return bool(super().has_add_permission(request))
+
+    def get_urls(self) -> list[URLPattern]:
+        urls: list[URLPattern] = super().get_urls()
+        custom = [
+            path(
+                "receive/",
+                self.admin_site.admin_view(self.receive_stock_view),
+                name="inventory_stock_receive",
+            ),
+        ]
+        return custom + urls
+
+    def add_view(
+        self,
+        request: HttpRequest,
+        form_url: str = "",
+        extra_context: dict[str, Any] | None = None,
+    ) -> HttpResponse:
+        return redirect(reverse("admin:inventory_stock_receive"))
+
+    def receive_stock_view(self, request: HttpRequest) -> HttpResponse:
+        if not self.has_add_permission(request):
+            raise PermissionDenied
+
+        if request.method == "POST":
+            form = ReceiveStockForm(request.POST)
+            if form.is_valid():
+                try:
+                    StockMovementService.receive_stock(
+                        variant=form.cleaned_data["variant"],
+                        warehouse=form.cleaned_data["warehouse"],
+                        quantity=form.cleaned_data["quantity"],
+                        meta=MovementMeta(
+                            reference=form.cleaned_data["reference"],
+                            note=form.cleaned_data["note"],
+                            performed_by=getattr(request.user, "staff_profile", None),
+                        ),
+                    )
+                except ValidationError as exc:
+                    form.add_error(None, exc)
+                else:
+                    self.message_user(request, _("Stock received."))
+                    return redirect(reverse("admin:inventory_stock_changelist"))
+        else:
+            form = ReceiveStockForm()
+
+        context = {
+            **self.admin_site.each_context(request),
+            "opts": self.model._meta,  # noqa: SLF001
+            "title": _("Receive Stock"),
+            "form": form,
+            "cancel_url": reverse("admin:inventory_stock_changelist"),
+        }
+        return TemplateResponse(
+            request, "admin/inventory/stock/receive_form.html", context
+        )
 
 
 @admin.register(StockMovement)

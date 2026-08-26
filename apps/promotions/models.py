@@ -1,6 +1,7 @@
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.db.models import Q
+from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
 from model_utils.models import TimeStampedModel
 from model_utils.models import UUIDModel
@@ -128,6 +129,17 @@ class Discount(UUIDModel, TimeStampedModel):
         _("Times Used"),
         default=0,
         help_text=_("Number of times this discount has been redeemed."),
+    )
+    slug = models.SlugField(
+        _("Slug"),
+        max_length=100,
+        unique=True,
+        db_index=True,
+        help_text=_(
+            "URL-safe unique identifier for this discount rule, "
+            "e.g. 'back-to-school-cart-10pct'. Auto-generated from campaign and "
+            "discount type if left blank."
+        ),
     )
 
     class Meta:
@@ -296,6 +308,14 @@ class Discount(UUIDModel, TimeStampedModel):
         super().clean()
         self._validate_target_exclusivity()
         self._validate_value_and_guards()
+
+    def save(self, *args: object, **kwargs: object) -> None:
+        if not self.slug:
+            campaign_slug = getattr(self.campaign, "slug", "") or ""
+            self.slug = slugify(
+                f"{campaign_slug}-{self.discount_type}-{self.applies_to}"
+            )[:100]
+        super().save(*args, **kwargs)
 
     def __str__(self) -> str:
         try:

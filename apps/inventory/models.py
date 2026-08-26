@@ -109,9 +109,23 @@ class Stock(UUIDModel, TimeStampedModel):
                 fields=["variant", "warehouse"],
                 name="unique_stock_per_variant_warehouse",
             ),
+            # reserved_quantity=0 is always valid, even against negative quantity
+            # (manual adjustments are allowed to take on-hand quantity negative).
             models.CheckConstraint(
-                condition=models.Q(reserved_quantity__lte=models.F("quantity")),
+                condition=(
+                    models.Q(reserved_quantity=0)
+                    | models.Q(reserved_quantity__lte=models.F("quantity"))
+                ),
                 name="stock_reserved_lte_quantity",
+            ),
+            # maximum_order_qty=0 means "no limit"; otherwise it must be able
+            # to satisfy minimum_order_qty, or no valid order quantity exists.
+            models.CheckConstraint(
+                condition=(
+                    models.Q(maximum_order_qty=0)
+                    | models.Q(maximum_order_qty__gte=models.F("minimum_order_qty"))
+                ),
+                name="stock_max_order_qty_gte_min",
             ),
         ]
 
@@ -254,8 +268,13 @@ class StockMovement(UUIDModel, TimeStampedModel):
             )
 
     def save(self, *args: object, **kwargs: object) -> None:
-        """Prevent editing an existing movement -- they are immutable."""
-        if self.pk:
+        """Prevent editing an existing movement -- they are immutable.
+
+        Can't check `self.pk` for this -- UUIDModel assigns the primary key
+        client-side at instantiation, so it's already set on a brand-new,
+        never-saved instance. `_state.adding` is the reliable signal.
+        """
+        if not self._state.adding:
             raise ValidationError(
                 _("StockMovement records are immutable. Create a new movement instead.")
             )

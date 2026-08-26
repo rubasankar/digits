@@ -1,0 +1,29 @@
+{% load i18n %}
+
+<c-vars type="toast" />
+{% if messages %}
+  {% if type == "toast" %}
+    <c-lb.toast horizontal="end" vertical="top" class="z-50 mt-16">
+      {% for message in messages %}
+        <div x-data="{ show: true }"
+             x-init="setTimeout(() => show = false, 5000)"
+             x-show="show"
+             x-transition:leave="transition ease-in duration-300"
+             x-transition:leave-start="opacity-100"
+             x-transition:leave-end="opacity-0">
+          <c-lb.alert variant="{% if message.tags %}{{ message.tags }}{% else %}info{% endif %}">
+            {{ message }}
+          </c-lb.alert>
+        </div>
+      {% endfor %}
+    </c-lb.toast>
+  {% else %}
+    <div class="container mx-auto flex flex-col gap-2 px-4 pt-4">
+      {% for message in messages %}
+        <c-lb.alert variant="{% if message.tags %}{{ message.tags }}{% else %}info{% endif %}">
+          {{ message }}
+        </c-lb.alert>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endif %}

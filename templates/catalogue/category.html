@@ -1,0 +1,97 @@
+{% extends "entrance.html" %}
+
+{% load i18n %}
+
+{% block seo_meta %}
+  <meta name="description"
+        content="{{ category.description|truncatechars:160 }}" />
+  <title>{{ category.name }}</title>
+{% endblock seo_meta %}
+{% block title %}
+  {{ category.name }}
+{% endblock title %}
+{% block content %}
+  <section class="container mx-auto px-4 py-12">
+    <c-components.breadcrumbs :items="breadcrumb_items" class="mb-4" />
+    <c-lb.text as="h1" size="2xl" class="font-bold">
+      {{ category.name }}
+    </c-lb.text>
+    {% if category.description %}
+      <c-lb.text as="p" variant="neutral" class="mt-2 max-w-2xl">
+        {{ category.description }}
+      </c-lb.text>
+    {% endif %}
+    <form method="get" class="mt-6 flex max-w-md gap-2">
+      <c-lb.input type="search"
+                  name="q"
+                  value="{{ search_term }}"
+                  placeholder="{% trans 'Search in this category...' %}"
+                  class="flex-1" />
+      <c-lb.button type="submit" btnStyle="outline">
+        {% trans "Search" %}
+      </c-lb.button>
+      {% if search_term %}
+        <c-lb.button as="a" href="?q=" btnStyle="ghost">
+          {% trans "Clear" %}
+        </c-lb.button>
+      {% endif %}
+    </form>
+    {% if page_obj %}
+      <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+        {% for product in page_obj %}
+          <c-components.card :product="product" />
+        {% endfor %}
+      </div>
+      {% if page_obj.has_other_pages %}
+        <nav aria-label="{% trans 'Pagination' %}"
+             class="mt-8 flex justify-center">
+          <div class="join">
+            {% if page_obj.has_previous %}
+              <a href="?page={{ page_obj.previous_page_number }}{% if search_term %}&q={{ search_term }}{% endif %}"
+                 aria-label="{% trans 'Previous page' %}"
+                 class="join-item btn">
+                <c-lbi n="rmx.arrow-left-s" />
+                {% trans "Previous" %}
+              </a>
+            {% else %}
+              <span class="join-item btn btn-disabled">
+                <c-lbi n="rmx.arrow-left-s" />
+                {% trans "Previous" %}
+              </span>
+            {% endif %}
+            <span class="join-item btn btn-disabled">
+              {% blocktrans with current=page_obj.number total=page_obj.paginator.num_pages %}Page {{ current }} of {{ total }}{% endblocktrans %}
+            </span>
+            {% if page_obj.has_next %}
+              <a href="?page={{ page_obj.next_page_number }}{% if search_term %}&q={{ search_term }}{% endif %}"
+                 aria-label="{% trans 'Next page' %}"
+                 class="join-item btn">
+                {% trans "Next" %}
+                <c-lbi n="rmx.arrow-right-s" />
+              </a>
+            {% else %}
+              <span class="join-item btn btn-disabled">
+                {% trans "Next" %}
+                <c-lbi n="rmx.arrow-right-s" />
+              </span>
+            {% endif %}
+          </div>
+        </nav>
+      {% endif %}
+    {% else %}
+      <div class="flex flex-col items-center gap-3 py-16 text-center">
+        <c-lbi n="rmx.price-tag-3" w="3em" h="3em" class="text-base-content/30" />
+        <c-lb.text as="p" variant="neutral">
+          {% if search_term %}
+            {% blocktrans with term=search_term %}No products found for '{{ term }}'.{% endblocktrans %}
+          {% else %}
+            {% trans "No products found." %}
+          {% endif %}
+        </c-lb.text>
+        <c-lb.button as="a" href="{% url 'core:home' %}" btnStyle="outline">
+          {% trans "Back to Home" %}
+        </c-lb.button>
+      </div>
+    {% endif %}
+  </section>
+{% endblock content %}

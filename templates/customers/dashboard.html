@@ -1,0 +1,126 @@
+{% extends "entrance.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "My Account" %}
+{% endblock title %}
+{% block meta_description %}
+  {% trans "Manage your account, addresses, orders, and security settings." %}
+{% endblock meta_description %}
+{% block content %}
+  <section class="container mx-auto px-4 py-12">
+    <c-lb.text as="h1" size="2xl" class="mb-6 font-bold">
+      {% trans "My Account" %}
+    </c-lb.text>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {# Profile card #}
+      <a href="{% url 'customers:profile' %}" class="block">
+        <c-lb.card border class="h-full transition hover:shadow-md">
+          <c-lb.card.body>
+            <div class="flex items-center gap-2">
+              <c-lbi n="rmx.user-3" w="1.5em" h="1.5em" class="text-primary" />
+              <c-lb.card.title>
+                {% trans "Profile" %}
+              </c-lb.card.title>
+            </div>
+            <c-lb.text as="p" size="sm" variant="neutral">
+              {% trans "View and update your personal information." %}
+            </c-lb.text>
+          </c-lb.card.body>
+        </c-lb.card>
+      </a>
+      {# Addresses card #}
+      <a href="{% url 'customers:addresses' %}" class="block">
+        <c-lb.card border class="h-full transition hover:shadow-md">
+          <c-lb.card.body>
+            <div class="flex items-center gap-2">
+              <c-lbi n="rmx.map-pin" w="1.5em" h="1.5em" class="text-primary" />
+              <c-lb.card.title>
+                {% trans "Addresses" %}
+              </c-lb.card.title>
+              {% if address_count %}
+                <c-lb.badge variant="neutral" size="sm">
+                  {{ address_count }} {% blocktrans count address_count as count %}address{% plural %}addresses{% endblocktrans %}
+                </c-lb.badge>
+              {% endif %}
+            </div>
+            <c-lb.text as="p" size="sm" variant="neutral">
+              {% trans "Manage your saved delivery and billing addresses." %}
+            </c-lb.text>
+          </c-lb.card.body>
+        </c-lb.card>
+      </a>
+      {# Orders card #}
+      <a href="{% url 'orders:history' %}" class="block">
+        <c-lb.card border class="h-full transition hover:shadow-md">
+          <c-lb.card.body>
+            <div class="flex items-center gap-2">
+              <c-lbi n="rmx.shopping-bag" w="1.5em" h="1.5em" class="text-primary" />
+              <c-lb.card.title>
+                {% trans "Orders" %}
+              </c-lb.card.title>
+              {% if order_count %}
+                <c-lb.badge variant="neutral" size="sm">{{ order_count }} {% trans "orders" %}</c-lb.badge>
+              {% endif %}
+            </div>
+            <c-lb.text as="p" size="sm" variant="neutral">
+              {% trans "View and track your order history." %}
+            </c-lb.text>
+          </c-lb.card.body>
+        </c-lb.card>
+      </a>
+      {# Wishlist card #}
+      <a href="{% url 'customers:wishlist' %}" class="block">
+        <c-lb.card border class="h-full transition hover:shadow-md">
+          <c-lb.card.body>
+            <div class="flex items-center gap-2">
+              <c-lbi n="rmx.heart" w="1.5em" h="1.5em" class="text-primary" />
+              <c-lb.card.title>
+                {% trans "Wishlist" %}
+              </c-lb.card.title>
+              {% if wishlist_count %}
+                <c-lb.badge variant="neutral" size="sm">{{ wishlist_count }} {% trans "items" %}</c-lb.badge>
+              {% endif %}
+            </div>
+            <c-lb.text as="p" size="sm" variant="neutral">
+              {% trans "Browse items you have saved for later." %}
+            </c-lb.text>
+          </c-lb.card.body>
+        </c-lb.card>
+      </a>
+      {# Returns card - links to orders #}
+      <a href="{% url 'orders:history' %}" class="block">
+        <c-lb.card border class="h-full transition hover:shadow-md">
+          <c-lb.card.body>
+            <div class="flex items-center gap-2">
+              <c-lbi n="rmx.arrow-go-back" w="1.5em" h="1.5em" class="text-primary" />
+              <c-lb.card.title>
+                {% trans "Returns" %}
+              </c-lb.card.title>
+            </div>
+            <c-lb.text as="p" size="sm" variant="neutral">
+              {% trans "Request a return or check the status of an existing one." %}
+            </c-lb.text>
+          </c-lb.card.body>
+        </c-lb.card>
+      </a>
+      {# Security card #}
+      <a href="{% url 'customers:security' %}" class="block">
+        <c-lb.card border class="h-full transition hover:shadow-md">
+          <c-lb.card.body>
+            <div class="flex items-center gap-2">
+              <c-lbi n="rmx.shield-check" w="1.5em" h="1.5em" class="text-primary" />
+              <c-lb.card.title>
+                {% trans "Security" %}
+              </c-lb.card.title>
+            </div>
+            <c-lb.text as="p" size="sm" variant="neutral">
+              {% trans "Manage your password and two-factor authentication." %}
+            </c-lb.text>
+          </c-lb.card.body>
+        </c-lb.card>
+      </a>
+    </div>
+  </section>
+{% endblock content %}

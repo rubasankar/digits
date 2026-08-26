@@ -1,0 +1,29 @@
+{% extends "entrance.html" %}
+
+{% load i18n %}
+
+{% block content %}
+  <section class="container mx-auto max-w-2xl px-4 py-12">
+    {% if checkout_steps %}
+      <c-lb.steps class="mb-10 w-full">
+        {% for step in checkout_steps %}
+          {% if step.state == "done" %}
+            <c-lb.steps.item variant="primary">
+              <a href="{% url step.url %}">{{ step.name.label }}</a>
+            </c-lb.steps.item>
+          {% elif step.state == "current" %}
+            <c-lb.steps.item variant="primary">
+              {{ step.name.label }}
+            </c-lb.steps.item>
+          {% else %}
+            <c-lb.steps.item>
+              {{ step.name.label }}
+            </c-lb.steps.item>
+          {% endif %}
+        {% endfor %}
+      </c-lb.steps>
+    {% endif %}
+    {% block checkout_content %}
+    {% endblock checkout_content %}
+  </section>
+{% endblock content %}

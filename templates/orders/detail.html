@@ -1,0 +1,67 @@
+{% extends "entrance.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "Order" %} {{ order.number }}
+{% endblock title %}
+{% block meta_description %}
+  {% trans "Order details and status." %}
+{% endblock meta_description %}
+{% block content %}
+  <section class="container mx-auto max-w-3xl px-4 py-12">
+    <c-components.breadcrumbs :items="breadcrumb_items" class="mb-4" />
+    <div class="mb-6 flex flex-wrap items-center gap-3">
+      <c-lb.text as="h1" size="2xl" class="font-bold">
+        {{ order.number }}
+      </c-lb.text>
+      <c-components.badge.order_status status="{{ order.status }}" />
+    </div>
+    <div class="flex flex-col gap-6">
+      <c-components.order_summary :order="order" />
+      {% if status_history %}
+        <c-lb.card border>
+          <c-lb.card.body>
+            <c-lb.card.title>
+              {% trans "Order Timeline" %}
+            </c-lb.card.title>
+            <c-lb.timeline direction="vertical">
+              {% for entry in status_history %}
+                <c-lb.timeline.item icon="rmx.checkbox-circle" variant="primary">
+                  <c-slot name="endSlot">
+                    <c-lb.timeline.end>
+                      <time class="text-sm text-base-content/70">
+                        {{ entry.changed_at|date:"N j, Y, g:i a" }}
+                      </time>
+                      <c-lb.text as="p" class="font-medium">
+                        {{ entry.new_status }}
+                      </c-lb.text>
+                      {% if entry.note %}
+                        <c-lb.text as="p" size="sm" variant="neutral">
+                          {{ entry.note }}
+                        </c-lb.text>
+                      {% endif %}
+                    </c-lb.timeline.end>
+                  </c-slot>
+                </c-lb.timeline.item>
+              {% endfor %}
+            </c-lb.timeline>
+          </c-lb.card.body>
+        </c-lb.card>
+      {% endif %}
+      <div class="flex flex-wrap items-center gap-2">
+        <c-lb.button as="a" href="{% url 'orders:history' %}" btnStyle="ghost">
+          <c-lbi n="rmx.arrow-left-s" />
+          {% trans "Back to Order History" %}
+        </c-lb.button>
+        {% if can_return %}
+          <c-lb.button as="a"
+                       href="{% url 'orders:return_create' number=order.number %}"
+                       btnStyle="outline">
+            {% trans "Request Return" %}
+          </c-lb.button>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+{% endblock content %}

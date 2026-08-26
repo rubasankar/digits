@@ -1,0 +1,95 @@
+{% extends "entrance.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "My Addresses" %}
+{% endblock title %}
+{% block meta_description %}
+  {% trans "Manage your saved addresses." %}
+{% endblock meta_description %}
+{% block content %}
+  <section class="container mx-auto px-4 py-12">
+    <c-lb.link href="{% url 'customers:dashboard' %}"
+               class="mb-4 inline-flex items-center gap-1">
+      <c-lbi n="rmx.arrow-left-s" w="1.25em" h="1.25em" />
+      {% trans "Back to Account" %}
+    </c-lb.link>
+    <div class="mb-6 flex flex-wrap items-center justify-between gap-3">
+      <c-lb.text as="h1" size="2xl" class="font-bold">
+        {% trans "My Addresses" %}
+      </c-lb.text>
+      <c-lb.button as="a"
+                   href="{% url 'customers:address_add' %}"
+                   variant="primary"
+                   size="sm">
+        <c-lbi n="rmx.add" w="1em" h="1em" />
+        {% trans "Add Address" %}
+      </c-lb.button>
+    </div>
+    {% if addresses %}
+      <div class="grid gap-4 sm:grid-cols-2">
+        {% for address in addresses %}
+          <c-lb.card border>
+            <c-lb.card.body>
+              <div class="flex flex-wrap items-center gap-2">
+                <c-lb.text as="span" class="font-medium">
+                  {{ address.full_name }}
+                </c-lb.text>
+                {% if address.is_default %}
+                  <c-lb.badge variant="success" size="sm">
+                    {% trans "Default" %}
+                  </c-lb.badge>
+                {% endif %}
+                <c-lb.badge variant="neutral" size="sm">
+                  {{ address.get_address_type_display }}
+                </c-lb.badge>
+              </div>
+              <address class="text-sm not-italic text-base-content/70">
+                {{ address.address_line1 }}{% if address.address_line2 %}, {{ address.address_line2 }}{% endif %}<br />
+                {% if address.landmark %}
+                  {% trans "Near:" %} {{ address.landmark }}<br />
+                {% endif %}
+                {{ address.city }}, {{ address.state }} {{ address.pincode }}
+                <br />
+                {{ address.country.name }}
+                <br />
+                {{ address.contact_number }}
+              </address>
+              <c-lb.card.actions justify="start">
+                <c-lb.button as="a"
+                             href="{% url 'customers:address_edit' pk=address.pk %}"
+                             btnStyle="outline"
+                             size="sm">
+                  <c-lbi n="rmx.pencil" w="0.9em" h="0.9em" />
+                  {% trans "Edit" %}
+                </c-lb.button>
+                <form method="post"
+                      action="{% url 'customers:address_delete' pk=address.pk %}">
+                  {% csrf_token %}
+                  <c-lb.button type="submit"
+                               btnStyle="ghost"
+                               size="sm"
+                               aria-label="{% trans 'Delete address' %}">
+                    <c-lbi n="rmx.delete-bin" w="0.9em" h="0.9em" />
+                    {% trans "Delete" %}
+                  </c-lb.button>
+                </form>
+              </c-lb.card.actions>
+            </c-lb.card.body>
+          </c-lb.card>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="flex flex-col items-center gap-3 py-16 text-center">
+        <c-lbi n="rmx.map-pin-2" w="4em" h="4em" class="text-base-content/30" />
+        <c-lb.text as="p" variant="neutral">
+          {% trans "You have no saved addresses." %}
+        </c-lb.text>
+        <c-lb.button as="a" href="{% url 'customers:address_add' %}" btnStyle="outline">
+          {% trans "Add Your First Address" %}
+        </c-lb.button>
+      </div>
+    {% endif %}
+  </section>
+{% endblock content %}

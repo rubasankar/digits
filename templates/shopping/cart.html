@@ -1,0 +1,162 @@
+{% extends "entrance.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "Your Cart" %}
+{% endblock title %}
+{% block meta_description %}
+  {% trans "Review the items in your shopping cart." %}
+{% endblock meta_description %}
+{% block content %}
+  <section class="container mx-auto px-4 py-12">
+    <c-components.breadcrumbs :items="breadcrumb_items" class="mb-4" />
+    <c-lb.text as="h1" size="2xl" class="mb-6 font-bold">
+      {% trans "Your Cart" %}
+    </c-lb.text>
+    {% if items %}
+      <div class="grid gap-8 lg:grid-cols-3">
+        {# Cart item list #}
+        <div class="flex flex-col divide-y divide-base-200 lg:col-span-2">
+          {% for item in items %}
+            <div class="flex flex-wrap items-center gap-4 py-4 first:pt-0">
+              <div class="h-20 w-20 shrink-0 overflow-hidden rounded-box bg-base-200">
+                {% for img in item.variant.images.all %}
+                  {% if img.is_primary %}
+                    <img src="{{ img.thumbnail.url }}"
+                         alt="{{ img.alt_text|default:item.variant.product.name }}"
+                         loading="lazy"
+                         class="h-full w-full object-cover" />
+                  {% endif %}
+                {% endfor %}
+              </div>
+              <div class="min-w-40 flex-1">
+                <c-lb.text as="p" class="font-medium">
+                  {{ item.variant.product.name }}
+                </c-lb.text>
+                <c-lb.text as="p" size="sm" variant="neutral">{% trans "SKU:" %} {{ item.variant.sku }}</c-lb.text>
+                {% if item.unit_price_at_add is not None %}
+                  <c-lb.text as="p" size="sm" variant="neutral">
+                    {{ item.unit_price_at_add }}
+                  </c-lb.text>
+                {% endif %}
+              </div>
+              <div class="flex items-center gap-1">
+                <form method="post" action="{% url 'shopping:update' item_id=item.id %}">
+                  {% csrf_token %}
+                  <input type="hidden" name="quantity" value="{{ item.quantity|add:'-1' }}" />
+                  {% if item.quantity <= 1 %}
+                    <c-lb.button type="submit"
+                                 btnStyle="ghost"
+                                 size="sm"
+                                 class="btn-square"
+                                 disabled
+                                 aria-label="{% trans 'Decrease quantity' %}">
+                      <c-lbi n="rmx.subtract" w="1em" h="1em" />
+                    </c-lb.button>
+                  {% else %}
+                    <c-lb.button type="submit"
+                                 btnStyle="ghost"
+                                 size="sm"
+                                 class="btn-square"
+                                 aria-label="{% trans 'Decrease quantity' %}">
+                      <c-lbi n="rmx.subtract" w="1em" h="1em" />
+                    </c-lb.button>
+                  {% endif %}
+                </form>
+                <c-lb.text as="span" class="w-8 text-center font-medium">
+                  {{ item.quantity }}
+                </c-lb.text>
+                <form method="post" action="{% url 'shopping:update' item_id=item.id %}">
+                  {% csrf_token %}
+                  <input type="hidden" name="quantity" value="{{ item.quantity|add:'1' }}" />
+                  {% if item.quantity >= 999 %}
+                    <c-lb.button type="submit"
+                                 btnStyle="ghost"
+                                 size="sm"
+                                 class="btn-square"
+                                 disabled
+                                 aria-label="{% trans 'Increase quantity' %}">
+                      <c-lbi n="rmx.add" w="1em" h="1em" />
+                    </c-lb.button>
+                  {% else %}
+                    <c-lb.button type="submit"
+                                 btnStyle="ghost"
+                                 size="sm"
+                                 class="btn-square"
+                                 aria-label="{% trans 'Increase quantity' %}">
+                      <c-lbi n="rmx.add" w="1em" h="1em" />
+                    </c-lb.button>
+                  {% endif %}
+                </form>
+              </div>
+              <div class="flex items-center gap-3">
+                <c-lb.text as="span" class="w-20 text-right font-medium">
+                  {% if item.line_total is not None %}{{ item.line_total }}{% else %}--{% endif %}
+                </c-lb.text>
+                <form method="post" action="{% url 'shopping:remove' item_id=item.id %}">
+                  {% csrf_token %}
+                  <c-lb.button type="submit"
+                               btnStyle="ghost"
+                               size="xs"
+                               aria-label="{% trans 'Remove item' %}">
+                    <c-lbi n="rmx.delete-bin" w="1em" h="1em" />
+                  </c-lb.button>
+                </form>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        {# Order summary panel #}
+        <div>
+          <c-lb.card border>
+            <c-lb.card.body>
+              <c-lb.card.title>
+                {% trans "Order Summary" %}
+              </c-lb.card.title>
+              <div class="flex justify-between text-sm">
+                <span>{% trans "Subtotal" %}</span>
+                <span>{{ subtotal }}</span>
+              </div>
+              <c-lb.divider class="my-1" />
+              <div class="flex justify-between font-semibold">
+                <span>{% trans "Total" %}</span>
+                <span>{{ subtotal }}</span>
+              </div>
+              <form method="post" action="{% url 'shopping:apply_coupon' %}" class="mt-4">
+                {% csrf_token %}
+                <div class="flex gap-2">
+                  <c-lb.input type="text"
+                              name="coupon_code"
+                              placeholder="{% trans 'Coupon code' %}"
+                              value="{{ cart.coupon_code }}"
+                              size="sm"
+                              class="flex-1" />
+                  <c-lb.button type="submit" btnStyle="outline" size="sm">
+                    {% trans "Apply" %}
+                  </c-lb.button>
+                </div>
+              </form>
+              <c-lb.button as="a"
+                           href="{% url 'checkout:start' %}"
+                           variant="primary"
+                           class="mt-4 w-full">
+                {% trans "Proceed to Checkout" %}
+              </c-lb.button>
+            </c-lb.card.body>
+          </c-lb.card>
+        </div>
+      </div>
+    {% else %}
+      <div class="flex flex-col items-center gap-3 py-16 text-center">
+        <c-lbi n="rmx.shopping-cart" w="4em" h="4em" class="text-base-content/30" />
+        <c-lb.text as="p" variant="neutral">
+          {% trans "Your cart is empty." %}
+        </c-lb.text>
+        <c-lb.button as="a" href="{% url 'catalogue:index' %}" btnStyle="outline">
+          {% trans "Continue Shopping" %}
+        </c-lb.button>
+      </div>
+    {% endif %}
+  </section>
+{% endblock content %}

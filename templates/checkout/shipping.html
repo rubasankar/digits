@@ -1,0 +1,79 @@
+{% extends "checkout/base.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "Shipping Method" %}
+{% endblock title %}
+{% block meta_description %}
+  {% trans "Select a shipping method for your order." %}
+{% endblock meta_description %}
+{% block checkout_content %}
+  <c-lb.text as="h1" size="2xl" class="mb-6 font-bold">
+    {% trans "Shipping Method" %}
+  </c-lb.text>
+  {% if error %}
+    <c-lb.alert variant="error" class="mb-4">
+      {{ error }}
+    </c-lb.alert>
+  {% endif %}
+  {% if available_methods %}
+    <form method="post"
+          action="{% url 'checkout:shipping' %}"
+          class="flex flex-col gap-4">
+      {% csrf_token %}
+      <div class="flex flex-col gap-3">
+        {% for method in available_methods %}
+          <label class="flex cursor-pointer items-start gap-3 rounded-box border border-base-300 p-4 has-[:checked]:border-primary has-[:checked]:ring-1 has-[:checked]:ring-primary">
+            {% if forloop.first %}
+              <c-lb.radio name="shipping_method_id"
+                          value="{{ method.pk }}"
+                          class="mt-1"
+                          checked />
+            {% else %}
+              <c-lb.radio name="shipping_method_id" value="{{ method.pk }}" class="mt-1" />
+            {% endif %}
+            <div class="flex flex-1 items-start justify-between gap-3">
+              <div>
+                <c-lb.text as="span" class="font-medium">
+                  {{ method.name }}
+                </c-lb.text>
+                {% if method.description %}
+                  <c-lb.text as="p" size="sm" variant="neutral">
+                    {{ method.description }}
+                  </c-lb.text>
+                {% endif %}
+                {% if method.estimated_days_min and method.estimated_days_max %}
+                  <c-lb.text as="p" size="sm" variant="neutral">
+                    {{ method.estimated_days_min }}-{{ method.estimated_days_max }} {% trans "business days" %}
+                  </c-lb.text>
+                {% endif %}
+              </div>
+              <c-lb.text as="span" class="whitespace-nowrap font-semibold">
+                {{ method.base_rate }}
+              </c-lb.text>
+            </div>
+          </label>
+        {% endfor %}
+      </div>
+      <div class="flex items-center gap-2">
+        <c-lb.button as="a" href="{% url 'checkout:address' %}" btnStyle="ghost">
+          {% trans "Back" %}
+        </c-lb.button>
+        <c-lb.button type="submit" variant="primary">
+          {% trans "Continue to Payment" %}
+        </c-lb.button>
+      </div>
+    </form>
+  {% else %}
+    <c-lb.alert variant="warning">
+      <p>{% trans "No shipping methods are available for your selected address." %}</p>
+    </c-lb.alert>
+    <c-lb.button as="a"
+                 href="{% url 'checkout:address' %}"
+                 btnStyle="outline"
+                 class="mt-4">
+      {% trans "Change Address" %}
+    </c-lb.button>
+  {% endif %}
+{% endblock checkout_content %}

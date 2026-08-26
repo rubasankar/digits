@@ -1,0 +1,51 @@
+{% extends "entrance.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "All Categories" %}
+{% endblock title %}
+{% block content %}
+  <section class="container mx-auto px-4 py-12">
+    <c-lb.text as="h1" size="2xl" class="mb-6 font-bold">
+      {% trans "Browse Categories" %}
+    </c-lb.text>
+    {% if categories %}
+      <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+        {% for cat in categories %}
+          <a href="{% url 'catalogue:category' slug=cat.slug %}" class="block">
+            <c-lb.card border class="h-full transition hover:shadow-md">
+              <c-lb.card.body class="items-center gap-2 text-center">
+                {% if cat.thumbnail %}
+                  <c-lb.avatar size="lg" rounded="full">
+                    <img src="{{ cat.thumbnail.url }}" alt="{{ cat.name }}" loading="lazy" />
+                  </c-lb.avatar>
+                {% else %}
+                  <c-lb.avatar size="lg" rounded="full">
+                    <c-lbi n="rmx.price-tag-3" w="2em" h="2em" />
+                  </c-lb.avatar>
+                {% endif %}
+                <c-lb.text as="span" class="font-medium">
+                  {{ cat.name }}
+                </c-lb.text>
+                <c-lb.text as="span" size="sm" variant="neutral">
+                  {% blocktrans count count=cat.product_count %}{{ count }} product{% plural %}{{ count }} products{% endblocktrans %}
+                </c-lb.text>
+              </c-lb.card.body>
+            </c-lb.card>
+          </a>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="flex flex-col items-center gap-3 py-16 text-center">
+        <c-lbi n="rmx.price-tag-3" w="3em" h="3em" class="text-base-content/30" />
+        <c-lb.text as="p" variant="neutral">
+          {% trans "No categories available yet." %}
+        </c-lb.text>
+        <c-lb.button as="a" href="{% url 'core:home' %}" btnStyle="outline">
+          {% trans "Back to Home" %}
+        </c-lb.button>
+      </div>
+    {% endif %}
+  </section>
+{% endblock content %}

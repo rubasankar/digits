@@ -1,0 +1,95 @@
+{% extends "entrance.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "Order History" %}
+{% endblock title %}
+{% block meta_description %}
+  {% trans "View your past orders." %}
+{% endblock meta_description %}
+{% block content %}
+  <section class="container mx-auto px-4 py-12">
+    <c-lb.text as="h1" size="2xl" class="mb-6 font-bold">
+      {% trans "Order History" %}
+    </c-lb.text>
+    {% if page_obj %}
+      <div class="overflow-x-auto rounded-box border border-base-200">
+        <c-lb.table zebra>
+          <thead>
+            <tr>
+              <th>{% trans "Order" %}</th>
+              <th>{% trans "Date" %}</th>
+              <th>{% trans "Items" %}</th>
+              <th>{% trans "Total" %}</th>
+              <th>{% trans "Status" %}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for order in page_obj %}
+              <tr>
+                <td>
+                  <c-lb.link href="{% url 'orders:detail' number=order.number %}">
+                    {{ order.number }}
+                  </c-lb.link>
+                </td>
+                <td>{{ order.created|date:"N j, Y" }}</td>
+                <td>{{ order.items.count }}</td>
+                <td>{{ order.total_amount }}</td>
+                <td>
+                  <c-components.badge.order_status status="{{ order.status }}" />
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </c-lb.table>
+      </div>
+      {% if page_obj.has_other_pages %}
+        <nav aria-label="{% trans 'Pagination' %}"
+             class="mt-8 flex justify-center">
+          <div class="join">
+            {% if page_obj.has_previous %}
+              <a href="?page={{ page_obj.previous_page_number }}"
+                 aria-label="{% trans 'Previous page' %}"
+                 class="join-item btn">
+                <c-lbi n="rmx.arrow-left-s" />
+                {% trans "Previous" %}
+              </a>
+            {% else %}
+              <span class="join-item btn btn-disabled">
+                <c-lbi n="rmx.arrow-left-s" />
+                {% trans "Previous" %}
+              </span>
+            {% endif %}
+            <span class="join-item btn btn-disabled">
+              {% blocktrans with current=page_obj.number total=page_obj.paginator.num_pages %}Page {{ current }} of {{ total }}{% endblocktrans %}
+            </span>
+            {% if page_obj.has_next %}
+              <a href="?page={{ page_obj.next_page_number }}"
+                 aria-label="{% trans 'Next page' %}"
+                 class="join-item btn">
+                {% trans "Next" %}
+                <c-lbi n="rmx.arrow-right-s" />
+              </a>
+            {% else %}
+              <span class="join-item btn btn-disabled">
+                {% trans "Next" %}
+                <c-lbi n="rmx.arrow-right-s" />
+              </span>
+            {% endif %}
+          </div>
+        </nav>
+      {% endif %}
+    {% else %}
+      <div class="flex flex-col items-center gap-3 py-16 text-center">
+        <c-lbi n="rmx.inbox" w="4em" h="4em" class="text-base-content/30" />
+        <c-lb.text as="p" variant="neutral">
+          {% trans "You have no orders yet." %}
+        </c-lb.text>
+        <c-lb.button as="a" href="{% url 'catalogue:index' %}" btnStyle="outline">
+          {% trans "Browse our catalogue" %}
+        </c-lb.button>
+      </div>
+    {% endif %}
+  </section>
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% load lb_tags %}
+
+<c-vars items="" />
+<c-lb.breadcrumbs>
+  {% for item in items %}
+    {% if item.url %}
+      <c-lb.breadcrumbs.item href="{{ item.url }}">
+        {{ item.label }}
+      </c-lb.breadcrumbs.item>
+    {% else %}
+      <c-lb.breadcrumbs.item>
+        {{ item.label }}
+      </c-lb.breadcrumbs.item>
+    {% endif %}
+  {% endfor %}
+</c-lb.breadcrumbs>

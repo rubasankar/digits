@@ -1,0 +1,20 @@
+{% load i18n %}
+
+<c-vars title="" subtitle="" titleSize="2xl" />
+<c-lb.hero class="{{ class }}">
+  <c-lb.hero.content class="text-center">
+    <div class="flex max-w-lg flex-col items-center gap-2">
+      {% if title %}
+        <c-lb.text as="h1" size="{{ titleSize }}" class="font-bold">
+          {{ title }}
+        </c-lb.text>
+      {% endif %}
+      {% if subtitle %}
+        <c-lb.text as="p" size="lg" variant="neutral">
+          {{ subtitle }}
+        </c-lb.text>
+      {% endif %}
+      {{ slot }}
+    </div>
+  </c-lb.hero.content>
+</c-lb.hero>

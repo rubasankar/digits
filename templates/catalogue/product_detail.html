@@ -1,0 +1,211 @@
+{% extends "entrance.html" %}
+
+{% load i18n static %}
+
+{% block title %}
+  {{ product.meta_title|default:product.name }}
+{% endblock title %}
+{% block seo_meta %}
+  <meta name="description"
+        content="{{ product.meta_description|default:product.description|truncatechars:160 }}" />
+  <title>{{ product.meta_title|default:product.name }}</title>
+{% endblock seo_meta %}
+{% block json_ld %}
+  {% if lowest_price %}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "{{ product.name|escapejs }}",
+            "description": "{{ product.meta_description|default:product.description|truncatechars:160|escapejs }}",
+            {% if primary_image_url %} "image": "{{ primary_image_url }}",
+            {% endif %} "offers": {
+                "@type": "Offer",
+                "priceCurrency": "{{ currency_code|escapejs }}",
+                "price": "{{ lowest_price }}",
+                "availability": "https://schema.org/InStock"
+            }
+        }
+    </script>
+  {% endif %}
+{% endblock json_ld %}
+{% block content %}
+  <section class="container mx-auto px-4 py-8">
+    <c-components.breadcrumbs :items="breadcrumb_items" class="mb-4" />
+    <div class="grid gap-8 lg:grid-cols-2">
+      {# Gallery: the selected variant's own photos #}
+      <div {% if selected_images|length > 1 %}x-data="{ current: '{{ selected_images.0|escapejs }}' }"{% endif %}>
+        <div class="aspect-square overflow-hidden rounded-box bg-base-200">
+          {% if selected_images %}
+            <img alt="{{ product.name }}"
+                 {% if selected_images|length > 1 %}x-bind:src="current"{% else %}src="{{ selected_images.0 }}"{% endif %}
+                 class="h-full w-full object-cover" />
+          {% else %}
+            <div class="flex h-full w-full items-center justify-center">
+              <c-lbi n="rmx.image" w="3em" h="3em" class="text-base-content/30" />
+            </div>
+          {% endif %}
+        </div>
+        {% if selected_images|length > 1 %}
+          <div class="mt-3 flex flex-wrap gap-2">
+            {% for url in selected_images %}
+              <button type="button"
+                      x-on:click="current = '{{ url|escapejs }}'"
+                      x-bind:class="current === '{{ url|escapejs }}' ? 'ring-2 ring-primary' : 'ring-1 ring-base-300'"
+                      class="h-16 w-16 shrink-0 overflow-hidden rounded-box">
+                <img src="{{ url }}"
+                     alt=""
+                     loading="lazy"
+                     class="h-full w-full object-cover" />
+              </button>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+      {# Info + add to cart #}
+      <div class="flex flex-col gap-4">
+        <div>
+          <c-lb.text as="h1" size="2xl" class="font-bold">
+            {{ product.name }}
+          </c-lb.text>
+          {% if product.brand %}
+            <c-lb.text as="p" variant="neutral">
+              {{ product.brand.name }}
+            </c-lb.text>
+          {% endif %}
+        </div>
+        <c-lb.text as="p" size="xl" class="font-semibold">
+          {% if selected_price is not None %}
+            {{ selected_price }} {{ currency_code }}
+          {% else %}
+            {% trans "N/A" %}
+          {% endif %}
+        </c-lb.text>
+        {% if selected_stock is not None %}
+          <div>
+            {% if selected_stock > 0 %}
+              <c-lb.badge variant="success">
+                {% trans "In Stock" %}
+              </c-lb.badge>
+            {% else %}
+              <c-lb.badge variant="error">
+                {% trans "Out of Stock" %}
+              </c-lb.badge>
+            {% endif %}
+          </div>
+        {% endif %}
+        {% if product.description %}
+          <div class="prose prose-sm max-w-none text-base-content">{{ product.description|linebreaks }}</div>
+        {% endif %}
+        {# Other options: each links to its own ?variant= page, no client-side swap #}
+        {% if variant_options %}
+          <div>
+            <c-lb.text as="span" size="sm" class="font-medium">
+              {% trans "Available Options" %}
+            </c-lb.text>
+            <div class="mt-2 flex flex-wrap gap-3">
+              {% for opt in variant_options %}
+                <a href="?variant={{ opt.sku|urlencode }}"
+                   class="flex w-24 flex-col items-center gap-1 rounded-box border p-2 text-center {% if opt.is_selected %}border-primary ring-1 ring-primary{% else %}border-base-300{% endif %}">
+                  <div class="h-14 w-14 overflow-hidden rounded-box bg-base-200">
+                    {% if opt.image %}
+                      <img src="{{ opt.image }}"
+                           alt="{{ opt.label }}"
+                           loading="lazy"
+                           class="h-full w-full object-cover" />
+                    {% else %}
+                      <div class="flex h-full w-full items-center justify-center">
+                        <c-lbi n="rmx.image" w="1.5em" h="1.5em" class="text-base-content/30" />
+                      </div>
+                    {% endif %}
+                  </div>
+                  <c-lb.text as="span" size="xs" class="line-clamp-1">
+                    {{ opt.label }}
+                  </c-lb.text>
+                  {% if opt.price is not None %}
+                    <c-lb.text as="span" size="xs" variant="neutral">
+                      {{ opt.price }}
+                    </c-lb.text>
+                  {% endif %}
+                </a>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+        <form method="post"
+              action="{% url 'shopping:add' %}"
+              hx-post="{% url 'shopping:add' %}"
+              hx-target="#cart-badge"
+              hx-swap="outerHTML"
+              class="mt-2">
+          {% csrf_token %}
+          <input type="hidden" name="variant_id" value="{{ selected_variant.pk }}" />
+          <input type="hidden" name="quantity" value="1" />
+          {% if not selected_variant or selected_stock == 0 %}
+            <c-lb.button type="submit"
+                         variant="primary"
+                         size="lg"
+                         class="w-full sm:w-auto"
+                         disabled>
+              {% trans "Out of Stock" %}
+            </c-lb.button>
+          {% else %}
+            <c-lb.button type="submit" variant="primary" size="lg" class="w-full sm:w-auto">
+              {% trans "Add to Cart" %}
+            </c-lb.button>
+          {% endif %}
+        </form>
+      </div>
+    </div>
+    {# Reviews section #}
+    <section class="mt-16">
+      <c-lb.text as="h2" size="xl" class="mb-6 font-semibold" id="reviews-heading">
+        {% trans "Customer Reviews" %}
+      </c-lb.text>
+      {% if reviews %}
+        <div class="flex flex-col gap-4">
+          {% for review in reviews %}
+            <c-lb.card border>
+              <c-lb.card.body>
+                <div class="flex flex-wrap items-center gap-2">
+                  <div aria-label="{{ review.rating }} {% trans 'out of 5 stars' %}"
+                       class="flex gap-0.5">
+                    {% for i in "12345" %}
+                      {% if forloop.counter <= review.rating %}
+                        <c-lbi n="rmx.star" fill class="h-4 w-4 text-warning" />
+                      {% else %}
+                        <c-lbi n="rmx.star" class="h-4 w-4 text-base-content/30" />
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                  {% if review.title %}
+                    <c-lb.text as="span" class="font-medium">
+                      {{ review.title }}
+                    </c-lb.text>
+                  {% endif %}
+                  {% if review.is_verified_purchase %}
+                    <c-lb.badge variant="neutral" size="sm">
+                      {% trans "Verified Purchase" %}
+                    </c-lb.badge>
+                  {% endif %}
+                </div>
+                {% if review.body %}
+                  <c-lb.text as="p" variant="neutral">
+                    {{ review.body }}
+                  </c-lb.text>
+                {% endif %}
+                <c-lb.text as="p" size="sm" variant="neutral">
+                  {{ review.created|date:"N j, Y" }}
+                </c-lb.text>
+              </c-lb.card.body>
+            </c-lb.card>
+          {% endfor %}
+        </div>
+      {% else %}
+        <c-lb.text as="p" variant="neutral">
+          {% trans "No reviews yet for this product." %}
+        </c-lb.text>
+      {% endif %}
+    </section>
+  </section>
+{% endblock content %}

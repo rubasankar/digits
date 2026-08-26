@@ -1,0 +1,200 @@
+{% extends "checkout/base.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "Shipping Address" %}
+{% endblock title %}
+{% block meta_description %}
+  {% trans "Select or enter your shipping address." %}
+{% endblock meta_description %}
+{% block checkout_content %}
+  <c-lb.text as="h1" size="2xl" class="mb-6 font-bold">
+    {% trans "Shipping Address" %}
+  </c-lb.text>
+  {% if error %}
+    <c-lb.alert variant="error" class="mb-4">
+      {{ error }}
+    </c-lb.alert>
+  {% endif %}
+  {% if address_forms %}
+    <form method="post"
+          action="{% url 'checkout:address' %}"
+          class="mb-8 flex flex-col gap-4">
+      {% csrf_token %}
+      <div class="flex flex-col gap-3">
+        {% for item in address_forms %}
+          {% with addr=item.address form=item.form %}
+            <c-lb.card border
+                       class="has-[:checked]:border-primary has-[:checked]:ring-1 has-[:checked]:ring-primary">
+              <c-lb.card.body class="flex items-start gap-3">
+                <label class="flex flex-1 cursor-pointer items-start gap-3">
+                  {% if forloop.first %}
+                    <c-lb.radio name="address_id" value="{{ addr.pk }}" class="mt-1" checked />
+                  {% else %}
+                    <c-lb.radio name="address_id" value="{{ addr.pk }}" class="mt-1" />
+                  {% endif %}
+                  <div class="flex-1">
+                    <div class="flex flex-wrap items-center gap-2">
+                      <c-lb.text as="span" class="font-medium">
+                        {{ addr.full_name }}
+                      </c-lb.text>
+                      {% if addr.is_default %}
+                        <c-lb.badge variant="primary" size="sm">
+                          {% trans "Default" %}
+                        </c-lb.badge>
+                      {% endif %}
+                    </div>
+                    <c-lb.text as="p" size="sm" variant="neutral" class="mt-1">
+                      {{ addr.address_line1 }}{% if addr.address_line2 %}, {{ addr.address_line2 }}{% endif %}<br />
+                      {{ addr.city }}, {{ addr.state }} {{ addr.pincode }}
+                      <br />
+                      {{ addr.country.name }}
+                    </c-lb.text>
+                  </div>
+                </label>
+                <c-lb.button variant="neutral"
+                             btnStyle="ghost"
+                             size="sm"
+                             class="mt-1"
+                             onclick="edit_address_{{ addr.pk|cut:'-' }}.showModal()">
+                  <c-lbi n="rmx.pencil" w="1em" h="1em" />
+                </c-lb.button>
+              </c-lb.card.body>
+            </c-lb.card>
+            <c-lb.modal id="edit_address_{{ addr.pk|cut:'-' }}" withBackdrop>
+              <c-lb.text as="h3" size="lg" class="font-bold">
+                {% trans "Edit Address" %}
+              </c-lb.text>
+              <form method="post"
+                    action="{% url 'checkout:edit_address' pk=addr.pk %}"
+                    class="mt-4 flex flex-col gap-3">
+                {% csrf_token %}
+                {% for field in form %}
+                  <div class="flex flex-col gap-1 {% if field.field.widget.input_type == 'checkbox' %}col-span-2{% endif %}">
+                    {% if field.field.widget.input_type == "checkbox" %}
+                      <label class="flex items-center gap-2">
+                        {% if field.value %}
+                          <c-lb.checkbox name="{{ field.html_name }}"
+                                         id="edit_{{ addr.pk }}_{{ field.id_for_label }}"
+                                         checked />
+                        {% else %}
+                          <c-lb.checkbox name="{{ field.html_name }}"
+                                         id="edit_{{ addr.pk }}_{{ field.id_for_label }}" />
+                        {% endif %}
+                        <span>{{ field.label }}</span>
+                      </label>
+                    {% elif field.field.widget.input_type == "select" %}
+                      <c-lb.fieldset legend="{{ field.label }}{% if field.field.required %} *{% endif %}">
+                        <c-lb.select name="{{ field.html_name }}"
+                                     id="edit_{{ addr.pk }}_{{ field.id_for_label }}">
+                          {% for choice_val, choice_label in field.field.choices %}
+                            <option value="{{ choice_val }}"
+                                    {% if field.value|stringformat:"s" == choice_val|stringformat:"s" %}selected{% endif %}>
+                              {{ choice_label }}
+                            </option>
+                          {% endfor %}
+                        </c-lb.select>
+                      </c-lb.fieldset>
+                    {% else %}
+                      <c-lb.fieldset legend="{{ field.label }}{% if field.field.required %} *{% endif %}">
+                        <c-lb.input type="text"
+                                    name="{{ field.html_name }}"
+                                    id="edit_{{ addr.pk }}_{{ field.id_for_label }}"
+                                    value="{{ field.value|default:'' }}"
+                                    placeholder="{{ field.field.widget.attrs.placeholder|default:'' }}"
+                                    variant="{% if field.errors %}error{% endif %}" />
+                      </c-lb.fieldset>
+                    {% endif %}
+                    {% if field.errors %}
+                      <c-lb.validator.hint>
+                        {{ field.errors|first }}
+                      </c-lb.validator.hint>
+                    {% endif %}
+                  </div>
+                {% endfor %}
+                <c-lb.modal.action class="justify-end">
+                  <form method="dialog" class="flex gap-2">
+                    <c-lb.button btnStyle="ghost">
+                      {% trans "Cancel" %}
+                    </c-lb.button>
+                    <c-lb.button type="submit" variant="primary">
+                      {% trans "Save Changes" %}
+                    </c-lb.button>
+                  </form>
+                </c-lb.modal.action>
+              </form>
+            </c-lb.modal>
+          {% endwith %}
+        {% endfor %}
+      </div>
+      <div>
+        <c-lb.button type="submit" variant="primary">
+          {% trans "Use Selected Address" %}
+        </c-lb.button>
+      </div>
+    </form>
+    <c-lb.divider>
+      {% trans "Or enter a new address" %}
+    </c-lb.divider>
+  {% endif %}
+  <c-lb.card border class="mt-6">
+    <c-lb.card.body>
+      <c-lb.text as="h3" size="lg" class="mb-4 font-bold">
+        {% trans "New Address" %}
+      </c-lb.text>
+      <form method="post"
+            action="{% url 'checkout:address' %}"
+            class="flex flex-col gap-4">
+        {% csrf_token %}
+        <input type="hidden" name="use_new" value="1" />
+        <div class="grid gap-4 sm:grid-cols-2">
+          {% for field in new_address_form %}
+            <div class="flex flex-col gap-1 {% if field.field.widget.input_type == 'checkbox' %}sm:col-span-2{% endif %}">
+              {% if field.field.widget.input_type == "checkbox" %}
+                <label class="flex items-center gap-2">
+                  {% if field.value %}
+                    <c-lb.checkbox name="{{ field.html_name }}" id="{{ field.id_for_label }}" checked />
+                  {% else %}
+                    <c-lb.checkbox name="{{ field.html_name }}" id="{{ field.id_for_label }}" />
+                  {% endif %}
+                  <span>{{ field.label }}</span>
+                </label>
+              {% elif field.field.widget.input_type == "select" %}
+                <c-lb.fieldset legend="{{ field.label }}{% if field.field.required %} *{% endif %}">
+                  <c-lb.select name="{{ field.html_name }}" id="{{ field.id_for_label }}">
+                    {% for choice_val, choice_label in field.field.choices %}
+                      <option value="{{ choice_val }}"
+                              {% if field.value|stringformat:"s" == choice_val|stringformat:"s" %}selected{% endif %}>
+                        {{ choice_label }}
+                      </option>
+                    {% endfor %}
+                  </c-lb.select>
+                </c-lb.fieldset>
+              {% else %}
+                <c-lb.fieldset legend="{{ field.label }}{% if field.field.required %} *{% endif %}">
+                  <c-lb.input type="text"
+                              name="{{ field.html_name }}"
+                              id="{{ field.id_for_label }}"
+                              value="{{ field.value|default:'' }}"
+                              placeholder="{{ field.field.widget.attrs.placeholder|default:'' }}"
+                              variant="{% if field.errors %}error{% endif %}" />
+                </c-lb.fieldset>
+              {% endif %}
+              {% if field.errors %}
+                <c-lb.validator.hint>
+                  {{ field.errors|first }}
+                </c-lb.validator.hint>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+        <div>
+          <c-lb.button type="submit" variant="primary">
+            {% trans "Use New Address" %}
+          </c-lb.button>
+        </div>
+      </form>
+    </c-lb.card.body>
+  </c-lb.card>
+{% endblock checkout_content %}

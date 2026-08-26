@@ -1,0 +1,62 @@
+{% load lb_tags catalogue_tags %}
+
+<c-vars product="" />
+{% default_variant product as default_variant %}
+<c-lb.card>
+  <c-lb.card.figure>
+    {% for variant in product.variants.all %}
+      {% for img in variant.images.all %}
+        {% if img.is_primary %}
+          <img src="{{ img.thumbnail.url }}"
+               alt="{{ img.alt_text|default:product.name }}"
+               loading="lazy" />
+        {% endif %}
+      {% endfor %}
+    {% empty %}
+      <div>
+        <c-lbi n="rmx.image" w="3em" h="3em" />
+      </div>
+    {% endfor %}
+  </c-lb.card.figure>
+  <c-lb.card.body>
+    <a href="{% url 'products:detail' slug=product.slug %}">
+      <c-lb.card.title>
+        {{ product.name }}
+      </c-lb.card.title>
+    </a>
+    {# Price: the default variant's BASE price #}
+    {% if default_variant %}
+      {% variant_base_price default_variant as price %}
+      {% if price is not None %}
+        <c-lb.text as="p" class="font-semibold">
+          {{ price }}
+        </c-lb.text>
+      {% endif %}
+    {% endif %}
+    <c-lb.card.actions justify="start">
+      {% if default_variant %}
+        {% if product.is_shippable %}
+          {% variant_available_stock default_variant as available %}
+        {% endif %}
+        {% if not product.is_shippable or available > 0 %}
+          <form method="post"
+                action="{% url 'shopping:add' %}"
+                hx-post="{% url 'shopping:add' %}"
+                hx-target="#cart-badge"
+                hx-swap="outerHTML">
+            {% csrf_token %}
+            <input type="hidden" name="variant_id" value="{{ default_variant.pk }}" />
+            <input type="hidden" name="quantity" value="1" />
+            <c-lb.button type="submit" variant="primary" size="sm">
+              Add to Cart
+            </c-lb.button>
+          </form>
+        {% else %}
+          <c-lb.badge variant="neutral">
+            Out of Stock
+          </c-lb.badge>
+        {% endif %}
+      {% endif %}
+    </c-lb.card.actions>
+  </c-lb.card.body>
+</c-lb.card>

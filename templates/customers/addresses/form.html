@@ -1,0 +1,101 @@
+{% extends "entrance.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% if is_edit %}
+    {% trans "Edit Address" %}
+  {% else %}
+    {% trans "Add Address" %}
+  {% endif %}
+{% endblock title %}
+{% block meta_description %}
+  {% if is_edit %}
+    {% trans "Update your saved address." %}
+  {% else %}
+    {% trans "Add a new address to your account." %}
+  {% endif %}
+{% endblock meta_description %}
+{% block content %}
+  <section class="container mx-auto max-w-2xl px-4 py-12">
+    <c-lb.link href="{% url 'customers:addresses' %}"
+               class="mb-4 inline-flex items-center gap-1">
+      <c-lbi n="rmx.arrow-left-s" w="1.25em" h="1.25em" />
+      {% trans "Back to Addresses" %}
+    </c-lb.link>
+    <c-lb.text as="h1" size="2xl" class="mb-6 font-bold">
+      {% if is_edit %}
+        {% trans "Edit Address" %}
+      {% else %}
+        {% trans "Add Address" %}
+      {% endif %}
+    </c-lb.text>
+    <c-lb.card border>
+      <c-lb.card.body>
+        <form method="post"
+              action="{% if is_edit %}{% url 'customers:address_edit' pk=address.pk %}{% else %}{% url 'customers:address_add' %}{% endif %}"
+              class="flex flex-col gap-4">
+          {% csrf_token %}
+          {% if form.non_field_errors %}
+            <c-lb.alert variant="error">
+              {% for err in form.non_field_errors %}<p>{{ err }}</p>{% endfor %}
+            </c-lb.alert>
+          {% endif %}
+          <div class="grid gap-4 sm:grid-cols-2">
+            {% for field in form %}
+              <div class="flex flex-col gap-1 {% if field.field.widget.input_type == 'checkbox' %}sm:col-span-2{% endif %}">
+                {% if field.field.widget.input_type == "checkbox" %}
+                  <label class="flex items-center gap-2">
+                    {% if field.value %}
+                      <c-lb.checkbox name="{{ field.html_name }}" id="{{ field.id_for_label }}" checked />
+                    {% else %}
+                      <c-lb.checkbox name="{{ field.html_name }}" id="{{ field.id_for_label }}" />
+                    {% endif %}
+                    <span>{{ field.label }}</span>
+                  </label>
+                {% elif field.field.widget.input_type == "select" %}
+                  <c-lb.fieldset legend="{{ field.label }}{% if field.field.required %} *{% endif %}">
+                    <c-lb.select name="{{ field.html_name }}" id="{{ field.id_for_label }}">
+                      {% for choice_val, choice_label in field.field.choices %}
+                        <option value="{{ choice_val }}"
+                                {% if field.value|stringformat:"s" == choice_val|stringformat:"s" %}selected{% endif %}>
+                          {{ choice_label }}
+                        </option>
+                      {% endfor %}
+                    </c-lb.select>
+                  </c-lb.fieldset>
+                {% else %}
+                  <c-lb.fieldset legend="{{ field.label }}{% if field.field.required %} *{% endif %}">
+                    <c-lb.input type="text"
+                                name="{{ field.html_name }}"
+                                id="{{ field.id_for_label }}"
+                                value="{{ field.value|default:'' }}"
+                                placeholder="{{ field.field.widget.attrs.placeholder|default:'' }}"
+                                variant="{% if field.errors %}error{% endif %}" />
+                  </c-lb.fieldset>
+                {% endif %}
+                {% if field.errors %}
+                  <c-lb.validator.hint>
+                    {{ field.errors|first }}
+                  </c-lb.validator.hint>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+          <div class="flex items-center gap-2">
+            <c-lb.button type="submit" variant="primary">
+              {% if is_edit %}
+                {% trans "Save Changes" %}
+              {% else %}
+                {% trans "Add Address" %}
+              {% endif %}
+            </c-lb.button>
+            <c-lb.button as="a" href="{% url 'customers:addresses' %}" btnStyle="ghost">
+              {% trans "Cancel" %}
+            </c-lb.button>
+          </div>
+        </form>
+      </c-lb.card.body>
+    </c-lb.card>
+  </section>
+{% endblock content %}

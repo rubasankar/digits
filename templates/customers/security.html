@@ -1,0 +1,108 @@
+{% extends "entrance.html" %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans "Security Settings" %}
+{% endblock title %}
+{% block meta_description %}
+  {% trans "Manage your account security and two-factor authentication." %}
+{% endblock meta_description %}
+{% block content %}
+  <section class="container mx-auto max-w-2xl px-4 py-12">
+    <c-lb.link href="{% url 'customers:dashboard' %}"
+               class="mb-4 inline-flex items-center gap-1">
+      <c-lbi n="rmx.arrow-left-s" w="1.25em" h="1.25em" />
+      {% trans "Back to Account" %}
+    </c-lb.link>
+    <c-lb.text as="h1" size="2xl" class="mb-6 font-bold">
+      {% trans "Security Settings" %}
+    </c-lb.text>
+    <div class="flex flex-col gap-4">
+      <c-lb.card border>
+        <c-lb.card.body>
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <c-lb.card.title>
+                {% trans "Password" %}
+              </c-lb.card.title>
+              <c-lb.text as="p" size="sm" variant="neutral">
+                {% trans "Keep your account secure with a strong password." %}
+              </c-lb.text>
+            </div>
+            <c-lb.button as="a"
+                         href="{% url 'account_change_password' %}"
+                         btnStyle="outline"
+                         size="sm">
+              {% trans "Change Password" %}
+            </c-lb.button>
+          </div>
+        </c-lb.card.body>
+      </c-lb.card>
+      <c-lb.card border>
+        <c-lb.card.body>
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <div class="flex items-center gap-2">
+                <c-lb.card.title>
+                  {% trans "Two-Factor Authentication" %}
+                </c-lb.card.title>
+                {% if mfa_enabled %}
+                  <c-lb.badge variant="success" size="sm">
+                    {% trans "Enabled" %}
+                  </c-lb.badge>
+                {% else %}
+                  <c-lb.badge variant="neutral" size="sm">
+                    {% trans "Disabled" %}
+                  </c-lb.badge>
+                {% endif %}
+              </div>
+              <c-lb.text as="p" size="sm" variant="neutral">
+                {% if mfa_enabled %}
+                  {% trans "Two-factor authentication is active on your account." %}
+                {% else %}
+                  {% trans "Add an extra layer of security by enabling two-factor authentication." %}
+                {% endif %}
+              </c-lb.text>
+            </div>
+            <c-lb.button as="a" href="{% url 'mfa_index' %}" btnStyle="outline" size="sm">
+              {% if mfa_enabled %}
+                {% trans "Manage 2FA" %}
+              {% else %}
+                {% trans "Enable 2FA" %}
+              {% endif %}
+            </c-lb.button>
+          </div>
+        </c-lb.card.body>
+      </c-lb.card>
+      <c-lb.card border>
+        <c-lb.card.body>
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <c-lb.card.title>
+                {% trans "Email Addresses" %}
+              </c-lb.card.title>
+              <c-lb.text as="p" size="sm" variant="neutral">
+                {% trans "Manage your email addresses and verification status." %}
+              </c-lb.text>
+            </div>
+            <c-lb.button as="a" href="{% url 'account_email' %}" btnStyle="outline" size="sm">
+              {% trans "Manage" %}
+            </c-lb.button>
+          </div>
+        </c-lb.card.body>
+      </c-lb.card>
+      <c-lb.card border>
+        <c-lb.card.body>
+          <c-lb.card.title>
+            {% trans "Connected Accounts" %}
+          </c-lb.card.title>
+          <c-lb.text as="p" size="sm" variant="neutral" class="mb-2">
+            {% trans "Sign in faster by connecting a third-party account." %}
+          </c-lb.text>
+          <c-components.social_connections :accounts="social_accounts" />
+        </c-lb.card.body>
+      </c-lb.card>
+    </div>
+  </section>
+{% endblock content %}

@@ -1,0 +1,36 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "uv run python .claude/hooks/ruff_fix.py",
+            "statusMessage": "Running ruff check --fix + format",
+            "timeout": 30,
+            "type": "command"
+          },
+          {
+            "command": "uv run python .claude/hooks/mypy_check.py",
+            "statusMessage": "Running mypy",
+            "timeout": 60,
+            "type": "command"
+          }
+        ],
+        "matcher": "Write|Edit"
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "uv run python .claude/hooks/guard_migrations.py",
+            "statusMessage": "Checking migrations guard",
+            "timeout": 10,
+            "type": "command"
+          }
+        ],
+        "matcher": "Write|Edit"
+      }
+    ]
+  }
+}

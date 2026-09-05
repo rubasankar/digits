@@ -66,6 +66,13 @@ lint.isort.force-single-line = true
 [lint.per-file-ignores]
 "manage.py" = ["PLC0415"]
 
+".claude/hooks/**/*.py" = [
+  "INP001", # Hook scripts are standalone entry points, not part of an app package.
+  "S603",   # Hooks intentionally invoke uv/ruff as fixed, non-user-controlled arguments.
+  "S607",   # `uv` is resolved via PATH by design, matching how the project's own tooling invokes it.
+  "T201",   # Hooks communicate back to Claude Code via stdout JSON, per the hooks protocol.
+]
+
 "**/tests/**/*.py" = [
   "PLC0415", # Local imports inside tests can improve fixture/test isolation.
   "PLR2004", # Literal values are often clearer in test assertions.

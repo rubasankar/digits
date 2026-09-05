@@ -89,3 +89,10 @@ class WebsocketDisconnectTests(SimpleTestCase):
         sent = _run({"type": "websocket.disconnect"})
         # No messages expected after an immediate disconnect.
         assert all(m.get("type") != "websocket.send" for m in sent)
+
+    def test_empty_event_queue_falls_back_to_disconnect(self) -> None:
+        """Cover the _make_receive fallback when the queue is exhausted."""
+        sender = _Sender()
+        receive = _make_receive()
+        asyncio.run(websocket_application({}, receive, sender))
+        assert sender.sent == []

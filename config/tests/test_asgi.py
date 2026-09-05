@@ -17,6 +17,8 @@ class ASGIHttpRoutingTests(SimpleTestCase):
 
         async def fake_django(sc: dict[str, Any], recv: Any, snd: Any) -> None:
             called_with.append(sc)
+            await recv()
+            await snd({"type": "http.response.start"})
 
         async def receive() -> dict[str, Any]:
             return {}
@@ -37,6 +39,8 @@ class ASGIHttpRoutingTests(SimpleTestCase):
 
         async def fake_ws(sc: dict[str, Any], recv: Any, snd: Any) -> None:
             called_with.append(sc)
+            await recv()
+            await snd({"type": "websocket.send", "text": "pong!"})
 
         async def receive() -> dict[str, Any]:
             return {"type": "websocket.disconnect"}
@@ -61,6 +65,8 @@ class ASGIHttpRoutingTests(SimpleTestCase):
             pass
 
         async def _run() -> None:
+            await receive()
+            await send({})
             await application(scope, receive, send)
 
         with pytest.raises(NotImplementedError):

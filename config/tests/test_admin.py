@@ -32,7 +32,7 @@ class HasPermissionTests(TestCase):
 
     def _staff_user(self) -> object:
         return User.objects.create_user(
-            email="staff@example.com",
+            email="alice@example.com",
             password="pass1234!",
             is_staff=True,
             is_active=True,
@@ -40,7 +40,7 @@ class HasPermissionTests(TestCase):
 
     def test_non_staff_user_denied(self) -> None:
         user = User.objects.create_user(
-            email="plain@example.com",
+            email="bob@example.com",
             password="pass1234!",
             is_staff=False,
         )
@@ -97,7 +97,7 @@ class GetAccountLinksTests(TestCase):
 
     def _staff_user(self) -> object:
         return User.objects.create_user(
-            email="links@example.com",
+            email="dave@example.com",
             password="pass1234!",
             is_staff=True,
         )

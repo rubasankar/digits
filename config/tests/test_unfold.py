@@ -21,9 +21,7 @@ def _request() -> HttpRequest:
     return factory.get("/admin/")
 
 
-# ---------------------------------------------------------------------------
 # environment_callback
-# ---------------------------------------------------------------------------
 
 
 class EnvironmentCallbackTests(TestCase):
@@ -45,12 +43,10 @@ class EnvironmentCallbackTests(TestCase):
         assert len(result) == 2
 
 
-# ---------------------------------------------------------------------------
 # badge_reviews_pending
 #
 # ProductReview is imported inside badge_reviews_pending, so patch the
 # class on its real home module, not on the settings module.
-# ---------------------------------------------------------------------------
 
 
 class BadgeReviewsPendingTests(TestCase):
@@ -76,11 +72,9 @@ class BadgeReviewsPendingTests(TestCase):
         mock_review.objects.filter.assert_called_once_with(is_published=False)
 
 
-# ---------------------------------------------------------------------------
 # dashboard_callback
 #
 # Same principle: patch each model on its real home module.
-# ---------------------------------------------------------------------------
 
 
 class DashboardCallbackTests(TestCase):
@@ -125,9 +119,7 @@ class DashboardCallbackTests(TestCase):
         assert ctx["existing_key"] == "value"
 
 
-# ---------------------------------------------------------------------------
 # tabs_callback
-# ---------------------------------------------------------------------------
 
 
 class TabsCallbackTests(TestCase):

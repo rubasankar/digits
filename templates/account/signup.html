@@ -55,12 +55,26 @@
         </c-lb.validator.hint>
       {% endif %}
     </c-lb.fieldset>
+    {% if form.phone %}
+      <c-lb.fieldset legend="{% trans 'Phone Number' %}">
+        <c-components.phone_input name="{{ form.phone.html_name }}"
+                                  id="{{ form.phone.id_for_label }}"
+                                  value="{{ form.phone.value|default:'' }}"
+                                  variant="{% if form.phone.errors %}error{% endif %}"
+                                  aria_describedby="{{ form.phone.id_for_label }}-error" />
+        {% if form.phone.errors %}
+          <c-lb.validator.hint id="{{ form.phone.id_for_label }}-error">
+            {{ form.phone.errors|first }}
+          </c-lb.validator.hint>
+        {% endif %}
+      </c-lb.fieldset>
+    {% endif %}
     <c-lb.button type="submit" variant="primary" class="w-full">
       {% trans "Sign Up" %}
     </c-lb.button>
   </form>
   <c-components.social_login />
-  <c-lb.text as="p" size="sm" variant="neutral" class="text-center">
+  <c-lb.text as="p" size="sm" variant="neutral" class="text-center mt-4">
     {% trans "Already have an account?" %}
     <c-lb.link href="{% url 'account_login' %}">
       {% trans "Log In" %}

@@ -46,12 +46,6 @@
         </div>
         <dl class="flex flex-col divide-y divide-base-200">
           <div class="flex flex-col gap-1 py-3 sm:flex-row sm:items-center sm:justify-between">
-            <dt class="text-sm text-base-content/60">{% trans "Phone Number" %}</dt>
-            <dd class="font-medium">
-              {{ profile.phone_number|default:not_set }}
-            </dd>
-          </div>
-          <div class="flex flex-col gap-1 py-3 sm:flex-row sm:items-center sm:justify-between">
             <dt class="text-sm text-base-content/60">{% trans "Date of Birth" %}</dt>
             <dd class="font-medium">
               {% if profile.date_of_birth %}{{ profile.date_of_birth|date:"N j, Y" }}{% else %}{{ not_set }}{% endif %}

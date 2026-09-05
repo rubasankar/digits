@@ -1,0 +1,55 @@
+{% load cotton i18n phone_tags %}
+
+<c-vars value=""
+        variant=""
+        required="False"
+        disabled="False"
+        aria_describedby="" />
+{% phone_countries as countries %}
+<div x-data="{ dialCode: '', national: '', get e164() { const digits = this.national.replace(/\D/g, ''); return digits ? this.dialCode + digits : ''; }, init() { const raw = '{{ value|escapejs }}'; const list = [{% for c in countries %}{'dial':'{{ c.dial_code }}'}{% if not forloop.last %},{% endif %}{% endfor %}]; if (raw && raw.startsWith('+')) { let matched = ''; list.forEach(c => { if (raw.startsWith(c.dial) && c.dial.length > matched.length) { matched = c.dial; } }); if (matched) { this.dialCode = matched; this.national = raw.slice(matched.length); } else { this.dialCode = list.length ? list[0].dial : ''; this.national = raw; } } else { this.dialCode = list.length ? list[0].dial : ''; this.national = raw; } } }" class="flex gap-2">
+  {% if disabled == 'true' %}
+    <c-lb.select x-model="dialCode"
+                 disabled
+                 aria-label="{% trans 'Country code' %}"
+                 class="w-24 shrink-0 text-xs"
+                 size="xs">
+      {% for country in countries %}
+        <option value="{{ country.dial_code }}">{{ country.code }} {{ country.dial_code }}</option>
+      {% endfor %}
+    </c-lb.select>
+    <c-lb.input type="tel"
+                id="{{ id }}"
+                x-model="national"
+                inputmode="numeric"
+                autocomplete="tel-national"
+                placeholder="{% trans 'Phone number' %}"
+                variant="{{ variant }}"
+                disabled
+                {% if aria_describedby %}aria-describedby="{{ aria_describedby }}"{% endif %}
+                aria-invalid="{% if variant == 'error' %}true{% else %}false{% endif %}"
+                class="flex-1 min-w-0" />
+  {% else %}
+    <c-lb.select x-model="dialCode"
+                 aria-label="{% trans 'Country code' %}"
+                 class="w-24 shrink-0 text-xs"
+                 size="xs">
+      {% for country in countries %}
+        <option value="{{ country.dial_code }}">{{ country.code }} {{ country.dial_code }}</option>
+      {% endfor %}
+    </c-lb.select>
+    <c-lb.input type="tel"
+                id="{{ id }}"
+                x-model="national"
+                inputmode="numeric"
+                autocomplete="tel-national"
+                placeholder="{% trans 'Phone number' %}"
+                variant="{{ variant }}"
+                {% if aria_describedby %}aria-describedby="{{ aria_describedby }}"{% endif %}
+                aria-invalid="{% if variant == 'error' %}true{% else %}false{% endif %}"
+                class="flex-1 min-w-0" />
+  {% endif %}
+  <input type="hidden"
+         name="{{ name }}"
+         :value="e164"
+         {% if required %}required{% endif %} />
+</div>

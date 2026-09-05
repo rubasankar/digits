@@ -1,0 +1,77 @@
+{% extends "entrance.html" %}
+
+{% load i18n lb_tags %}
+
+{% block title %}
+  {% trans "Phone Number" %}
+{% endblock title %}
+{% block content %}
+  <section class="container mx-auto max-w-lg px-4 py-12">
+    <c-lb.text as="h1" size="2xl" class="mb-6 font-bold">
+      {% trans "Phone Number" %}
+    </c-lb.text>
+    <div class="flex flex-col gap-4">
+      {% if phone %}
+        <c-lb.fieldset legend="{% trans 'Current phone number' %}">
+          <div class="flex items-center gap-2">
+            <c-components.phone_input value="{{ phone }}" disabled="true" class="flex-1" />
+            {% if phone_verified %}
+              <c-lb.badge variant="success" size="sm">
+                {% trans "Verified" %}
+              </c-lb.badge>
+            {% else %}
+              <c-lb.badge variant="warning" size="sm">
+                {% trans "Unverified" %}
+              </c-lb.badge>
+            {% endif %}
+          </div>
+        </c-lb.fieldset>
+      {% endif %}
+      {% if form.non_field_errors %}
+        <c-lb.alert variant="error">
+          {% for err in form.non_field_errors %}<p>{{ err }}</p>{% endfor %}
+        </c-lb.alert>
+      {% endif %}
+      {% if phone and phone_verified %}
+        <c-lb.alert variant="info">
+          {% blocktranslate %}Your current number is verified. Enter a new number
+          and we'll send a 6-digit code to it to confirm the change.{% endblocktranslate %}
+        </c-lb.alert>
+      {% endif %}
+      <form method="post"
+            action="{% url 'account_change_phone' %}"
+            class="flex flex-col gap-4">
+        {% csrf_token %}
+        <c-lb.fieldset legend="{% if phone %}{% trans 'Change to' %}{% else %}{% trans 'Enter your phone number' %}{% endif %}">
+          <c-components.phone_input name="{{ form.phone.html_name }}"
+                                    id="{{ form.phone.id_for_label }}"
+                                    value="{{ form.phone.value|default:'' }}"
+                                    variant="{% if form.phone.errors %}error{% endif %}"
+                                    aria_describedby="{{ form.phone.id_for_label }}-error"
+                                    required />
+          {% if form.phone.errors %}
+            <c-lb.validator.hint id="{{ form.phone.id_for_label }}-error">
+              {{ form.phone.errors|first }}
+            </c-lb.validator.hint>
+          {% endif %}
+        </c-lb.fieldset>
+        <div>
+          <c-lb.button type="submit" name="action" value="verify" variant="primary">
+            {% if phone %}
+              {% trans "Verify New Number" %}
+            {% else %}
+              {% trans "Add & Verify" %}
+            {% endif %}
+          </c-lb.button>
+        </div>
+      </form>
+      <c-lb.button as="a"
+                   href="{% url 'customers:security' %}"
+                   btnStyle="ghost"
+                   size="sm">
+        <c-lbi n="rmx.arrow-left-s" w="1.25em" h="1.25em" />
+        {% trans "Back to Security" %}
+      </c-lb.button>
+    </div>
+  </section>
+{% endblock content %}

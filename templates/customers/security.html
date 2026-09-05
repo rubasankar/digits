@@ -94,6 +94,37 @@
       </c-lb.card>
       <c-lb.card border>
         <c-lb.card.body>
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <div class="flex items-center gap-2">
+                <c-lb.card.title>
+                  {% trans "Phone Number" %}
+                </c-lb.card.title>
+                {% if phone_verified %}
+                  <c-lb.badge variant="success" size="sm">
+                    {% trans "Verified" %}
+                  </c-lb.badge>
+                {% elif phone %}
+                  <c-lb.badge variant="warning" size="sm">
+                    {% trans "Unverified" %}
+                  </c-lb.badge>
+                {% endif %}
+              </div>
+              <c-lb.text as="p" size="sm" variant="neutral">
+                {% trans "Manage your phone number for account verification." %}
+              </c-lb.text>
+            </div>
+            <c-lb.button as="a"
+                         href="{% url 'account_change_phone' %}"
+                         btnStyle="outline"
+                         size="sm">
+              {% trans "Manage" %}
+            </c-lb.button>
+          </div>
+        </c-lb.card.body>
+      </c-lb.card>
+      <c-lb.card border>
+        <c-lb.card.body>
           <c-lb.card.title>
             {% trans "Connected Accounts" %}
           </c-lb.card.title>

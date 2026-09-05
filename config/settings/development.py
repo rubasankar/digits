@@ -34,10 +34,6 @@ MAILERS = {
     },
 }
 
-# WhiteNoise
-_INSTALLED_APPS = ["whitenoise.runserver_nostatic", *INSTALLED_APPS]
-
-
 # django-debug-toolbar
 INSTALLED_APPS += ["debug_toolbar"]
 MIDDLEWARE += ["debug_toolbar.middleware.DebugToolbarMiddleware"]

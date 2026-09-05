@@ -22,7 +22,7 @@ class UserManager(DjangoUserManager["UserAccount"]):
         if not email:
             msg = "The given email must be set"
             raise ValueError(msg)
-        email = self.normalize_email(email)
+        email = self.normalize_email(email.lower())
         user = self.model(email=email, **extra_fields)
         user.password = make_password(password)
         user.save(using=self._db)

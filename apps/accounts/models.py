@@ -6,6 +6,7 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from model_utils.models import TimeStampedModel
 from model_utils.models import UUIDModel
+from phonenumber_field.modelfields import PhoneNumberField
 
 from .managers import UserManager
 
@@ -31,10 +32,35 @@ class UserAccount(UUIDModel, AbstractUser, TimeStampedModel):
         ),
     )
 
+    phone = PhoneNumberField(
+        _("Phone Number"),
+        blank=True,
+        default="",
+        help_text=_("Optional phone number for verification and contact."),
+    )
+    phone_verified = models.BooleanField(
+        _("Phone Verified"),
+        default=False,
+        help_text=_("Designates whether the phone number has been verified."),
+    )
+
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS: ClassVar[list[str]] = []
 
     objects: ClassVar[UserManager] = UserManager()
+
+    @property
+    def email_verified(self) -> bool:
+        """
+        Check if user has verified their email.
+        """
+        from allauth.account.models import EmailAddress  # noqa: PLC0415
+
+        return bool(
+            EmailAddress.objects.filter(
+                user=self, email=self.email, verified=True
+            ).exists()
+        )
 
     class Meta:
         verbose_name = _("User Account")

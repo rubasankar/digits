@@ -23,6 +23,15 @@ class UserAdmin(auth_admin.UserAdmin[UserAccount], ModelAdmin):  # type: ignore[
     fieldsets = (
         (None, {"fields": ("email", "password")}),
         (
+            _("Phone"),
+            {
+                "fields": (
+                    "phone",
+                    "phone_verified",
+                ),
+            },
+        ),
+        (
             _("Permissions"),
             {
                 "fields": (
@@ -36,8 +45,8 @@ class UserAdmin(auth_admin.UserAdmin[UserAccount], ModelAdmin):  # type: ignore[
         ),
         (_("Important dates"), {"fields": ("last_login", "date_joined")}),
     )
-    list_display = ["email", "is_superuser"]
-    search_fields = ["email"]
+    list_display = ["email", "phone", "phone_verified", "is_superuser"]
+    search_fields = ["email", "phone"]
     ordering = ["id"]
     add_fieldsets = (
         (

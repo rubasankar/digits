@@ -225,6 +225,8 @@ def security_overview(request: HttpRequest) -> HttpResponse:
     """Display MFA and security overview."""
     mfa_enabled = False
     social_accounts = []
+    phone = None
+    phone_verified = False
     try:
         from allauth.mfa.models import Authenticator  # noqa: PLC0415
 
@@ -239,10 +241,21 @@ def security_overview(request: HttpRequest) -> HttpResponse:
     except ImportError:
         pass
 
+    from allauth.account.adapter import get_adapter  # noqa: PLC0415
+
+    phone_result = get_adapter().get_phone(request.user)
+    if phone_result is not None:
+        phone, phone_verified = phone_result
+
     return render(
         request,
         "customers/security.html",
-        {"mfa_enabled": mfa_enabled, "social_accounts": social_accounts},
+        {
+            "mfa_enabled": mfa_enabled,
+            "social_accounts": social_accounts,
+            "phone": phone,
+            "phone_verified": phone_verified,
+        },
     )
 
 

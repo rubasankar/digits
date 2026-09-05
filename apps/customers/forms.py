@@ -25,7 +25,6 @@ class CustomerProfileForm(forms.ModelForm[CustomerProfile]):
         fields = [
             "first_name",
             "last_name",
-            "phone_number",
             "date_of_birth",
             "gender",
             "avatar",

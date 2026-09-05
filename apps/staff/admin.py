@@ -52,7 +52,6 @@ class StaffProfileAdmin(ModelAdmin):  # type: ignore[misc]
         "user",
         "department",
         "role",
-        "phone_number",
         "is_active",
     ]
     list_filter = ["department", "is_active"]
@@ -65,7 +64,6 @@ class StaffProfileAdmin(ModelAdmin):  # type: ignore[misc]
             _("Avatar"),
             {"fields": ("avatar", "avatar_display"), "classes": ("collapse",)},
         ),
-        (_("Contact"), {"fields": ("phone_number",)}),
         (
             _("Access"),
             {
@@ -100,7 +98,6 @@ class StaffProfileAdmin(ModelAdmin):  # type: ignore[misc]
                     "last_name",
                     "avatar",
                     "avatar_display",
-                    "phone_number",
                 )
             },
         ),

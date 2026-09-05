@@ -6,4 +6,4 @@ from .models import StaffProfile
 class StaffProfileForm(forms.ModelForm[StaffProfile]):
     class Meta:
         model = StaffProfile
-        fields = ["first_name", "last_name", "phone_number", "avatar"]
+        fields = ["first_name", "last_name", "avatar"]

@@ -57,13 +57,12 @@ class CustomerProfileAdmin(ModelAdmin):  # type: ignore[misc]
     list_display = [
         "full_name",
         "user",
-        "phone_number",
         "gender",
         "accepts_marketing",
         "created",
     ]
     list_filter = ["gender", "accepts_marketing"]
-    search_fields = ["first_name", "last_name", "user__email", "phone_number"]
+    search_fields = ["first_name", "last_name", "user__email"]
     readonly_fields = ["created", "modified", "avatar_display"]
     inlines = [CustomerAddressInline]
     fieldsets = (
@@ -73,7 +72,7 @@ class CustomerProfileAdmin(ModelAdmin):  # type: ignore[misc]
         ),
         (
             _("Contact & Personal"),
-            {"fields": ("phone_number", "date_of_birth", "gender")},
+            {"fields": ("date_of_birth", "gender")},
         ),
         (
             _("Avatar"),

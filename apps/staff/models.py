@@ -4,7 +4,6 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from model_utils.models import TimeStampedModel
 from model_utils.models import UUIDModel
-from phonenumber_field.modelfields import PhoneNumberField
 
 User = get_user_model()
 
@@ -57,11 +56,6 @@ class StaffProfile(UUIDModel, TimeStampedModel):
     )
     first_name = models.CharField(_("First Name"), max_length=100)
     last_name = models.CharField(_("Last Name"), max_length=100, blank=True)
-    phone_number = PhoneNumberField(
-        _("Work Phone Number"),
-        blank=True,
-        help_text=_("Internal work contact number in E.164 format."),
-    )
     role = models.CharField(
         _("Role / Job Title"),
         max_length=100,

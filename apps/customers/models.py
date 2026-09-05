@@ -22,11 +22,6 @@ class CustomerProfile(UUIDModel, TimeStampedModel):
     )
     first_name = models.CharField(_("First Name"), max_length=100)
     last_name = models.CharField(_("Last Name"), max_length=100, blank=True)
-    phone_number = PhoneNumberField(
-        _("Phone Number"),
-        blank=True,
-        help_text=_("E.164 format, e.g. +14155552671."),
-    )
     date_of_birth = models.DateField(
         _("Date of Birth"),
         null=True,

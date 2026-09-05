@@ -926,11 +926,10 @@ class ShippingAttributesField(forms.Field):
         pass
 
 
-# ---------------------------------------------------------------------------
 # Attribute value widget - renders the correct Unfold-styled input for the
 # selected attribute definition and embeds JS that swaps the input when the
 # user picks a different definition via AJAX.
-# ---------------------------------------------------------------------------
+
 
 _INPUT_TYPE_MAP: dict[str, str] = {
     AttributeValueType.INTEGER: "number",

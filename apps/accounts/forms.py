@@ -1,5 +1,6 @@
+from __future__ import annotations
+
 from allauth.account.forms import SignupForm
-from allauth.socialaccount.forms import SignupForm as SocialSignupForm
 from django.forms import EmailField
 from django.utils.translation import gettext_lazy as _
 from unfold.forms import UserChangeForm
@@ -25,10 +26,8 @@ class UserAdminCreationForm(UserCreationForm):  # type: ignore[misc]
 
 
 class UserSignupForm(SignupForm):  # type: ignore[misc]
-    """
-    Form rendered on the sign-up screen.
-    """
+    """Form rendered on the sign-up screen."""
 
 
-class UserSocialSignupForm(SocialSignupForm):  # type: ignore[misc]
+class UserSocialSignupForm(SignupForm):  # type: ignore[misc]
     """Form for accounts created via social login."""

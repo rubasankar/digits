@@ -105,6 +105,8 @@ AUTH_USER_MODEL = "accounts.UserAccount"
 LOGIN_REDIRECT_URL = "core:home"
 LOGIN_URL = "account_login"
 
+PHONENUMBER_DEFAULT_REGION = env("PHONENUMBER_DEFAULT_REGION", default="IN")
+
 # Password hashing & validation
 PASSWORD_HASHERS = [
     "django.contrib.auth.hashers.Argon2PasswordHasher",
@@ -131,7 +133,6 @@ MIDDLEWARE = [
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
-    "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "waffle.middleware.WaffleMiddleware",
     *ALLAUTH_MIDDLEWARE,
@@ -216,7 +217,7 @@ ACCOUNT_EMAIL_SUBJECT_PREFIX = EMAIL_SUBJECT_PREFIX
 
 # Admin
 ADMIN_URL = "admin/"
-ADMINS = ['"Rubasankar" <rubasankar@outlook.in>']
+ADMINS = env.list("DJANGO_ADMINS", default=["admin@example.com"])
 MANAGERS = ADMINS
 
 # Logging -- delegate entirely to the structlog settings module so there is

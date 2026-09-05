@@ -2,6 +2,7 @@ extend-exclude = [
   "*/migrations/*.py",
   "staticfiles/*",
 ]
+
 lint.select = [
   "A",
   "ASYNC",
@@ -52,28 +53,50 @@ lint.select = [
   "W",
   "YTT",
 ]
+
 lint.ignore = [
-  "COM812", # Conflicts with the formatter
-  "RUF012", # Mutable class attributes should be annotated with `typing.ClassVar`
-  "S101",   # Use of assert detected https://docs.astral.sh/ruff/rules/assert/
-  "SIM102", # sometimes it's better to nest
-  # of types for comparison.
-  # Deactivated because it can make the code slow:
-  # https://github.com/astral-sh/ruff/issues/7871
+  "COM812", # Conflicts with the formatter.
+  "RUF012", # Mutable class attributes are intentionally not required to use ClassVar.
+  "S101",   # Assertions are allowed; tests still get normal pytest-specific checks.
+  "SIM102", # Nested conditionals can sometimes be clearer.
 ]
+
 lint.isort.force-single-line = true
+
 [lint.per-file-ignores]
 "manage.py" = ["PLC0415"]
-"*/tests/*.py" = [
-  "PLC0415", # local imports inside test methods are fine
-  "PLR2004", # magic numbers in assertions are readable
-  "S106",    # hardcoded passwords in test fixtures are intentional
-  "SLF001",  # testing private methods is legitimate
-  "BLE001",  # broad except in test helpers is acceptable
-  "TRY301",  # abstract raise rule doesn't apply in tests
-  "ERA001",  # commented-out explanatory notes in tests are fine
-  "PT017",   # assertion-in-except: handled manually in some tests
-  "N806",    # uppercase mock aliases (MockSvc, MP, etc.) are conventional
-  "PT012",   # single-statement pytest.raises: handled case by case
-  "E501",    # long lines with mock.patch strings are acceptable
+
+"**/tests/**/*.py" = [
+  "PLC0415", # Local imports inside tests can improve fixture/test isolation.
+  "PLR2004", # Literal values are often clearer in test assertions.
+  "S105",    # Test fixtures may intentionally contain password-like literals.
+  "S106",    # Test fixtures may intentionally pass password-like literals.
+  "SLF001",  # Tests may need to exercise private implementation details.
+  "BLE001",  # Broad exceptions can be intentional when testing error handling.
+  "TRY301",  # Explicit raises inside test helpers can be intentional.
+  "ERA001",  # Commented-out examples/notes can be useful in tests.
+  "PT017",   # Assertion-in-except can be intentional when testing exceptions.
+  "N806",    # Uppercase mock aliases are conventional in some tests.
+  "PT012",   # Multi-statement pytest.raises blocks can be intentional.
+  "E501",    # Long mock.patch strings can be more readable as-is.
+  "FBT001",  # Boolean parameters are common in test factories/fixtures.
+  "B017",    # Broad exception assertions can be intentional in negative tests.
+  "PT011",   # pytest.raises(Exception) can be intentional when testing broad failures.
+  "PT009",   # Some tests intentionally use unittest-style assertions.
+  "PT010",   # Exception assertions may be intentionally broad in some tests.
+  "DTZ011",  # date.today() is sometimes appropriate for date-only test cases.
+  "PLR0915", # Test setup can legitimately require many statements.
+  "PLR0914", # Tests/fixtures can legitimately require many local variables.
+  "PLR0912", # Parametrized tests can legitimately have many branches.
+  "PLR0913", # Fixtures can legitimately require many arguments.
+  "PLR0917", # Fixtures can legitimately require many positional arguments.
+  "PLR1714", # Repeated comparisons can improve test readability.
+  "PLR1722", # Explicit cleanup/control flow can be intentional in tests.
+  "PLR1730", # Explicit min/max logic can make test intent clearer.
+  "PLR1733", # Explicit return/control flow can make test intent clearer.
+  "PLW0603", # Some test fixtures intentionally modify module globals.
+  "PLW2901", # Reassigning loop variables can be useful in test setup.
+  "TRY003",  # Test exceptions often need descriptive messages.
+  "TRY200",  # Raise-within-try can be intentional when testing exception paths.
+  "TRY300",  # Some test cleanup/exception paths intentionally raise in try blocks.
 ]

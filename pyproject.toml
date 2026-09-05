@@ -40,6 +40,9 @@ dependencies = [
   "uvicorn[standard]>=0.52.3",
   "uvicorn-worker>=0.4.0",
 ]
+optional-dependencies.sms = [
+  "twilio>=9.0.0",
+]
 
 [dependency-groups]
 dev = [

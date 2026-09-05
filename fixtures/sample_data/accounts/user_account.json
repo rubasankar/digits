@@ -4,7 +4,8 @@
       "is_active": true,
       "is_staff": true,
       "is_superuser": true,
-      "password": "pbkdf2_sha256$870000$samplehashADMIN$hashed+placeholder+admin+password="
+      "password": "pbkdf2_sha256$870000$samplehashADMIN$hashed+placeholder+admin+password=",
+      "phone": "+12135550100"
     },
     "lookup": {
       "email": "admin@digits.store"
@@ -15,7 +16,8 @@
       "is_active": true,
       "is_staff": true,
       "is_superuser": false,
-      "password": "pbkdf2_sha256$870000$samplehashOPS01$hashed+placeholder+ops+manager="
+      "password": "pbkdf2_sha256$870000$samplehashOPS01$hashed+placeholder+ops+manager=",
+      "phone": "+12135550101"
     },
     "lookup": {
       "email": "ops.manager@digits.store"
@@ -26,7 +28,8 @@
       "is_active": true,
       "is_staff": true,
       "is_superuser": false,
-      "password": "pbkdf2_sha256$870000$samplehashSUP01$hashed+placeholder+support+lead="
+      "password": "pbkdf2_sha256$870000$samplehashSUP01$hashed+placeholder+support+lead=",
+      "phone": "+12135550102"
     },
     "lookup": {
       "email": "support.lead@digits.store"
@@ -37,7 +40,8 @@
       "is_active": true,
       "is_staff": true,
       "is_superuser": false,
-      "password": "pbkdf2_sha256$870000$samplehashWH01$hashed+placeholder+warehouse+la="
+      "password": "pbkdf2_sha256$870000$samplehashWH01$hashed+placeholder+warehouse+la=",
+      "phone": "+13235550201"
     },
     "lookup": {
       "email": "warehouse.la@digits.store"
@@ -48,7 +52,8 @@
       "is_active": true,
       "is_staff": true,
       "is_superuser": false,
-      "password": "pbkdf2_sha256$870000$samplehashWH02$hashed+placeholder+warehouse+ny="
+      "password": "pbkdf2_sha256$870000$samplehashWH02$hashed+placeholder+warehouse+ny=",
+      "phone": "+12125550202"
     },
     "lookup": {
       "email": "warehouse.ny@digits.store"
@@ -59,7 +64,8 @@
       "is_active": true,
       "is_staff": true,
       "is_superuser": false,
-      "password": "pbkdf2_sha256$870000$samplehashFIN01$hashed+placeholder+finance+analyst="
+      "password": "pbkdf2_sha256$870000$samplehashFIN01$hashed+placeholder+finance+analyst=",
+      "phone": "+12135550301"
     },
     "lookup": {
       "email": "finance.analyst@digits.store"
@@ -70,7 +76,8 @@
       "is_active": true,
       "is_staff": true,
       "is_superuser": false,
-      "password": "pbkdf2_sha256$870000$samplehashMKT01$hashed+placeholder+marketing+exec="
+      "password": "pbkdf2_sha256$870000$samplehashMKT01$hashed+placeholder+marketing+exec=",
+      "phone": "+12135550401"
     },
     "lookup": {
       "email": "marketing.exec@digits.store"
@@ -81,7 +88,8 @@
       "is_active": true,
       "is_staff": true,
       "is_superuser": false,
-      "password": "pbkdf2_sha256$870000$samplehashIT01$hashed+placeholder+it+support="
+      "password": "pbkdf2_sha256$870000$samplehashIT01$hashed+placeholder+it+support=",
+      "phone": "+12135550501"
     },
     "lookup": {
       "email": "it.support@digits.store"
@@ -92,7 +100,8 @@
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "password": "pbkdf2_sha256$870000$samplehashCUST01$hashed+placeholder+customer+01="
+      "password": "pbkdf2_sha256$870000$samplehashCUST01$hashed+placeholder+customer+01=",
+      "phone": "+12135558001"
     },
     "lookup": {
       "email": "james.carter@example.com"
@@ -103,7 +112,8 @@
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "password": "pbkdf2_sha256$870000$samplehashCUST02$hashed+placeholder+customer+02="
+      "password": "pbkdf2_sha256$870000$samplehashCUST02$hashed+placeholder+customer+02=",
+      "phone": "+14085558002"
     },
     "lookup": {
       "email": "sophia.nguyen@example.com"
@@ -114,7 +124,8 @@
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "password": "pbkdf2_sha256$870000$samplehashCUST03$hashed+placeholder+customer+03="
+      "password": "pbkdf2_sha256$870000$samplehashCUST03$hashed+placeholder+customer+03=",
+      "phone": "+13125558003"
     },
     "lookup": {
       "email": "liam.oconnor@example.com"
@@ -125,7 +136,8 @@
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "password": "pbkdf2_sha256$870000$samplehashCUST04$hashed+placeholder+customer+04="
+      "password": "pbkdf2_sha256$870000$samplehashCUST04$hashed+placeholder+customer+04=",
+      "phone": "+17185558004"
     },
     "lookup": {
       "email": "amara.osei@example.com"
@@ -136,7 +148,8 @@
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "password": "pbkdf2_sha256$870000$samplehashCUST05$hashed+placeholder+customer+05="
+      "password": "pbkdf2_sha256$870000$samplehashCUST05$hashed+placeholder+customer+05=",
+      "phone": "+14155558005"
     },
     "lookup": {
       "email": "priya.sharma@example.com"
@@ -147,7 +160,8 @@
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "password": "pbkdf2_sha256$870000$samplehashCUST06$hashed+placeholder+customer+06="
+      "password": "pbkdf2_sha256$870000$samplehashCUST06$hashed+placeholder+customer+06=",
+      "phone": "+13055558006"
     },
     "lookup": {
       "email": "carlos.reyes@example.com"
@@ -158,7 +172,8 @@
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "password": "pbkdf2_sha256$870000$samplehashCUST07$hashed+placeholder+customer+07="
+      "password": "pbkdf2_sha256$870000$samplehashCUST07$hashed+placeholder+customer+07=",
+      "phone": "+12025558007"
     },
     "lookup": {
       "email": "emily.watson@example.com"
@@ -169,7 +184,8 @@
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "password": "pbkdf2_sha256$870000$samplehashCUST08$hashed+placeholder+customer+08="
+      "password": "pbkdf2_sha256$870000$samplehashCUST08$hashed+placeholder+customer+08=",
+      "phone": "+17135558008"
     },
     "lookup": {
       "email": "noah.thompson@example.com"
@@ -180,7 +196,8 @@
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "password": "pbkdf2_sha256$870000$samplehashCUST09$hashed+placeholder+customer+09="
+      "password": "pbkdf2_sha256$870000$samplehashCUST09$hashed+placeholder+customer+09=",
+      "phone": "+12015558009"
     },
     "lookup": {
       "email": "fatima.malik@example.com"
@@ -191,7 +208,8 @@
       "is_active": true,
       "is_staff": false,
       "is_superuser": false,
-      "password": "pbkdf2_sha256$870000$samplehashCUST10$hashed+placeholder+customer+10="
+      "password": "pbkdf2_sha256$870000$samplehashCUST10$hashed+placeholder+customer+10=",
+      "phone": "+15035558010"
     },
     "lookup": {
       "email": "oliver.kim@example.com"

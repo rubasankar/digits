@@ -11,7 +11,6 @@
       "is_active": true,
       "last_name": "Morgan",
       "notes": "Superuser account. Responsible for platform configuration and user management.",
-      "phone_number": "+12135550100",
       "role": "Platform Administrator"
     },
     "lookup": {
@@ -35,7 +34,6 @@
       "is_active": true,
       "last_name": "Holloway",
       "notes": "Oversees daily store operations and fulfilment SLA compliance.",
-      "phone_number": "+12135550101",
       "role": "Operations Manager"
     },
     "lookup": {
@@ -59,7 +57,6 @@
       "is_active": true,
       "last_name": "Bell",
       "notes": "Handles escalations and manages the support ticket queue.",
-      "phone_number": "+12135550102",
       "role": "Customer Support Lead"
     },
     "lookup": {
@@ -83,7 +80,6 @@
       "is_active": true,
       "last_name": "Ramirez",
       "notes": "Manages LA-01 picking, packing, and outbound shipments.",
-      "phone_number": "+13235550201",
       "role": "Warehouse Manager"
     },
     "lookup": {
@@ -107,7 +103,6 @@
       "is_active": true,
       "last_name": "Williams",
       "notes": "Supervises NY-01 operations and coordinates inbound stock receipts.",
-      "phone_number": "+12125550202",
       "role": "Warehouse Supervisor"
     },
     "lookup": {
@@ -131,7 +126,6 @@
       "is_active": true,
       "last_name": "Bauer",
       "notes": "Responsible for refund processing, revenue reporting, and payment reconciliation.",
-      "phone_number": "+12135550301",
       "role": "Finance Analyst"
     },
     "lookup": {
@@ -155,7 +149,6 @@
       "is_active": true,
       "last_name": "Pierce",
       "notes": "Owns campaign creation, coupon management, and promotional calendar.",
-      "phone_number": "+12135550401",
       "role": "Marketing Executive"
     },
     "lookup": {
@@ -179,7 +172,6 @@
       "is_active": true,
       "last_name": "Novak",
       "notes": "Manages platform infrastructure, integrations, and internal technical support.",
-      "phone_number": "+12135550501",
       "role": "IT Support Engineer"
     },
     "lookup": {

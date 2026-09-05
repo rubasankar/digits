@@ -18,9 +18,8 @@ from core.views import handler_500
 if TYPE_CHECKING:
     from django.http import HttpRequest
 
-# ---------------------------------------------------------------------------
+
 # Home view
-# ---------------------------------------------------------------------------
 
 
 class HomeViewTests(TestCase):
@@ -83,9 +82,7 @@ class HomeViewTests(TestCase):
         assert list(qs) == []
 
 
-# ---------------------------------------------------------------------------
 # Error handler views
-# ---------------------------------------------------------------------------
 
 
 def _get_with_session(path: str = "/") -> HttpRequest:

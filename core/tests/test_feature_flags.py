@@ -23,7 +23,7 @@ class ReviewAutoPublishFeatureFlagTests(TestCase):
     """Tests that ReviewService respects the reviews_auto_publish Waffle switch."""
 
     def setUp(self) -> None:
-        self.user = User.objects.create_user(email="customer@example.com")
+        self.user = User.objects.create_user(email="casey@example.com")
         self.customer = CustomerProfile.objects.create(
             user=self.user,
             first_name="Casey",

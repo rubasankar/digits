@@ -28,9 +28,7 @@ from core.exceptions import ReturnAlreadyExistsError
 from core.exceptions import ReturnError
 from core.exceptions import ReturnQuantityExceededError
 
-# ---------------------------------------------------------------------------
 # DomainError base
-# ---------------------------------------------------------------------------
 
 
 class DomainErrorTests(SimpleTestCase):
@@ -52,9 +50,7 @@ class DomainErrorTests(SimpleTestCase):
             raise DomainError(msg)
 
 
-# ---------------------------------------------------------------------------
 # Generic errors
-# ---------------------------------------------------------------------------
 
 
 class NotFoundErrorTests(SimpleTestCase):
@@ -81,9 +77,7 @@ class PermissionDeniedErrorTests(SimpleTestCase):
         assert isinstance(PermissionDeniedError(), DomainError)
 
 
-# ---------------------------------------------------------------------------
 # Status machine
-# ---------------------------------------------------------------------------
 
 
 class InvalidStatusTransitionErrorTests(SimpleTestCase):
@@ -120,9 +114,7 @@ class InvalidStatusTransitionErrorTests(SimpleTestCase):
         assert isinstance(self._make(), DomainError)
 
 
-# ---------------------------------------------------------------------------
 # Inventory
-# ---------------------------------------------------------------------------
 
 
 class InsufficientStockErrorTests(SimpleTestCase):
@@ -151,9 +143,7 @@ class InsufficientStockErrorTests(SimpleTestCase):
         )
 
 
-# ---------------------------------------------------------------------------
 # Coupons / Promotions
-# ---------------------------------------------------------------------------
 
 
 class CouponErrorHierarchyTests(SimpleTestCase):
@@ -191,9 +181,7 @@ class CouponErrorMessageTests(SimpleTestCase):
         assert "already used" in str(CouponAlreadyUsedByCustomerError()).lower()
 
 
-# ---------------------------------------------------------------------------
 # Pricing
-# ---------------------------------------------------------------------------
 
 
 class NoPriceFoundErrorTests(SimpleTestCase):
@@ -218,9 +206,7 @@ class NoPriceFoundErrorTests(SimpleTestCase):
         assert isinstance(NoPriceFoundError(sku="X", currency_code="Y"), DomainError)
 
 
-# ---------------------------------------------------------------------------
 # Checkout
-# ---------------------------------------------------------------------------
 
 
 class CheckoutErrorHierarchyTests(SimpleTestCase):
@@ -250,9 +236,7 @@ class CheckoutErrorMessageTests(SimpleTestCase):
         assert "completed" in str(CheckoutAlreadyCompletedError()).lower()
 
 
-# ---------------------------------------------------------------------------
 # Payments
-# ---------------------------------------------------------------------------
 
 
 class PaymentErrorHierarchyTests(SimpleTestCase):
@@ -282,9 +266,7 @@ class RefundExceedsPaymentErrorTests(SimpleTestCase):
         assert str(err) == "Too much."
 
 
-# ---------------------------------------------------------------------------
 # Returns
-# ---------------------------------------------------------------------------
 
 
 class ReturnErrorHierarchyTests(SimpleTestCase):

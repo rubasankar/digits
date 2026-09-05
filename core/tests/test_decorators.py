@@ -44,7 +44,7 @@ class RequireCustomerDecoratorTests(TestCase):
         let the user through.
         """
         user = User.objects.create_user(
-            email="shopper@example.com",
+            email="shop@example.com",
             password="pass1234!",
         )
         CustomerProfile.objects.create(
@@ -60,7 +60,7 @@ class RequireCustomerDecoratorTests(TestCase):
     def test_authenticated_without_profile_gets_non_login_redirect(self) -> None:
         """Decorator passes; the view redirects to profile_edit, not login."""
         user = User.objects.create_user(
-            email="noprofile@example.com",
+            email="shop2@example.com",
             password="pass1234!",
         )
         self.client.force_login(user)
